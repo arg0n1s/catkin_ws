@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sebastian/catkin_ws/src/simulation/include/Raycaster.h
+opencv2/opencv.hpp
+-
+opencv2/imgproc/imgproc.hpp
+-
+math.h
+-
+vector
+-
+iostream
+-
+
+/home/sebastian/catkin_ws/src/simulation/src/Raycaster.cpp
+Raycaster.h
+/home/sebastian/catkin_ws/src/simulation/src/Raycaster.h
+
