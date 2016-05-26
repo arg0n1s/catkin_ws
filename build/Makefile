@@ -695,6 +695,19 @@ tf_generate_messages_py/fast:
 	$(MAKE) -f simulation/CMakeFiles/tf_generate_messages_py.dir/build.make simulation/CMakeFiles/tf_generate_messages_py.dir/build
 .PHONY : tf_generate_messages_py/fast
 
+#=============================================================================
+# Target rules for targets named usrange_node
+
+# Build rule for target.
+usrange_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 usrange_node
+.PHONY : usrange_node
+
+# fast build rule for target.
+usrange_node/fast:
+	$(MAKE) -f simulation/CMakeFiles/usrange_node.dir/build.make simulation/CMakeFiles/usrange_node.dir/build
+.PHONY : usrange_node/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -750,6 +763,7 @@ help:
 	@echo "... tf_generate_messages_cpp"
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf_generate_messages_py"
+	@echo "... usrange_node"
 .PHONY : help
 
 

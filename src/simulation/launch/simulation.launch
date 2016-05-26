@@ -1,48 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <launch>
-	<master auto="start" />
-
-	<!-- Set static tf transformations
-	<node pkg="tf" type="static_transform_publisher" name="base_laser_broadcaster" args="0.18 0 0.34 0 0 0 1 base_link base_laser 10" />
-	<node pkg="tf" type="static_transform_publisher" name="front_us_broadcaster" args="0.175 0 -0.06 0 0 0 1 base_link front_sensor 10" />
-	<node pkg="tf" type="static_transform_publisher" name="left_us_broadcaster" args="0 0.1 -0.06 1.57 0 0 base_link left_sensor 10" />
-	<node pkg="tf" type="static_transform_publisher" name="right_us_broadcaster" args="0 -0.1 -0.06 -1.57 0 0 base_link right_sensor 10" />
-
-	<node pkg="tf" type="static_transform_publisher" name="front_us_broadcaster" args="0.175 0 -0.06 0 0 0 1 base_link front_sensor 10" />
-	<node pkg="tf" type="static_transform_publisher" name="left_us_broadcaster" args="0 0.1 -0.06 1.57 0 0 base_link left_sensor 10" />
-	<node pkg="tf" type="static_transform_publisher" name="right_us_broadcaster" args="0 -0.1 -0.06 -1.57 0 0 base_link right_sensor 10" />
-  -->
-
-	<node pkg="tf" type="static_transform_publisher" name="map_broadcaster" args="0 0 0 0 0 0 1 map odom 10" />
-	<!--
-	<node pkg="tf" type="static_transform_publisher" name="base_laser_broadcaster" args="0 0 0 0 0 0 1 odom scan 10" />
-  -->
-
-	<!--
-	<node pkg="tf" type="static_transform_publisher" name="base_laser_broadcaster" args="0.18 0 0.34 0 0 0 1 base_link base_laser 10" />
-	-->
-	<!-- Set static tf car model transformations
-	<node pkg="tf" type="static_transform_publisher" name="base_footprint_broadcaster" args="0 0 0 0 0 0 1 base_link base_footprint 10" />
-	-->
-
+	<master auto="start"/>
+	<!-- Set static tf transformations -->
+	<node pkg="tf" type="static_transform_publisher" name="map_broadcaster" args="0 0 0 0 0 0 1 map odom 10"/>
 	<!-- Run the necessary nodes to bring up the car -->
-	<node pkg="simulation" type="simulation_node" name="simulation" output ="screen" />
-	<node pkg="simulation" type="scan_node" name="scan_simulation" output ="screen" />
-
+	<node pkg="simulation" type="simulation_node" name="simulation" output="screen"/>
+	<node pkg="simulation" type="scan_node" name="scan_simulation" output="screen"/>
+	<node pkg="simulation" type="usrange_node" name="usrange_simulation" output="screen"/>
 	<!-- Run the map server -->
-	<node name="map_server" pkg="map_server" type="map_server" args="$(find simulation)/data/map/map.yaml" />
-
+	<node name="map_server" pkg="map_server" type="map_server" args="$(find simulation)/data/map/map.yaml"/>
 	<!-- Run the navigation stack
 	<node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" />
   -->
-
 	<!-- Run AMCL
 	<include file="$(find simulation)/launch/amcl.launch"/>
 	-->
-
 	<!-- Show the Rviz visualization 	-->
-	<include file="$(find simulation)/launch/car_display.launch" />
-
-
-
+	<include file="$(find simulation)/launch/car_display.launch"/>
+	<node pkg="rqt_gui" type="rqt_gui" name="rqt" args="--perspective-file $(find simulation)/data/control/control.perspective"/>
 </launch>

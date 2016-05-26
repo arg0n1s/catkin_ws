@@ -639,6 +639,20 @@ tf_generate_messages_py/fast:
 	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/tf_generate_messages_py.dir/build.make simulation/CMakeFiles/tf_generate_messages_py.dir/build
 .PHONY : tf_generate_messages_py/fast
 
+# Convenience name for target.
+simulation/CMakeFiles/usrange_node.dir/rule:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/usrange_node.dir/rule
+.PHONY : simulation/CMakeFiles/usrange_node.dir/rule
+
+# Convenience name for target.
+usrange_node: simulation/CMakeFiles/usrange_node.dir/rule
+.PHONY : usrange_node
+
+# fast build rule for target.
+usrange_node/fast:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/usrange_node.dir/build.make simulation/CMakeFiles/usrange_node.dir/build
+.PHONY : usrange_node/fast
+
 src/CarModel.o: src/CarModel.cpp.o
 .PHONY : src/CarModel.o
 
@@ -759,6 +773,30 @@ src/simulation_laserscan.cpp.s:
 	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/scan_node.dir/build.make simulation/CMakeFiles/scan_node.dir/src/simulation_laserscan.cpp.s
 .PHONY : src/simulation_laserscan.cpp.s
 
+src/simulation_usscan.o: src/simulation_usscan.cpp.o
+.PHONY : src/simulation_usscan.o
+
+# target to build an object file
+src/simulation_usscan.cpp.o:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/usrange_node.dir/build.make simulation/CMakeFiles/usrange_node.dir/src/simulation_usscan.cpp.o
+.PHONY : src/simulation_usscan.cpp.o
+
+src/simulation_usscan.i: src/simulation_usscan.cpp.i
+.PHONY : src/simulation_usscan.i
+
+# target to preprocess a source file
+src/simulation_usscan.cpp.i:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/usrange_node.dir/build.make simulation/CMakeFiles/usrange_node.dir/src/simulation_usscan.cpp.i
+.PHONY : src/simulation_usscan.cpp.i
+
+src/simulation_usscan.s: src/simulation_usscan.cpp.s
+.PHONY : src/simulation_usscan.s
+
+# target to generate assembly for a file
+src/simulation_usscan.cpp.s:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/usrange_node.dir/build.make simulation/CMakeFiles/usrange_node.dir/src/simulation_usscan.cpp.s
+.PHONY : src/simulation_usscan.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -807,6 +845,7 @@ help:
 	@echo "... tf_generate_messages_cpp"
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf_generate_messages_py"
+	@echo "... usrange_node"
 	@echo "... src/CarModel.o"
 	@echo "... src/CarModel.i"
 	@echo "... src/CarModel.s"
@@ -822,6 +861,9 @@ help:
 	@echo "... src/simulation_laserscan.o"
 	@echo "... src/simulation_laserscan.i"
 	@echo "... src/simulation_laserscan.s"
+	@echo "... src/simulation_usscan.o"
+	@echo "... src/simulation_usscan.i"
+	@echo "... src/simulation_usscan.s"
 .PHONY : help
 
 

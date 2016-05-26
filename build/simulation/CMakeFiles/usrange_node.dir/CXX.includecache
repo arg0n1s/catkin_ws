@@ -20,7 +20,7 @@ iostream
 memory
 -
 
-/home/sebastian/catkin_ws/src/simulation/src/simulation_laserscan.cpp
+/home/sebastian/catkin_ws/src/simulation/src/simulation_usscan.cpp
 ros/ros.h
 -
 ros/package.h
@@ -30,8 +30,6 @@ geometry_msgs/TransformStamped.h
 nav_msgs/MapMetaData.h
 -
 iostream
--
-sensor_msgs/LaserScan.h
 -
 tf/transform_listener.h
 -
@@ -1004,24 +1002,6 @@ ros/serialization.h
 ros/builtin_message_traits.h
 -
 ros/message_operations.h
--
-
-/opt/ros/indigo/include/sensor_msgs/LaserScan.h
-string
--
-vector
--
-map
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-std_msgs/Header.h
 -
 
 /opt/ros/indigo/include/sensor_msgs/PointCloud.h

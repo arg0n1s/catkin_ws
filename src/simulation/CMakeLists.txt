@@ -137,6 +137,7 @@ add_library(RAY_CAST src/Raycaster.cpp)
 ## Declare a C++ executable
 add_executable(simulation_node src/simulation_control.cpp)
 add_executable(scan_node src/simulation_laserscan.cpp)
+add_executable(usrange_node src/simulation_usscan.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
@@ -147,6 +148,9 @@ add_executable(scan_node src/simulation_laserscan.cpp)
    ${catkin_LIBRARIES} CAR_MODEL FWD_KIN
  )
  target_link_libraries(scan_node
+   ${catkin_LIBRARIES} ${OpenCV_LIBS} RAY_CAST
+ )
+ target_link_libraries(usrange_node
    ${catkin_LIBRARIES} ${OpenCV_LIBS} RAY_CAST
  )
 

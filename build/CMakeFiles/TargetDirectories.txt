@@ -40,3 +40,4 @@
 /home/sebastian/catkin_ws/build/simulation/CMakeFiles/tf_generate_messages_cpp.dir
 /home/sebastian/catkin_ws/build/simulation/CMakeFiles/tf_generate_messages_lisp.dir
 /home/sebastian/catkin_ws/build/simulation/CMakeFiles/tf_generate_messages_py.dir
+/home/sebastian/catkin_ws/build/simulation/CMakeFiles/usrange_node.dir
