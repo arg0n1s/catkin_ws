@@ -34,7 +34,7 @@ int main(int argc, char **argv){
         sensor_msgs::Range front_range, left_range, right_range;
         tf::TransformListener listener;
         geometry_msgs::Pose ussensorPosition;
-        cv::Vec2i gridPose;
+        rc::vec2i_ptr gridPose;
         double roll, pitch, yaw;
         tf::Quaternion q;
         ros::Time currentTime = ros::Time::now();
@@ -79,7 +79,7 @@ int main(int argc, char **argv){
                         unsigned int grid_x = (unsigned int)((ussensorPosition.position.x - mapInfo.origin.position.x) / mapInfo.resolution);
                         unsigned int grid_y = (unsigned int)((-ussensorPosition.position.y - mapInfo.origin.position.y) / mapInfo.resolution);
 
-                        gridPose = cv::Vec2i(grid_x, grid_y);
+                        gridPose = std::make_shared<cv::Vec2i>(cv::Vec2i(grid_x, grid_y));
                         yaw = 0;
                         try{
                                 tf::quaternionMsgToTF(ussensorPosition.orientation, q);
@@ -88,7 +88,7 @@ int main(int argc, char **argv){
 
                                 if(!isnan(yaw)) {
                                         yaw = rc_ussensor.radToDeg(yaw);
-                                        front_range.range = (*rc_ussensor.getRangeInfo(gridPose, yaw))[44];
+                                        front_range.range = rc_ussensor.getUsRangeInfo(gridPose, yaw);
                                 }
 
                         }catch(std::exception ex) {
@@ -109,7 +109,7 @@ int main(int argc, char **argv){
                         unsigned int grid_x = (unsigned int)((ussensorPosition.position.x - mapInfo.origin.position.x) / mapInfo.resolution);
                         unsigned int grid_y = (unsigned int)((-ussensorPosition.position.y - mapInfo.origin.position.y) / mapInfo.resolution);
 
-                        gridPose = cv::Vec2i(grid_x, grid_y);
+                        gridPose = std::make_shared<cv::Vec2i>(cv::Vec2i(grid_x, grid_y));
                         yaw = 0;
                         try{
                                 tf::quaternionMsgToTF(ussensorPosition.orientation, q);
@@ -118,7 +118,7 @@ int main(int argc, char **argv){
 
                                 if(!isnan(yaw)) {
                                         yaw = rc_ussensor.radToDeg(yaw);
-                                        left_range.range = (*rc_ussensor.getRangeInfo(gridPose, yaw))[44];
+                                        left_range.range = rc_ussensor.getUsRangeInfo(gridPose, yaw);
                                 }
 
                         }catch(std::exception ex) {
@@ -139,7 +139,7 @@ int main(int argc, char **argv){
                         unsigned int grid_x = (unsigned int)((ussensorPosition.position.x - mapInfo.origin.position.x) / mapInfo.resolution);
                         unsigned int grid_y = (unsigned int)((-ussensorPosition.position.y - mapInfo.origin.position.y) / mapInfo.resolution);
 
-                        gridPose = cv::Vec2i(grid_x, grid_y);
+                        gridPose = std::make_shared<cv::Vec2i>(cv::Vec2i(grid_x, grid_y));
                         yaw = 0;
                         try{
                                 tf::quaternionMsgToTF(ussensorPosition.orientation, q);
@@ -148,7 +148,7 @@ int main(int argc, char **argv){
 
                                 if(!isnan(yaw)) {
                                         yaw = rc_ussensor.radToDeg(yaw);
-                                        right_range.range = (*rc_ussensor.getRangeInfo(gridPose, yaw))[44];
+                                        right_range.range = rc_ussensor.getUsRangeInfo(gridPose, yaw);
                                 }
 
                         }catch(std::exception ex) {

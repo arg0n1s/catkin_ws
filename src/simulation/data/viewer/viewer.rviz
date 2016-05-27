@@ -3,8 +3,7 @@ Panels:
     Help Height: 81
     Name: Displays
     Property Tree Widget:
-      Expanded:
-        - /Status1
+      Expanded: ~
       Splitter Ratio: 0.5
     Tree Height: 773
   - Class: rviz/Selection
@@ -25,7 +24,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: LaserScan
 Visualization Manager:
   Class: ""
   Displays:
@@ -69,7 +68,7 @@ Visualization Manager:
       Position Transformer: XYZ
       Queue Size: 10
       Selectable: true
-      Size (Pixels): 3
+      Size (Pixels): 5
       Size (m): 0.01
       Style: Points
       Topic: /scan
@@ -88,32 +87,32 @@ Visualization Manager:
       Topic: /odom
       Value: true
     - Alpha: 0.5
-      Buffer Length: 1
+      Buffer Length: 10
       Class: rviz/Range
       Color: 255; 255; 255
       Enabled: true
       Name: Range
-      Queue Size: 100
+      Queue Size: 10
       Topic: /front_us_range
       Unreliable: false
       Value: true
     - Alpha: 0.5
-      Buffer Length: 1
+      Buffer Length: 10
       Class: rviz/Range
       Color: 255; 255; 255
       Enabled: true
       Name: Range
-      Queue Size: 100
+      Queue Size: 10
       Topic: /left_us_range
       Unreliable: false
       Value: true
     - Alpha: 0.5
-      Buffer Length: 1
+      Buffer Length: 10
       Class: rviz/Range
       Color: 255; 255; 255
       Enabled: true
       Name: Range
-      Queue Size: 100
+      Queue Size: 10
       Topic: /right_us_range
       Unreliable: false
       Value: true
@@ -160,12 +159,32 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        front_sensor:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_sensor:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         rear_left_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
         rear_right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_sensor:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        scan:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -380,7 +399,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: map
+    Fixed Frame: base_footprint
     Frame Rate: 30
   Name: root
   Tools:
@@ -401,7 +420,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 6.60521
+      Distance: 7.16975
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
@@ -413,10 +432,10 @@ Visualization Manager:
         Z: 0.00805118
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 1.0348
+      Pitch: 0.954795
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 2.7654
+      Yaw: 2.65857
     Saved: ~
 Window Geometry:
   Displays:
@@ -434,5 +453,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1855
-  X: 48
-  Y: 12
+  X: 1925
+  Y: 35

@@ -45,8 +45,8 @@ double Raycaster::radToDeg(double angle) const {
 								return angle/rc::PI*180.0;
 }
 
-const rangeArray_ptr Raycaster::getRangeInfo(const cv::Vec2i pointOfOrigin, const double theta) {
-								origin = pointOfOrigin;
+const rc::rangeArray_ptr Raycaster::getRangeInfo(const rc::vec2i_ptr pointOfOrigin, const double theta) {
+								origin = *pointOfOrigin;
 								double eps = 0.001;
 								//yaw needs to be shifted by -90deg because robot people put their yaw=0 on the positive x-axis
 								double viewAngle = correctYawAngle(theta, -90);
@@ -62,7 +62,18 @@ const rangeArray_ptr Raycaster::getRangeInfo(const cv::Vec2i pointOfOrigin, cons
 
 }
 
-const minMaxFov_ptr Raycaster::angleMinMax(const double theta) const {
+const double Raycaster::getUsRangeInfo(const rc::vec2i_ptr pointOfOrigin, const double theta){
+	getRangeInfo(pointOfOrigin, theta);
+	double minOfRange = rangeArray[0];
+	for(auto current : rangeArray){
+		if(current < minOfRange){
+			minOfRange = current;
+		}
+	}
+	return minOfRange;
+}
+
+const rc::minMaxFov_ptr Raycaster::angleMinMax(const double theta) const {
 								double minAngle = correctYawAngle(theta, -FOV / 2);
 								double maxAngle = correctYawAngle(theta, FOV / 2);
 								std::pair<double,double> out(minAngle, maxAngle);
@@ -81,7 +92,7 @@ double Raycaster::correctYawAngle(const double theta, const double increment) co
 								}
 								return yaw;
 }
-const vec2i_ptr Raycaster::calcEndpoint(const double heading) const {
+const rc::vec2i_ptr Raycaster::calcEndpoint(const double heading) const {
 								double xMax;
 								double yMax;
 								double m;
@@ -132,7 +143,7 @@ const int Raycaster::sgn(const int x) const {
 								return (x > 0) ? 1 : (x < 0) ? -1 : 0;
 }
 
-const vec2i_ptr Raycaster::bresenham(const cv::Vec2i& end) {
+const rc::vec2i_ptr Raycaster::bresenham(const cv::Vec2i& end) {
 								int x, y, t, dx, dy, incx, incy, pdx, pdy, ddx, ddy, es, el, err;
 								cv::Vec2i trueEnd = end;
 

@@ -25,9 +25,6 @@ int main(int argc, char **argv){
 
         ros::Publisher scanPub = nh.advertise<sensor_msgs::LaserScan>("scan", 10);
         ros::Subscriber mapMetaData = nh.subscribe<nav_msgs::MapMetaData>("map_metadata", 10, callMapMetaData);
-        ros::Publisher front_us_range = nh.advertise<sensor_msgs::Range>("front_us_range", 10);
-        ros::Publisher left_us_range = nh.advertise<sensor_msgs::Range>("left_us_range", 10);
-        ros::Publisher right_us_range = nh.advertise<sensor_msgs::Range>("right_us_range", 10);
 
         ros::Time currentTime = ros::Time::now();
         sensor_msgs::LaserScan scan;
@@ -38,7 +35,7 @@ int main(int argc, char **argv){
         //45.0, 0.5);
         tf::TransformListener listener;
         geometry_msgs::Pose laserPosition;
-        cv::Vec2i gridPose;
+        rc::vec2i_ptr gridPose;
         double roll, pitch, yaw;
         std::pair<double,double> minMax;
         tf::Quaternion q;
@@ -64,7 +61,7 @@ int main(int argc, char **argv){
                         unsigned int grid_x = (unsigned int)((laserPosition.position.x - mapInfo.origin.position.x) / mapInfo.resolution);
                         unsigned int grid_y = (unsigned int)((-laserPosition.position.y - mapInfo.origin.position.y) / mapInfo.resolution);
 
-                        gridPose = cv::Vec2i(grid_x, grid_y);
+                        gridPose = std::make_shared<cv::Vec2i>(cv::Vec2i(grid_x, grid_y));
                         yaw = 0;
                         try{
                                 tf::quaternionMsgToTF(laserPosition.orientation, q);
@@ -86,37 +83,6 @@ int main(int argc, char **argv){
                 }catch(tf::TransformException ex) {
                         ROS_ERROR("%s", ex.what());
                 }
-
-                sensor_msgs::Range front_range;
-                front_range.header.stamp = currentTime;
-                front_range.header.frame_id = "front_sensor";
-                front_range.range = 0.5;
-                front_range.radiation_type = 0;
-                front_range.field_of_view = 0.76;
-                front_range.min_range = 0.00;
-                front_range.max_range = 2.7;
-
-                sensor_msgs::Range left_range;
-                left_range.header.stamp = currentTime;
-                left_range.header.frame_id = "left_sensor";
-                left_range.range = 0.5;
-                left_range.radiation_type = 0;
-                left_range.field_of_view = 0.76;
-                left_range.min_range = 0.0;
-                left_range.max_range = 2.7;
-
-                sensor_msgs::Range right_range;
-                right_range.header.stamp = currentTime;
-                right_range.header.frame_id = "right_sensor";
-                right_range.range = 0.5;
-                right_range.radiation_type = 0;
-                right_range.field_of_view = 0.76;
-                right_range.min_range = 0.00;
-                right_range.max_range = 2.7;
-
-                front_us_range.publish(front_range);
-                right_us_range.publish(right_range);
-                left_us_range.publish(left_range);
 
                 scanPub.publish(scan);
                 ros::spinOnce();

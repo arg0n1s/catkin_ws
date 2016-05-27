@@ -16,13 +16,14 @@
 #include <memory>
 
 namespace rc {
+typedef std::shared_ptr<std::pair<double,double> > minMaxFov_ptr;
+typedef std::shared_ptr<cv::Vec2i> vec2i_ptr;
+typedef std::shared_ptr<std::vector<float> > rangeArray_ptr;
 const double PI = acos(-1);
 class Raycaster;
 }
 
-typedef std::shared_ptr<std::pair<double,double> > minMaxFov_ptr;
-typedef std::shared_ptr<cv::Vec2i> vec2i_ptr;
-typedef std::shared_ptr<std::vector<float> > rangeArray_ptr;
+
 
 using rc::Raycaster;
 class Raycaster {
@@ -31,8 +32,9 @@ public:
 								Raycaster(const Raycaster &other);
 								Raycaster(const cv::Mat map, const double meterPerPixel, const double maxDistance, const double FOV,
 																		const double angularResolution);
-								const rangeArray_ptr getRangeInfo(const cv::Vec2i pointOfOrigin, const double theta);
-								const minMaxFov_ptr angleMinMax(const double theta) const;
+								const rc::rangeArray_ptr getRangeInfo(const rc::vec2i_ptr pointOfOrigin, const double theta);
+								const double getUsRangeInfo(const rc::vec2i_ptr pointOfOrigin, const double theta);
+								const rc::minMaxFov_ptr angleMinMax(const double theta) const;
 								// Find out how to put those functions in the namespace,
 								// because they don't have to be member functions
 								const int sgn(const int x) const;
@@ -52,8 +54,8 @@ private:
 								std::vector<float> rangeArray;
 
 								void init();
-								const vec2i_ptr calcEndpoint(const double heading) const;
-								const vec2i_ptr bresenham(const cv::Vec2i& end);
+								const rc::vec2i_ptr calcEndpoint(const double heading) const;
+								const rc::vec2i_ptr bresenham(const cv::Vec2i& end);
 };
 
 
