@@ -19,7 +19,14 @@ namespace rc {
 typedef std::shared_ptr<std::pair<double,double> > minMaxFov_ptr;
 typedef std::shared_ptr<cv::Vec2i> vec2i_ptr;
 typedef std::shared_ptr<std::vector<float> > rangeArray_ptr;
+
 const double PI = acos(-1);
+
+double correctYawAngle(const double theta, const double increment);
+const int sgn(const int x);
+double degToRad(double angle);
+double radToDeg(double angle);
+
 class Raycaster;
 }
 
@@ -35,13 +42,6 @@ public:
 								const rc::rangeArray_ptr getRangeInfo(const rc::vec2i_ptr pointOfOrigin, const double theta);
 								const double getUsRangeInfo(const rc::vec2i_ptr pointOfOrigin, const double theta);
 								const rc::minMaxFov_ptr angleMinMax(const double theta) const;
-								// Find out how to put those functions in the namespace,
-								// because they don't have to be member functions
-								const int sgn(const int x) const;
-								double correctYawAngle(const double theta, const double increment) const;
-								double degToRad(double angle) const;
-								double radToDeg(double angle) const;
-
 private:
 								cv::Mat map;
 								double meterPerPixel;
@@ -57,8 +57,5 @@ private:
 								const rc::vec2i_ptr calcEndpoint(const double heading) const;
 								const rc::vec2i_ptr bresenham(const cv::Vec2i& end);
 };
-
-
-
 
 #endif /* RAYCASTER_H_ */

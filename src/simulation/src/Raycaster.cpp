@@ -7,6 +7,35 @@
 
 #include "Raycaster.h"
 
+namespace rc {
+
+double correctYawAngle(const double theta, const double increment) {
+								double yaw = 0;
+								double angle = theta + increment;
+								if (angle > 180.0) {
+																yaw = -180.0 - (180.0 - angle);
+								} else if (angle < -180.0) {
+																yaw = 180.0 - (-180.0 - angle);
+								} else {
+																yaw = angle;
+								}
+								return yaw;
+}
+
+const int sgn(const int x) {
+								return (x > 0) ? 1 : (x < 0) ? -1 : 0;
+}
+
+double degToRad(double angle){
+								return angle/180.0*rc::PI;
+}
+
+double radToDeg(double angle){
+								return angle/rc::PI*180.0;
+}
+
+}
+
 Raycaster::Raycaster() {
 								map = cv::Mat();
 								meterPerPixel = 1.0;
@@ -38,23 +67,16 @@ void Raycaster::init() {
 								color = cv::Vec3b(254, 0, 0);
 }
 
-double Raycaster::degToRad(double angle) const {
-								return angle/180.0*rc::PI;
-}
-double Raycaster::radToDeg(double angle) const {
-								return angle/rc::PI*180.0;
-}
-
 const rc::rangeArray_ptr Raycaster::getRangeInfo(const rc::vec2i_ptr pointOfOrigin, const double theta) {
 								origin = *pointOfOrigin;
 								double eps = 0.001;
 								//yaw needs to be shifted by -90deg because robot people put their yaw=0 on the positive x-axis
-								double viewAngle = correctYawAngle(theta, -90);
+								double viewAngle = rc::correctYawAngle(theta, -90);
 								std::pair<double, double> minMaxFov = *angleMinMax(viewAngle);
 								rangeArray = std::vector<float>((int)FOV/angularResolution);
 								int counter = 0;
 								for (double angle = minMaxFov.first; !(angle <= minMaxFov.second+eps && angle >= minMaxFov.second-eps); angle =
-																					correctYawAngle(angle, angularResolution)) {
+																					rc::correctYawAngle(angle, angularResolution)) {
 																rangeArray[counter] = norm(*bresenham(*calcEndpoint(angle)), origin)*meterPerPixel;
 																counter++;
 								}
@@ -63,35 +85,23 @@ const rc::rangeArray_ptr Raycaster::getRangeInfo(const rc::vec2i_ptr pointOfOrig
 }
 
 const double Raycaster::getUsRangeInfo(const rc::vec2i_ptr pointOfOrigin, const double theta){
-	getRangeInfo(pointOfOrigin, theta);
-	double minOfRange = rangeArray[0];
-	for(auto current : rangeArray){
-		if(current < minOfRange){
-			minOfRange = current;
-		}
-	}
-	return minOfRange;
+								getRangeInfo(pointOfOrigin, theta);
+								double minOfRange = rangeArray[0];
+								for(auto current : rangeArray) {
+																if(current < minOfRange) {
+																								minOfRange = current;
+																}
+								}
+								return minOfRange;
 }
 
 const rc::minMaxFov_ptr Raycaster::angleMinMax(const double theta) const {
-								double minAngle = correctYawAngle(theta, -FOV / 2);
-								double maxAngle = correctYawAngle(theta, FOV / 2);
+								double minAngle = rc::correctYawAngle(theta, -FOV / 2);
+								double maxAngle = rc::correctYawAngle(theta, FOV / 2);
 								std::pair<double,double> out(minAngle, maxAngle);
 								return std::make_shared<std::pair<double,double> >(std::make_pair(minAngle, maxAngle));
 }
 
-double Raycaster::correctYawAngle(const double theta, const double increment) const {
-								double yaw = 0;
-								double angle = theta + increment;
-								if (angle > 180.0) {
-																yaw = -180.0 - (180.0 - angle);
-								} else if (angle < -180.0) {
-																yaw = 180.0 - (-180.0 - angle);
-								} else {
-																yaw = angle;
-								}
-								return yaw;
-}
 const rc::vec2i_ptr Raycaster::calcEndpoint(const double heading) const {
 								double xMax;
 								double yMax;
@@ -114,22 +124,22 @@ const rc::vec2i_ptr Raycaster::calcEndpoint(const double heading) const {
 																yMax = 0;
 																m = 0;
 								} else if (heading < 0 && heading > -90.0) { // first quadrant
-																float modheading = (heading + 90.0) * PI / 180.0;
+																float modheading = rc::degToRad(heading + 90.0);
 																m = tan(modheading);
 																xMax = cos(modheading) * maxDistance;
 																yMax = m * xMax;
 								} else if (heading < -90.0 && heading != 180.0) { // fourth quadrant
-																float modheading = (heading + 90.0) * PI / 180.0;
+																float modheading = rc::degToRad(heading + 90.0);
 																m = tan(modheading);
 																xMax = cos(modheading) * maxDistance;
 																yMax = m * xMax;
 								} else if (heading > 0 && heading < 90.0) { // second quadrant
-																float modheading = (heading - 90.0) * PI / 180.0;
+																float modheading = rc::degToRad(heading - 90.0);
 																m = tan(modheading);
 																xMax = -cos(modheading) * maxDistance;
 																yMax = m * xMax;
 								} else { // third quadrant -> heading > 90
-																float modheading = (heading - 90.0) * PI / 180.0;
+																float modheading = rc::degToRad(heading - 90.0);
 																m = tan(modheading);
 																xMax = -cos(modheading) * maxDistance;
 																yMax = m * xMax;
@@ -139,10 +149,6 @@ const rc::vec2i_ptr Raycaster::calcEndpoint(const double heading) const {
 								return std::make_shared<cv::Vec2i>(endpoint);
 }
 
-const int Raycaster::sgn(const int x) const {
-								return (x > 0) ? 1 : (x < 0) ? -1 : 0;
-}
-
 const rc::vec2i_ptr Raycaster::bresenham(const cv::Vec2i& end) {
 								int x, y, t, dx, dy, incx, incy, pdx, pdy, ddx, ddy, es, el, err;
 								cv::Vec2i trueEnd = end;
@@ -150,8 +156,8 @@ const rc::vec2i_ptr Raycaster::bresenham(const cv::Vec2i& end) {
 								dx = end[0] - origin[0];
 								dy = end[1] - origin[1];
 
-								incx = sgn(dx);
-								incy = sgn(dy);
+								incx = rc::sgn(dx);
+								incy = rc::sgn(dy);
 								if (dx < 0)
 																dx = -dx;
 								if (dy < 0)
