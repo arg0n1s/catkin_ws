@@ -21,6 +21,8 @@ static const double angleArray[101]={25.0, 24.6, 24.2, 23.8, 23.4, 23.0, 22.6, 2
 																		 -5.0, -5.4, -5.8, -6.2, -6.6, -7.0, -7.4, -7.8, -8.2, -8.6,
 																	   -9.0, -9.4, -9.8, -10.2, -10.6, -11.0, -11.4, -11.8, -12.2, -12.6,
 																		-13.0, -13.5, -14.0, -14.5, -15.0, -15.5, -16.0, -16.5, -17.0, -17.5, -18.0};
+static const double velocityArray[21]={-2.0, -1.8, -1.6, -1.4, -1.2, -1.0, -0.8, -0.6, -0.4, -0.2, 0,
+                                        0.2,  0.4,  0.6,  0.8,  1.0,  1.2,  1.4,  1.6,  1.8,  2.0};
 
 class CarModel {
 public:
@@ -29,7 +31,8 @@ public:
 								void setSteering(const int steering);
 								const int getSteering() const;
 								const double getSteeringAngle() const;
-								const std::vector<double>& getUpdate(const int newSteering, const double newVelocity);
+                                const double speedToVelocity(const int speed) const;
+                                const std::vector<double>& getUpdate(const int newSteering, const int newSpeed);
 private:
 								ForwardKinematics fwdKin;
 								int steering;

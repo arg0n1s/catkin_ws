@@ -72,14 +72,39 @@ simulation/CMakeFiles/usrange_node.dir/src/simulation_usscan.cpp.o.provides: sim
 
 simulation/CMakeFiles/usrange_node.dir/src/simulation_usscan.cpp.o.provides.build: simulation/CMakeFiles/usrange_node.dir/src/simulation_usscan.cpp.o
 
+simulation/CMakeFiles/usrange_node.dir/usrange_node_automoc.cpp.o: simulation/CMakeFiles/usrange_node.dir/flags.make
+simulation/CMakeFiles/usrange_node.dir/usrange_node_automoc.cpp.o: simulation/usrange_node_automoc.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object simulation/CMakeFiles/usrange_node.dir/usrange_node_automoc.cpp.o"
+	cd /home/sebastian/catkin_ws/build/simulation && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/usrange_node.dir/usrange_node_automoc.cpp.o -c /home/sebastian/catkin_ws/build/simulation/usrange_node_automoc.cpp
+
+simulation/CMakeFiles/usrange_node.dir/usrange_node_automoc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/usrange_node.dir/usrange_node_automoc.cpp.i"
+	cd /home/sebastian/catkin_ws/build/simulation && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sebastian/catkin_ws/build/simulation/usrange_node_automoc.cpp > CMakeFiles/usrange_node.dir/usrange_node_automoc.cpp.i
+
+simulation/CMakeFiles/usrange_node.dir/usrange_node_automoc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/usrange_node.dir/usrange_node_automoc.cpp.s"
+	cd /home/sebastian/catkin_ws/build/simulation && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sebastian/catkin_ws/build/simulation/usrange_node_automoc.cpp -o CMakeFiles/usrange_node.dir/usrange_node_automoc.cpp.s
+
+simulation/CMakeFiles/usrange_node.dir/usrange_node_automoc.cpp.o.requires:
+.PHONY : simulation/CMakeFiles/usrange_node.dir/usrange_node_automoc.cpp.o.requires
+
+simulation/CMakeFiles/usrange_node.dir/usrange_node_automoc.cpp.o.provides: simulation/CMakeFiles/usrange_node.dir/usrange_node_automoc.cpp.o.requires
+	$(MAKE) -f simulation/CMakeFiles/usrange_node.dir/build.make simulation/CMakeFiles/usrange_node.dir/usrange_node_automoc.cpp.o.provides.build
+.PHONY : simulation/CMakeFiles/usrange_node.dir/usrange_node_automoc.cpp.o.provides
+
+simulation/CMakeFiles/usrange_node.dir/usrange_node_automoc.cpp.o.provides.build: simulation/CMakeFiles/usrange_node.dir/usrange_node_automoc.cpp.o
+
 # Object files for target usrange_node
 usrange_node_OBJECTS = \
-"CMakeFiles/usrange_node.dir/src/simulation_usscan.cpp.o"
+"CMakeFiles/usrange_node.dir/src/simulation_usscan.cpp.o" \
+"CMakeFiles/usrange_node.dir/usrange_node_automoc.cpp.o"
 
 # External object files for target usrange_node
 usrange_node_EXTERNAL_OBJECTS =
 
 /home/sebastian/catkin_ws/devel/lib/simulation/usrange_node: simulation/CMakeFiles/usrange_node.dir/src/simulation_usscan.cpp.o
+/home/sebastian/catkin_ws/devel/lib/simulation/usrange_node: simulation/CMakeFiles/usrange_node.dir/usrange_node_automoc.cpp.o
 /home/sebastian/catkin_ws/devel/lib/simulation/usrange_node: simulation/CMakeFiles/usrange_node.dir/build.make
 /home/sebastian/catkin_ws/devel/lib/simulation/usrange_node: /opt/ros/indigo/lib/libroslib.so
 /home/sebastian/catkin_ws/devel/lib/simulation/usrange_node: /opt/ros/indigo/lib/librospack.so
@@ -146,6 +171,7 @@ simulation/CMakeFiles/usrange_node.dir/build: /home/sebastian/catkin_ws/devel/li
 .PHONY : simulation/CMakeFiles/usrange_node.dir/build
 
 simulation/CMakeFiles/usrange_node.dir/requires: simulation/CMakeFiles/usrange_node.dir/src/simulation_usscan.cpp.o.requires
+simulation/CMakeFiles/usrange_node.dir/requires: simulation/CMakeFiles/usrange_node.dir/usrange_node_automoc.cpp.o.requires
 .PHONY : simulation/CMakeFiles/usrange_node.dir/requires
 
 simulation/CMakeFiles/usrange_node.dir/clean:

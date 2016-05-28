@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sebastian/catkin_ws/src/simulation/src/simulation_dashboard.cpp
+ros/ros.h
+-
+QApplication
+-
+Dashboard.h
+-
+

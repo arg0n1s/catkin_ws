@@ -41,11 +41,12 @@ void CarModel::steeringToAngle(){
 								steeringAngle = angleArray[steering+50];
 }
 
-const std::vector<double>& CarModel::getUpdate(const int newSteering, const double newVelocity){
-								double ds = velocity * timeStep;
+const std::vector<double>& CarModel::getUpdate(const int newSteering, const int newSpeed){
+                                //double ds = velocity * timeStep;
+                                double ds = speedToVelocity(newSpeed) * timeStep;
 								pose = fwdKin.getUpdate(fwdKin.degToRad(steeringAngle), ds);
 								distance += ds;
-								velocity = newVelocity;
+                                velocity = speedToVelocity(newSpeed);
 								setSteering(newSteering);
 								return pose;
 }
@@ -65,4 +66,14 @@ void CarModel::angleToSteering(const double alpha){
 																								}
 																}
 								}
+}
+
+const double CarModel::speedToVelocity(const int speed) const{
+    if(speed<=-10){
+        return velocityArray[0];
+    }else if(speed>=10){
+        return velocityArray[20];
+    }else{
+        return velocityArray[10+speed];
+    }
 }

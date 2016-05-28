@@ -7,15 +7,18 @@
 	<node pkg="simulation" type="simulation_node" name="simulation" output="screen"/>
 	<node pkg="simulation" type="scan_node" name="scan_simulation" output="screen"/>
 	<node pkg="simulation" type="usrange_node" name="usrange_simulation" output="screen"/>
+        <node pkg="simulation" type="dashboard_node" name="dashboard_simulation" output="screen"/>
 	<!-- Run the map server -->
 	<node name="map_server" pkg="map_server" type="map_server" args="$(find simulation)/data/map/map.yaml"/>
 	<!-- Run the navigation stack
 	<node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" />
-  -->
+        -->
 	<!-- Run AMCL
 	<include file="$(find simulation)/launch/amcl.launch"/>
 	-->
 	<!-- Show the Rviz visualization 	-->
 	<include file="$(find simulation)/launch/car_display.launch"/>
-	<node pkg="rqt_gui" type="rqt_gui" name="rqt" args="--perspective-file $(find simulation)/data/control/control.perspective"/>
+        <!-- add the double dash before "perspective"
+        <node pkg="rqt_gui" type="rqt_gui" name="rqt" args="perspective-file $(find simulation)/data/control/control.perspective"/>
+        -->
 </launch>

@@ -72,14 +72,39 @@ simulation/CMakeFiles/FWD_KIN.dir/src/ForwardKinematics.cpp.o.provides: simulati
 
 simulation/CMakeFiles/FWD_KIN.dir/src/ForwardKinematics.cpp.o.provides.build: simulation/CMakeFiles/FWD_KIN.dir/src/ForwardKinematics.cpp.o
 
+simulation/CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.o: simulation/CMakeFiles/FWD_KIN.dir/flags.make
+simulation/CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.o: simulation/FWD_KIN_automoc.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object simulation/CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.o"
+	cd /home/sebastian/catkin_ws/build/simulation && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.o -c /home/sebastian/catkin_ws/build/simulation/FWD_KIN_automoc.cpp
+
+simulation/CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.i"
+	cd /home/sebastian/catkin_ws/build/simulation && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sebastian/catkin_ws/build/simulation/FWD_KIN_automoc.cpp > CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.i
+
+simulation/CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.s"
+	cd /home/sebastian/catkin_ws/build/simulation && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sebastian/catkin_ws/build/simulation/FWD_KIN_automoc.cpp -o CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.s
+
+simulation/CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.o.requires:
+.PHONY : simulation/CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.o.requires
+
+simulation/CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.o.provides: simulation/CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.o.requires
+	$(MAKE) -f simulation/CMakeFiles/FWD_KIN.dir/build.make simulation/CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.o.provides.build
+.PHONY : simulation/CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.o.provides
+
+simulation/CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.o.provides.build: simulation/CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.o
+
 # Object files for target FWD_KIN
 FWD_KIN_OBJECTS = \
-"CMakeFiles/FWD_KIN.dir/src/ForwardKinematics.cpp.o"
+"CMakeFiles/FWD_KIN.dir/src/ForwardKinematics.cpp.o" \
+"CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.o"
 
 # External object files for target FWD_KIN
 FWD_KIN_EXTERNAL_OBJECTS =
 
 /home/sebastian/catkin_ws/devel/lib/libFWD_KIN.so: simulation/CMakeFiles/FWD_KIN.dir/src/ForwardKinematics.cpp.o
+/home/sebastian/catkin_ws/devel/lib/libFWD_KIN.so: simulation/CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.o
 /home/sebastian/catkin_ws/devel/lib/libFWD_KIN.so: simulation/CMakeFiles/FWD_KIN.dir/build.make
 /home/sebastian/catkin_ws/devel/lib/libFWD_KIN.so: simulation/CMakeFiles/FWD_KIN.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX shared library /home/sebastian/catkin_ws/devel/lib/libFWD_KIN.so"
@@ -90,6 +115,7 @@ simulation/CMakeFiles/FWD_KIN.dir/build: /home/sebastian/catkin_ws/devel/lib/lib
 .PHONY : simulation/CMakeFiles/FWD_KIN.dir/build
 
 simulation/CMakeFiles/FWD_KIN.dir/requires: simulation/CMakeFiles/FWD_KIN.dir/src/ForwardKinematics.cpp.o.requires
+simulation/CMakeFiles/FWD_KIN.dir/requires: simulation/CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.o.requires
 .PHONY : simulation/CMakeFiles/FWD_KIN.dir/requires
 
 simulation/CMakeFiles/FWD_KIN.dir/clean:

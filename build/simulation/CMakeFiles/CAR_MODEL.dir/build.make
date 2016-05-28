@@ -72,14 +72,39 @@ simulation/CMakeFiles/CAR_MODEL.dir/src/CarModel.cpp.o.provides: simulation/CMak
 
 simulation/CMakeFiles/CAR_MODEL.dir/src/CarModel.cpp.o.provides.build: simulation/CMakeFiles/CAR_MODEL.dir/src/CarModel.cpp.o
 
+simulation/CMakeFiles/CAR_MODEL.dir/CAR_MODEL_automoc.cpp.o: simulation/CMakeFiles/CAR_MODEL.dir/flags.make
+simulation/CMakeFiles/CAR_MODEL.dir/CAR_MODEL_automoc.cpp.o: simulation/CAR_MODEL_automoc.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object simulation/CMakeFiles/CAR_MODEL.dir/CAR_MODEL_automoc.cpp.o"
+	cd /home/sebastian/catkin_ws/build/simulation && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/CAR_MODEL.dir/CAR_MODEL_automoc.cpp.o -c /home/sebastian/catkin_ws/build/simulation/CAR_MODEL_automoc.cpp
+
+simulation/CMakeFiles/CAR_MODEL.dir/CAR_MODEL_automoc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CAR_MODEL.dir/CAR_MODEL_automoc.cpp.i"
+	cd /home/sebastian/catkin_ws/build/simulation && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sebastian/catkin_ws/build/simulation/CAR_MODEL_automoc.cpp > CMakeFiles/CAR_MODEL.dir/CAR_MODEL_automoc.cpp.i
+
+simulation/CMakeFiles/CAR_MODEL.dir/CAR_MODEL_automoc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CAR_MODEL.dir/CAR_MODEL_automoc.cpp.s"
+	cd /home/sebastian/catkin_ws/build/simulation && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sebastian/catkin_ws/build/simulation/CAR_MODEL_automoc.cpp -o CMakeFiles/CAR_MODEL.dir/CAR_MODEL_automoc.cpp.s
+
+simulation/CMakeFiles/CAR_MODEL.dir/CAR_MODEL_automoc.cpp.o.requires:
+.PHONY : simulation/CMakeFiles/CAR_MODEL.dir/CAR_MODEL_automoc.cpp.o.requires
+
+simulation/CMakeFiles/CAR_MODEL.dir/CAR_MODEL_automoc.cpp.o.provides: simulation/CMakeFiles/CAR_MODEL.dir/CAR_MODEL_automoc.cpp.o.requires
+	$(MAKE) -f simulation/CMakeFiles/CAR_MODEL.dir/build.make simulation/CMakeFiles/CAR_MODEL.dir/CAR_MODEL_automoc.cpp.o.provides.build
+.PHONY : simulation/CMakeFiles/CAR_MODEL.dir/CAR_MODEL_automoc.cpp.o.provides
+
+simulation/CMakeFiles/CAR_MODEL.dir/CAR_MODEL_automoc.cpp.o.provides.build: simulation/CMakeFiles/CAR_MODEL.dir/CAR_MODEL_automoc.cpp.o
+
 # Object files for target CAR_MODEL
 CAR_MODEL_OBJECTS = \
-"CMakeFiles/CAR_MODEL.dir/src/CarModel.cpp.o"
+"CMakeFiles/CAR_MODEL.dir/src/CarModel.cpp.o" \
+"CMakeFiles/CAR_MODEL.dir/CAR_MODEL_automoc.cpp.o"
 
 # External object files for target CAR_MODEL
 CAR_MODEL_EXTERNAL_OBJECTS =
 
 /home/sebastian/catkin_ws/devel/lib/libCAR_MODEL.so: simulation/CMakeFiles/CAR_MODEL.dir/src/CarModel.cpp.o
+/home/sebastian/catkin_ws/devel/lib/libCAR_MODEL.so: simulation/CMakeFiles/CAR_MODEL.dir/CAR_MODEL_automoc.cpp.o
 /home/sebastian/catkin_ws/devel/lib/libCAR_MODEL.so: simulation/CMakeFiles/CAR_MODEL.dir/build.make
 /home/sebastian/catkin_ws/devel/lib/libCAR_MODEL.so: simulation/CMakeFiles/CAR_MODEL.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX shared library /home/sebastian/catkin_ws/devel/lib/libCAR_MODEL.so"
@@ -90,6 +115,7 @@ simulation/CMakeFiles/CAR_MODEL.dir/build: /home/sebastian/catkin_ws/devel/lib/l
 .PHONY : simulation/CMakeFiles/CAR_MODEL.dir/build
 
 simulation/CMakeFiles/CAR_MODEL.dir/requires: simulation/CMakeFiles/CAR_MODEL.dir/src/CarModel.cpp.o.requires
+simulation/CMakeFiles/CAR_MODEL.dir/requires: simulation/CMakeFiles/CAR_MODEL.dir/CAR_MODEL_automoc.cpp.o.requires
 .PHONY : simulation/CMakeFiles/CAR_MODEL.dir/requires
 
 simulation/CMakeFiles/CAR_MODEL.dir/clean:

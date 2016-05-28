@@ -72,14 +72,39 @@ simulation/CMakeFiles/simulation_node.dir/src/simulation_control.cpp.o.provides:
 
 simulation/CMakeFiles/simulation_node.dir/src/simulation_control.cpp.o.provides.build: simulation/CMakeFiles/simulation_node.dir/src/simulation_control.cpp.o
 
+simulation/CMakeFiles/simulation_node.dir/simulation_node_automoc.cpp.o: simulation/CMakeFiles/simulation_node.dir/flags.make
+simulation/CMakeFiles/simulation_node.dir/simulation_node_automoc.cpp.o: simulation/simulation_node_automoc.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object simulation/CMakeFiles/simulation_node.dir/simulation_node_automoc.cpp.o"
+	cd /home/sebastian/catkin_ws/build/simulation && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/simulation_node.dir/simulation_node_automoc.cpp.o -c /home/sebastian/catkin_ws/build/simulation/simulation_node_automoc.cpp
+
+simulation/CMakeFiles/simulation_node.dir/simulation_node_automoc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulation_node.dir/simulation_node_automoc.cpp.i"
+	cd /home/sebastian/catkin_ws/build/simulation && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sebastian/catkin_ws/build/simulation/simulation_node_automoc.cpp > CMakeFiles/simulation_node.dir/simulation_node_automoc.cpp.i
+
+simulation/CMakeFiles/simulation_node.dir/simulation_node_automoc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulation_node.dir/simulation_node_automoc.cpp.s"
+	cd /home/sebastian/catkin_ws/build/simulation && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sebastian/catkin_ws/build/simulation/simulation_node_automoc.cpp -o CMakeFiles/simulation_node.dir/simulation_node_automoc.cpp.s
+
+simulation/CMakeFiles/simulation_node.dir/simulation_node_automoc.cpp.o.requires:
+.PHONY : simulation/CMakeFiles/simulation_node.dir/simulation_node_automoc.cpp.o.requires
+
+simulation/CMakeFiles/simulation_node.dir/simulation_node_automoc.cpp.o.provides: simulation/CMakeFiles/simulation_node.dir/simulation_node_automoc.cpp.o.requires
+	$(MAKE) -f simulation/CMakeFiles/simulation_node.dir/build.make simulation/CMakeFiles/simulation_node.dir/simulation_node_automoc.cpp.o.provides.build
+.PHONY : simulation/CMakeFiles/simulation_node.dir/simulation_node_automoc.cpp.o.provides
+
+simulation/CMakeFiles/simulation_node.dir/simulation_node_automoc.cpp.o.provides.build: simulation/CMakeFiles/simulation_node.dir/simulation_node_automoc.cpp.o
+
 # Object files for target simulation_node
 simulation_node_OBJECTS = \
-"CMakeFiles/simulation_node.dir/src/simulation_control.cpp.o"
+"CMakeFiles/simulation_node.dir/src/simulation_control.cpp.o" \
+"CMakeFiles/simulation_node.dir/simulation_node_automoc.cpp.o"
 
 # External object files for target simulation_node
 simulation_node_EXTERNAL_OBJECTS =
 
 /home/sebastian/catkin_ws/devel/lib/simulation/simulation_node: simulation/CMakeFiles/simulation_node.dir/src/simulation_control.cpp.o
+/home/sebastian/catkin_ws/devel/lib/simulation/simulation_node: simulation/CMakeFiles/simulation_node.dir/simulation_node_automoc.cpp.o
 /home/sebastian/catkin_ws/devel/lib/simulation/simulation_node: simulation/CMakeFiles/simulation_node.dir/build.make
 /home/sebastian/catkin_ws/devel/lib/simulation/simulation_node: /opt/ros/indigo/lib/libroslib.so
 /home/sebastian/catkin_ws/devel/lib/simulation/simulation_node: /opt/ros/indigo/lib/librospack.so
@@ -119,6 +144,7 @@ simulation/CMakeFiles/simulation_node.dir/build: /home/sebastian/catkin_ws/devel
 .PHONY : simulation/CMakeFiles/simulation_node.dir/build
 
 simulation/CMakeFiles/simulation_node.dir/requires: simulation/CMakeFiles/simulation_node.dir/src/simulation_control.cpp.o.requires
+simulation/CMakeFiles/simulation_node.dir/requires: simulation/CMakeFiles/simulation_node.dir/simulation_node_automoc.cpp.o.requires
 .PHONY : simulation/CMakeFiles/simulation_node.dir/requires
 
 simulation/CMakeFiles/simulation_node.dir/clean:

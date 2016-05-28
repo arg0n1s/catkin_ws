@@ -191,6 +191,9 @@ CMAKE_USE_RELATIVE_PATHS:BOOL=OFF
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Dependencies for the target
+DASH_LIB_DEPENDS:STATIC=general;Qt5::Widgets;general;Qt5::Core;general;Qt5::Gui;
+
 //Path to a program.
 DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
 
@@ -270,6 +273,42 @@ Project_BINARY_DIR:STATIC=/home/sebastian/catkin_ws/build
 
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=/home/sebastian/catkin_ws/src
+
+//The directory containing a CMake configuration file for Qt5Application.
+Qt5Application_DIR:PATH=Qt5Application_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for Qt5Core.
+Qt5Core_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Core
+
+//The directory containing a CMake configuration file for Qt5GUID.
+Qt5GUID_DIR:PATH=Qt5GUID_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for Qt5Gui.
+Qt5Gui_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui
+
+//The directory containing a CMake configuration file for Qt5QWidget.
+Qt5QWidget_DIR:PATH=Qt5QWidget_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for Qt5Qt5QtCore.
+Qt5Qt5QtCore_DIR:PATH=Qt5Qt5QtCore_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for Qt5QtCore.
+Qt5QtCore_DIR:PATH=Qt5QtCore_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for Qt5QtGui.
+Qt5QtGui_DIR:PATH=Qt5QtGui_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for Qt5QtWidget.
+Qt5QtWidget_DIR:PATH=Qt5QtWidget_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for Qt5Widget.
+Qt5Widget_DIR:PATH=Qt5Widget_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for Qt5Widgets.
+Qt5Widgets_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets
+
+//The directory containing a CMake configuration file for Qt5.
+Qt5_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5
 
 //Dependencies for target
 RAY_CAST_LIB_DEPENDS:STATIC=
@@ -361,6 +400,9 @@ nav_msgs_DIR:PATH=/opt/ros/indigo/share/nav_msgs/cmake
 
 //The directory containing a CMake configuration file for openCV.
 openCV_DIR:PATH=openCV_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for qt.
+qt_DIR:PATH=qt_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/indigo/share/rosconsole/cmake

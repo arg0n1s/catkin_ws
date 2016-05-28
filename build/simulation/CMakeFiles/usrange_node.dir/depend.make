@@ -113,3 +113,5 @@ simulation/CMakeFiles/usrange_node.dir/src/simulation_usscan.cpp.o: /opt/ros/ind
 simulation/CMakeFiles/usrange_node.dir/src/simulation_usscan.cpp.o: /opt/ros/indigo/include/tf2_ros/buffer_interface.h
 simulation/CMakeFiles/usrange_node.dir/src/simulation_usscan.cpp.o: /opt/ros/indigo/include/tf2_ros/transform_listener.h
 
+simulation/CMakeFiles/usrange_node.dir/usrange_node_automoc.cpp.o: simulation/usrange_node_automoc.cpp
+

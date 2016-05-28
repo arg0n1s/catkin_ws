@@ -72,14 +72,39 @@ simulation/CMakeFiles/scan_node.dir/src/simulation_laserscan.cpp.o.provides: sim
 
 simulation/CMakeFiles/scan_node.dir/src/simulation_laserscan.cpp.o.provides.build: simulation/CMakeFiles/scan_node.dir/src/simulation_laserscan.cpp.o
 
+simulation/CMakeFiles/scan_node.dir/scan_node_automoc.cpp.o: simulation/CMakeFiles/scan_node.dir/flags.make
+simulation/CMakeFiles/scan_node.dir/scan_node_automoc.cpp.o: simulation/scan_node_automoc.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object simulation/CMakeFiles/scan_node.dir/scan_node_automoc.cpp.o"
+	cd /home/sebastian/catkin_ws/build/simulation && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/scan_node.dir/scan_node_automoc.cpp.o -c /home/sebastian/catkin_ws/build/simulation/scan_node_automoc.cpp
+
+simulation/CMakeFiles/scan_node.dir/scan_node_automoc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scan_node.dir/scan_node_automoc.cpp.i"
+	cd /home/sebastian/catkin_ws/build/simulation && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sebastian/catkin_ws/build/simulation/scan_node_automoc.cpp > CMakeFiles/scan_node.dir/scan_node_automoc.cpp.i
+
+simulation/CMakeFiles/scan_node.dir/scan_node_automoc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scan_node.dir/scan_node_automoc.cpp.s"
+	cd /home/sebastian/catkin_ws/build/simulation && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sebastian/catkin_ws/build/simulation/scan_node_automoc.cpp -o CMakeFiles/scan_node.dir/scan_node_automoc.cpp.s
+
+simulation/CMakeFiles/scan_node.dir/scan_node_automoc.cpp.o.requires:
+.PHONY : simulation/CMakeFiles/scan_node.dir/scan_node_automoc.cpp.o.requires
+
+simulation/CMakeFiles/scan_node.dir/scan_node_automoc.cpp.o.provides: simulation/CMakeFiles/scan_node.dir/scan_node_automoc.cpp.o.requires
+	$(MAKE) -f simulation/CMakeFiles/scan_node.dir/build.make simulation/CMakeFiles/scan_node.dir/scan_node_automoc.cpp.o.provides.build
+.PHONY : simulation/CMakeFiles/scan_node.dir/scan_node_automoc.cpp.o.provides
+
+simulation/CMakeFiles/scan_node.dir/scan_node_automoc.cpp.o.provides.build: simulation/CMakeFiles/scan_node.dir/scan_node_automoc.cpp.o
+
 # Object files for target scan_node
 scan_node_OBJECTS = \
-"CMakeFiles/scan_node.dir/src/simulation_laserscan.cpp.o"
+"CMakeFiles/scan_node.dir/src/simulation_laserscan.cpp.o" \
+"CMakeFiles/scan_node.dir/scan_node_automoc.cpp.o"
 
 # External object files for target scan_node
 scan_node_EXTERNAL_OBJECTS =
 
 /home/sebastian/catkin_ws/devel/lib/simulation/scan_node: simulation/CMakeFiles/scan_node.dir/src/simulation_laserscan.cpp.o
+/home/sebastian/catkin_ws/devel/lib/simulation/scan_node: simulation/CMakeFiles/scan_node.dir/scan_node_automoc.cpp.o
 /home/sebastian/catkin_ws/devel/lib/simulation/scan_node: simulation/CMakeFiles/scan_node.dir/build.make
 /home/sebastian/catkin_ws/devel/lib/simulation/scan_node: /opt/ros/indigo/lib/libroslib.so
 /home/sebastian/catkin_ws/devel/lib/simulation/scan_node: /opt/ros/indigo/lib/librospack.so
@@ -146,6 +171,7 @@ simulation/CMakeFiles/scan_node.dir/build: /home/sebastian/catkin_ws/devel/lib/s
 .PHONY : simulation/CMakeFiles/scan_node.dir/build
 
 simulation/CMakeFiles/scan_node.dir/requires: simulation/CMakeFiles/scan_node.dir/src/simulation_laserscan.cpp.o.requires
+simulation/CMakeFiles/scan_node.dir/requires: simulation/CMakeFiles/scan_node.dir/scan_node_automoc.cpp.o.requires
 .PHONY : simulation/CMakeFiles/scan_node.dir/requires
 
 simulation/CMakeFiles/scan_node.dir/clean:

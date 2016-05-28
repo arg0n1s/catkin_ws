@@ -3,6 +3,6 @@ prefix=/home/sebastian/catkin_ws/devel
 Name: simulation
 Description: Description of simulation
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/sebastian/catkin_ws/devel/include
 Libs: -L/home/sebastian/catkin_ws/devel/lib 
-Requires: 
+Requires: message_runtime std_msgs

@@ -72,14 +72,39 @@ simulation/CMakeFiles/RAY_CAST.dir/src/Raycaster.cpp.o.provides: simulation/CMak
 
 simulation/CMakeFiles/RAY_CAST.dir/src/Raycaster.cpp.o.provides.build: simulation/CMakeFiles/RAY_CAST.dir/src/Raycaster.cpp.o
 
+simulation/CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.o: simulation/CMakeFiles/RAY_CAST.dir/flags.make
+simulation/CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.o: simulation/RAY_CAST_automoc.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object simulation/CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.o"
+	cd /home/sebastian/catkin_ws/build/simulation && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.o -c /home/sebastian/catkin_ws/build/simulation/RAY_CAST_automoc.cpp
+
+simulation/CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.i"
+	cd /home/sebastian/catkin_ws/build/simulation && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sebastian/catkin_ws/build/simulation/RAY_CAST_automoc.cpp > CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.i
+
+simulation/CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.s"
+	cd /home/sebastian/catkin_ws/build/simulation && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sebastian/catkin_ws/build/simulation/RAY_CAST_automoc.cpp -o CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.s
+
+simulation/CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.o.requires:
+.PHONY : simulation/CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.o.requires
+
+simulation/CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.o.provides: simulation/CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.o.requires
+	$(MAKE) -f simulation/CMakeFiles/RAY_CAST.dir/build.make simulation/CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.o.provides.build
+.PHONY : simulation/CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.o.provides
+
+simulation/CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.o.provides.build: simulation/CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.o
+
 # Object files for target RAY_CAST
 RAY_CAST_OBJECTS = \
-"CMakeFiles/RAY_CAST.dir/src/Raycaster.cpp.o"
+"CMakeFiles/RAY_CAST.dir/src/Raycaster.cpp.o" \
+"CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.o"
 
 # External object files for target RAY_CAST
 RAY_CAST_EXTERNAL_OBJECTS =
 
 /home/sebastian/catkin_ws/devel/lib/libRAY_CAST.so: simulation/CMakeFiles/RAY_CAST.dir/src/Raycaster.cpp.o
+/home/sebastian/catkin_ws/devel/lib/libRAY_CAST.so: simulation/CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.o
 /home/sebastian/catkin_ws/devel/lib/libRAY_CAST.so: simulation/CMakeFiles/RAY_CAST.dir/build.make
 /home/sebastian/catkin_ws/devel/lib/libRAY_CAST.so: simulation/CMakeFiles/RAY_CAST.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX shared library /home/sebastian/catkin_ws/devel/lib/libRAY_CAST.so"
@@ -90,6 +115,7 @@ simulation/CMakeFiles/RAY_CAST.dir/build: /home/sebastian/catkin_ws/devel/lib/li
 .PHONY : simulation/CMakeFiles/RAY_CAST.dir/build
 
 simulation/CMakeFiles/RAY_CAST.dir/requires: simulation/CMakeFiles/RAY_CAST.dir/src/Raycaster.cpp.o.requires
+simulation/CMakeFiles/RAY_CAST.dir/requires: simulation/CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.o.requires
 .PHONY : simulation/CMakeFiles/RAY_CAST.dir/requires
 
 simulation/CMakeFiles/RAY_CAST.dir/clean:
