@@ -45,7 +45,7 @@ double getYaw(geometry_msgs::Pose& laser){
                 q = q.normalize();
                 tf::Matrix3x3(q).getRPY(roll, pitch, yaw);
         }catch(std::exception ex) {
-                ROS_ERROR("%s", ex.what());
+                //ROS_ERROR("%s", ex.what());
         }
 
         if(!isnan(yaw)) {
@@ -92,7 +92,7 @@ int main(int argc, char **argv){
                 try{
                         laserPosition = *setLaserPosition(listener);
                 }catch(tf::TransformException ex) {
-                        ROS_ERROR("%s", ex.what());
+                        //ROS_ERROR("%s", ex.what());
                 }
                 gridPose = setGridPosition(laserPosition);
                 yaw = getYaw(laserPosition);

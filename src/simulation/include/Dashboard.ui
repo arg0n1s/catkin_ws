@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>487</width>
+    <height>472</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <widget class="QSlider" name="speedSlider">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>233</x>
       <y>60</y>
       <width>29</width>
       <height>211</height>
@@ -42,7 +42,7 @@
    <widget class="QSlider" name="steeringSlider">
     <property name="geometry">
      <rect>
-      <x>210</x>
+      <x>73</x>
       <y>350</y>
       <width>351</width>
       <height>29</height>
@@ -70,7 +70,7 @@
    <widget class="QPushButton" name="maxSpeed">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>233</x>
       <y>30</y>
       <width>31</width>
       <height>27</height>
@@ -83,7 +83,7 @@
    <widget class="QPushButton" name="minSpeed">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>233</x>
       <y>280</y>
       <width>31</width>
       <height>27</height>
@@ -96,7 +96,7 @@
    <widget class="QPushButton" name="zeroSpeed">
     <property name="geometry">
      <rect>
-      <x>410</x>
+      <x>273</x>
       <y>150</y>
       <width>31</width>
       <height>27</height>
@@ -109,7 +109,7 @@
    <widget class="QPushButton" name="minSteering">
     <property name="geometry">
      <rect>
-      <x>167</x>
+      <x>30</x>
       <y>350</y>
       <width>31</width>
       <height>27</height>
@@ -122,7 +122,7 @@
    <widget class="QPushButton" name="maxSteering">
     <property name="geometry">
      <rect>
-      <x>570</x>
+      <x>433</x>
       <y>350</y>
       <width>31</width>
       <height>27</height>
@@ -135,7 +135,7 @@
    <widget class="QPushButton" name="centerSteering">
     <property name="geometry">
      <rect>
-      <x>360</x>
+      <x>223</x>
       <y>380</y>
       <width>51</width>
       <height>27</height>
@@ -148,7 +148,7 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>203</x>
       <y>330</y>
       <width>91</width>
       <height>20</height>
@@ -161,7 +161,7 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>267</x>
+      <x>120</x>
       <y>160</y>
       <width>91</width>
       <height>20</height>
@@ -171,13 +171,80 @@
      <string>Speed Control</string>
     </property>
    </widget>
+   <widget class="QLCDNumber" name="speed">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>120</y>
+      <width>64</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="steering">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>320</y>
+      <width>64</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>320</y>
+      <width>58</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Deg</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>120</y>
+      <width>58</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>m/s</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>487</width>
      <height>24</height>
     </rect>
    </property>

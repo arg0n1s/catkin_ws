@@ -31,8 +31,11 @@ public:
 								void setSteering(const int steering);
 								const int getSteering() const;
 								const double getSteeringAngle() const;
-                                const double speedToVelocity(const int speed) const;
+                                void speedToVelocity(const int speed);
                                 const std::vector<double>& getUpdate(const int newSteering, const int newSpeed);
+                                const double getVelocity() const;
+                                void setAngularVelocity(const double yaw0, const double yaw1);
+                                const double getAngularVelocity() const;
 private:
 								ForwardKinematics fwdKin;
 								int steering;
@@ -41,6 +44,7 @@ private:
 								double velocity;
 								double distance;
 								std::vector<double> pose;
+                                double angularVelocity;
 
 								void steeringToAngle();
 };

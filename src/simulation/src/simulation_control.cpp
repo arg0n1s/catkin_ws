@@ -31,13 +31,14 @@ int main(int argc, char **argv){
         CarModel car(0.25, 1.0/loopRate);
         motion = geometry_msgs::Twist();
         control = simulation::ctrl_msg();
+        geometry_msgs::Twist telemetry;
         tf::TransformBroadcaster odom_broadcaster;
-        tf::TransformBroadcaster map_broadcaster;
-        tf::TransformBroadcaster laser_broadcaster;
 
         ros::Subscriber motionControl = nh.subscribe<geometry_msgs::Twist>("cmd_vel", 10, motionCommands);
         ros::Subscriber steeringControl = nh.subscribe<simulation::ctrl_msg>("robot_control", 10, controlCommands);
         ros::Publisher odomPub = nh.advertise<nav_msgs::Odometry>("odom", 10);
+        ros::Publisher telemetryPub = nh.advertise<geometry_msgs::Twist>("telemetry", 10);
+
 
         ros::Time currentTime = ros::Time::now();
         // Loop starts here:
@@ -46,7 +47,6 @@ int main(int argc, char **argv){
                 currentTime = ros::Time::now();
                 simPose = car.getUpdate(control.steering, control.speed);
                 geometry_msgs::Quaternion odom_quat = tf::createQuaternionMsgFromYaw(simPose[2]);
-                geometry_msgs::Quaternion map_quat =tf::createQuaternionMsgFromYaw(0.0);
 
                 // first, we'll publish the transform over tf
                 geometry_msgs::TransformStamped odom_trans;
@@ -72,15 +72,20 @@ int main(int argc, char **argv){
                 odom.pose.pose.orientation = odom_quat;
                 // set the velocity
                 odom.child_frame_id = "base_footprint";
-                odom.twist.twist.linear.x = motion.linear.x*std::cos(simPose[2]);
-                odom.twist.twist.linear.y = motion.linear.x*std::sin(simPose[2]);
+                odom.twist.twist.linear.x = car.getVelocity()*std::cos(simPose[2]);
+                odom.twist.twist.linear.y = car.getVelocity()*std::sin(simPose[2]);
                 // This doesn't make any sense when using steering commands as input.
                 // If this becomes relevant at any point, it should be calculated in the
                 // simulation.
-                odom.twist.twist.angular.z = motion.angular.z;
+                odom.twist.twist.angular.z = car.getAngularVelocity();
+
+                // Send Telemetry by misusing the twist msg..
+                telemetry.linear.x=car.getVelocity();
+                telemetry.angular.z=car.getSteeringAngle();
 
                 // publish the message
                 odomPub.publish(odom);
+                telemetryPub.publish(telemetry);
                 ros::spinOnce();
                 loop_rate.sleep();
         }

@@ -44,7 +44,7 @@ double getYaw(geometry_msgs::Pose& laser){
                 q = q.normalize();
                 tf::Matrix3x3(q).getRPY(roll, pitch, yaw);
         }catch(std::exception ex) {
-                ROS_ERROR("%s", ex.what());
+                //ROS_ERROR("%s", ex.what());
         }
 
         if(!isnan(yaw)) {
@@ -109,7 +109,7 @@ int main(int argc, char **argv){
                 try{
                         ussensorPosition = *setSensorPosition(listener, "front_sensor");
                 }catch(tf::TransformException ex) {
-                        ROS_ERROR("%s", ex.what());
+                        //ROS_ERROR("%s", ex.what());
                 }
                 gridPose = setGridPosition(ussensorPosition);
                 yaw = getYaw(ussensorPosition);
@@ -118,7 +118,7 @@ int main(int argc, char **argv){
                 try{
                         ussensorPosition = *setSensorPosition(listener, "left_sensor");
                 }catch(tf::TransformException ex) {
-                        ROS_ERROR("%s", ex.what());
+                       // ROS_ERROR("%s", ex.what());
                 }
                 gridPose = setGridPosition(ussensorPosition);
                 yaw = getYaw(ussensorPosition);
@@ -127,7 +127,7 @@ int main(int argc, char **argv){
                 try{
                         ussensorPosition = *setSensorPosition(listener,"right_sensor");
                 }catch(tf::TransformException ex) {
-                        ROS_ERROR("%s", ex.what());
+                       // ROS_ERROR("%s", ex.what());
                 }
                 gridPose = setGridPosition(ussensorPosition);
                 yaw = getYaw(ussensorPosition);

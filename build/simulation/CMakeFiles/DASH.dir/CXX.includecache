@@ -17,6 +17,8 @@ QtWidgets/QButtonGroup
 -
 QtWidgets/QHeaderView
 -
+QtWidgets/QLCDNumber
+-
 QtWidgets/QLabel
 -
 QtWidgets/QMainWindow
@@ -928,6 +930,10 @@ QtCore/qatomic_gcc.h
 QtCore/qatomic_unix.h
 -
 
+/usr/include/qt5/QtCore/qbitarray.h
+QtCore/qbytearray.h
+-
+
 /usr/include/qt5/QtCore/qbytearray.h
 QtCore/qrefcount.h
 -
@@ -1806,6 +1812,10 @@ qbuttongroup.h
 qheaderview.h
 /usr/include/qt5/QtWidgets/qheaderview.h
 
+/usr/include/qt5/QtWidgets/QLCDNumber
+qlcdnumber.h
+/usr/include/qt5/QtWidgets/qlcdnumber.h
+
 /usr/include/qt5/QtWidgets/QLabel
 qlabel.h
 /usr/include/qt5/QtWidgets/qlabel.h
@@ -1926,6 +1936,12 @@ QtWidgets/qabstractitemview.h
 
 /usr/include/qt5/QtWidgets/qlabel.h
 QtWidgets/qframe.h
+-
+
+/usr/include/qt5/QtWidgets/qlcdnumber.h
+QtWidgets/qframe.h
+-
+QtCore/qbitarray.h
 -
 
 /usr/include/qt5/QtWidgets/qmainwindow.h

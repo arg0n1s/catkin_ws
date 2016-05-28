@@ -16,6 +16,8 @@ CarModel::CarModel(const double dAxis, const double timeStep) : timeStep(timeSte
 								// start with stationary state
 								velocity = 0;
 								distance = 0;
+                                pose=std::vector<double>(3,0);
+                                angularVelocity = 0;
 
 }
 void CarModel::setSteering(const int steering){
@@ -42,11 +44,13 @@ void CarModel::steeringToAngle(){
 }
 
 const std::vector<double>& CarModel::getUpdate(const int newSteering, const int newSpeed){
-                                //double ds = velocity * timeStep;
-                                double ds = speedToVelocity(newSpeed) * timeStep;
+                                double ds = velocity * timeStep;
+                                //double ds = speedToVelocity(newSpeed) * timeStep;
+                                double oldYaw = pose[2];
 								pose = fwdKin.getUpdate(fwdKin.degToRad(steeringAngle), ds);
 								distance += ds;
-                                velocity = speedToVelocity(newSpeed);
+                                speedToVelocity(newSpeed);
+                                setAngularVelocity(oldYaw, pose[2]);
 								setSteering(newSteering);
 								return pose;
 }
@@ -68,12 +72,30 @@ void CarModel::angleToSteering(const double alpha){
 								}
 }
 
-const double CarModel::speedToVelocity(const int speed) const{
+void CarModel::speedToVelocity(const int speed) {
     if(speed<=-10){
-        return velocityArray[0];
+        velocity = velocityArray[0];
     }else if(speed>=10){
-        return velocityArray[20];
+        velocity = velocityArray[20];
     }else{
-        return velocityArray[10+speed];
+        velocity = velocityArray[10+speed];
     }
+}
+
+const double CarModel::getVelocity() const{
+    return velocity;
+}
+
+void CarModel::setAngularVelocity(const double yaw0, const double yaw1){
+    double dTh = yaw1-yaw0;
+    if(dTh<-fwdKin.PI){
+        dTh += 2*fwdKin.PI;
+    }else if(dTh>fwdKin.PI){
+        dTh -= 2*fwdKin.PI;
+    }
+    angularVelocity = dTh/timeStep;
+}
+
+const double CarModel::getAngularVelocity() const{
+    return angularVelocity;
 }

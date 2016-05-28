@@ -230,9 +230,6 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests-2.7
 
-//The directory containing a CMake configuration file for OpenCV2.
-OpenCV2_DIR:PATH=OpenCV2_DIR-NOTFOUND
-
 //Path where debug 3rdpaty OpenCV dependencies are located
 OpenCV_3RDPARTY_LIB_DIR_DBG:PATH=
 
@@ -253,18 +250,6 @@ OpenCV_LIB_DIR_OPT:PATH=
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python
 
-//Path to a file.
-PYTHON_INCLUDE_DIR:PATH=/usr/include/python2.7
-
-//Path to a file.
-PYTHON_INCLUDE_DIR2:PATH=/usr/include/x86_64-linux-gnu/python2.7
-
-//Path to a library.
-PYTHON_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpython2.7.so
-
-//Path to a library.
-PYTHON_LIBRARY_DEBUG:FILEPATH=PYTHON_LIBRARY_DEBUG-NOTFOUND
-
 //Specify specific Python version to use ('major.minor' or 'major')
 PYTHON_VERSION:STRING=
 
@@ -274,41 +259,14 @@ Project_BINARY_DIR:STATIC=/home/sebastian/catkin_ws/build
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=/home/sebastian/catkin_ws/src
 
-//The directory containing a CMake configuration file for Qt5Application.
-Qt5Application_DIR:PATH=Qt5Application_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for Qt5Core.
 Qt5Core_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Core
-
-//The directory containing a CMake configuration file for Qt5GUID.
-Qt5GUID_DIR:PATH=Qt5GUID_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for Qt5Gui.
 Qt5Gui_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui
 
-//The directory containing a CMake configuration file for Qt5QWidget.
-Qt5QWidget_DIR:PATH=Qt5QWidget_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for Qt5Qt5QtCore.
-Qt5Qt5QtCore_DIR:PATH=Qt5Qt5QtCore_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for Qt5QtCore.
-Qt5QtCore_DIR:PATH=Qt5QtCore_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for Qt5QtGui.
-Qt5QtGui_DIR:PATH=Qt5QtGui_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for Qt5QtWidget.
-Qt5QtWidget_DIR:PATH=Qt5QtWidget_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for Qt5Widget.
-Qt5Widget_DIR:PATH=Qt5Widget_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for Qt5Widgets.
 Qt5Widgets_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets
-
-//The directory containing a CMake configuration file for Qt5.
-Qt5_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5
 
 //Dependencies for target
 RAY_CAST_LIB_DEPENDS:STATIC=
@@ -398,12 +356,6 @@ message_runtime_DIR:PATH=/opt/ros/indigo/share/message_runtime/cmake
 //The directory containing a CMake configuration file for nav_msgs.
 nav_msgs_DIR:PATH=/opt/ros/indigo/share/nav_msgs/cmake
 
-//The directory containing a CMake configuration file for openCV.
-openCV_DIR:PATH=openCV_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for qt.
-qt_DIR:PATH=qt_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/indigo/share/rosconsole/cmake
 
@@ -428,9 +380,6 @@ roslib_DIR:PATH=/opt/ros/indigo/share/roslib/cmake
 //The directory containing a CMake configuration file for rospack.
 rospack_DIR:PATH=/opt/ros/indigo/share/rospack/cmake
 
-//The directory containing a CMake configuration file for rospkg.
-rospkg_DIR:PATH=rospkg_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for rospy.
 rospy_DIR:PATH=/opt/ros/indigo/share/rospy/cmake
 
@@ -442,9 +391,6 @@ sensor_msgs_DIR:PATH=/opt/ros/indigo/share/sensor_msgs/cmake
 
 //Value Computed by CMake
 simulation_BINARY_DIR:STATIC=/home/sebastian/catkin_ws/build/simulation
-
-//Dependencies for target
-simulation_LIB_DEPENDS:STATIC=
 
 //Value Computed by CMake
 simulation_SOURCE_DIR:STATIC=/home/sebastian/catkin_ws/src/simulation
@@ -619,8 +565,6 @@ COMPILER_SUPPORTS_CXX0X:INTERNAL=1
 COMPILER_SUPPORTS_CXX11:INTERNAL=1
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python][v2.7.6()]
-//Details about finding PythonLibs
-FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[/usr/lib/x86_64-linux-gnu/libpython2.7.so][/usr/include/python2.7;/usr/include/x86_64-linux-gnu/python2.7][v2.7.6()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 GTEST_FROM_SOURCE_FOUND:INTERNAL=TRUE
@@ -650,16 +594,8 @@ OpenCV_LIB_DIR_DBG-ADVANCED:INTERNAL=1
 OpenCV_LIB_DIR_OPT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PYTHON_INCLUDE_DIR
-PYTHON_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PYTHON_INCLUDE_DIR2
-PYTHON_INCLUDE_DIR2-ADVANCED:INTERNAL=1
 //This needs to be in PYTHONPATH when 'setup.py install' is called.
 //  And it needs to match.  But setuptools won't tell us where
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
-//ADVANCED property for variable: PYTHON_LIBRARY
-PYTHON_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PYTHON_LIBRARY_DEBUG
-PYTHON_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 

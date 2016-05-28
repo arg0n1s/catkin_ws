@@ -6,7 +6,8 @@ Dashboard::Dashboard(ros::NodeHandle* nh, QWidget *parent) :
 {
     ui->setupUi(this);
     ctrl_msg = control_msg();
-    commands = nh->advertise<simulation::ctrl_msg>("robot_control", 50);
+    commands = nh->advertise<simulation::ctrl_msg>("robot_control", 10);
+    robotInfo = nh->subscribe<geometry_msgs::Twist>("telemetry", 10, boost::bind(telemetryCallback, _1, ui));
 
     connect(ui->speedSlider, SIGNAL(valueChanged(int)), this, SLOT(valueChangedSpeed(int)));
     connect(ui->steeringSlider, SIGNAL(valueChanged(int)), this, SLOT(valueChangedSteering(int)));
@@ -16,11 +17,23 @@ Dashboard::Dashboard(ros::NodeHandle* nh, QWidget *parent) :
     connect(ui->maxSteering, SIGNAL(clicked()), this, SLOT(maxSteeringClicked()));
     connect(ui->minSteering, SIGNAL(clicked()), this, SLOT(minSteeringClicked()));
     connect(ui->centerSteering, SIGNAL(clicked()), this, SLOT(centerSteeringClicked()));
+
+    //timer = new QTimer(this);
+    //connect(timer, SIGNAL(timeout()), this, SLOT(setLCDDisplay()));
+    //timer->start(25);
+
 }
 
 Dashboard::~Dashboard()
 {
     delete ui;
+}
+
+void telemetryCallback(const geometry_msgs::Twist::ConstPtr& tele, Ui::Dashboard* ui){
+    ROS_INFO("Speed: %f / Steering Angle: %f", tele->linear.x, tele->angular.z);
+    ui->speed->display(tele->linear.x);
+    ui->steering->display(tele->angular.z);
+    ros::spinOnce();
 }
 
 void Dashboard::valueChangedSpeed(int value){

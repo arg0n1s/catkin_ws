@@ -28,10 +28,11 @@ public:
 								Eigen::Matrix4d* calcRot(double theta, double alpha);
 								Eigen::Matrix4d* calcTrans(double radius, double distance, double alpha, std::pair<double, double> ICC);
 								std::vector<double>& getUpdate(double alpha, double distance);
+                                double PI;
 
 private:
 								double k;
-								double PI;
+
 								Eigen::Matrix4d initT;
 								std::vector<Eigen::Matrix4d>T;
 								Eigen::Matrix4d prevT;

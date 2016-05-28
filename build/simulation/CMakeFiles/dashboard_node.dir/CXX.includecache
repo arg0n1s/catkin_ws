@@ -41,6 +41,10 @@ QApplication
 -
 Dashboard.h
 -
+signal.h
+-
+unistd.h
+-
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h

@@ -13,6 +13,8 @@ namespace Ui {
 class Dashboard;
 }
 
+void telemetryCallback(const geometry_msgs::Twist::ConstPtr& tele, Ui::Dashboard* ui);
+
 class Dashboard : public QMainWindow
 {
     Q_OBJECT
@@ -26,6 +28,9 @@ private:
     ros::NodeHandle* nh;
     control_msg ctrl_msg;
     ros::Publisher commands;
+    ros::Subscriber robotInfo;
+    QTimer *timer;
+
 private slots:
     void valueChangedSpeed(int value);
     void valueChangedSteering(int value);

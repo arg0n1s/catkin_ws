@@ -3,6 +3,7 @@
 
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: simulation/DASH_automoc.cpp
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: simulation/moc_Dashboard.cpp
+simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /home/sebastian/catkin_ws/devel/include/simulation/ctrl_msg.h
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /home/sebastian/catkin_ws/src/simulation/include/Dashboard.h
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h
@@ -62,6 +63,7 @@ simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /opt/ros/indigo/include/ros/t
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /opt/ros/indigo/include/ros/wall_timer.h
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /opt/ros/indigo/include/ros/wall_timer_options.h
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /opt/ros/indigo/include/rosconsole/macros_generated.h
+simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /opt/ros/indigo/include/std_msgs/Header.h
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /usr/include/qt5/QtCore/qalgorithms.h
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /usr/include/qt5/QtCore/qarraydata.h
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /usr/include/qt5/QtCore/qatomic.h
@@ -262,6 +264,7 @@ simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtCore/
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtCore/qatomic_vxworks.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtCore/qatomic_x86.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtCore/qbasicatomic.h
+simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtCore/qbitarray.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtCore/qbytearray.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtCore/qchar.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtCore/qcompilerdetection.h
@@ -356,6 +359,7 @@ simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidge
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/QApplication
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/QButtonGroup
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/QHeaderView
+simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/QLCDNumber
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/QLabel
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/QMainWindow
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/QMenuBar
@@ -377,6 +381,7 @@ simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidge
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/qframe.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/qheaderview.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/qlabel.h
+simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/qlcdnumber.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/qmainwindow.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/qmenu.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/qmenubar.h
