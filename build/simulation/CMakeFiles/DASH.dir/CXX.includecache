@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/home/sebastian/catkin_ws/build/simulation/DASH_automoc.cpp
+moc_Dashboard.cpp
+/home/sebastian/catkin_ws/build/simulation/moc_Dashboard.cpp
+
+/home/sebastian/catkin_ws/build/simulation/moc_Dashboard.cpp
+../../src/simulation/include/Dashboard.h
+/home/sebastian/catkin_ws/src/simulation/include/Dashboard.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
 /home/sebastian/catkin_ws/build/simulation/ui_Dashboard.h
 QtCore/QVariant
 -
@@ -66,6 +78,8 @@ ros/ros.h
 geometry_msgs/Twist.h
 -
 simulation/ctrl_msg.h
+-
+QTimer
 -
 
 /opt/ros/indigo/include/XmlRpcDecl.h
@@ -764,6 +778,10 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
+/usr/include/qt5/QtCore/QTimer
+qtimer.h
+/usr/include/qt5/QtCore/qtimer.h
+
 /usr/include/qt5/QtCore/QVariant
 qvariant.h
 /usr/include/qt5/QtCore/qvariant.h
@@ -928,6 +946,12 @@ QtCore/qatomic_cxx11.h
 QtCore/qatomic_gcc.h
 -
 QtCore/qatomic_unix.h
+-
+
+/usr/include/qt5/QtCore/qbasictimer.h
+QtCore/qglobal.h
+-
+QtCore/qnamespace.h
 -
 
 /usr/include/qt5/QtCore/qbitarray.h
@@ -1422,6 +1446,14 @@ QtCore/qlocale.h
 QtCore/qscopedpointer.h
 -
 stdio.h
+-
+
+/usr/include/qt5/QtCore/qtimer.h
+QtCore/qglobal.h
+-
+QtCore/qbasictimer.h
+-
+QtCore/qobject.h
 -
 
 /usr/include/qt5/QtCore/qtypeinfo.h

@@ -33,6 +33,8 @@ geometry_msgs/Twist.h
 -
 simulation/ctrl_msg.h
 -
+QTimer
+-
 
 /home/sebastian/catkin_ws/src/simulation/src/simulation_dashboard.cpp
 ros/ros.h
@@ -742,6 +744,10 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
+/usr/include/qt5/QtCore/QTimer
+qtimer.h
+/usr/include/qt5/QtCore/qtimer.h
+
 /usr/include/qt5/QtCore/qalgorithms.h
 QtCore/qglobal.h
 -
@@ -892,6 +898,12 @@ QtCore/qatomic_cxx11.h
 QtCore/qatomic_gcc.h
 -
 QtCore/qatomic_unix.h
+-
+
+/usr/include/qt5/QtCore/qbasictimer.h
+QtCore/qglobal.h
+-
+QtCore/qnamespace.h
 -
 
 /usr/include/qt5/QtCore/qbytearray.h
@@ -1360,6 +1372,14 @@ QtCore/qlocale.h
 QtCore/qscopedpointer.h
 -
 stdio.h
+-
+
+/usr/include/qt5/QtCore/qtimer.h
+QtCore/qglobal.h
+-
+QtCore/qbasictimer.h
+-
+QtCore/qobject.h
 -
 
 /usr/include/qt5/QtCore/qtypeinfo.h

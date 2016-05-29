@@ -5,6 +5,7 @@
 #include <ros/ros.h>
 #include <geometry_msgs/Twist.h>
 #include <simulation/ctrl_msg.h>
+#include <QTimer>
 
 typedef geometry_msgs::Twist twist_msg;
 typedef simulation::ctrl_msg control_msg;
@@ -40,6 +41,7 @@ private slots:
     void maxSteeringClicked();
     void minSteeringClicked();
     void centerSteeringClicked();
+    void pollNodeHandle();
 };
 
 #endif // DASHBOARD_H

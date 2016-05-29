@@ -18,9 +18,9 @@ Dashboard::Dashboard(ros::NodeHandle* nh, QWidget *parent) :
     connect(ui->minSteering, SIGNAL(clicked()), this, SLOT(minSteeringClicked()));
     connect(ui->centerSteering, SIGNAL(clicked()), this, SLOT(centerSteeringClicked()));
 
-    //timer = new QTimer(this);
-    //connect(timer, SIGNAL(timeout()), this, SLOT(setLCDDisplay()));
-    //timer->start(25);
+    timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(pollNodeHandle()));
+    timer->start(20);
 
 }
 
@@ -34,6 +34,11 @@ void telemetryCallback(const geometry_msgs::Twist::ConstPtr& tele, Ui::Dashboard
     ui->speed->display(tele->linear.x);
     ui->steering->display(tele->angular.z);
     ros::spinOnce();
+}
+
+void Dashboard::pollNodeHandle(){
+    ros::spinOnce();
+    timer->start(20);
 }
 
 void Dashboard::valueChangedSpeed(int value){
