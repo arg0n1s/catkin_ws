@@ -60,7 +60,7 @@ int main(int argc, char **argv){
         ros::init(argc, argv, "simulation_laserscan");
         ros::NodeHandle nh;
 
-        ros::Publisher scanPub = nh.advertise<sensor_msgs::LaserScan>("scan", 10);
+        ros::Publisher scanPub = nh.advertise<sensor_msgs::LaserScan>("scan", 200);
         ros::Subscriber mapMetaData = nh.subscribe<nav_msgs::MapMetaData>("map_metadata", 10, callMapMetaData);
 
         sensor_msgs::LaserScan scan;

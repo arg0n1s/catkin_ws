@@ -10,9 +10,25 @@
         <node pkg="simulation" type="dashboard_node" name="dashboard_simulation" output="screen"/>
 	<!-- Run the map server -->
 	<node name="map_server" pkg="map_server" type="map_server" args="$(find simulation)/data/map/map.yaml"/>
-	<!-- Run the navigation stack
-	<node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" />
-        -->
+	<!-- Run the navigation stack -->
+	<node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" >
+
+			<!-- Planners -->
+			<param name="base_global_planner" value="SBPLLatticePlanner" />
+			<param name="base_local_planner" value="pose_follower/PoseFollower" />
+
+			<!-- Motion primitives file -->
+			<param name="SBPLLatticePlanner/primitive_filename" value="$(find simulation)/data/motion_primitives/apollo_13_motion_primitives.mprim" />
+	
+			<!-- Costmap parameters -->
+			<rosparam file="$(find simulation)/config/costmap_common_params.yaml" command="load" ns="global_costmap"/>
+			<rosparam file="$(find simulation)/config/costmap_common_params.yaml" command="load" ns="local_costmap"/>
+			<rosparam file="$(find simulation)/config/local_costmap_params.yaml" command="load"/>
+			<rosparam file="$(find simulation)/config/global_costmap_params.yaml" command="load"/>
+			<rosparam file="$(find simulation)/config/sbpl_global_params.yaml" command="load" />
+
+	</node>
+        
 	<!-- Run AMCL
 	<include file="$(find simulation)/launch/amcl.launch"/>
 	-->

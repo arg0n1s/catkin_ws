@@ -1,0 +1,8 @@
+prefix=/home/sebastian/catkin_ws/devel
+
+Name: sbpl
+Description: Description of sbpl
+Version: 0.0.0
+Cflags: -I/home/sebastian/catkin_ws/src/global_planner/sbpl/include
+Libs: -L/home/sebastian/catkin_ws/devel/lib -lsbpl
+Requires: 

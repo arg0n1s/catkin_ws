@@ -29,6 +29,12 @@ ForwardKinematics.h
 /home/sebastian/catkin_ws/src/simulation/include/ForwardKinematics.h
 iostream
 -
+geometry_msgs/Twist.h
+-
+memory.h
+-
+ros/ros.h
+-
 
 /home/sebastian/catkin_ws/src/simulation/include/Eigen/Eigen/Cholesky
 Core

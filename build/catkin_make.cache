@@ -1,2 +1,2 @@
-simulation
+global_planner/pose_follower:global_planner/sbpl:global_planner/sbpl_lattice_planner:simulation
 -DCATKIN_DEVEL_PREFIX=/home/sebastian/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/sebastian/catkin_ws/install -G Unix Makefiles

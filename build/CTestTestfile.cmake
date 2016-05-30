@@ -6,3 +6,6 @@
 # testing this directory and lists subdirectories to be tested as well.
 SUBDIRS(gtest)
 SUBDIRS(simulation)
+SUBDIRS(global_planner/sbpl)
+SUBDIRS(global_planner/pose_follower)
+SUBDIRS(global_planner/sbpl_lattice_planner)

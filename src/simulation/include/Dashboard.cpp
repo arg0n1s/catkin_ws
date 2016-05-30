@@ -30,7 +30,6 @@ Dashboard::~Dashboard()
 }
 
 void telemetryCallback(const geometry_msgs::Twist::ConstPtr& tele, Ui::Dashboard* ui){
-    ROS_INFO("Speed: %f / Steering Angle: %f", tele->linear.x, tele->angular.z);
     ui->speed->display(tele->linear.x);
     ui->steering->display(tele->angular.z);
     ros::spinOnce();

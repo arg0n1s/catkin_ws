@@ -6,18 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/sebastian/catkin_ws/build/simulation/DASH_automoc.cpp
-moc_Dashboard.cpp
-/home/sebastian/catkin_ws/build/simulation/moc_Dashboard.cpp
-
-/home/sebastian/catkin_ws/build/simulation/moc_Dashboard.cpp
-../../src/simulation/include/Dashboard.h
-/home/sebastian/catkin_ws/src/simulation/include/Dashboard.h
-QtCore/qbytearray.h
--
-QtCore/qmetatype.h
--
-
 /home/sebastian/catkin_ws/build/simulation/ui_Dashboard.h
 QtCore/QVariant
 -

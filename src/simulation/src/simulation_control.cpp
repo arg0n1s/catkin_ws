@@ -7,7 +7,6 @@
 #include <tf/transform_broadcaster.h>
 #include <simulation/ctrl_msg.h>
 
-const double loopRate = 40.0;
 geometry_msgs::Twist motion;
 simulation::ctrl_msg control;
 std::vector<double>simPose;
@@ -27,8 +26,9 @@ int main(int argc, char **argv){
 
         ros::init(argc, argv, "simulation_control");
         ros::NodeHandle nh;
+        ros::Time currentTime = ros::Time::now();
 
-        CarModel car(0.25, 1.0/loopRate);
+        CarModel car(0.25, currentTime);
         motion = geometry_msgs::Twist();
         control = simulation::ctrl_msg();
         geometry_msgs::Twist telemetry;
@@ -40,12 +40,13 @@ int main(int argc, char **argv){
         ros::Publisher telemetryPub = nh.advertise<geometry_msgs::Twist>("telemetry", 10);
 
 
-        ros::Time currentTime = ros::Time::now();
+
         // Loop starts here:
-        ros::Rate loop_rate(loopRate);
+        ros::Rate loop_rate(30);
         while(ros::ok()) {
                 currentTime = ros::Time::now();
-                simPose = car.getUpdate(control.steering, control.speed);
+                simPose = *car.getUpdate(control.steering, control.speed, currentTime);
+                //simPose = *car.getUpdateTwist(motion, currentTime);
                 geometry_msgs::Quaternion odom_quat = tf::createQuaternionMsgFromYaw(simPose[2]);
 
                 // first, we'll publish the transform over tf
@@ -83,9 +84,11 @@ int main(int argc, char **argv){
                 telemetry.linear.x=car.getVelocity();
                 telemetry.angular.z=car.getSteeringAngle();
 
-                // publish the message
+                // publish the messages
                 odomPub.publish(odom);
                 telemetryPub.publish(telemetry);
+
+                //ROS_INFO("node duration: %lf ms", (ros::Time::now()-currentTime).toNSec()/bla);
                 ros::spinOnce();
                 loop_rate.sleep();
         }

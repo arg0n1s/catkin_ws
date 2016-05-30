@@ -118,6 +118,9 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   INCLUDE("/home/sebastian/catkin_ws/build/gtest/cmake_install.cmake")
   INCLUDE("/home/sebastian/catkin_ws/build/simulation/cmake_install.cmake")
+  INCLUDE("/home/sebastian/catkin_ws/build/global_planner/sbpl/cmake_install.cmake")
+  INCLUDE("/home/sebastian/catkin_ws/build/global_planner/pose_follower/cmake_install.cmake")
+  INCLUDE("/home/sebastian/catkin_ws/build/global_planner/sbpl_lattice_planner/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 
