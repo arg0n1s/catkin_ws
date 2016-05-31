@@ -8,6 +8,7 @@ FILE(REMOVE_RECURSE
   "simulation_node_automoc.cpp"
   "usrange_node_automoc.cpp"
   "CMakeFiles/simulation_generate_messages_lisp"
+  "/home/sebastian/catkin_ws/devel/share/common-lisp/ros/simulation/msg/telemetry_msg.lisp"
   "/home/sebastian/catkin_ws/devel/share/common-lisp/ros/simulation/msg/ctrl_msg.lisp"
 )
 

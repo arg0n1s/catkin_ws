@@ -1364,30 +1364,6 @@
       <Unit filename="/home/sebastian/catkin_ws/src/../../../../opt/ros/indigo/share/geometry_msgs/cmake/geometry_msgs-msg-extras.cmake">
           <Option virtualFolder="CMake Files\..\..\..\..\opt\ros\indigo\share\geometry_msgs\cmake\" />
       </Unit>
-      <Unit filename="/home/sebastian/catkin_ws/src/../../../../opt/ros/indigo/share/geometry_msgs/cmake/geometry_msgsConfig-version.cmake">
-          <Option virtualFolder="CMake Files\..\..\..\..\opt\ros\indigo\share\geometry_msgs\cmake\" />
-      </Unit>
-      <Unit filename="/home/sebastian/catkin_ws/src/../../../../opt/ros/indigo/share/geometry_msgs/cmake/geometry_msgsConfig.cmake">
-          <Option virtualFolder="CMake Files\..\..\..\..\opt\ros\indigo\share\geometry_msgs\cmake\" />
-      </Unit>
-      <Unit filename="/home/sebastian/catkin_ws/src/../../../../opt/ros/indigo/share/geometry_msgs/cmake/geometry_msgs-msg-extras.cmake">
-          <Option virtualFolder="CMake Files\..\..\..\..\opt\ros\indigo\share\geometry_msgs\cmake\" />
-      </Unit>
-      <Unit filename="/home/sebastian/catkin_ws/src/../../../../opt/ros/indigo/share/geometry_msgs/cmake/geometry_msgsConfig-version.cmake">
-          <Option virtualFolder="CMake Files\..\..\..\..\opt\ros\indigo\share\geometry_msgs\cmake\" />
-      </Unit>
-      <Unit filename="/home/sebastian/catkin_ws/src/../../../../opt/ros/indigo/share/geometry_msgs/cmake/geometry_msgsConfig.cmake">
-          <Option virtualFolder="CMake Files\..\..\..\..\opt\ros\indigo\share\geometry_msgs\cmake\" />
-      </Unit>
-      <Unit filename="/home/sebastian/catkin_ws/src/../../../../opt/ros/indigo/share/geometry_msgs/cmake/geometry_msgs-msg-extras.cmake">
-          <Option virtualFolder="CMake Files\..\..\..\..\opt\ros\indigo\share\geometry_msgs\cmake\" />
-      </Unit>
-      <Unit filename="/home/sebastian/catkin_ws/src/../../../../opt/ros/indigo/share/geometry_msgs/cmake/geometry_msgsConfig-version.cmake">
-          <Option virtualFolder="CMake Files\..\..\..\..\opt\ros\indigo\share\geometry_msgs\cmake\" />
-      </Unit>
-      <Unit filename="/home/sebastian/catkin_ws/src/../../../../opt/ros/indigo/share/geometry_msgs/cmake/geometry_msgsConfig.cmake">
-          <Option virtualFolder="CMake Files\..\..\..\..\opt\ros\indigo\share\geometry_msgs\cmake\" />
-      </Unit>
       <Unit filename="/home/sebastian/catkin_ws/src/../../../../opt/ros/indigo/share/geometry_msgs/cmake/geometry_msgs-msg-paths.cmake">
           <Option virtualFolder="CMake Files\..\..\..\..\opt\ros\indigo\share\geometry_msgs\cmake\" />
       </Unit>
@@ -1425,6 +1401,36 @@
           <Option virtualFolder="CMake Files\..\..\..\..\opt\ros\indigo\share\geometry_msgs\cmake\" />
       </Unit>
       <Unit filename="/home/sebastian/catkin_ws/src/../../../../opt/ros/indigo/share/geometry_msgs/cmake/geometry_msgs-msg-extras.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\opt\ros\indigo\share\geometry_msgs\cmake\" />
+      </Unit>
+      <Unit filename="/home/sebastian/catkin_ws/src/../../../../opt/ros/indigo/share/geometry_msgs/cmake/geometry_msgsConfig-version.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\opt\ros\indigo\share\geometry_msgs\cmake\" />
+      </Unit>
+      <Unit filename="/home/sebastian/catkin_ws/src/../../../../opt/ros/indigo/share/geometry_msgs/cmake/geometry_msgsConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\opt\ros\indigo\share\geometry_msgs\cmake\" />
+      </Unit>
+      <Unit filename="/home/sebastian/catkin_ws/src/../../../../opt/ros/indigo/share/geometry_msgs/cmake/geometry_msgs-msg-extras.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\opt\ros\indigo\share\geometry_msgs\cmake\" />
+      </Unit>
+      <Unit filename="/home/sebastian/catkin_ws/src/../../../../opt/ros/indigo/share/geometry_msgs/cmake/geometry_msgsConfig-version.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\opt\ros\indigo\share\geometry_msgs\cmake\" />
+      </Unit>
+      <Unit filename="/home/sebastian/catkin_ws/src/../../../../opt/ros/indigo/share/geometry_msgs/cmake/geometry_msgsConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\opt\ros\indigo\share\geometry_msgs\cmake\" />
+      </Unit>
+      <Unit filename="/home/sebastian/catkin_ws/src/../../../../opt/ros/indigo/share/geometry_msgs/cmake/geometry_msgs-msg-paths.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\opt\ros\indigo\share\geometry_msgs\cmake\" />
+      </Unit>
+      <Unit filename="/home/sebastian/catkin_ws/src/../../../../opt/ros/indigo/share/geometry_msgs/cmake/geometry_msgsConfig-version.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\opt\ros\indigo\share\geometry_msgs\cmake\" />
+      </Unit>
+      <Unit filename="/home/sebastian/catkin_ws/src/../../../../opt/ros/indigo/share/geometry_msgs/cmake/geometry_msgsConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\opt\ros\indigo\share\geometry_msgs\cmake\" />
+      </Unit>
+      <Unit filename="/home/sebastian/catkin_ws/src/../../../../opt/ros/indigo/share/geometry_msgs/cmake/geometry_msgs-msg-extras.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\opt\ros\indigo\share\geometry_msgs\cmake\" />
+      </Unit>
+      <Unit filename="/home/sebastian/catkin_ws/src/../../../../opt/ros/indigo/share/geometry_msgs/cmake/geometry_msgs-msg-paths.cmake">
           <Option virtualFolder="CMake Files\..\..\..\..\opt\ros\indigo\share\geometry_msgs\cmake\" />
       </Unit>
       <Unit filename="/home/sebastian/catkin_ws/src/../../../../opt/ros/indigo/share/actionlib_msgs/cmake/actionlib_msgsConfig-version.cmake">

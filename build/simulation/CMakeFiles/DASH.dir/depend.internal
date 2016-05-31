@@ -5,6 +5,7 @@ simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o
  /home/sebastian/catkin_ws/build/simulation/DASH_automoc.cpp
  /home/sebastian/catkin_ws/build/simulation/moc_Dashboard.cpp
  /home/sebastian/catkin_ws/devel/include/simulation/ctrl_msg.h
+ /home/sebastian/catkin_ws/devel/include/simulation/telemetry_msg.h
  /home/sebastian/catkin_ws/src/simulation/include/Dashboard.h
  /opt/ros/indigo/include/XmlRpcDecl.h
  /opt/ros/indigo/include/XmlRpcValue.h
@@ -151,6 +152,7 @@ simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o
  /usr/include/qt5/QtCore/qvariant.h
  /usr/include/qt5/QtCore/qvarlengtharray.h
  /usr/include/qt5/QtCore/qvector.h
+ /usr/include/qt5/QtGui/QKeyEvent
  /usr/include/qt5/QtGui/qbrush.h
  /usr/include/qt5/QtGui/qcolor.h
  /usr/include/qt5/QtGui/qcursor.h
@@ -182,6 +184,7 @@ simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o
  /home/sebastian/catkin_ws/build/simulation/ui_Dashboard.h
  /home/sebastian/catkin_ws/devel/include/simulation/ctrl_msg.h
+ /home/sebastian/catkin_ws/devel/include/simulation/telemetry_msg.h
  /home/sebastian/catkin_ws/src/simulation/include/Dashboard.cpp
  /home/sebastian/catkin_ws/src/simulation/include/Dashboard.h
  /opt/ros/indigo/include/XmlRpcDecl.h
@@ -336,6 +339,7 @@ simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o
  /usr/include/qt5/QtCore/qvariant.h
  /usr/include/qt5/QtCore/qvarlengtharray.h
  /usr/include/qt5/QtCore/qvector.h
+ /usr/include/qt5/QtGui/QKeyEvent
  /usr/include/qt5/QtGui/qbrush.h
  /usr/include/qt5/QtGui/qcolor.h
  /usr/include/qt5/QtGui/qcursor.h

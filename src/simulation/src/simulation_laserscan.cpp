@@ -41,13 +41,15 @@ double getYaw(geometry_msgs::Pose& laser){
         double roll, pitch, yaw;
         try{
                 tf::Quaternion q;
+                //q = q.normalize();
                 tf::quaternionMsgToTF(laser.orientation, q);
-                q = q.normalize();
+                //ROS_INFO("x %f y %f z %f w %f" ,laser.orientation.x, laser.orientation.y, laser.orientation.z, laser.orientation.w);
+                //q = q.normalize();
                 tf::Matrix3x3(q).getRPY(roll, pitch, yaw);
         }catch(std::exception ex) {
                 //ROS_ERROR("%s", ex.what());
         }
-
+        //ROS_INFO("YAW: %f", yaw);
         if(!isnan(yaw)) {
                 return rc::radToDeg(yaw);
         }else{
@@ -60,7 +62,7 @@ int main(int argc, char **argv){
         ros::init(argc, argv, "simulation_laserscan");
         ros::NodeHandle nh;
 
-        ros::Publisher scanPub = nh.advertise<sensor_msgs::LaserScan>("scan", 200);
+        ros::Publisher scanPub = nh.advertise<sensor_msgs::LaserScan>("scan", 10);
         ros::Subscriber mapMetaData = nh.subscribe<nav_msgs::MapMetaData>("map_metadata", 10, callMapMetaData);
 
         sensor_msgs::LaserScan scan;

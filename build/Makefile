@@ -371,6 +371,19 @@ _simulation_generate_messages_check_deps_ctrl_msg/fast:
 .PHONY : _simulation_generate_messages_check_deps_ctrl_msg/fast
 
 #=============================================================================
+# Target rules for targets named _simulation_generate_messages_check_deps_telemetry_msg
+
+# Build rule for target.
+_simulation_generate_messages_check_deps_telemetry_msg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _simulation_generate_messages_check_deps_telemetry_msg
+.PHONY : _simulation_generate_messages_check_deps_telemetry_msg
+
+# fast build rule for target.
+_simulation_generate_messages_check_deps_telemetry_msg/fast:
+	$(MAKE) -f simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/build.make simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/build
+.PHONY : _simulation_generate_messages_check_deps_telemetry_msg/fast
+
+#=============================================================================
 # Target rules for targets named actionlib_generate_messages_cpp
 
 # Build rule for target.
@@ -2465,6 +2478,7 @@ help:
 	@echo "... RAY_CAST"
 	@echo "... RAY_CAST_automoc"
 	@echo "... _simulation_generate_messages_check_deps_ctrl_msg"
+	@echo "... _simulation_generate_messages_check_deps_telemetry_msg"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... actionlib_generate_messages_lisp"
 	@echo "... actionlib_generate_messages_py"

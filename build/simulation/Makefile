@@ -276,6 +276,20 @@ _simulation_generate_messages_check_deps_ctrl_msg/fast:
 .PHONY : _simulation_generate_messages_check_deps_ctrl_msg/fast
 
 # Convenience name for target.
+simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/rule:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/rule
+.PHONY : simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/rule
+
+# Convenience name for target.
+_simulation_generate_messages_check_deps_telemetry_msg: simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/rule
+.PHONY : _simulation_generate_messages_check_deps_telemetry_msg
+
+# fast build rule for target.
+_simulation_generate_messages_check_deps_telemetry_msg/fast:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/build.make simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/build
+.PHONY : _simulation_generate_messages_check_deps_telemetry_msg/fast
+
+# Convenience name for target.
 simulation/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
 	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
 .PHONY : simulation/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
@@ -1304,6 +1318,7 @@ help:
 	@echo "... RAY_CAST"
 	@echo "... RAY_CAST_automoc"
 	@echo "... _simulation_generate_messages_check_deps_ctrl_msg"
+	@echo "... _simulation_generate_messages_check_deps_telemetry_msg"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... actionlib_generate_messages_lisp"
 	@echo "... actionlib_generate_messages_py"

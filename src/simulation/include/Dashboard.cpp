@@ -7,7 +7,8 @@ Dashboard::Dashboard(ros::NodeHandle* nh, QWidget *parent) :
     ui->setupUi(this);
     ctrl_msg = control_msg();
     commands = nh->advertise<simulation::ctrl_msg>("robot_control", 10);
-    robotInfo = nh->subscribe<geometry_msgs::Twist>("telemetry", 10, boost::bind(telemetryCallback, _1, ui));
+    //robotInfo = nh->subscribe<geometry_msgs::Twist>("telemetry", 10, boost::bind(telemetryCallback, _1, ui));
+    robotInfo = nh->subscribe<simulation::telemetry_msg>("telemetry", 10, boost::bind(telemetryCallback, _1, ui));
 
     connect(ui->speedSlider, SIGNAL(valueChanged(int)), this, SLOT(valueChangedSpeed(int)));
     connect(ui->steeringSlider, SIGNAL(valueChanged(int)), this, SLOT(valueChangedSteering(int)));
@@ -29,10 +30,65 @@ Dashboard::~Dashboard()
     delete ui;
 }
 
+void telemetryCallback(const simulation::telemetry_msg::ConstPtr& tele, Ui::Dashboard* ui){
+    ui->speed->display(tele->v_radial);
+    ui->steering->display(tele->steering_angle);
+    ui->v_x->display(tele->v_linear.x);
+    ui->v_y->display(tele->v_linear.y);
+    ui->v_angle->display(tele->v_angular.z);
+    ros::spinOnce();
+}
+/*
 void telemetryCallback(const geometry_msgs::Twist::ConstPtr& tele, Ui::Dashboard* ui){
     ui->speed->display(tele->linear.x);
     ui->steering->display(tele->angular.z);
     ros::spinOnce();
+}
+*/
+void Dashboard::keyPressEvent(QKeyEvent *event){
+    ctrl_msg.header.stamp = ros::Time::now();
+    int speed = ctrl_msg.speed;
+    int steering = ctrl_msg.steering;
+
+  switch ( event->key()){
+    case Qt::Key_W:{
+      if(speed<10){
+          ctrl_msg.speed = speed + 1;
+      }
+      break;
+    }
+
+
+    case  Qt::Key_S:{
+      if(speed>-10){
+          ctrl_msg.speed = speed - 1;
+      }
+      break;
+    }
+
+
+    case  Qt::Key_A:{
+      if(steering > -50){
+          ctrl_msg.steering = steering - 1;
+      }
+      break;
+    }
+
+
+    case Qt::Key_D:{
+      if(steering < 50){
+          ctrl_msg.steering  = steering + 1;
+      }
+      break;
+    }
+
+  }
+
+  ui->speedSlider->setValue(ctrl_msg.speed);
+  ui->steeringSlider->setValue(ctrl_msg.steering);
+
+  commands.publish(ctrl_msg);
+  ros::spinOnce();
 }
 
 void Dashboard::pollNodeHandle(){

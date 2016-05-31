@@ -4,6 +4,7 @@
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: simulation/DASH_automoc.cpp
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: simulation/moc_Dashboard.cpp
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /home/sebastian/catkin_ws/devel/include/simulation/ctrl_msg.h
+simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /home/sebastian/catkin_ws/devel/include/simulation/telemetry_msg.h
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /home/sebastian/catkin_ws/src/simulation/include/Dashboard.h
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h
@@ -150,6 +151,7 @@ simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /usr/include/qt5/QtCore/qurlq
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /usr/include/qt5/QtCore/qvariant.h
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /usr/include/qt5/QtCore/qvarlengtharray.h
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /usr/include/qt5/QtCore/qvector.h
+simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /usr/include/qt5/QtGui/QKeyEvent
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /usr/include/qt5/QtGui/qbrush.h
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /usr/include/qt5/QtGui/qcolor.h
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /usr/include/qt5/QtGui/qcursor.h
@@ -181,6 +183,7 @@ simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /usr/include/qt5/QtWidgets/qw
 
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: simulation/ui_Dashboard.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /home/sebastian/catkin_ws/devel/include/simulation/ctrl_msg.h
+simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /home/sebastian/catkin_ws/devel/include/simulation/telemetry_msg.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /home/sebastian/catkin_ws/src/simulation/include/Dashboard.cpp
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /home/sebastian/catkin_ws/src/simulation/include/Dashboard.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
@@ -335,6 +338,7 @@ simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtCore/
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtCore/qvariant.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtCore/qvarlengtharray.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtCore/qvector.h
+simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtGui/QKeyEvent
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtGui/qbrush.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtGui/qcolor.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtGui/qcursor.h

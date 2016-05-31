@@ -4,6 +4,7 @@
 simulation/CMakeFiles/dashboard_node.dir/dashboard_node_automoc.cpp.o: simulation/dashboard_node_automoc.cpp
 
 simulation/CMakeFiles/dashboard_node.dir/src/simulation_dashboard.cpp.o: /home/sebastian/catkin_ws/devel/include/simulation/ctrl_msg.h
+simulation/CMakeFiles/dashboard_node.dir/src/simulation_dashboard.cpp.o: /home/sebastian/catkin_ws/devel/include/simulation/telemetry_msg.h
 simulation/CMakeFiles/dashboard_node.dir/src/simulation_dashboard.cpp.o: /home/sebastian/catkin_ws/src/simulation/include/Dashboard.h
 simulation/CMakeFiles/dashboard_node.dir/src/simulation_dashboard.cpp.o: /home/sebastian/catkin_ws/src/simulation/src/simulation_dashboard.cpp
 simulation/CMakeFiles/dashboard_node.dir/src/simulation_dashboard.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
@@ -153,6 +154,7 @@ simulation/CMakeFiles/dashboard_node.dir/src/simulation_dashboard.cpp.o: /usr/in
 simulation/CMakeFiles/dashboard_node.dir/src/simulation_dashboard.cpp.o: /usr/include/qt5/QtCore/qvariant.h
 simulation/CMakeFiles/dashboard_node.dir/src/simulation_dashboard.cpp.o: /usr/include/qt5/QtCore/qvarlengtharray.h
 simulation/CMakeFiles/dashboard_node.dir/src/simulation_dashboard.cpp.o: /usr/include/qt5/QtCore/qvector.h
+simulation/CMakeFiles/dashboard_node.dir/src/simulation_dashboard.cpp.o: /usr/include/qt5/QtGui/QKeyEvent
 simulation/CMakeFiles/dashboard_node.dir/src/simulation_dashboard.cpp.o: /usr/include/qt5/QtGui/qbrush.h
 simulation/CMakeFiles/dashboard_node.dir/src/simulation_dashboard.cpp.o: /usr/include/qt5/QtGui/qcolor.h
 simulation/CMakeFiles/dashboard_node.dir/src/simulation_dashboard.cpp.o: /usr/include/qt5/QtGui/qcursor.h

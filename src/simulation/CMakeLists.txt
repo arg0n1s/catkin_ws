@@ -64,6 +64,7 @@ set( QT_USE_QTXML TRUE )
  add_message_files(
    FILES
    ctrl_msg.msg
+   telemetry_msg.msg
  )
 
 ## Generate services in the 'srv' folder
@@ -84,6 +85,7 @@ set( QT_USE_QTXML TRUE )
  generate_messages(
    DEPENDENCIES
   std_msgs
+  geometry_msgs
  )
 
 ################################################
@@ -118,7 +120,7 @@ set( QT_USE_QTXML TRUE )
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES simulation
-  CATKIN_DEPENDS message_runtime std_msgs
+  CATKIN_DEPENDS message_runtime std_msgs geometry_msgs
 )
 
 ###########

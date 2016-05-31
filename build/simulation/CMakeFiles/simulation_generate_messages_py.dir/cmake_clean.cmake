@@ -8,6 +8,7 @@ FILE(REMOVE_RECURSE
   "simulation_node_automoc.cpp"
   "usrange_node_automoc.cpp"
   "CMakeFiles/simulation_generate_messages_py"
+  "/home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg/_telemetry_msg.py"
   "/home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg/_ctrl_msg.py"
   "/home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg/__init__.py"
 )

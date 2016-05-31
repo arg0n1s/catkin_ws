@@ -4,8 +4,10 @@
 #include <QMainWindow>
 #include <ros/ros.h>
 #include <geometry_msgs/Twist.h>
+#include <simulation/telemetry_msg.h>
 #include <simulation/ctrl_msg.h>
 #include <QTimer>
+#include <QKeyEvent>
 
 typedef geometry_msgs::Twist twist_msg;
 typedef simulation::ctrl_msg control_msg;
@@ -14,7 +16,8 @@ namespace Ui {
 class Dashboard;
 }
 
-void telemetryCallback(const geometry_msgs::Twist::ConstPtr& tele, Ui::Dashboard* ui);
+//void telemetryCallback(const geometry_msgs::Twist::ConstPtr& tele, Ui::Dashboard* ui);
+void telemetryCallback(const simulation::telemetry_msg::ConstPtr& tele, Ui::Dashboard* ui);
 
 class Dashboard : public QMainWindow
 {
@@ -23,6 +26,7 @@ class Dashboard : public QMainWindow
 public:
     explicit Dashboard(ros::NodeHandle* nh, QWidget *parent = 0);
     ~Dashboard();
+    void keyPressEvent(QKeyEvent *event);
 
 private:
     Ui::Dashboard *ui;

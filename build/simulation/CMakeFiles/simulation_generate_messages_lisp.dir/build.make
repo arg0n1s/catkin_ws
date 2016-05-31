@@ -45,16 +45,26 @@ CMAKE_BINARY_DIR = /home/sebastian/catkin_ws/build
 # Include the progress variables for this target.
 include simulation/CMakeFiles/simulation_generate_messages_lisp.dir/progress.make
 
+simulation/CMakeFiles/simulation_generate_messages_lisp: /home/sebastian/catkin_ws/devel/share/common-lisp/ros/simulation/msg/telemetry_msg.lisp
 simulation/CMakeFiles/simulation_generate_messages_lisp: /home/sebastian/catkin_ws/devel/share/common-lisp/ros/simulation/msg/ctrl_msg.lisp
+
+/home/sebastian/catkin_ws/devel/share/common-lisp/ros/simulation/msg/telemetry_msg.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
+/home/sebastian/catkin_ws/devel/share/common-lisp/ros/simulation/msg/telemetry_msg.lisp: /home/sebastian/catkin_ws/src/simulation/msg/telemetry_msg.msg
+/home/sebastian/catkin_ws/devel/share/common-lisp/ros/simulation/msg/telemetry_msg.lisp: /opt/ros/indigo/share/geometry_msgs/cmake/../msg/Vector3.msg
+/home/sebastian/catkin_ws/devel/share/common-lisp/ros/simulation/msg/telemetry_msg.lisp: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from simulation/telemetry_msg.msg"
+	cd /home/sebastian/catkin_ws/build/simulation && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/sebastian/catkin_ws/src/simulation/msg/telemetry_msg.msg -Isimulation:/home/sebastian/catkin_ws/src/simulation/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -p simulation -o /home/sebastian/catkin_ws/devel/share/common-lisp/ros/simulation/msg
 
 /home/sebastian/catkin_ws/devel/share/common-lisp/ros/simulation/msg/ctrl_msg.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/sebastian/catkin_ws/devel/share/common-lisp/ros/simulation/msg/ctrl_msg.lisp: /home/sebastian/catkin_ws/src/simulation/msg/ctrl_msg.msg
 /home/sebastian/catkin_ws/devel/share/common-lisp/ros/simulation/msg/ctrl_msg.lisp: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from simulation/ctrl_msg.msg"
-	cd /home/sebastian/catkin_ws/build/simulation && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/sebastian/catkin_ws/src/simulation/msg/ctrl_msg.msg -Isimulation:/home/sebastian/catkin_ws/src/simulation/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p simulation -o /home/sebastian/catkin_ws/devel/share/common-lisp/ros/simulation/msg
+	cd /home/sebastian/catkin_ws/build/simulation && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/sebastian/catkin_ws/src/simulation/msg/ctrl_msg.msg -Isimulation:/home/sebastian/catkin_ws/src/simulation/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -p simulation -o /home/sebastian/catkin_ws/devel/share/common-lisp/ros/simulation/msg
 
 simulation_generate_messages_lisp: simulation/CMakeFiles/simulation_generate_messages_lisp
+simulation_generate_messages_lisp: /home/sebastian/catkin_ws/devel/share/common-lisp/ros/simulation/msg/telemetry_msg.lisp
 simulation_generate_messages_lisp: /home/sebastian/catkin_ws/devel/share/common-lisp/ros/simulation/msg/ctrl_msg.lisp
 simulation_generate_messages_lisp: simulation/CMakeFiles/simulation_generate_messages_lisp.dir/build.make
 .PHONY : simulation_generate_messages_lisp

@@ -5,6 +5,7 @@ simulation/CMakeFiles/simulation_node.dir/simulation_node_automoc.cpp.o
  /home/sebastian/catkin_ws/build/simulation/simulation_node_automoc.cpp
 simulation/CMakeFiles/simulation_node.dir/src/simulation_control.cpp.o
  /home/sebastian/catkin_ws/devel/include/simulation/ctrl_msg.h
+ /home/sebastian/catkin_ws/devel/include/simulation/telemetry_msg.h
  /home/sebastian/catkin_ws/src/simulation/include/CarModel.h
  /home/sebastian/catkin_ws/src/simulation/include/Eigen/Eigen/Cholesky
  /home/sebastian/catkin_ws/src/simulation/include/Eigen/Eigen/Core

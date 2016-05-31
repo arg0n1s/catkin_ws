@@ -8,6 +8,7 @@ FILE(REMOVE_RECURSE
   "simulation_node_automoc.cpp"
   "usrange_node_automoc.cpp"
   "CMakeFiles/simulation_generate_messages_cpp"
+  "/home/sebastian/catkin_ws/devel/include/simulation/telemetry_msg.h"
   "/home/sebastian/catkin_ws/devel/include/simulation/ctrl_msg.h"
 )
 

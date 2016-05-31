@@ -45,23 +45,34 @@ CMAKE_BINARY_DIR = /home/sebastian/catkin_ws/build
 # Include the progress variables for this target.
 include simulation/CMakeFiles/simulation_generate_messages_py.dir/progress.make
 
+simulation/CMakeFiles/simulation_generate_messages_py: /home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg/_telemetry_msg.py
 simulation/CMakeFiles/simulation_generate_messages_py: /home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg/_ctrl_msg.py
 simulation/CMakeFiles/simulation_generate_messages_py: /home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg/__init__.py
+
+/home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg/_telemetry_msg.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg/_telemetry_msg.py: /home/sebastian/catkin_ws/src/simulation/msg/telemetry_msg.msg
+/home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg/_telemetry_msg.py: /opt/ros/indigo/share/geometry_msgs/cmake/../msg/Vector3.msg
+/home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg/_telemetry_msg.py: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG simulation/telemetry_msg"
+	cd /home/sebastian/catkin_ws/build/simulation && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/sebastian/catkin_ws/src/simulation/msg/telemetry_msg.msg -Isimulation:/home/sebastian/catkin_ws/src/simulation/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -p simulation -o /home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg
 
 /home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg/_ctrl_msg.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg/_ctrl_msg.py: /home/sebastian/catkin_ws/src/simulation/msg/ctrl_msg.msg
 /home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg/_ctrl_msg.py: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG simulation/ctrl_msg"
-	cd /home/sebastian/catkin_ws/build/simulation && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/sebastian/catkin_ws/src/simulation/msg/ctrl_msg.msg -Isimulation:/home/sebastian/catkin_ws/src/simulation/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p simulation -o /home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg
+	cd /home/sebastian/catkin_ws/build/simulation && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/sebastian/catkin_ws/src/simulation/msg/ctrl_msg.msg -Isimulation:/home/sebastian/catkin_ws/src/simulation/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -p simulation -o /home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg
 
 /home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg/__init__.py: /home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg/_telemetry_msg.py
 /home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg/__init__.py: /home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg/_ctrl_msg.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python msg __init__.py for simulation"
 	cd /home/sebastian/catkin_ws/build/simulation && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg --initpy
 
 simulation_generate_messages_py: simulation/CMakeFiles/simulation_generate_messages_py
+simulation_generate_messages_py: /home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg/_telemetry_msg.py
 simulation_generate_messages_py: /home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg/_ctrl_msg.py
 simulation_generate_messages_py: /home/sebastian/catkin_ws/devel/lib/python2.7/dist-packages/simulation/msg/__init__.py
 simulation_generate_messages_py: simulation/CMakeFiles/simulation_generate_messages_py.dir/build.make

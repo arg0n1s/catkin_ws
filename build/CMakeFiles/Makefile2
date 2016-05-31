@@ -345,6 +345,7 @@ simulation/clean: simulation/CMakeFiles/FWD_KIN_automoc.dir/clean
 simulation/clean: simulation/CMakeFiles/RAY_CAST.dir/clean
 simulation/clean: simulation/CMakeFiles/RAY_CAST_automoc.dir/clean
 simulation/clean: simulation/CMakeFiles/_simulation_generate_messages_check_deps_ctrl_msg.dir/clean
+simulation/clean: simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/clean
 simulation/clean: simulation/CMakeFiles/actionlib_generate_messages_cpp.dir/clean
 simulation/clean: simulation/CMakeFiles/actionlib_generate_messages_lisp.dir/clean
 simulation/clean: simulation/CMakeFiles/actionlib_generate_messages_py.dir/clean
@@ -689,6 +690,37 @@ simulation/CMakeFiles/_simulation_generate_messages_check_deps_ctrl_msg.dir/clea
 
 # clean rule for target.
 clean: simulation/CMakeFiles/_simulation_generate_messages_check_deps_ctrl_msg.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir
+
+# All Build rule for target.
+simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/all:
+	$(MAKE) -f simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/build.make simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/depend
+	$(MAKE) -f simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/build.make simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles 
+	@echo "Built target _simulation_generate_messages_check_deps_telemetry_msg"
+.PHONY : simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/all
+
+# Build rule for subdir invocation for target.
+simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 0
+.PHONY : simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/rule
+
+# Convenience name for target.
+_simulation_generate_messages_check_deps_telemetry_msg: simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/rule
+.PHONY : _simulation_generate_messages_check_deps_telemetry_msg
+
+# clean rule for target.
+simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/clean:
+	$(MAKE) -f simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/build.make simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/clean
+.PHONY : simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/clean
+
+# clean rule for target.
+clean: simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -1489,7 +1521,7 @@ simulation/CMakeFiles/simulation_gencpp.dir/all: simulation/CMakeFiles/simulatio
 
 # Build rule for subdir invocation for target.
 simulation/CMakeFiles/simulation_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/simulation_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 0
 .PHONY : simulation/CMakeFiles/simulation_gencpp.dir/rule
@@ -1526,7 +1558,7 @@ all: simulation/CMakeFiles/simulation_generate_messages.dir/all
 
 # Build rule for subdir invocation for target.
 simulation/CMakeFiles/simulation_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/simulation_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 0
 .PHONY : simulation/CMakeFiles/simulation_generate_messages.dir/rule
@@ -1549,16 +1581,18 @@ clean: simulation/CMakeFiles/simulation_generate_messages.dir/clean
 
 # All Build rule for target.
 simulation/CMakeFiles/simulation_generate_messages_cpp.dir/all: simulation/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+simulation/CMakeFiles/simulation_generate_messages_cpp.dir/all: simulation/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+simulation/CMakeFiles/simulation_generate_messages_cpp.dir/all: simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/all
 simulation/CMakeFiles/simulation_generate_messages_cpp.dir/all: simulation/CMakeFiles/_simulation_generate_messages_check_deps_ctrl_msg.dir/all
 	$(MAKE) -f simulation/CMakeFiles/simulation_generate_messages_cpp.dir/build.make simulation/CMakeFiles/simulation_generate_messages_cpp.dir/depend
 	$(MAKE) -f simulation/CMakeFiles/simulation_generate_messages_cpp.dir/build.make simulation/CMakeFiles/simulation_generate_messages_cpp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles  87
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles  87 88
 	@echo "Built target simulation_generate_messages_cpp"
 .PHONY : simulation/CMakeFiles/simulation_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 simulation/CMakeFiles/simulation_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/simulation_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 0
 .PHONY : simulation/CMakeFiles/simulation_generate_messages_cpp.dir/rule
@@ -1580,17 +1614,19 @@ clean: simulation/CMakeFiles/simulation_generate_messages_cpp.dir/clean
 # Target rules for target simulation/CMakeFiles/simulation_generate_messages_lisp.dir
 
 # All Build rule for target.
+simulation/CMakeFiles/simulation_generate_messages_lisp.dir/all: simulation/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
 simulation/CMakeFiles/simulation_generate_messages_lisp.dir/all: simulation/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+simulation/CMakeFiles/simulation_generate_messages_lisp.dir/all: simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/all
 simulation/CMakeFiles/simulation_generate_messages_lisp.dir/all: simulation/CMakeFiles/_simulation_generate_messages_check_deps_ctrl_msg.dir/all
 	$(MAKE) -f simulation/CMakeFiles/simulation_generate_messages_lisp.dir/build.make simulation/CMakeFiles/simulation_generate_messages_lisp.dir/depend
 	$(MAKE) -f simulation/CMakeFiles/simulation_generate_messages_lisp.dir/build.make simulation/CMakeFiles/simulation_generate_messages_lisp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles  88
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles  89 90
 	@echo "Built target simulation_generate_messages_lisp"
 .PHONY : simulation/CMakeFiles/simulation_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 simulation/CMakeFiles/simulation_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/simulation_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 0
 .PHONY : simulation/CMakeFiles/simulation_generate_messages_lisp.dir/rule
@@ -1613,16 +1649,18 @@ clean: simulation/CMakeFiles/simulation_generate_messages_lisp.dir/clean
 
 # All Build rule for target.
 simulation/CMakeFiles/simulation_generate_messages_py.dir/all: simulation/CMakeFiles/std_msgs_generate_messages_py.dir/all
+simulation/CMakeFiles/simulation_generate_messages_py.dir/all: simulation/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+simulation/CMakeFiles/simulation_generate_messages_py.dir/all: simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/all
 simulation/CMakeFiles/simulation_generate_messages_py.dir/all: simulation/CMakeFiles/_simulation_generate_messages_check_deps_ctrl_msg.dir/all
 	$(MAKE) -f simulation/CMakeFiles/simulation_generate_messages_py.dir/build.make simulation/CMakeFiles/simulation_generate_messages_py.dir/depend
 	$(MAKE) -f simulation/CMakeFiles/simulation_generate_messages_py.dir/build.make simulation/CMakeFiles/simulation_generate_messages_py.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles  89 90
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles  91 92 93
 	@echo "Built target simulation_generate_messages_py"
 .PHONY : simulation/CMakeFiles/simulation_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 simulation/CMakeFiles/simulation_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/simulation_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 0
 .PHONY : simulation/CMakeFiles/simulation_generate_messages_py.dir/rule
@@ -1653,7 +1691,7 @@ simulation/CMakeFiles/simulation_genlisp.dir/all: simulation/CMakeFiles/simulati
 
 # Build rule for subdir invocation for target.
 simulation/CMakeFiles/simulation_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/simulation_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 0
 .PHONY : simulation/CMakeFiles/simulation_genlisp.dir/rule
@@ -1684,7 +1722,7 @@ simulation/CMakeFiles/simulation_genpy.dir/all: simulation/CMakeFiles/simulation
 
 # Build rule for subdir invocation for target.
 simulation/CMakeFiles/simulation_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/simulation_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 0
 .PHONY : simulation/CMakeFiles/simulation_genpy.dir/rule
@@ -1714,7 +1752,7 @@ simulation/CMakeFiles/simulation_node.dir/all: simulation/CMakeFiles/FWD_KIN.dir
 simulation/CMakeFiles/simulation_node.dir/all: simulation/CMakeFiles/simulation_node_automoc.dir/all
 	$(MAKE) -f simulation/CMakeFiles/simulation_node.dir/build.make simulation/CMakeFiles/simulation_node.dir/depend
 	$(MAKE) -f simulation/CMakeFiles/simulation_node.dir/build.make simulation/CMakeFiles/simulation_node.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles  91 92
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles  94 95
 	@echo "Built target simulation_node"
 .PHONY : simulation/CMakeFiles/simulation_node.dir/all
 
@@ -1724,7 +1762,7 @@ all: simulation/CMakeFiles/simulation_node.dir/all
 
 # Build rule for subdir invocation for target.
 simulation/CMakeFiles/simulation_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/simulation_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 0
 .PHONY : simulation/CMakeFiles/simulation_node.dir/rule
@@ -1749,7 +1787,7 @@ clean: simulation/CMakeFiles/simulation_node.dir/clean
 simulation/CMakeFiles/simulation_node_automoc.dir/all:
 	$(MAKE) -f simulation/CMakeFiles/simulation_node_automoc.dir/build.make simulation/CMakeFiles/simulation_node_automoc.dir/depend
 	$(MAKE) -f simulation/CMakeFiles/simulation_node_automoc.dir/build.make simulation/CMakeFiles/simulation_node_automoc.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles  93
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles  96
 	@echo "Built target simulation_node_automoc"
 .PHONY : simulation/CMakeFiles/simulation_node_automoc.dir/all
 
@@ -2060,7 +2098,7 @@ simulation/CMakeFiles/usrange_node.dir/all: simulation/CMakeFiles/RAY_CAST.dir/a
 simulation/CMakeFiles/usrange_node.dir/all: simulation/CMakeFiles/usrange_node_automoc.dir/all
 	$(MAKE) -f simulation/CMakeFiles/usrange_node.dir/build.make simulation/CMakeFiles/usrange_node.dir/depend
 	$(MAKE) -f simulation/CMakeFiles/usrange_node.dir/build.make simulation/CMakeFiles/usrange_node.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles  94 95
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles  97 98
 	@echo "Built target usrange_node"
 .PHONY : simulation/CMakeFiles/usrange_node.dir/all
 
@@ -2095,7 +2133,7 @@ clean: simulation/CMakeFiles/usrange_node.dir/clean
 simulation/CMakeFiles/usrange_node_automoc.dir/all:
 	$(MAKE) -f simulation/CMakeFiles/usrange_node_automoc.dir/build.make simulation/CMakeFiles/usrange_node_automoc.dir/depend
 	$(MAKE) -f simulation/CMakeFiles/usrange_node_automoc.dir/build.make simulation/CMakeFiles/usrange_node_automoc.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles  96
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles  99
 	@echo "Built target usrange_node_automoc"
 .PHONY : simulation/CMakeFiles/usrange_node_automoc.dir/all
 
@@ -3206,8 +3244,8 @@ clean: global_planner/sbpl_lattice_planner/CMakeFiles/_sbpl_lattice_planner_gene
 # Target rules for target global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner.dir
 
 # All Build rule for target.
-global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner.dir/all: global_planner/sbpl/CMakeFiles/sbpl.dir/all
 global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner.dir/all: global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_gencpp.dir/all
+global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner.dir/all: global_planner/sbpl/CMakeFiles/sbpl.dir/all
 	$(MAKE) -f global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner.dir/build.make global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner.dir/depend
 	$(MAKE) -f global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner.dir/build.make global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles  79
@@ -3273,9 +3311,9 @@ clean: global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_gencp
 # Target rules for target global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages.dir
 
 # All Build rule for target.
+global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages.dir/all: global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages_cpp.dir/all
 global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages.dir/all: global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages_lisp.dir/all
 global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages.dir/all: global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages_py.dir/all
-global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages.dir/all: global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages_cpp.dir/all
 	$(MAKE) -f global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages.dir/build.make global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages.dir/depend
 	$(MAKE) -f global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages.dir/build.make global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles 

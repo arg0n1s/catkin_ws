@@ -45,17 +45,28 @@ CMAKE_BINARY_DIR = /home/sebastian/catkin_ws/build
 # Include the progress variables for this target.
 include simulation/CMakeFiles/simulation_generate_messages_cpp.dir/progress.make
 
+simulation/CMakeFiles/simulation_generate_messages_cpp: /home/sebastian/catkin_ws/devel/include/simulation/telemetry_msg.h
 simulation/CMakeFiles/simulation_generate_messages_cpp: /home/sebastian/catkin_ws/devel/include/simulation/ctrl_msg.h
+
+/home/sebastian/catkin_ws/devel/include/simulation/telemetry_msg.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
+/home/sebastian/catkin_ws/devel/include/simulation/telemetry_msg.h: /home/sebastian/catkin_ws/src/simulation/msg/telemetry_msg.msg
+/home/sebastian/catkin_ws/devel/include/simulation/telemetry_msg.h: /opt/ros/indigo/share/geometry_msgs/cmake/../msg/Vector3.msg
+/home/sebastian/catkin_ws/devel/include/simulation/telemetry_msg.h: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
+/home/sebastian/catkin_ws/devel/include/simulation/telemetry_msg.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from simulation/telemetry_msg.msg"
+	cd /home/sebastian/catkin_ws/build/simulation && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/sebastian/catkin_ws/src/simulation/msg/telemetry_msg.msg -Isimulation:/home/sebastian/catkin_ws/src/simulation/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -p simulation -o /home/sebastian/catkin_ws/devel/include/simulation -e /opt/ros/indigo/share/gencpp/cmake/..
 
 /home/sebastian/catkin_ws/devel/include/simulation/ctrl_msg.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
 /home/sebastian/catkin_ws/devel/include/simulation/ctrl_msg.h: /home/sebastian/catkin_ws/src/simulation/msg/ctrl_msg.msg
 /home/sebastian/catkin_ws/devel/include/simulation/ctrl_msg.h: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
 /home/sebastian/catkin_ws/devel/include/simulation/ctrl_msg.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from simulation/ctrl_msg.msg"
-	cd /home/sebastian/catkin_ws/build/simulation && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/sebastian/catkin_ws/src/simulation/msg/ctrl_msg.msg -Isimulation:/home/sebastian/catkin_ws/src/simulation/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p simulation -o /home/sebastian/catkin_ws/devel/include/simulation -e /opt/ros/indigo/share/gencpp/cmake/..
+	cd /home/sebastian/catkin_ws/build/simulation && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/sebastian/catkin_ws/src/simulation/msg/ctrl_msg.msg -Isimulation:/home/sebastian/catkin_ws/src/simulation/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -p simulation -o /home/sebastian/catkin_ws/devel/include/simulation -e /opt/ros/indigo/share/gencpp/cmake/..
 
 simulation_generate_messages_cpp: simulation/CMakeFiles/simulation_generate_messages_cpp
+simulation_generate_messages_cpp: /home/sebastian/catkin_ws/devel/include/simulation/telemetry_msg.h
 simulation_generate_messages_cpp: /home/sebastian/catkin_ws/devel/include/simulation/ctrl_msg.h
 simulation_generate_messages_cpp: simulation/CMakeFiles/simulation_generate_messages_cpp.dir/build.make
 .PHONY : simulation_generate_messages_cpp
