@@ -3,7 +3,7 @@
   <link name="base_footprint">
     <visual>
       <geometry>
-        <box size=".46 .33 0"/>
+        <box size=".40 .20 0"/>
       </geometry>
       <material name="nothing">
         <color rgba="0 0 0 0"/>
@@ -14,7 +14,7 @@
   <link name="base_link">
     <visual>
       <geometry>
-        <box size=".46 .33 .18"/>
+        <box size=".40 .20 .18"/>
       </geometry>
       <material name="red">
         <color rgba="0 0 .8 .3"/>
@@ -34,7 +34,7 @@
         <box size=".066 .24 .066"/>
       </geometry>
       <material name="black">
-        <color rgba="0 0 0 .3"/>
+        <color rgba="0 0 0 .7"/>
       </material>
     </visual>
   </link>

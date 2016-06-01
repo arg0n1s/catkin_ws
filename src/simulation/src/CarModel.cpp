@@ -45,8 +45,8 @@ const pose_ptr CarModel::getUpdateTwist(const twist_msg cmdVel, const ros::Time&
 								distance += ds;
 								velocity = cmdVel.linear.x;
 								setAngularVelocity(oldYaw, pose[2]);
-								//angleToSteering(-cmdVel.angular.z);
-								steeringAngle = fwdKin.radToDeg(cmdVel.angular.z);
+								angleToSteering(fwdKin.radToDeg(cmdVel.angular.z));
+								//steeringAngle = fwdKin.radToDeg(cmdVel.angular.z);
 								//ROS_INFO("x: %lf / y: %lf / th: %lf / cmdVelx: %lf/ cmdAngz: %lf", pose[0], pose[1], pose[2], cmdVel.linear.x, cmdVel.angular.z);
 								return std::make_shared<std::vector<double> >(pose);
 }

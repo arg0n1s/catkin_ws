@@ -118,7 +118,7 @@ int main(int argc, char **argv){
                 try{
                         ussensorPosition = *setSensorPosition(listener, "left_sensor");
                 }catch(tf::TransformException ex) {
-                       // ROS_ERROR("%s", ex.what());
+                        // ROS_ERROR("%s", ex.what());
                 }
                 gridPose = setGridPosition(ussensorPosition);
                 yaw = getYaw(ussensorPosition);
@@ -127,7 +127,7 @@ int main(int argc, char **argv){
                 try{
                         ussensorPosition = *setSensorPosition(listener,"right_sensor");
                 }catch(tf::TransformException ex) {
-                       // ROS_ERROR("%s", ex.what());
+                        // ROS_ERROR("%s", ex.what());
                 }
                 gridPose = setGridPosition(ussensorPosition);
                 yaw = getYaw(ussensorPosition);

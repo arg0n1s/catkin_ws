@@ -21,31 +21,31 @@ void telemetryCallback(const simulation::telemetry_msg::ConstPtr& tele, Ui::Dash
 
 class Dashboard : public QMainWindow
 {
-    Q_OBJECT
+        Q_OBJECT
 
 public:
-    explicit Dashboard(ros::NodeHandle* nh, QWidget *parent = 0);
-    ~Dashboard();
-    void keyPressEvent(QKeyEvent *event);
+        explicit Dashboard(ros::NodeHandle* nh, QWidget *parent = 0);
+        ~Dashboard();
+        void keyPressEvent(QKeyEvent *event);
 
 private:
-    Ui::Dashboard *ui;
-    ros::NodeHandle* nh;
-    control_msg ctrl_msg;
-    ros::Publisher commands;
-    ros::Subscriber robotInfo;
-    QTimer *timer;
+        Ui::Dashboard *ui;
+        ros::NodeHandle* nh;
+        control_msg ctrl_msg;
+        ros::Publisher commands;
+        ros::Subscriber robotInfo;
+        QTimer *timer;
 
 private slots:
-    void valueChangedSpeed(int value);
-    void valueChangedSteering(int value);
-    void maxSpeedClicked();
-    void minSpeedClicked();
-    void zeroSpeedClicked();
-    void maxSteeringClicked();
-    void minSteeringClicked();
-    void centerSteeringClicked();
-    void pollNodeHandle();
+        void valueChangedSpeed(int value);
+        void valueChangedSteering(int value);
+        void maxSpeedClicked();
+        void minSpeedClicked();
+        void zeroSpeedClicked();
+        void maxSteeringClicked();
+        void minSteeringClicked();
+        void centerSteeringClicked();
+        void pollNodeHandle();
 };
 
 #endif // DASHBOARD_H

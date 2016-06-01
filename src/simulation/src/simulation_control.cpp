@@ -23,7 +23,6 @@ void motionCommands(const geometry_msgs::Twist::ConstPtr& motionCMD)
 void controlCommands(const simulation::ctrl_msg::ConstPtr& ctrlCMD)
 {
         control = *ctrlCMD;
-        ROS_INFO("Gui lenkt: %d", control.steering);
         sbplFlag = 0;
 }
 
@@ -57,7 +56,6 @@ int main(int argc, char **argv){
                         simPose = *car.getUpdateTwist(motion, currentTime);
                 }
 
-                //simPose = *car.getUpdateTwist(motion, currentTime);
                 geometry_msgs::Quaternion odom_quat = tf::createQuaternionMsgFromYaw(simPose[2]);
 
                 // first, we'll publish the transform over tf
@@ -86,12 +84,9 @@ int main(int argc, char **argv){
                 odom.child_frame_id = "base_footprint";
                 odom.twist.twist.linear.x = car.getVelocity()*std::cos(simPose[2]);
                 odom.twist.twist.linear.y = car.getVelocity()*std::sin(simPose[2]);
-                // This doesn't make any sense when using steering commands as input.
-                // If this becomes relevant at any point, it should be calculated in the
-                // simulation.
                 odom.twist.twist.angular.z = car.getAngularVelocity();
 
-                // Send Telemetry by misusing the twist msg..
+                // Send Telemetry
                 telemetry.header.stamp = currentTime;
                 telemetry.steering = car.getSteering();
                 //telemetry.speed = car.getSpeed();
@@ -105,7 +100,6 @@ int main(int argc, char **argv){
                 odomPub.publish(odom);
                 telemetryPub.publish(telemetry);
 
-                //ROS_INFO("node duration: %lf ms", (ros::Time::now()-currentTime).toNSec()/bla);
                 ros::spinOnce();
                 loop_rate.sleep();
         }
