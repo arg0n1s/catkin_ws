@@ -43,6 +43,8 @@ stdexcept
 -
 sensor_msgs/Range.h
 -
+yaml-cpp/yaml.h
+-
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h

@@ -9,6 +9,7 @@
 #include <string>
 #include <stdexcept>
 #include <sensor_msgs/Range.h>
+#include <yaml-cpp/yaml.h>
 
 typedef std::shared_ptr<sensor_msgs::LaserScan> scan_msg_ptr;
 typedef std::shared_ptr<geometry_msgs::Pose> pose_msg_ptr;
@@ -16,9 +17,28 @@ typedef std::shared_ptr<geometry_msgs::Pose> pose_msg_ptr;
 const double loopRate = 40.0;
 nav_msgs::MapMetaData mapInfo;
 
-void callMapMetaData(const nav_msgs::MapMetaData::ConstPtr& mapData)
-{
-        mapInfo = *mapData;
+namespace YAML {
+template<>
+struct convert<geometry_msgs::Pose> {
+        static Node encode(const geometry_msgs::Pose& rhs) {
+                Node node;
+                node.push_back(rhs.position.x);
+                node.push_back(rhs.position.y);
+                node.push_back(rhs.position.z);
+                return node;
+        }
+
+        static bool decode(const Node& node, geometry_msgs::Pose& rhs) {
+                if(!node.IsSequence() || node.size() != 3) {
+                        return false;
+                }
+
+                rhs.position.x = node[0].as<double>();
+                rhs.position.y = node[1].as<double>();
+                rhs.position.z = node[2].as<double>();
+                return true;
+        }
+};
 }
 
 pose_msg_ptr setLaserPosition(const tf::TransformListener& listener){
@@ -63,9 +83,15 @@ int main(int argc, char **argv){
         ros::NodeHandle nh;
 
         ros::Publisher scanPub = nh.advertise<sensor_msgs::LaserScan>("scan", 10);
-        ros::Subscriber mapMetaData = nh.subscribe<nav_msgs::MapMetaData>("map_metadata", 10, callMapMetaData);
 
         sensor_msgs::LaserScan scan;
+
+        std::string imgMetaPath = ros::package::getPath("simulation") + "/data/map/map.yaml";
+        YAML::Node imgMetaInfo = YAML::LoadFile(imgMetaPath);
+        double resolution = imgMetaInfo["resolution"].as<double>();
+        geometry_msgs::Pose origin = imgMetaInfo["origin"].as<geometry_msgs::Pose>();
+        mapInfo.origin = origin;
+        mapInfo.resolution = resolution;
 
         std::string imagePath = ros::package::getPath("simulation") + "/data/map/map.pgm";
         cv::Mat map = cv::imread(imagePath,1);
