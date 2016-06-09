@@ -1,13 +1,15 @@
 /home/sebastian/catkin_ws/build/simulation/CMakeFiles/CAR_MODEL.dir
 /home/sebastian/catkin_ws/build/simulation/CMakeFiles/CAR_MODEL_automoc.dir
+/home/sebastian/catkin_ws/build/automap/CMakeFiles/CONTOUR.dir
 /home/sebastian/catkin_ws/build/simulation/CMakeFiles/DASH.dir
 /home/sebastian/catkin_ws/build/simulation/CMakeFiles/DASH_automoc.dir
+/home/sebastian/catkin_ws/build/automap/CMakeFiles/EDGES.dir
 /home/sebastian/catkin_ws/build/simulation/CMakeFiles/FWD_KIN.dir
 /home/sebastian/catkin_ws/build/simulation/CMakeFiles/FWD_KIN_automoc.dir
 /home/sebastian/catkin_ws/build/CMakeFiles/Project_OTHER_FILES.dir
 /home/sebastian/catkin_ws/build/simulation/CMakeFiles/RAY_CAST.dir
 /home/sebastian/catkin_ws/build/simulation/CMakeFiles/RAY_CAST_automoc.dir
-/home/sebastian/catkin_ws/build/global_planner/pose_follower/CMakeFiles/_catkin_empty_exported_target.dir
+/home/sebastian/catkin_ws/build/automap/CMakeFiles/_catkin_empty_exported_target.dir
 /home/sebastian/catkin_ws/build/global_planner/sbpl_lattice_planner/CMakeFiles/_sbpl_lattice_planner_generate_messages_check_deps_SBPLLatticePlannerStats.dir
 /home/sebastian/catkin_ws/build/simulation/CMakeFiles/_simulation_generate_messages_check_deps_ctrl_msg.dir
 /home/sebastian/catkin_ws/build/simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir
@@ -17,6 +19,7 @@
 /home/sebastian/catkin_ws/build/simulation/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir
 /home/sebastian/catkin_ws/build/simulation/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir
 /home/sebastian/catkin_ws/build/simulation/CMakeFiles/actionlib_msgs_generate_messages_py.dir
+/home/sebastian/catkin_ws/build/automap/CMakeFiles/automap_node.dir
 /home/sebastian/catkin_ws/build/global_planner/pose_follower/CMakeFiles/base_local_planner_gencfg.dir
 /home/sebastian/catkin_ws/build/global_planner/pose_follower/CMakeFiles/base_local_planner_generate_messages_cpp.dir
 /home/sebastian/catkin_ws/build/global_planner/pose_follower/CMakeFiles/base_local_planner_generate_messages_lisp.dir

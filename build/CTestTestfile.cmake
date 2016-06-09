@@ -7,5 +7,6 @@
 SUBDIRS(gtest)
 SUBDIRS(simulation)
 SUBDIRS(global_planner/sbpl)
+SUBDIRS(automap)
 SUBDIRS(global_planner/pose_follower)
 SUBDIRS(global_planner/sbpl_lattice_planner)

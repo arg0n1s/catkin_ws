@@ -982,6 +982,32 @@ sbpl/fast:
 .PHONY : sbpl/fast
 
 #=============================================================================
+# Target rules for targets named CONTOUR
+
+# Build rule for target.
+CONTOUR: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 CONTOUR
+.PHONY : CONTOUR
+
+# fast build rule for target.
+CONTOUR/fast:
+	$(MAKE) -f automap/CMakeFiles/CONTOUR.dir/build.make automap/CMakeFiles/CONTOUR.dir/build
+.PHONY : CONTOUR/fast
+
+#=============================================================================
+# Target rules for targets named EDGES
+
+# Build rule for target.
+EDGES: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 EDGES
+.PHONY : EDGES
+
+# fast build rule for target.
+EDGES/fast:
+	$(MAKE) -f automap/CMakeFiles/EDGES.dir/build.make automap/CMakeFiles/EDGES.dir/build
+.PHONY : EDGES/fast
+
+#=============================================================================
 # Target rules for targets named _catkin_empty_exported_target
 
 # Build rule for target.
@@ -991,8 +1017,21 @@ _catkin_empty_exported_target: cmake_check_build_system
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
-	$(MAKE) -f global_planner/pose_follower/CMakeFiles/_catkin_empty_exported_target.dir/build.make global_planner/pose_follower/CMakeFiles/_catkin_empty_exported_target.dir/build
+	$(MAKE) -f automap/CMakeFiles/_catkin_empty_exported_target.dir/build.make automap/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
+
+#=============================================================================
+# Target rules for targets named automap_node
+
+# Build rule for target.
+automap_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 automap_node
+.PHONY : automap_node
+
+# fast build rule for target.
+automap_node/fast:
+	$(MAKE) -f automap/CMakeFiles/automap_node.dir/build.make automap/CMakeFiles/automap_node.dir/build
+.PHONY : automap_node/fast
 
 #=============================================================================
 # Target rules for targets named base_local_planner_gencfg
@@ -1487,6 +1526,78 @@ sbpl_lattice_planner_genpy: cmake_check_build_system
 sbpl_lattice_planner_genpy/fast:
 	$(MAKE) -f global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_genpy.dir/build.make global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_genpy.dir/build
 .PHONY : sbpl_lattice_planner_genpy/fast
+
+automap/src/Contour.o: automap/src/Contour.cpp.o
+.PHONY : automap/src/Contour.o
+
+# target to build an object file
+automap/src/Contour.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.o
+.PHONY : automap/src/Contour.cpp.o
+
+automap/src/Contour.i: automap/src/Contour.cpp.i
+.PHONY : automap/src/Contour.i
+
+# target to preprocess a source file
+automap/src/Contour.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.i
+.PHONY : automap/src/Contour.cpp.i
+
+automap/src/Contour.s: automap/src/Contour.cpp.s
+.PHONY : automap/src/Contour.s
+
+# target to generate assembly for a file
+automap/src/Contour.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.s
+.PHONY : automap/src/Contour.cpp.s
+
+automap/src/FloatingEdges.o: automap/src/FloatingEdges.cpp.o
+.PHONY : automap/src/FloatingEdges.o
+
+# target to build an object file
+automap/src/FloatingEdges.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.o
+.PHONY : automap/src/FloatingEdges.cpp.o
+
+automap/src/FloatingEdges.i: automap/src/FloatingEdges.cpp.i
+.PHONY : automap/src/FloatingEdges.i
+
+# target to preprocess a source file
+automap/src/FloatingEdges.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.i
+.PHONY : automap/src/FloatingEdges.cpp.i
+
+automap/src/FloatingEdges.s: automap/src/FloatingEdges.cpp.s
+.PHONY : automap/src/FloatingEdges.s
+
+# target to generate assembly for a file
+automap/src/FloatingEdges.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.s
+.PHONY : automap/src/FloatingEdges.cpp.s
+
+automap/src/automap_node.o: automap/src/automap_node.cpp.o
+.PHONY : automap/src/automap_node.o
+
+# target to build an object file
+automap/src/automap_node.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/automap_node.cpp.o
+.PHONY : automap/src/automap_node.cpp.o
+
+automap/src/automap_node.i: automap/src/automap_node.cpp.i
+.PHONY : automap/src/automap_node.i
+
+# target to preprocess a source file
+automap/src/automap_node.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/automap_node.cpp.i
+.PHONY : automap/src/automap_node.cpp.i
+
+automap/src/automap_node.s: automap/src/automap_node.cpp.s
+.PHONY : automap/src/automap_node.s
+
+# target to generate assembly for a file
+automap/src/automap_node.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/automap_node.cpp.s
+.PHONY : automap/src/automap_node.cpp.s
 
 global_planner/pose_follower/src/pose_follower.o: global_planner/pose_follower/src/pose_follower.cpp.o
 .PHONY : global_planner/pose_follower/src/pose_follower.o
@@ -2525,7 +2636,10 @@ help:
 	@echo "... usrange_node"
 	@echo "... usrange_node_automoc"
 	@echo "... sbpl"
+	@echo "... CONTOUR"
+	@echo "... EDGES"
 	@echo "... _catkin_empty_exported_target"
+	@echo "... automap_node"
 	@echo "... base_local_planner_gencfg"
 	@echo "... base_local_planner_generate_messages_cpp"
 	@echo "... base_local_planner_generate_messages_lisp"
@@ -2564,6 +2678,15 @@ help:
 	@echo "... sbpl_lattice_planner_generate_messages_py"
 	@echo "... sbpl_lattice_planner_genlisp"
 	@echo "... sbpl_lattice_planner_genpy"
+	@echo "... automap/src/Contour.o"
+	@echo "... automap/src/Contour.i"
+	@echo "... automap/src/Contour.s"
+	@echo "... automap/src/FloatingEdges.o"
+	@echo "... automap/src/FloatingEdges.i"
+	@echo "... automap/src/FloatingEdges.s"
+	@echo "... automap/src/automap_node.o"
+	@echo "... automap/src/automap_node.i"
+	@echo "... automap/src/automap_node.s"
 	@echo "... global_planner/pose_follower/src/pose_follower.o"
 	@echo "... global_planner/pose_follower/src/pose_follower.i"
 	@echo "... global_planner/pose_follower/src/pose_follower.s"

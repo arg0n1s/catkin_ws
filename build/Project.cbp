@@ -1888,7 +1888,17 @@
       </Unit>
       <Unit filename="/home/sebastian/catkin_ws/src/simulation/data/motion_primitives/apollo_13_motion_primitives.mprim">
       </Unit>
+      <Unit filename="/home/sebastian/catkin_ws/src/simulation/data/other_maps/clean-willow-full-0.05.pgm">
+      </Unit>
+      <Unit filename="/home/sebastian/catkin_ws/src/simulation/data/other_maps/test.pgm">
+      </Unit>
+      <Unit filename="/home/sebastian/catkin_ws/src/simulation/data/other_maps/willow-edited-2010-02-18-0.025.pgm">
+      </Unit>
+      <Unit filename="/home/sebastian/catkin_ws/src/simulation/data/other_maps/willow-full-0.10.pgm">
+      </Unit>
       <Unit filename="/home/sebastian/catkin_ws/src/simulation/data/urdf_model/apollo_13.urdf">
+      </Unit>
+      <Unit filename="/home/sebastian/catkin_ws/src/simulation/data/urdf_model/mapping_model.urdf">
       </Unit>
       <Unit filename="/home/sebastian/catkin_ws/src/simulation/data/viewer/viewer.rviz">
       </Unit>
@@ -2861,6 +2871,8 @@
       <Unit filename="/home/sebastian/catkin_ws/src/simulation/launch/simulation.launch">
       </Unit>
       <Unit filename="/home/sebastian/catkin_ws/src/simulation/launch/simulation.launch~">
+      </Unit>
+      <Unit filename="/home/sebastian/catkin_ws/src/simulation/launch/simulation_mapping.launch">
       </Unit>
       <Unit filename="/home/sebastian/catkin_ws/src/simulation/msg/ctrl_msg.msg">
       </Unit>

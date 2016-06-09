@@ -53,7 +53,8 @@ pose_msg_ptr setLaserPosition(const tf::TransformListener& listener){
 rc::vec2i_ptr setGridPosition(geometry_msgs::Pose& laser){
         unsigned int grid_x = (unsigned int)((laser.position.x - mapInfo.origin.position.x) / mapInfo.resolution);
         unsigned int grid_y = (unsigned int)((-laser.position.y - mapInfo.origin.position.y) / mapInfo.resolution);
-
+        //ROS_INFO("x: %u / y: %u", grid_x, grid_y);
+        //ROS_INFO("map_x: %lf / map_y: %lf", mapInfo.origin.position.x, mapInfo.origin.position.y);
         return std::make_shared<cv::Vec2i>(cv::Vec2i(grid_x, grid_y));
 }
 
