@@ -13,6 +13,8 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   std_msgs
   tf
+  cv_bridge
+  image_transport
 )
 
 ## System dependencies are found with CMake's conventions
@@ -140,7 +142,7 @@ add_library(EDGES src/FloatingEdges.cpp)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(CONTOUR ${catkin_LIBRARIES})
-target_link_libraries(EDGES ${catkin_LIBRARIES})
+target_link_libraries(EDGES ${catkin_LIBRARIES} CONTOUR)
  target_link_libraries(automap_node
    ${catkin_LIBRARIES} EDGES
  )

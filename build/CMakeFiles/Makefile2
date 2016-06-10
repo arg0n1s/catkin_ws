@@ -1543,8 +1543,8 @@ clean: simulation/CMakeFiles/simulation_gencpp.dir/clean
 # Target rules for target simulation/CMakeFiles/simulation_generate_messages.dir
 
 # All Build rule for target.
-simulation/CMakeFiles/simulation_generate_messages.dir/all: simulation/CMakeFiles/simulation_generate_messages_cpp.dir/all
 simulation/CMakeFiles/simulation_generate_messages.dir/all: simulation/CMakeFiles/simulation_generate_messages_lisp.dir/all
+simulation/CMakeFiles/simulation_generate_messages.dir/all: simulation/CMakeFiles/simulation_generate_messages_cpp.dir/all
 simulation/CMakeFiles/simulation_generate_messages.dir/all: simulation/CMakeFiles/simulation_generate_messages_py.dir/all
 	$(MAKE) -f simulation/CMakeFiles/simulation_generate_messages.dir/build.make simulation/CMakeFiles/simulation_generate_messages.dir/depend
 	$(MAKE) -f simulation/CMakeFiles/simulation_generate_messages.dir/build.make simulation/CMakeFiles/simulation_generate_messages.dir/build
@@ -1614,8 +1614,8 @@ clean: simulation/CMakeFiles/simulation_generate_messages_cpp.dir/clean
 # Target rules for target simulation/CMakeFiles/simulation_generate_messages_lisp.dir
 
 # All Build rule for target.
-simulation/CMakeFiles/simulation_generate_messages_lisp.dir/all: simulation/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
 simulation/CMakeFiles/simulation_generate_messages_lisp.dir/all: simulation/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+simulation/CMakeFiles/simulation_generate_messages_lisp.dir/all: simulation/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
 simulation/CMakeFiles/simulation_generate_messages_lisp.dir/all: simulation/CMakeFiles/_simulation_generate_messages_check_deps_ctrl_msg.dir/all
 simulation/CMakeFiles/simulation_generate_messages_lisp.dir/all: simulation/CMakeFiles/_simulation_generate_messages_check_deps_telemetry_msg.dir/all
 	$(MAKE) -f simulation/CMakeFiles/simulation_generate_messages_lisp.dir/build.make simulation/CMakeFiles/simulation_generate_messages_lisp.dir/depend
@@ -1744,8 +1744,8 @@ clean: simulation/CMakeFiles/simulation_genpy.dir/clean
 # Target rules for target simulation/CMakeFiles/simulation_node.dir
 
 # All Build rule for target.
-simulation/CMakeFiles/simulation_node.dir/all: simulation/CMakeFiles/simulation_generate_messages_cpp.dir/all
 simulation/CMakeFiles/simulation_node.dir/all: simulation/CMakeFiles/simulation_generate_messages_lisp.dir/all
+simulation/CMakeFiles/simulation_node.dir/all: simulation/CMakeFiles/simulation_generate_messages_cpp.dir/all
 simulation/CMakeFiles/simulation_node.dir/all: simulation/CMakeFiles/simulation_generate_messages_py.dir/all
 simulation/CMakeFiles/simulation_node.dir/all: simulation/CMakeFiles/CAR_MODEL.dir/all
 simulation/CMakeFiles/simulation_node.dir/all: simulation/CMakeFiles/FWD_KIN.dir/all
@@ -2266,7 +2266,7 @@ clean: automap/CMakeFiles/CONTOUR.dir/clean
 # Target rules for target automap/CMakeFiles/EDGES.dir
 
 # All Build rule for target.
-automap/CMakeFiles/EDGES.dir/all:
+automap/CMakeFiles/EDGES.dir/all: automap/CMakeFiles/CONTOUR.dir/all
 	$(MAKE) -f automap/CMakeFiles/EDGES.dir/build.make automap/CMakeFiles/EDGES.dir/depend
 	$(MAKE) -f automap/CMakeFiles/EDGES.dir/build.make automap/CMakeFiles/EDGES.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles  8
@@ -2279,7 +2279,7 @@ all: automap/CMakeFiles/EDGES.dir/all
 
 # Build rule for subdir invocation for target.
 automap/CMakeFiles/EDGES.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 automap/CMakeFiles/EDGES.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 0
 .PHONY : automap/CMakeFiles/EDGES.dir/rule
@@ -2333,37 +2333,38 @@ clean: automap/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 # All Build rule for target.
 automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
-automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/nav_msgs_generate_messages_py.dir/all
+automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/tf_generate_messages_lisp.dir/all
 automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
+automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/roscpp_generate_messages_cpp.dir/all
 automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
+automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
 automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/roscpp_generate_messages_lisp.dir/all
 automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/roscpp_generate_messages_py.dir/all
-automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
 automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
+automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/tf_generate_messages_py.dir/all
+automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/std_msgs_generate_messages_py.dir/all
+automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/actionlib_generate_messages_cpp.dir/all
+automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
+automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/nav_msgs_generate_messages_py.dir/all
+automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
 automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/actionlib_generate_messages_lisp.dir/all
 automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/tf_generate_messages_cpp.dir/all
 automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
-automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/std_msgs_generate_messages_py.dir/all
-automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/tf_generate_messages_py.dir/all
-automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/actionlib_generate_messages_cpp.dir/all
-automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/actionlib_generate_messages_lisp.dir/all
-automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
-automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/tf_generate_messages_lisp.dir/all
 automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/actionlib_generate_messages_py.dir/all
-automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/tf2_msgs_generate_messages_py.dir/all
 automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
 automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all
-automap/CMakeFiles/automap_node.dir/all: automap/CMakeFiles/EDGES.dir/all
+automap/CMakeFiles/automap_node.dir/all: simulation/CMakeFiles/tf2_msgs_generate_messages_py.dir/all
 automap/CMakeFiles/automap_node.dir/all: automap/CMakeFiles/_catkin_empty_exported_target.dir/all
+automap/CMakeFiles/automap_node.dir/all: automap/CMakeFiles/EDGES.dir/all
+automap/CMakeFiles/automap_node.dir/all: automap/CMakeFiles/CONTOUR.dir/all
 	$(MAKE) -f automap/CMakeFiles/automap_node.dir/build.make automap/CMakeFiles/automap_node.dir/depend
 	$(MAKE) -f automap/CMakeFiles/automap_node.dir/build.make automap/CMakeFiles/automap_node.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles  56
@@ -2376,7 +2377,7 @@ all: automap/CMakeFiles/automap_node.dir/all
 
 # Build rule for subdir invocation for target.
 automap/CMakeFiles/automap_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 automap/CMakeFiles/automap_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sebastian/catkin_ws/build/CMakeFiles 0
 .PHONY : automap/CMakeFiles/automap_node.dir/rule
@@ -3399,8 +3400,8 @@ clean: global_planner/sbpl_lattice_planner/CMakeFiles/_sbpl_lattice_planner_gene
 # Target rules for target global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner.dir
 
 # All Build rule for target.
-global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner.dir/all: global_planner/sbpl/CMakeFiles/sbpl.dir/all
 global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner.dir/all: global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_gencpp.dir/all
+global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner.dir/all: global_planner/sbpl/CMakeFiles/sbpl.dir/all
 	$(MAKE) -f global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner.dir/build.make global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner.dir/depend
 	$(MAKE) -f global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner.dir/build.make global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles 
@@ -3467,8 +3468,8 @@ clean: global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_gencp
 
 # All Build rule for target.
 global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages.dir/all: global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages_cpp.dir/all
-global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages.dir/all: global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages_py.dir/all
 global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages.dir/all: global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages_lisp.dir/all
+global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages.dir/all: global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages_py.dir/all
 	$(MAKE) -f global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages.dir/build.make global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages.dir/depend
 	$(MAKE) -f global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages.dir/build.make global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_generate_messages.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles 

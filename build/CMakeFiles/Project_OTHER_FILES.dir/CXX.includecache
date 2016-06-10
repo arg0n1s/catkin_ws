@@ -6,9 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/sebastian/catkin_ws/src/automap/src/automap_node.cpp
-ros/ros.h
--
+/home/sebastian/catkin_ws/src/automap/src/FloatingEdges.cpp
 FloatingEdges.h
--
+/home/sebastian/catkin_ws/src/automap/src/FloatingEdges.h
 

@@ -6,6 +6,21 @@ automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /home/sebastian/catk
 automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /home/sebastian/catkin_ws/src/automap/src/automap_node.cpp
 automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h
+automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/cv_bridge/cv_bridge.h
+automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/geometry_msgs/Point.h
+automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/geometry_msgs/Pose.h
+automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/geometry_msgs/Quaternion.h
+automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/image_transport/camera_publisher.h
+automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/image_transport/camera_subscriber.h
+automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/image_transport/exception.h
+automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/image_transport/image_transport.h
+automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/image_transport/loader_fwds.h
+automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/image_transport/publisher.h
+automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/image_transport/single_subscriber_publisher.h
+automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/image_transport/subscriber.h
+automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/image_transport/transport_hints.h
+automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/nav_msgs/MapMetaData.h
+automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/nav_msgs/OccupancyGrid.h
 automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/ros/advertise_options.h
 automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/ros/advertise_service_options.h
 automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/ros/assert.h
@@ -24,6 +39,7 @@ automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/incl
 automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/ros/message.h
 automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/ros/message_event.h
 automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/ros/message_forward.h
+automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/ros/message_operations.h
 automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/ros/message_traits.h
 automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/ros/names.h
 automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/ros/node_handle.h
@@ -59,5 +75,11 @@ automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/incl
 automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/ros/wall_timer.h
 automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/ros/wall_timer_options.h
 automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/rosconsole/macros_generated.h
+automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/sensor_msgs/CameraInfo.h
+automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/sensor_msgs/CompressedImage.h
+automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/sensor_msgs/Image.h
+automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/sensor_msgs/RegionOfInterest.h
+automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/sensor_msgs/image_encodings.h
+automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /opt/ros/indigo/include/std_msgs/Header.h
 automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o: /usr/include/opencv/cv.h
 

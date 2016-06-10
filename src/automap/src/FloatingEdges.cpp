@@ -7,18 +7,25 @@
 
 #include "FloatingEdges.h"
 
-FloatingEdges::FloatingEdges(const cv::Mat& map):map(map) {
-	g_map = th_all_map = th_wall_map = all_edges = wall_only_edges = bw_mask, black = floating_edges = map;
+FloatingEdges::FloatingEdges() {
 	edges = contours();
 	detectedEdges = contVector();
 	hierarchy = std::vector<cv::Vec4i>();
 
 }
 
+void FloatingEdges::getEdges(const cv::Mat& map){
+	if(map.rows>0 && map.cols>0){
+		this->map = map;
+		imgProc();
+		detectEdges();
+		findFloatingEdges();
+	}
+}
+
 void FloatingEdges::imgProc(){
-	cv::cvtColor(map, g_map, CV_RGB2GRAY);
-	cv::threshold(g_map, th_all_map, 208, 255, CV_THRESH_BINARY);
-    cv::threshold(g_map, th_wall_map, 204, 255, CV_THRESH_BINARY);
+	cv::threshold(map, th_all_map, 208, 255, CV_THRESH_BINARY);
+    cv::threshold(map, th_wall_map, 204, 255, CV_THRESH_BINARY);
     black = cv::Mat(map.size(), CV_8UC1, cv::Scalar(0));
 }
 
@@ -51,10 +58,11 @@ bool FloatingEdges::findFloatingEdges(){
 }
 
 cv::Mat FloatingEdges::drawEdges(){
+	cv::Mat out = map.clone();
+	cv::cvtColor(out, out, CV_GRAY2RGB);;
 	if(detectedEdges.size()==0){
-		return map;
+		return out;
 	}else{
-		cv::Mat out = map.clone();
 		for(int idx = 0; idx >=0; idx = hierarchy[idx][0]){
 			cv::drawContours(out, detectedEdges, idx, cv::Scalar(0, 0, 255), CV_FILLED, 8, hierarchy);
 		}
@@ -65,4 +73,3 @@ cv::Mat FloatingEdges::drawEdges(){
 	}
 
 }
-
