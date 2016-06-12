@@ -37,6 +37,8 @@ Raycaster.h
 -
 string
 -
+vector
+-
 stdexcept
 -
 sensor_msgs/Range.h

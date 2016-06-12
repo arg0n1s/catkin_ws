@@ -2,8 +2,12 @@
 #include <FloatingEdges.h>
 #include <nav_msgs/MapMetaData.h>
 #include <nav_msgs/OccupancyGrid.h>
+#include <geometry_msgs/Pose.h>
 #include <image_transport/image_transport.h>
 #include <cv_bridge/cv_bridge.h>
+#include <tf/transform_listener.h>
+#include <vector>
+#include <string>
 
 void mapMetaCallback(const nav_msgs::MapMetaData::ConstPtr& metaMsg, nav_msgs::MapMetaData *meta){
         *meta = *metaMsg;
@@ -31,6 +35,45 @@ void mapCallback(const nav_msgs::OccupancyGrid::ConstPtr& mapMsg, cv::Mat *map){
 
 }
 
+void getPositionInfo(const std::string& base_frame, const std::string& target_frame, const tf::TransformListener& listener, geometry_msgs::Pose * position, std::vector<double> * rpy){
+        bool transformReady = false;
+        tf::StampedTransform stf;
+        tf::Stamped<tf::Pose> tmp;
+        geometry_msgs::PoseStamped tmp2;
+        tf::Quaternion q;
+
+        try{
+                transformReady = listener.waitForTransform (base_frame, target_frame, ros::Time(0), ros::Duration(0.01));
+
+        }
+        catch (tf::TransformException ex) {
+                ROS_ERROR("%s",ex.what());
+
+        }
+
+        if(transformReady) {
+                try{
+                        listener.lookupTransform(base_frame, target_frame, ros::Time(0), stf);
+
+                }
+                catch (tf::TransformException ex) {
+                        ROS_ERROR("%s",ex.what());
+
+                }
+                tmp = tf::Stamped<tf::Pose>(stf, stf.stamp_, base_frame);
+                tf::poseStampedTFToMsg(tmp,tmp2);
+                *position = tmp2.pose;
+
+                try{
+                        tf::quaternionMsgToTF(tmp2.pose.orientation, q);
+                        tf::Matrix3x3(q).getRPY((*rpy)[0], (*rpy)[1], (*rpy)[2]);
+                }catch(std::exception ex) {
+                        //ROS_ERROR("%s", ex.what());
+                }
+
+        }
+}
+
 int main(int argc, char **argv){
 
         ros::init(argc, argv, "automap");
@@ -41,6 +84,9 @@ int main(int argc, char **argv){
         sensor_msgs::ImagePtr edgeImageMsg;
 
         FloatingEdges fe(0.6, 0.05);
+        tf::TransformListener listener;
+        geometry_msgs::Pose position;
+        std::vector<double> rpy(3, 0.0);
 
         ros::Subscriber mapMetaSub = nh.subscribe<nav_msgs::MapMetaData>("map_metadata", 10, boost::bind(mapMetaCallback, _1, &mapMetaData));
         ros::Subscriber mapSub = nh.subscribe<nav_msgs::OccupancyGrid>("map", 10, boost::bind(mapCallback, _1, &map));
@@ -54,6 +100,9 @@ int main(int argc, char **argv){
                 cv::Rect imROI(0, 0, map.rows, map.cols);
                 cv::Rect ROI(1770, 1670, 800, 600);
                 cv::Rect myROI = imROI & ROI;
+
+                getPositionInfo("map", "base_footprint", listener, &position, &rpy);
+                //ROS_INFO("YAW: %lf", rpy[2]);
 
                 fe.getEdges(map(myROI));
                 cv::Mat out = fe.drawEdges();

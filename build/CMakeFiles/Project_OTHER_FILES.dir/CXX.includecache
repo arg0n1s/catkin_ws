@@ -6,7 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/sebastian/catkin_ws/src/automap/src/FloatingEdges.cpp
-FloatingEdges.h
-/home/sebastian/catkin_ws/src/automap/src/FloatingEdges.h
+/home/sebastian/catkin_ws/src/simulation/src/simulation_control.cpp
+ros/ros.h
+-
+geometry_msgs/Twist.h
+-
+iostream
+-
+CarModel.h
+-
+vector
+-
+nav_msgs/Odometry.h
+-
+tf/transform_broadcaster.h
+-
+simulation/ctrl_msg.h
+-
+simulation/telemetry_msg.h
+-
 
