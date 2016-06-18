@@ -29,7 +29,7 @@ const edge& Contour::getContour(){
 void Contour::setScore(const cv::Point& vehicle, const double& yaw, const cv::Rect& roi){
 								cv::Point adjustedVehicle(vehicle.x-roi.x, vehicle.y-roi.y);
 								double distance = cv::norm(adjustedVehicle-centroid);
-								double dYaw = 180-std::fabs(yaw-this->yaw);
+								double dYaw = 180-std::fabs(makeYaw(yaw-this->yaw));
 								//score = (180-dYaw)*(180-dYaw)* (1/ (1+distance)) *  length;
 								//score = (180-dYaw)*(180-dYaw)*  length;
 								score =dYaw +  dYaw*(1/ (1+(distance))) + dYaw*(length * 0.05);
@@ -59,6 +59,7 @@ const double Contour::getLength() const {
 }
 
 void Contour::shiftCentroid(){
+	/*
 	int col = map.at<uchar>(centroid);
 
 	double length = 1;
@@ -73,6 +74,11 @@ void Contour::shiftCentroid(){
 		length+=1.0;
 		c++;
 	}
+	*/
+
+	double temp_yaw = correctYawAngle(yaw, 180);
+	centroid.x =  (int)round(centroid.x + 0.4/0.05 * cv::cos((-temp_yaw) * CV_PI / 180.0));
+	centroid.y =  (int)round(centroid.y + 0.4/0.05 * cv::sin((-temp_yaw) * CV_PI / 180.0));
 
 
 

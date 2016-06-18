@@ -30,7 +30,7 @@ const contours& FloatingEdges::getEdges(const cv::Mat& map, const cv::Point& veh
 																								 */
 																								detectedEdges = contVector();
 																								for(auto current : edges) {
-																									current.shiftCentroid();
+																									//current.shiftCentroid();
 																																detectedEdges.push_back(current.getContour());
 																								}
 																}
