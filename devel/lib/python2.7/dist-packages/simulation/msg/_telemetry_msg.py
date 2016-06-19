@@ -9,7 +9,7 @@ import geometry_msgs.msg
 import std_msgs.msg
 
 class telemetry_msg(genpy.Message):
-  _md5sum = "f2866a22f43d550027399fcf4a865a89"
+  _md5sum = "580095b2de22e4508c6c64513ea95ea5"
   _type = "simulation/telemetry_msg"
   _has_header = True #flag to mark the presence of a Header object
   _full_text = """Header header
@@ -17,6 +17,7 @@ int32 steering
 int32 speed
 float32 steering_angle
 float32 v_radial
+float64 radial_distance
 geometry_msgs/Vector3 v_linear
 geometry_msgs/Vector3 v_angular
 
@@ -50,8 +51,8 @@ MSG: geometry_msgs/Vector3
 float64 x
 float64 y
 float64 z"""
-  __slots__ = ['header','steering','speed','steering_angle','v_radial','v_linear','v_angular']
-  _slot_types = ['std_msgs/Header','int32','int32','float32','float32','geometry_msgs/Vector3','geometry_msgs/Vector3']
+  __slots__ = ['header','steering','speed','steering_angle','v_radial','radial_distance','v_linear','v_angular']
+  _slot_types = ['std_msgs/Header','int32','int32','float32','float32','float64','geometry_msgs/Vector3','geometry_msgs/Vector3']
 
   def __init__(self, *args, **kwds):
     """
@@ -61,7 +62,7 @@ float64 z"""
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       header,steering,speed,steering_angle,v_radial,v_linear,v_angular
+       header,steering,speed,steering_angle,v_radial,radial_distance,v_linear,v_angular
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -80,6 +81,8 @@ float64 z"""
         self.steering_angle = 0.
       if self.v_radial is None:
         self.v_radial = 0.
+      if self.radial_distance is None:
+        self.radial_distance = 0.
       if self.v_linear is None:
         self.v_linear = geometry_msgs.msg.Vector3()
       if self.v_angular is None:
@@ -90,6 +93,7 @@ float64 z"""
       self.speed = 0
       self.steering_angle = 0.
       self.v_radial = 0.
+      self.radial_distance = 0.
       self.v_linear = geometry_msgs.msg.Vector3()
       self.v_angular = geometry_msgs.msg.Vector3()
 
@@ -117,7 +121,7 @@ float64 z"""
       else:
         buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
-      buff.write(_struct_2i2f6d.pack(_x.steering, _x.speed, _x.steering_angle, _x.v_radial, _x.v_linear.x, _x.v_linear.y, _x.v_linear.z, _x.v_angular.x, _x.v_angular.y, _x.v_angular.z))
+      buff.write(_struct_2i2f7d.pack(_x.steering, _x.speed, _x.steering_angle, _x.v_radial, _x.radial_distance, _x.v_linear.x, _x.v_linear.y, _x.v_linear.z, _x.v_angular.x, _x.v_angular.y, _x.v_angular.z))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -149,8 +153,8 @@ float64 z"""
         self.header.frame_id = str[start:end]
       _x = self
       start = end
-      end += 64
-      (_x.steering, _x.speed, _x.steering_angle, _x.v_radial, _x.v_linear.x, _x.v_linear.y, _x.v_linear.z, _x.v_angular.x, _x.v_angular.y, _x.v_angular.z,) = _struct_2i2f6d.unpack(str[start:end])
+      end += 72
+      (_x.steering, _x.speed, _x.steering_angle, _x.v_radial, _x.radial_distance, _x.v_linear.x, _x.v_linear.y, _x.v_linear.z, _x.v_angular.x, _x.v_angular.y, _x.v_angular.z,) = _struct_2i2f7d.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -175,7 +179,7 @@ float64 z"""
       else:
         buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
-      buff.write(_struct_2i2f6d.pack(_x.steering, _x.speed, _x.steering_angle, _x.v_radial, _x.v_linear.x, _x.v_linear.y, _x.v_linear.z, _x.v_angular.x, _x.v_angular.y, _x.v_angular.z))
+      buff.write(_struct_2i2f7d.pack(_x.steering, _x.speed, _x.steering_angle, _x.v_radial, _x.radial_distance, _x.v_linear.x, _x.v_linear.y, _x.v_linear.z, _x.v_angular.x, _x.v_angular.y, _x.v_angular.z))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -208,12 +212,12 @@ float64 z"""
         self.header.frame_id = str[start:end]
       _x = self
       start = end
-      end += 64
-      (_x.steering, _x.speed, _x.steering_angle, _x.v_radial, _x.v_linear.x, _x.v_linear.y, _x.v_linear.z, _x.v_angular.x, _x.v_angular.y, _x.v_angular.z,) = _struct_2i2f6d.unpack(str[start:end])
+      end += 72
+      (_x.steering, _x.speed, _x.steering_angle, _x.v_radial, _x.radial_distance, _x.v_linear.x, _x.v_linear.y, _x.v_linear.z, _x.v_angular.x, _x.v_angular.y, _x.v_angular.z,) = _struct_2i2f7d.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
+_struct_2i2f7d = struct.Struct("<2i2f7d")
 _struct_3I = struct.Struct("<3I")
-_struct_2i2f6d = struct.Struct("<2i2f6d")

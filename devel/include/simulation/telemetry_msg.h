@@ -32,6 +32,7 @@ struct telemetry_msg_
     , speed(0)
     , steering_angle(0.0)
     , v_radial(0.0)
+    , radial_distance(0.0)
     , v_linear()
     , v_angular()  {
     }
@@ -41,6 +42,7 @@ struct telemetry_msg_
     , speed(0)
     , steering_angle(0.0)
     , v_radial(0.0)
+    , radial_distance(0.0)
     , v_linear(_alloc)
     , v_angular(_alloc)  {
   (void)_alloc;
@@ -62,6 +64,9 @@ struct telemetry_msg_
 
    typedef float _v_radial_type;
   _v_radial_type v_radial;
+
+   typedef double _radial_distance_type;
+  _radial_distance_type radial_distance;
 
    typedef  ::geometry_msgs::Vector3_<ContainerAllocator>  _v_linear_type;
   _v_linear_type v_linear;
@@ -146,12 +151,12 @@ struct MD5Sum< ::simulation::telemetry_msg_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "f2866a22f43d550027399fcf4a865a89";
+    return "580095b2de22e4508c6c64513ea95ea5";
   }
 
   static const char* value(const ::simulation::telemetry_msg_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xf2866a22f43d5500ULL;
-  static const uint64_t static_value2 = 0x27399fcf4a865a89ULL;
+  static const uint64_t static_value1 = 0x580095b2de22e450ULL;
+  static const uint64_t static_value2 = 0x8c6c64513ea95ea5ULL;
 };
 
 template<class ContainerAllocator>
@@ -175,6 +180,7 @@ int32 steering\n\
 int32 speed\n\
 float32 steering_angle\n\
 float32 v_radial\n\
+float64 radial_distance\n\
 geometry_msgs/Vector3 v_linear\n\
 geometry_msgs/Vector3 v_angular\n\
 \n\
@@ -231,6 +237,7 @@ namespace serialization
       stream.next(m.speed);
       stream.next(m.steering_angle);
       stream.next(m.v_radial);
+      stream.next(m.radial_distance);
       stream.next(m.v_linear);
       stream.next(m.v_angular);
     }
@@ -262,6 +269,8 @@ struct Printer< ::simulation::telemetry_msg_<ContainerAllocator> >
     Printer<float>::stream(s, indent + "  ", v.steering_angle);
     s << indent << "v_radial: ";
     Printer<float>::stream(s, indent + "  ", v.v_radial);
+    s << indent << "radial_distance: ";
+    Printer<double>::stream(s, indent + "  ", v.radial_distance);
     s << indent << "v_linear: ";
     s << std::endl;
     Printer< ::geometry_msgs::Vector3_<ContainerAllocator> >::stream(s, indent + "  ", v.v_linear);

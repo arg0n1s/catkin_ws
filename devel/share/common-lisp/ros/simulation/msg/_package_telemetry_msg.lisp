@@ -9,6 +9,8 @@
           STEERING_ANGLE
           V_RADIAL-VAL
           V_RADIAL
+          RADIAL_DISTANCE-VAL
+          RADIAL_DISTANCE
           V_LINEAR-VAL
           V_LINEAR
           V_ANGULAR-VAL

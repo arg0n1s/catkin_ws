@@ -7,4 +7,5 @@
 # new environment variables
 
 # modified environment variables
+export PATH="/opt/ros/indigo/bin:/usr/lib/x86_64-linux-gnu/qt5/bin:/usr/bin:/usr/lib/x86_64-linux-gnu/qt5/bin:/usr/bin:/opt/OpenPrinting-Gutenprint/sbin:/opt/OpenPrinting-Gutenprint/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export PWD="/home/sebastian/catkin_ws/build"

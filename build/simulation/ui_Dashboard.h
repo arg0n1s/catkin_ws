@@ -54,6 +54,9 @@ public:
     QLabel *label_10;
     QLabel *label_11;
     QLabel *label_12;
+    QLabel *label_13;
+    QLCDNumber *distance;
+    QLabel *label_14;
     QStatusBar *statusbar;
     QMenuBar *menubar;
 
@@ -169,6 +172,18 @@ public:
         label_12 = new QLabel(centralwidget);
         label_12->setObjectName(QStringLiteral("label_12"));
         label_12->setGeometry(QRect(130, 130, 91, 20));
+        label_13 = new QLabel(centralwidget);
+        label_13->setObjectName(QStringLiteral("label_13"));
+        label_13->setGeometry(QRect(10, 200, 111, 16));
+        distance = new QLCDNumber(centralwidget);
+        distance->setObjectName(QStringLiteral("distance"));
+        distance->setGeometry(QRect(10, 220, 101, 23));
+        distance->setFrameShadow(QFrame::Raised);
+        distance->setDigitCount(8);
+        distance->setSegmentStyle(QLCDNumber::Flat);
+        label_14 = new QLabel(centralwidget);
+        label_14->setObjectName(QStringLiteral("label_14"));
+        label_14->setGeometry(QRect(120, 220, 41, 16));
         Dashboard->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(Dashboard);
         statusbar->setObjectName(QStringLiteral("statusbar"));
@@ -204,6 +219,8 @@ public:
         label_10->setText(QApplication::translate("Dashboard", "rad/s", 0));
         label_11->setText(QApplication::translate("Dashboard", "Steering Angle", 0));
         label_12->setText(QApplication::translate("Dashboard", "Radial Velocity", 0));
+        label_13->setText(QApplication::translate("Dashboard", "Distance traveled:", 0));
+        label_14->setText(QApplication::translate("Dashboard", "meters", 0));
     } // retranslateUi
 
 };
