@@ -982,30 +982,95 @@ sbpl/fast:
 .PHONY : sbpl/fast
 
 #=============================================================================
-# Target rules for targets named CONTOUR
+# Target rules for targets named E_PLANNER
 
 # Build rule for target.
-CONTOUR: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 CONTOUR
-.PHONY : CONTOUR
+E_PLANNER: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 E_PLANNER
+.PHONY : E_PLANNER
 
 # fast build rule for target.
-CONTOUR/fast:
-	$(MAKE) -f automap/CMakeFiles/CONTOUR.dir/build.make automap/CMakeFiles/CONTOUR.dir/build
-.PHONY : CONTOUR/fast
+E_PLANNER/fast:
+	$(MAKE) -f automap/CMakeFiles/E_PLANNER.dir/build.make automap/CMakeFiles/E_PLANNER.dir/build
+.PHONY : E_PLANNER/fast
 
 #=============================================================================
-# Target rules for targets named EDGES
+# Target rules for targets named FRONTIER
 
 # Build rule for target.
-EDGES: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 EDGES
-.PHONY : EDGES
+FRONTIER: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 FRONTIER
+.PHONY : FRONTIER
 
 # fast build rule for target.
-EDGES/fast:
-	$(MAKE) -f automap/CMakeFiles/EDGES.dir/build.make automap/CMakeFiles/EDGES.dir/build
-.PHONY : EDGES/fast
+FRONTIER/fast:
+	$(MAKE) -f automap/CMakeFiles/FRONTIER.dir/build.make automap/CMakeFiles/FRONTIER.dir/build
+.PHONY : FRONTIER/fast
+
+#=============================================================================
+# Target rules for targets named F_DETECTOR
+
+# Build rule for target.
+F_DETECTOR: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 F_DETECTOR
+.PHONY : F_DETECTOR
+
+# fast build rule for target.
+F_DETECTOR/fast:
+	$(MAKE) -f automap/CMakeFiles/F_DETECTOR.dir/build.make automap/CMakeFiles/F_DETECTOR.dir/build
+.PHONY : F_DETECTOR/fast
+
+#=============================================================================
+# Target rules for targets named GLOBAL_PLANNER
+
+# Build rule for target.
+GLOBAL_PLANNER: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 GLOBAL_PLANNER
+.PHONY : GLOBAL_PLANNER
+
+# fast build rule for target.
+GLOBAL_PLANNER/fast:
+	$(MAKE) -f automap/CMakeFiles/GLOBAL_PLANNER.dir/build.make automap/CMakeFiles/GLOBAL_PLANNER.dir/build
+.PHONY : GLOBAL_PLANNER/fast
+
+#=============================================================================
+# Target rules for targets named PATH
+
+# Build rule for target.
+PATH: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 PATH
+.PHONY : PATH
+
+# fast build rule for target.
+PATH/fast:
+	$(MAKE) -f automap/CMakeFiles/PATH.dir/build.make automap/CMakeFiles/PATH.dir/build
+.PHONY : PATH/fast
+
+#=============================================================================
+# Target rules for targets named PLANNER
+
+# Build rule for target.
+PLANNER: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 PLANNER
+.PHONY : PLANNER
+
+# fast build rule for target.
+PLANNER/fast:
+	$(MAKE) -f automap/CMakeFiles/PLANNER.dir/build.make automap/CMakeFiles/PLANNER.dir/build
+.PHONY : PLANNER/fast
+
+#=============================================================================
+# Target rules for targets named P_EX
+
+# Build rule for target.
+P_EX: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 P_EX
+.PHONY : P_EX
+
+# fast build rule for target.
+P_EX/fast:
+	$(MAKE) -f automap/CMakeFiles/P_EX.dir/build.make automap/CMakeFiles/P_EX.dir/build
+.PHONY : P_EX/fast
 
 #=============================================================================
 # Target rules for targets named _catkin_empty_exported_target
@@ -1527,53 +1592,173 @@ sbpl_lattice_planner_genpy/fast:
 	$(MAKE) -f global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_genpy.dir/build.make global_planner/sbpl_lattice_planner/CMakeFiles/sbpl_lattice_planner_genpy.dir/build
 .PHONY : sbpl_lattice_planner_genpy/fast
 
-automap/src/Contour.o: automap/src/Contour.cpp.o
-.PHONY : automap/src/Contour.o
+automap/src/ExplorationPlanner.o: automap/src/ExplorationPlanner.cpp.o
+.PHONY : automap/src/ExplorationPlanner.o
 
 # target to build an object file
-automap/src/Contour.cpp.o:
-	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.o
-.PHONY : automap/src/Contour.cpp.o
+automap/src/ExplorationPlanner.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/ExplorationPlanner.cpp.o
+.PHONY : automap/src/ExplorationPlanner.cpp.o
 
-automap/src/Contour.i: automap/src/Contour.cpp.i
-.PHONY : automap/src/Contour.i
+automap/src/ExplorationPlanner.i: automap/src/ExplorationPlanner.cpp.i
+.PHONY : automap/src/ExplorationPlanner.i
 
 # target to preprocess a source file
-automap/src/Contour.cpp.i:
-	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.i
-.PHONY : automap/src/Contour.cpp.i
+automap/src/ExplorationPlanner.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/ExplorationPlanner.cpp.i
+.PHONY : automap/src/ExplorationPlanner.cpp.i
 
-automap/src/Contour.s: automap/src/Contour.cpp.s
-.PHONY : automap/src/Contour.s
+automap/src/ExplorationPlanner.s: automap/src/ExplorationPlanner.cpp.s
+.PHONY : automap/src/ExplorationPlanner.s
 
 # target to generate assembly for a file
-automap/src/Contour.cpp.s:
-	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.s
-.PHONY : automap/src/Contour.cpp.s
+automap/src/ExplorationPlanner.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/ExplorationPlanner.cpp.s
+.PHONY : automap/src/ExplorationPlanner.cpp.s
 
-automap/src/FloatingEdges.o: automap/src/FloatingEdges.cpp.o
-.PHONY : automap/src/FloatingEdges.o
+automap/src/Frontier.o: automap/src/Frontier.cpp.o
+.PHONY : automap/src/Frontier.o
 
 # target to build an object file
-automap/src/FloatingEdges.cpp.o:
-	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.o
-.PHONY : automap/src/FloatingEdges.cpp.o
+automap/src/Frontier.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/Frontier.cpp.o
+.PHONY : automap/src/Frontier.cpp.o
 
-automap/src/FloatingEdges.i: automap/src/FloatingEdges.cpp.i
-.PHONY : automap/src/FloatingEdges.i
+automap/src/Frontier.i: automap/src/Frontier.cpp.i
+.PHONY : automap/src/Frontier.i
 
 # target to preprocess a source file
-automap/src/FloatingEdges.cpp.i:
-	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.i
-.PHONY : automap/src/FloatingEdges.cpp.i
+automap/src/Frontier.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/Frontier.cpp.i
+.PHONY : automap/src/Frontier.cpp.i
 
-automap/src/FloatingEdges.s: automap/src/FloatingEdges.cpp.s
-.PHONY : automap/src/FloatingEdges.s
+automap/src/Frontier.s: automap/src/Frontier.cpp.s
+.PHONY : automap/src/Frontier.s
 
 # target to generate assembly for a file
-automap/src/FloatingEdges.cpp.s:
-	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.s
-.PHONY : automap/src/FloatingEdges.cpp.s
+automap/src/Frontier.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/Frontier.cpp.s
+.PHONY : automap/src/Frontier.cpp.s
+
+automap/src/FrontierDetector.o: automap/src/FrontierDetector.cpp.o
+.PHONY : automap/src/FrontierDetector.o
+
+# target to build an object file
+automap/src/FrontierDetector.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/FrontierDetector.cpp.o
+.PHONY : automap/src/FrontierDetector.cpp.o
+
+automap/src/FrontierDetector.i: automap/src/FrontierDetector.cpp.i
+.PHONY : automap/src/FrontierDetector.i
+
+# target to preprocess a source file
+automap/src/FrontierDetector.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/FrontierDetector.cpp.i
+.PHONY : automap/src/FrontierDetector.cpp.i
+
+automap/src/FrontierDetector.s: automap/src/FrontierDetector.cpp.s
+.PHONY : automap/src/FrontierDetector.s
+
+# target to generate assembly for a file
+automap/src/FrontierDetector.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/FrontierDetector.cpp.s
+.PHONY : automap/src/FrontierDetector.cpp.s
+
+automap/src/GlobalPlannerAdapter.o: automap/src/GlobalPlannerAdapter.cpp.o
+.PHONY : automap/src/GlobalPlannerAdapter.o
+
+# target to build an object file
+automap/src/GlobalPlannerAdapter.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/GlobalPlannerAdapter.cpp.o
+.PHONY : automap/src/GlobalPlannerAdapter.cpp.o
+
+automap/src/GlobalPlannerAdapter.i: automap/src/GlobalPlannerAdapter.cpp.i
+.PHONY : automap/src/GlobalPlannerAdapter.i
+
+# target to preprocess a source file
+automap/src/GlobalPlannerAdapter.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/GlobalPlannerAdapter.cpp.i
+.PHONY : automap/src/GlobalPlannerAdapter.cpp.i
+
+automap/src/GlobalPlannerAdapter.s: automap/src/GlobalPlannerAdapter.cpp.s
+.PHONY : automap/src/GlobalPlannerAdapter.s
+
+# target to generate assembly for a file
+automap/src/GlobalPlannerAdapter.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/GlobalPlannerAdapter.cpp.s
+.PHONY : automap/src/GlobalPlannerAdapter.cpp.s
+
+automap/src/Path.o: automap/src/Path.cpp.o
+.PHONY : automap/src/Path.o
+
+# target to build an object file
+automap/src/Path.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/Path.cpp.o
+.PHONY : automap/src/Path.cpp.o
+
+automap/src/Path.i: automap/src/Path.cpp.i
+.PHONY : automap/src/Path.i
+
+# target to preprocess a source file
+automap/src/Path.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/Path.cpp.i
+.PHONY : automap/src/Path.cpp.i
+
+automap/src/Path.s: automap/src/Path.cpp.s
+.PHONY : automap/src/Path.s
+
+# target to generate assembly for a file
+automap/src/Path.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/Path.cpp.s
+.PHONY : automap/src/Path.cpp.s
+
+automap/src/PathtransformPlanner.o: automap/src/PathtransformPlanner.cpp.o
+.PHONY : automap/src/PathtransformPlanner.o
+
+# target to build an object file
+automap/src/PathtransformPlanner.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/PathtransformPlanner.cpp.o
+.PHONY : automap/src/PathtransformPlanner.cpp.o
+
+automap/src/PathtransformPlanner.i: automap/src/PathtransformPlanner.cpp.i
+.PHONY : automap/src/PathtransformPlanner.i
+
+# target to preprocess a source file
+automap/src/PathtransformPlanner.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/PathtransformPlanner.cpp.i
+.PHONY : automap/src/PathtransformPlanner.cpp.i
+
+automap/src/PathtransformPlanner.s: automap/src/PathtransformPlanner.cpp.s
+.PHONY : automap/src/PathtransformPlanner.s
+
+# target to generate assembly for a file
+automap/src/PathtransformPlanner.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/PathtransformPlanner.cpp.s
+.PHONY : automap/src/PathtransformPlanner.cpp.s
+
+automap/src/PlannerException.o: automap/src/PlannerException.cpp.o
+.PHONY : automap/src/PlannerException.o
+
+# target to build an object file
+automap/src/PlannerException.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/PlannerException.cpp.o
+.PHONY : automap/src/PlannerException.cpp.o
+
+automap/src/PlannerException.i: automap/src/PlannerException.cpp.i
+.PHONY : automap/src/PlannerException.i
+
+# target to preprocess a source file
+automap/src/PlannerException.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/PlannerException.cpp.i
+.PHONY : automap/src/PlannerException.cpp.i
+
+automap/src/PlannerException.s: automap/src/PlannerException.cpp.s
+.PHONY : automap/src/PlannerException.s
+
+# target to generate assembly for a file
+automap/src/PlannerException.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/PlannerException.cpp.s
+.PHONY : automap/src/PlannerException.cpp.s
 
 automap/src/automap_node.o: automap/src/automap_node.cpp.o
 .PHONY : automap/src/automap_node.o
@@ -2636,8 +2821,13 @@ help:
 	@echo "... usrange_node"
 	@echo "... usrange_node_automoc"
 	@echo "... sbpl"
-	@echo "... CONTOUR"
-	@echo "... EDGES"
+	@echo "... E_PLANNER"
+	@echo "... FRONTIER"
+	@echo "... F_DETECTOR"
+	@echo "... GLOBAL_PLANNER"
+	@echo "... PATH"
+	@echo "... PLANNER"
+	@echo "... P_EX"
 	@echo "... _catkin_empty_exported_target"
 	@echo "... automap_node"
 	@echo "... base_local_planner_gencfg"
@@ -2678,12 +2868,27 @@ help:
 	@echo "... sbpl_lattice_planner_generate_messages_py"
 	@echo "... sbpl_lattice_planner_genlisp"
 	@echo "... sbpl_lattice_planner_genpy"
-	@echo "... automap/src/Contour.o"
-	@echo "... automap/src/Contour.i"
-	@echo "... automap/src/Contour.s"
-	@echo "... automap/src/FloatingEdges.o"
-	@echo "... automap/src/FloatingEdges.i"
-	@echo "... automap/src/FloatingEdges.s"
+	@echo "... automap/src/ExplorationPlanner.o"
+	@echo "... automap/src/ExplorationPlanner.i"
+	@echo "... automap/src/ExplorationPlanner.s"
+	@echo "... automap/src/Frontier.o"
+	@echo "... automap/src/Frontier.i"
+	@echo "... automap/src/Frontier.s"
+	@echo "... automap/src/FrontierDetector.o"
+	@echo "... automap/src/FrontierDetector.i"
+	@echo "... automap/src/FrontierDetector.s"
+	@echo "... automap/src/GlobalPlannerAdapter.o"
+	@echo "... automap/src/GlobalPlannerAdapter.i"
+	@echo "... automap/src/GlobalPlannerAdapter.s"
+	@echo "... automap/src/Path.o"
+	@echo "... automap/src/Path.i"
+	@echo "... automap/src/Path.s"
+	@echo "... automap/src/PathtransformPlanner.o"
+	@echo "... automap/src/PathtransformPlanner.i"
+	@echo "... automap/src/PathtransformPlanner.s"
+	@echo "... automap/src/PlannerException.o"
+	@echo "... automap/src/PlannerException.i"
+	@echo "... automap/src/PlannerException.s"
 	@echo "... automap/src/automap_node.o"
 	@echo "... automap/src/automap_node.i"
 	@echo "... automap/src/automap_node.s"

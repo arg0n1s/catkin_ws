@@ -192,7 +192,7 @@ namespace serialization
       stream.next(m.speed);
     }
 
-    ROS_DECLARE_ALLINONE_SERIALIZER;
+    ROS_DECLARE_ALLINONE_SERIALIZER
   }; // struct ctrl_msg_
 
 } // namespace serialization

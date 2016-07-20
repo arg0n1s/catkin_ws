@@ -242,7 +242,7 @@ namespace serialization
       stream.next(m.v_angular);
     }
 
-    ROS_DECLARE_ALLINONE_SERIALIZER;
+    ROS_DECLARE_ALLINONE_SERIALIZER
   }; // struct telemetry_msg_
 
 } // namespace serialization

@@ -150,32 +150,102 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-automap/CMakeFiles/CONTOUR.dir/rule:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 automap/CMakeFiles/CONTOUR.dir/rule
-.PHONY : automap/CMakeFiles/CONTOUR.dir/rule
+automap/CMakeFiles/E_PLANNER.dir/rule:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 automap/CMakeFiles/E_PLANNER.dir/rule
+.PHONY : automap/CMakeFiles/E_PLANNER.dir/rule
 
 # Convenience name for target.
-CONTOUR: automap/CMakeFiles/CONTOUR.dir/rule
-.PHONY : CONTOUR
+E_PLANNER: automap/CMakeFiles/E_PLANNER.dir/rule
+.PHONY : E_PLANNER
 
 # fast build rule for target.
-CONTOUR/fast:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/CONTOUR.dir/build.make automap/CMakeFiles/CONTOUR.dir/build
-.PHONY : CONTOUR/fast
+E_PLANNER/fast:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/E_PLANNER.dir/build.make automap/CMakeFiles/E_PLANNER.dir/build
+.PHONY : E_PLANNER/fast
 
 # Convenience name for target.
-automap/CMakeFiles/EDGES.dir/rule:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 automap/CMakeFiles/EDGES.dir/rule
-.PHONY : automap/CMakeFiles/EDGES.dir/rule
+automap/CMakeFiles/FRONTIER.dir/rule:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 automap/CMakeFiles/FRONTIER.dir/rule
+.PHONY : automap/CMakeFiles/FRONTIER.dir/rule
 
 # Convenience name for target.
-EDGES: automap/CMakeFiles/EDGES.dir/rule
-.PHONY : EDGES
+FRONTIER: automap/CMakeFiles/FRONTIER.dir/rule
+.PHONY : FRONTIER
 
 # fast build rule for target.
-EDGES/fast:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/EDGES.dir/build.make automap/CMakeFiles/EDGES.dir/build
-.PHONY : EDGES/fast
+FRONTIER/fast:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/FRONTIER.dir/build.make automap/CMakeFiles/FRONTIER.dir/build
+.PHONY : FRONTIER/fast
+
+# Convenience name for target.
+automap/CMakeFiles/F_DETECTOR.dir/rule:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 automap/CMakeFiles/F_DETECTOR.dir/rule
+.PHONY : automap/CMakeFiles/F_DETECTOR.dir/rule
+
+# Convenience name for target.
+F_DETECTOR: automap/CMakeFiles/F_DETECTOR.dir/rule
+.PHONY : F_DETECTOR
+
+# fast build rule for target.
+F_DETECTOR/fast:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/F_DETECTOR.dir/build.make automap/CMakeFiles/F_DETECTOR.dir/build
+.PHONY : F_DETECTOR/fast
+
+# Convenience name for target.
+automap/CMakeFiles/GLOBAL_PLANNER.dir/rule:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 automap/CMakeFiles/GLOBAL_PLANNER.dir/rule
+.PHONY : automap/CMakeFiles/GLOBAL_PLANNER.dir/rule
+
+# Convenience name for target.
+GLOBAL_PLANNER: automap/CMakeFiles/GLOBAL_PLANNER.dir/rule
+.PHONY : GLOBAL_PLANNER
+
+# fast build rule for target.
+GLOBAL_PLANNER/fast:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/GLOBAL_PLANNER.dir/build.make automap/CMakeFiles/GLOBAL_PLANNER.dir/build
+.PHONY : GLOBAL_PLANNER/fast
+
+# Convenience name for target.
+automap/CMakeFiles/PATH.dir/rule:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 automap/CMakeFiles/PATH.dir/rule
+.PHONY : automap/CMakeFiles/PATH.dir/rule
+
+# Convenience name for target.
+PATH: automap/CMakeFiles/PATH.dir/rule
+.PHONY : PATH
+
+# fast build rule for target.
+PATH/fast:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/PATH.dir/build.make automap/CMakeFiles/PATH.dir/build
+.PHONY : PATH/fast
+
+# Convenience name for target.
+automap/CMakeFiles/PLANNER.dir/rule:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 automap/CMakeFiles/PLANNER.dir/rule
+.PHONY : automap/CMakeFiles/PLANNER.dir/rule
+
+# Convenience name for target.
+PLANNER: automap/CMakeFiles/PLANNER.dir/rule
+.PHONY : PLANNER
+
+# fast build rule for target.
+PLANNER/fast:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/PLANNER.dir/build.make automap/CMakeFiles/PLANNER.dir/build
+.PHONY : PLANNER/fast
+
+# Convenience name for target.
+automap/CMakeFiles/P_EX.dir/rule:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 automap/CMakeFiles/P_EX.dir/rule
+.PHONY : automap/CMakeFiles/P_EX.dir/rule
+
+# Convenience name for target.
+P_EX: automap/CMakeFiles/P_EX.dir/rule
+.PHONY : P_EX
+
+# fast build rule for target.
+P_EX/fast:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/P_EX.dir/build.make automap/CMakeFiles/P_EX.dir/build
+.PHONY : P_EX/fast
 
 # Convenience name for target.
 automap/CMakeFiles/_catkin_empty_exported_target.dir/rule:
@@ -205,53 +275,173 @@ automap_node/fast:
 	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/automap_node.dir/build.make automap/CMakeFiles/automap_node.dir/build
 .PHONY : automap_node/fast
 
-src/Contour.o: src/Contour.cpp.o
-.PHONY : src/Contour.o
+src/ExplorationPlanner.o: src/ExplorationPlanner.cpp.o
+.PHONY : src/ExplorationPlanner.o
 
 # target to build an object file
-src/Contour.cpp.o:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/CONTOUR.dir/build.make automap/CMakeFiles/CONTOUR.dir/src/Contour.cpp.o
-.PHONY : src/Contour.cpp.o
+src/ExplorationPlanner.cpp.o:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/E_PLANNER.dir/build.make automap/CMakeFiles/E_PLANNER.dir/src/ExplorationPlanner.cpp.o
+.PHONY : src/ExplorationPlanner.cpp.o
 
-src/Contour.i: src/Contour.cpp.i
-.PHONY : src/Contour.i
+src/ExplorationPlanner.i: src/ExplorationPlanner.cpp.i
+.PHONY : src/ExplorationPlanner.i
 
 # target to preprocess a source file
-src/Contour.cpp.i:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/CONTOUR.dir/build.make automap/CMakeFiles/CONTOUR.dir/src/Contour.cpp.i
-.PHONY : src/Contour.cpp.i
+src/ExplorationPlanner.cpp.i:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/E_PLANNER.dir/build.make automap/CMakeFiles/E_PLANNER.dir/src/ExplorationPlanner.cpp.i
+.PHONY : src/ExplorationPlanner.cpp.i
 
-src/Contour.s: src/Contour.cpp.s
-.PHONY : src/Contour.s
+src/ExplorationPlanner.s: src/ExplorationPlanner.cpp.s
+.PHONY : src/ExplorationPlanner.s
 
 # target to generate assembly for a file
-src/Contour.cpp.s:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/CONTOUR.dir/build.make automap/CMakeFiles/CONTOUR.dir/src/Contour.cpp.s
-.PHONY : src/Contour.cpp.s
+src/ExplorationPlanner.cpp.s:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/E_PLANNER.dir/build.make automap/CMakeFiles/E_PLANNER.dir/src/ExplorationPlanner.cpp.s
+.PHONY : src/ExplorationPlanner.cpp.s
 
-src/FloatingEdges.o: src/FloatingEdges.cpp.o
-.PHONY : src/FloatingEdges.o
+src/Frontier.o: src/Frontier.cpp.o
+.PHONY : src/Frontier.o
 
 # target to build an object file
-src/FloatingEdges.cpp.o:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/EDGES.dir/build.make automap/CMakeFiles/EDGES.dir/src/FloatingEdges.cpp.o
-.PHONY : src/FloatingEdges.cpp.o
+src/Frontier.cpp.o:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/FRONTIER.dir/build.make automap/CMakeFiles/FRONTIER.dir/src/Frontier.cpp.o
+.PHONY : src/Frontier.cpp.o
 
-src/FloatingEdges.i: src/FloatingEdges.cpp.i
-.PHONY : src/FloatingEdges.i
+src/Frontier.i: src/Frontier.cpp.i
+.PHONY : src/Frontier.i
 
 # target to preprocess a source file
-src/FloatingEdges.cpp.i:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/EDGES.dir/build.make automap/CMakeFiles/EDGES.dir/src/FloatingEdges.cpp.i
-.PHONY : src/FloatingEdges.cpp.i
+src/Frontier.cpp.i:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/FRONTIER.dir/build.make automap/CMakeFiles/FRONTIER.dir/src/Frontier.cpp.i
+.PHONY : src/Frontier.cpp.i
 
-src/FloatingEdges.s: src/FloatingEdges.cpp.s
-.PHONY : src/FloatingEdges.s
+src/Frontier.s: src/Frontier.cpp.s
+.PHONY : src/Frontier.s
 
 # target to generate assembly for a file
-src/FloatingEdges.cpp.s:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/EDGES.dir/build.make automap/CMakeFiles/EDGES.dir/src/FloatingEdges.cpp.s
-.PHONY : src/FloatingEdges.cpp.s
+src/Frontier.cpp.s:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/FRONTIER.dir/build.make automap/CMakeFiles/FRONTIER.dir/src/Frontier.cpp.s
+.PHONY : src/Frontier.cpp.s
+
+src/FrontierDetector.o: src/FrontierDetector.cpp.o
+.PHONY : src/FrontierDetector.o
+
+# target to build an object file
+src/FrontierDetector.cpp.o:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/F_DETECTOR.dir/build.make automap/CMakeFiles/F_DETECTOR.dir/src/FrontierDetector.cpp.o
+.PHONY : src/FrontierDetector.cpp.o
+
+src/FrontierDetector.i: src/FrontierDetector.cpp.i
+.PHONY : src/FrontierDetector.i
+
+# target to preprocess a source file
+src/FrontierDetector.cpp.i:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/F_DETECTOR.dir/build.make automap/CMakeFiles/F_DETECTOR.dir/src/FrontierDetector.cpp.i
+.PHONY : src/FrontierDetector.cpp.i
+
+src/FrontierDetector.s: src/FrontierDetector.cpp.s
+.PHONY : src/FrontierDetector.s
+
+# target to generate assembly for a file
+src/FrontierDetector.cpp.s:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/F_DETECTOR.dir/build.make automap/CMakeFiles/F_DETECTOR.dir/src/FrontierDetector.cpp.s
+.PHONY : src/FrontierDetector.cpp.s
+
+src/GlobalPlannerAdapter.o: src/GlobalPlannerAdapter.cpp.o
+.PHONY : src/GlobalPlannerAdapter.o
+
+# target to build an object file
+src/GlobalPlannerAdapter.cpp.o:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/GLOBAL_PLANNER.dir/build.make automap/CMakeFiles/GLOBAL_PLANNER.dir/src/GlobalPlannerAdapter.cpp.o
+.PHONY : src/GlobalPlannerAdapter.cpp.o
+
+src/GlobalPlannerAdapter.i: src/GlobalPlannerAdapter.cpp.i
+.PHONY : src/GlobalPlannerAdapter.i
+
+# target to preprocess a source file
+src/GlobalPlannerAdapter.cpp.i:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/GLOBAL_PLANNER.dir/build.make automap/CMakeFiles/GLOBAL_PLANNER.dir/src/GlobalPlannerAdapter.cpp.i
+.PHONY : src/GlobalPlannerAdapter.cpp.i
+
+src/GlobalPlannerAdapter.s: src/GlobalPlannerAdapter.cpp.s
+.PHONY : src/GlobalPlannerAdapter.s
+
+# target to generate assembly for a file
+src/GlobalPlannerAdapter.cpp.s:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/GLOBAL_PLANNER.dir/build.make automap/CMakeFiles/GLOBAL_PLANNER.dir/src/GlobalPlannerAdapter.cpp.s
+.PHONY : src/GlobalPlannerAdapter.cpp.s
+
+src/Path.o: src/Path.cpp.o
+.PHONY : src/Path.o
+
+# target to build an object file
+src/Path.cpp.o:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/PATH.dir/build.make automap/CMakeFiles/PATH.dir/src/Path.cpp.o
+.PHONY : src/Path.cpp.o
+
+src/Path.i: src/Path.cpp.i
+.PHONY : src/Path.i
+
+# target to preprocess a source file
+src/Path.cpp.i:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/PATH.dir/build.make automap/CMakeFiles/PATH.dir/src/Path.cpp.i
+.PHONY : src/Path.cpp.i
+
+src/Path.s: src/Path.cpp.s
+.PHONY : src/Path.s
+
+# target to generate assembly for a file
+src/Path.cpp.s:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/PATH.dir/build.make automap/CMakeFiles/PATH.dir/src/Path.cpp.s
+.PHONY : src/Path.cpp.s
+
+src/PathtransformPlanner.o: src/PathtransformPlanner.cpp.o
+.PHONY : src/PathtransformPlanner.o
+
+# target to build an object file
+src/PathtransformPlanner.cpp.o:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/PLANNER.dir/build.make automap/CMakeFiles/PLANNER.dir/src/PathtransformPlanner.cpp.o
+.PHONY : src/PathtransformPlanner.cpp.o
+
+src/PathtransformPlanner.i: src/PathtransformPlanner.cpp.i
+.PHONY : src/PathtransformPlanner.i
+
+# target to preprocess a source file
+src/PathtransformPlanner.cpp.i:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/PLANNER.dir/build.make automap/CMakeFiles/PLANNER.dir/src/PathtransformPlanner.cpp.i
+.PHONY : src/PathtransformPlanner.cpp.i
+
+src/PathtransformPlanner.s: src/PathtransformPlanner.cpp.s
+.PHONY : src/PathtransformPlanner.s
+
+# target to generate assembly for a file
+src/PathtransformPlanner.cpp.s:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/PLANNER.dir/build.make automap/CMakeFiles/PLANNER.dir/src/PathtransformPlanner.cpp.s
+.PHONY : src/PathtransformPlanner.cpp.s
+
+src/PlannerException.o: src/PlannerException.cpp.o
+.PHONY : src/PlannerException.o
+
+# target to build an object file
+src/PlannerException.cpp.o:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/P_EX.dir/build.make automap/CMakeFiles/P_EX.dir/src/PlannerException.cpp.o
+.PHONY : src/PlannerException.cpp.o
+
+src/PlannerException.i: src/PlannerException.cpp.i
+.PHONY : src/PlannerException.i
+
+# target to preprocess a source file
+src/PlannerException.cpp.i:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/P_EX.dir/build.make automap/CMakeFiles/P_EX.dir/src/PlannerException.cpp.i
+.PHONY : src/PlannerException.cpp.i
+
+src/PlannerException.s: src/PlannerException.cpp.s
+.PHONY : src/PlannerException.s
+
+# target to generate assembly for a file
+src/PlannerException.cpp.s:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/P_EX.dir/build.make automap/CMakeFiles/P_EX.dir/src/PlannerException.cpp.s
+.PHONY : src/PlannerException.cpp.s
 
 src/automap_node.o: src/automap_node.cpp.o
 .PHONY : src/automap_node.o
@@ -283,8 +473,13 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... CONTOUR"
-	@echo "... EDGES"
+	@echo "... E_PLANNER"
+	@echo "... FRONTIER"
+	@echo "... F_DETECTOR"
+	@echo "... GLOBAL_PLANNER"
+	@echo "... PATH"
+	@echo "... PLANNER"
+	@echo "... P_EX"
 	@echo "... _catkin_empty_exported_target"
 	@echo "... automap_node"
 	@echo "... edit_cache"
@@ -294,12 +489,27 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... src/Contour.o"
-	@echo "... src/Contour.i"
-	@echo "... src/Contour.s"
-	@echo "... src/FloatingEdges.o"
-	@echo "... src/FloatingEdges.i"
-	@echo "... src/FloatingEdges.s"
+	@echo "... src/ExplorationPlanner.o"
+	@echo "... src/ExplorationPlanner.i"
+	@echo "... src/ExplorationPlanner.s"
+	@echo "... src/Frontier.o"
+	@echo "... src/Frontier.i"
+	@echo "... src/Frontier.s"
+	@echo "... src/FrontierDetector.o"
+	@echo "... src/FrontierDetector.i"
+	@echo "... src/FrontierDetector.s"
+	@echo "... src/GlobalPlannerAdapter.o"
+	@echo "... src/GlobalPlannerAdapter.i"
+	@echo "... src/GlobalPlannerAdapter.s"
+	@echo "... src/Path.o"
+	@echo "... src/Path.i"
+	@echo "... src/Path.s"
+	@echo "... src/PathtransformPlanner.o"
+	@echo "... src/PathtransformPlanner.i"
+	@echo "... src/PathtransformPlanner.s"
+	@echo "... src/PlannerException.o"
+	@echo "... src/PlannerException.i"
+	@echo "... src/PlannerException.s"
 	@echo "... src/automap_node.o"
 	@echo "... src/automap_node.i"
 	@echo "... src/automap_node.s"

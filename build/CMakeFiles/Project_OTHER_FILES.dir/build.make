@@ -231,32 +231,147 @@ CMakeFiles/Project_OTHER_FILES.dir/simulation/include/Dashboard.cpp.o.provides: 
 
 CMakeFiles/Project_OTHER_FILES.dir/simulation/include/Dashboard.cpp.o.provides.build: CMakeFiles/Project_OTHER_FILES.dir/simulation/include/Dashboard.cpp.o
 
-CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.o: 
-CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.o: /home/sebastian/catkin_ws/src/automap/src/Contour.cpp
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/Path.cpp.o: 
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/Path.cpp.o: /home/sebastian/catkin_ws/src/automap/src/Path.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_9)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.o -c /home/sebastian/catkin_ws/src/automap/src/Contour.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/automap/src/Path.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/automap/src/Path.cpp.o -c /home/sebastian/catkin_ws/src/automap/src/Path.cpp
 
-CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sebastian/catkin_ws/src/automap/src/Contour.cpp > CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.i
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/Path.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_OTHER_FILES.dir/automap/src/Path.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sebastian/catkin_ws/src/automap/src/Path.cpp > CMakeFiles/Project_OTHER_FILES.dir/automap/src/Path.cpp.i
 
-CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sebastian/catkin_ws/src/automap/src/Contour.cpp -o CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.s
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/Path.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_OTHER_FILES.dir/automap/src/Path.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sebastian/catkin_ws/src/automap/src/Path.cpp -o CMakeFiles/Project_OTHER_FILES.dir/automap/src/Path.cpp.s
 
-CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.o.requires:
-.PHONY : CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.o.requires
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/Path.cpp.o.requires:
+.PHONY : CMakeFiles/Project_OTHER_FILES.dir/automap/src/Path.cpp.o.requires
 
-CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.o.provides: CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.o.provides.build
-.PHONY : CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.o.provides
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/Path.cpp.o.provides: CMakeFiles/Project_OTHER_FILES.dir/automap/src/Path.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/Path.cpp.o.provides.build
+.PHONY : CMakeFiles/Project_OTHER_FILES.dir/automap/src/Path.cpp.o.provides
 
-CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.o.provides.build: CMakeFiles/Project_OTHER_FILES.dir/automap/src/Contour.cpp.o
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/Path.cpp.o.provides.build: CMakeFiles/Project_OTHER_FILES.dir/automap/src/Path.cpp.o
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/Frontier.cpp.o: 
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/Frontier.cpp.o: /home/sebastian/catkin_ws/src/automap/src/Frontier.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/automap/src/Frontier.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/automap/src/Frontier.cpp.o -c /home/sebastian/catkin_ws/src/automap/src/Frontier.cpp
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/Frontier.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_OTHER_FILES.dir/automap/src/Frontier.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sebastian/catkin_ws/src/automap/src/Frontier.cpp > CMakeFiles/Project_OTHER_FILES.dir/automap/src/Frontier.cpp.i
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/Frontier.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_OTHER_FILES.dir/automap/src/Frontier.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sebastian/catkin_ws/src/automap/src/Frontier.cpp -o CMakeFiles/Project_OTHER_FILES.dir/automap/src/Frontier.cpp.s
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/Frontier.cpp.o.requires:
+.PHONY : CMakeFiles/Project_OTHER_FILES.dir/automap/src/Frontier.cpp.o.requires
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/Frontier.cpp.o.provides: CMakeFiles/Project_OTHER_FILES.dir/automap/src/Frontier.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/Frontier.cpp.o.provides.build
+.PHONY : CMakeFiles/Project_OTHER_FILES.dir/automap/src/Frontier.cpp.o.provides
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/Frontier.cpp.o.provides.build: CMakeFiles/Project_OTHER_FILES.dir/automap/src/Frontier.cpp.o
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/ExplorationPlanner.cpp.o: 
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/ExplorationPlanner.cpp.o: /home/sebastian/catkin_ws/src/automap/src/ExplorationPlanner.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/automap/src/ExplorationPlanner.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/automap/src/ExplorationPlanner.cpp.o -c /home/sebastian/catkin_ws/src/automap/src/ExplorationPlanner.cpp
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/ExplorationPlanner.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_OTHER_FILES.dir/automap/src/ExplorationPlanner.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sebastian/catkin_ws/src/automap/src/ExplorationPlanner.cpp > CMakeFiles/Project_OTHER_FILES.dir/automap/src/ExplorationPlanner.cpp.i
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/ExplorationPlanner.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_OTHER_FILES.dir/automap/src/ExplorationPlanner.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sebastian/catkin_ws/src/automap/src/ExplorationPlanner.cpp -o CMakeFiles/Project_OTHER_FILES.dir/automap/src/ExplorationPlanner.cpp.s
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/ExplorationPlanner.cpp.o.requires:
+.PHONY : CMakeFiles/Project_OTHER_FILES.dir/automap/src/ExplorationPlanner.cpp.o.requires
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/ExplorationPlanner.cpp.o.provides: CMakeFiles/Project_OTHER_FILES.dir/automap/src/ExplorationPlanner.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/ExplorationPlanner.cpp.o.provides.build
+.PHONY : CMakeFiles/Project_OTHER_FILES.dir/automap/src/ExplorationPlanner.cpp.o.provides
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/ExplorationPlanner.cpp.o.provides.build: CMakeFiles/Project_OTHER_FILES.dir/automap/src/ExplorationPlanner.cpp.o
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/GlobalPlannerAdapter.cpp.o: 
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/GlobalPlannerAdapter.cpp.o: /home/sebastian/catkin_ws/src/automap/src/GlobalPlannerAdapter.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/automap/src/GlobalPlannerAdapter.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/automap/src/GlobalPlannerAdapter.cpp.o -c /home/sebastian/catkin_ws/src/automap/src/GlobalPlannerAdapter.cpp
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/GlobalPlannerAdapter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_OTHER_FILES.dir/automap/src/GlobalPlannerAdapter.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sebastian/catkin_ws/src/automap/src/GlobalPlannerAdapter.cpp > CMakeFiles/Project_OTHER_FILES.dir/automap/src/GlobalPlannerAdapter.cpp.i
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/GlobalPlannerAdapter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_OTHER_FILES.dir/automap/src/GlobalPlannerAdapter.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sebastian/catkin_ws/src/automap/src/GlobalPlannerAdapter.cpp -o CMakeFiles/Project_OTHER_FILES.dir/automap/src/GlobalPlannerAdapter.cpp.s
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/GlobalPlannerAdapter.cpp.o.requires:
+.PHONY : CMakeFiles/Project_OTHER_FILES.dir/automap/src/GlobalPlannerAdapter.cpp.o.requires
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/GlobalPlannerAdapter.cpp.o.provides: CMakeFiles/Project_OTHER_FILES.dir/automap/src/GlobalPlannerAdapter.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/GlobalPlannerAdapter.cpp.o.provides.build
+.PHONY : CMakeFiles/Project_OTHER_FILES.dir/automap/src/GlobalPlannerAdapter.cpp.o.provides
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/GlobalPlannerAdapter.cpp.o.provides.build: CMakeFiles/Project_OTHER_FILES.dir/automap/src/GlobalPlannerAdapter.cpp.o
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/FrontierDetector.cpp.o: 
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/FrontierDetector.cpp.o: /home/sebastian/catkin_ws/src/automap/src/FrontierDetector.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/automap/src/FrontierDetector.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/automap/src/FrontierDetector.cpp.o -c /home/sebastian/catkin_ws/src/automap/src/FrontierDetector.cpp
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/FrontierDetector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_OTHER_FILES.dir/automap/src/FrontierDetector.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sebastian/catkin_ws/src/automap/src/FrontierDetector.cpp > CMakeFiles/Project_OTHER_FILES.dir/automap/src/FrontierDetector.cpp.i
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/FrontierDetector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_OTHER_FILES.dir/automap/src/FrontierDetector.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sebastian/catkin_ws/src/automap/src/FrontierDetector.cpp -o CMakeFiles/Project_OTHER_FILES.dir/automap/src/FrontierDetector.cpp.s
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/FrontierDetector.cpp.o.requires:
+.PHONY : CMakeFiles/Project_OTHER_FILES.dir/automap/src/FrontierDetector.cpp.o.requires
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/FrontierDetector.cpp.o.provides: CMakeFiles/Project_OTHER_FILES.dir/automap/src/FrontierDetector.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/FrontierDetector.cpp.o.provides.build
+.PHONY : CMakeFiles/Project_OTHER_FILES.dir/automap/src/FrontierDetector.cpp.o.provides
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/FrontierDetector.cpp.o.provides.build: CMakeFiles/Project_OTHER_FILES.dir/automap/src/FrontierDetector.cpp.o
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/PlannerException.cpp.o: 
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/PlannerException.cpp.o: /home/sebastian/catkin_ws/src/automap/src/PlannerException.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/automap/src/PlannerException.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/automap/src/PlannerException.cpp.o -c /home/sebastian/catkin_ws/src/automap/src/PlannerException.cpp
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/PlannerException.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_OTHER_FILES.dir/automap/src/PlannerException.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sebastian/catkin_ws/src/automap/src/PlannerException.cpp > CMakeFiles/Project_OTHER_FILES.dir/automap/src/PlannerException.cpp.i
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/PlannerException.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_OTHER_FILES.dir/automap/src/PlannerException.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sebastian/catkin_ws/src/automap/src/PlannerException.cpp -o CMakeFiles/Project_OTHER_FILES.dir/automap/src/PlannerException.cpp.s
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/PlannerException.cpp.o.requires:
+.PHONY : CMakeFiles/Project_OTHER_FILES.dir/automap/src/PlannerException.cpp.o.requires
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/PlannerException.cpp.o.provides: CMakeFiles/Project_OTHER_FILES.dir/automap/src/PlannerException.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/PlannerException.cpp.o.provides.build
+.PHONY : CMakeFiles/Project_OTHER_FILES.dir/automap/src/PlannerException.cpp.o.provides
+
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/PlannerException.cpp.o.provides.build: CMakeFiles/Project_OTHER_FILES.dir/automap/src/PlannerException.cpp.o
 
 CMakeFiles/Project_OTHER_FILES.dir/automap/src/automap_node.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/automap/src/automap_node.cpp.o: /home/sebastian/catkin_ws/src/automap/src/automap_node.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/automap/src/automap_node.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/automap/src/automap_node.cpp.o -c /home/sebastian/catkin_ws/src/automap/src/automap_node.cpp
 
@@ -277,32 +392,32 @@ CMakeFiles/Project_OTHER_FILES.dir/automap/src/automap_node.cpp.o.provides: CMak
 
 CMakeFiles/Project_OTHER_FILES.dir/automap/src/automap_node.cpp.o.provides.build: CMakeFiles/Project_OTHER_FILES.dir/automap/src/automap_node.cpp.o
 
-CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.o: 
-CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.o: /home/sebastian/catkin_ws/src/automap/src/FloatingEdges.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_11)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.o -c /home/sebastian/catkin_ws/src/automap/src/FloatingEdges.cpp
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/PathtransformPlanner.cpp.o: 
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/PathtransformPlanner.cpp.o: /home/sebastian/catkin_ws/src/automap/src/PathtransformPlanner.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/automap/src/PathtransformPlanner.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/automap/src/PathtransformPlanner.cpp.o -c /home/sebastian/catkin_ws/src/automap/src/PathtransformPlanner.cpp
 
-CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sebastian/catkin_ws/src/automap/src/FloatingEdges.cpp > CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.i
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/PathtransformPlanner.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_OTHER_FILES.dir/automap/src/PathtransformPlanner.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sebastian/catkin_ws/src/automap/src/PathtransformPlanner.cpp > CMakeFiles/Project_OTHER_FILES.dir/automap/src/PathtransformPlanner.cpp.i
 
-CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sebastian/catkin_ws/src/automap/src/FloatingEdges.cpp -o CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.s
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/PathtransformPlanner.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_OTHER_FILES.dir/automap/src/PathtransformPlanner.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sebastian/catkin_ws/src/automap/src/PathtransformPlanner.cpp -o CMakeFiles/Project_OTHER_FILES.dir/automap/src/PathtransformPlanner.cpp.s
 
-CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.o.requires:
-.PHONY : CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.o.requires
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/PathtransformPlanner.cpp.o.requires:
+.PHONY : CMakeFiles/Project_OTHER_FILES.dir/automap/src/PathtransformPlanner.cpp.o.requires
 
-CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.o.provides: CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.o.provides.build
-.PHONY : CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.o.provides
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/PathtransformPlanner.cpp.o.provides: CMakeFiles/Project_OTHER_FILES.dir/automap/src/PathtransformPlanner.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Project_OTHER_FILES.dir/build.make CMakeFiles/Project_OTHER_FILES.dir/automap/src/PathtransformPlanner.cpp.o.provides.build
+.PHONY : CMakeFiles/Project_OTHER_FILES.dir/automap/src/PathtransformPlanner.cpp.o.provides
 
-CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.o.provides.build: CMakeFiles/Project_OTHER_FILES.dir/automap/src/FloatingEdges.cpp.o
+CMakeFiles/Project_OTHER_FILES.dir/automap/src/PathtransformPlanner.cpp.o.provides.build: CMakeFiles/Project_OTHER_FILES.dir/automap/src/PathtransformPlanner.cpp.o
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl_lattice_planner/src/sbpl_lattice_planner.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl_lattice_planner/src/sbpl_lattice_planner.cpp.o: /home/sebastian/catkin_ws/src/global_planner/sbpl_lattice_planner/src/sbpl_lattice_planner.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl_lattice_planner/src/sbpl_lattice_planner.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl_lattice_planner/src/sbpl_lattice_planner.cpp.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl_lattice_planner/src/sbpl_lattice_planner.cpp
 
@@ -325,7 +440,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl_lattice_planner/src/sbpl_
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/pose_follower/src/pose_follower.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/pose_follower/src/pose_follower.cpp.o: /home/sebastian/catkin_ws/src/global_planner/pose_follower/src/pose_follower.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/pose_follower/src/pose_follower.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/pose_follower/src/pose_follower.cpp.o -c /home/sebastian/catkin_ws/src/global_planner/pose_follower/src/pose_follower.cpp
 
@@ -348,7 +463,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/pose_follower/src/pose_followe
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/config.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/config.cpp.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/src/utils/config.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/config.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/config.cpp.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/src/utils/config.cpp
 
@@ -371,7 +486,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/config.cpp.o.pr
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/2Dgridsearch.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/2Dgridsearch.cpp.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/src/utils/2Dgridsearch.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/2Dgridsearch.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/2Dgridsearch.cpp.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/src/utils/2Dgridsearch.cpp
 
@@ -394,7 +509,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/2Dgridsearch.cp
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/mdp.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/mdp.cpp.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/src/utils/mdp.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/mdp.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/mdp.cpp.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/src/utils/mdp.cpp
 
@@ -417,7 +532,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/mdp.cpp.o.provi
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/utils.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/utils.cpp.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/src/utils/utils.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/utils.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/utils.cpp.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/src/utils/utils.cpp
 
@@ -440,7 +555,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/utils.cpp.o.pro
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/heap.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/heap.cpp.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/src/utils/heap.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_23)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/heap.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/heap.cpp.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/src/utils/heap.cpp
 
@@ -463,7 +578,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/utils/heap.cpp.o.prov
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/test/main.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/test/main.cpp.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/src/test/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_24)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/test/main.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/test/main.cpp.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/src/test/main.cpp
 
@@ -486,7 +601,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/test/main.cpp.o.provi
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/test/module-tests.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/test/module-tests.cpp.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/src/test/module-tests.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_20)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_25)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/test/module-tests.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/test/module-tests.cpp.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/src/test/module-tests.cpp
 
@@ -509,7 +624,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/test/module-tests.cpp
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/test/test_adjacency_list.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/test/test_adjacency_list.cpp.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/src/test/test_adjacency_list.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_21)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_26)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/test/test_adjacency_list.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/test/test_adjacency_list.cpp.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/src/test/test_adjacency_list.cpp
 
@@ -532,7 +647,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/test/test_adjacency_l
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/ANAplanner.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/ANAplanner.cpp.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/src/planners/ANAplanner.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_22)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_27)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/ANAplanner.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/ANAplanner.cpp.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/src/planners/ANAplanner.cpp
 
@@ -555,7 +670,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/ANAplanner.c
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/adplanner.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/adplanner.cpp.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/src/planners/adplanner.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_23)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_28)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/adplanner.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/adplanner.cpp.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/src/planners/adplanner.cpp
 
@@ -578,7 +693,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/adplanner.cp
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/rstarplanner.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/rstarplanner.cpp.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/src/planners/rstarplanner.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_24)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_29)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/rstarplanner.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/rstarplanner.cpp.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/src/planners/rstarplanner.cpp
 
@@ -601,7 +716,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/rstarplanner
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/viplanner.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/viplanner.cpp.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/src/planners/viplanner.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_25)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_30)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/viplanner.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/viplanner.cpp.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/src/planners/viplanner.cpp
 
@@ -624,7 +739,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/viplanner.cp
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/ppcpplanner.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/ppcpplanner.cpp.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/src/planners/ppcpplanner.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_26)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_31)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/ppcpplanner.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/ppcpplanner.cpp.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/src/planners/ppcpplanner.cpp
 
@@ -647,7 +762,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/ppcpplanner.
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/lazyARA.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/lazyARA.cpp.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/src/planners/lazyARA.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_27)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_32)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/lazyARA.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/lazyARA.cpp.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/src/planners/lazyARA.cpp
 
@@ -670,7 +785,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/lazyARA.cpp.
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/araplanner.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/araplanner.cpp.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/src/planners/araplanner.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_28)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_33)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/araplanner.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/araplanner.cpp.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/src/planners/araplanner.cpp
 
@@ -693,7 +808,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/planners/araplanner.c
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_navxythetamlevlat.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_navxythetamlevlat.cpp.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/src/discrete_space_information/environment_navxythetamlevlat.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_29)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_34)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_navxythetamlevlat.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_navxythetamlevlat.cpp.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/src/discrete_space_information/environment_navxythetamlevlat.cpp
 
@@ -716,7 +831,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_inform
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_nav2Duu.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_nav2Duu.cpp.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/src/discrete_space_information/environment_nav2Duu.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_30)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_35)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_nav2Duu.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_nav2Duu.cpp.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/src/discrete_space_information/environment_nav2Duu.cpp
 
@@ -739,7 +854,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_inform
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_XXX.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_XXX.cpp.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/src/discrete_space_information/environment_XXX.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_31)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_36)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_XXX.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_XXX.cpp.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/src/discrete_space_information/environment_XXX.cpp
 
@@ -762,7 +877,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_inform
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_navxythetalat.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_navxythetalat.cpp.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/src/discrete_space_information/environment_navxythetalat.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_32)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_37)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_navxythetalat.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_navxythetalat.cpp.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/src/discrete_space_information/environment_navxythetalat.cpp
 
@@ -785,7 +900,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_inform
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_robarm.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_robarm.cpp.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/src/discrete_space_information/environment_robarm.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_33)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_38)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_robarm.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_robarm.cpp.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/src/discrete_space_information/environment_robarm.cpp
 
@@ -808,7 +923,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_inform
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_nav2D.cpp.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_nav2D.cpp.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/src/discrete_space_information/environment_nav2D.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_34)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_39)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_nav2D.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_information/environment_nav2D.cpp.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/src/discrete_space_information/environment_nav2D.cpp
 
@@ -831,7 +946,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/src/discrete_space_inform
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/visualization/plot_3Dpath.m.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/visualization/plot_3Dpath.m.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/matlab/visualization/plot_3Dpath.m
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_35)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_40)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/visualization/plot_3Dpath.m.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/visualization/plot_3Dpath.m.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/matlab/visualization/plot_3Dpath.m
 
@@ -854,7 +969,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/visualization/plot
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim.m.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim.m.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/matlab/mprim/genmprim.m
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_36)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_41)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim.m.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim.m.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/matlab/mprim/genmprim.m
 
@@ -877,7 +992,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim.m.o
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim_unicycleplussidewaysplusbackturnplusdiag.m.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim_unicycleplussidewaysplusbackturnplusdiag.m.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/matlab/mprim/genmprim_unicycleplussidewaysplusbackturnplusdiag.m
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_37)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_42)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim_unicycleplussidewaysplusbackturnplusdiag.m.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim_unicycleplussidewaysplusbackturnplusdiag.m.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/matlab/mprim/genmprim_unicycleplussidewaysplusbackturnplusdiag.m
 
@@ -900,7 +1015,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim_uni
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim_unicycleplussidewaysplusbackturn.m.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim_unicycleplussidewaysplusbackturn.m.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/matlab/mprim/genmprim_unicycleplussidewaysplusbackturn.m
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_38)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_43)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim_unicycleplussidewaysplusbackturn.m.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim_unicycleplussidewaysplusbackturn.m.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/matlab/mprim/genmprim_unicycleplussidewaysplusbackturn.m
 
@@ -923,7 +1038,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim_uni
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/rover_16.m.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/rover_16.m.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/matlab/mprim/rover_16.m
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_39)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_44)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/rover_16.m.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/rover_16.m.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/matlab/mprim/rover_16.m
 
@@ -946,7 +1061,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/rover_16.m.o
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim_unicycleplussideways.m.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim_unicycleplussideways.m.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/matlab/mprim/genmprim_unicycleplussideways.m
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_40)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_45)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim_unicycleplussideways.m.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim_unicycleplussideways.m.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/matlab/mprim/genmprim_unicycleplussideways.m
 
@@ -969,7 +1084,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim_uni
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim_unicycle.m.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim_unicycle.m.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/matlab/mprim/genmprim_unicycle.m
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_41)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_46)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim_unicycle.m.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim_unicycle.m.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/matlab/mprim/genmprim_unicycle.m
 
@@ -992,7 +1107,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/genmprim_uni
 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/rover_32.m.o: 
 CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/rover_32.m.o: /home/sebastian/catkin_ws/src/global_planner/sbpl/matlab/mprim/rover_32.m
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_42)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_47)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/rover_32.m.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/rover_32.m.o -c /home/sebastian/catkin_ws/src/global_planner/sbpl/matlab/mprim/rover_32.m
 
@@ -1015,7 +1130,7 @@ CMakeFiles/Project_OTHER_FILES.dir/global_planner/sbpl/matlab/mprim/rover_32.m.o
 
 CMakeFiles/Project_OTHER_FILES.dir/motion_primitives_matlab/genmprim_ackermann.m.o: 
 CMakeFiles/Project_OTHER_FILES.dir/motion_primitives_matlab/genmprim_ackermann.m.o: /home/sebastian/catkin_ws/src/motion_primitives_matlab/genmprim_ackermann.m
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_43)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_48)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project_OTHER_FILES.dir/motion_primitives_matlab/genmprim_ackermann.m.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project_OTHER_FILES.dir/motion_primitives_matlab/genmprim_ackermann.m.o -c /home/sebastian/catkin_ws/src/motion_primitives_matlab/genmprim_ackermann.m
 
