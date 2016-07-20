@@ -161,7 +161,7 @@ int main(int argc, char **argv){
         while(ros::ok() && !finished) {
                 double gain = cv::norm(old, map, CV_L2);
 
-                if(gain>2000.0 || retry==0) {
+                if(gain>2500.0 || retry==0) {
                         //Get Position Information...
                         getPositionInfo("map", "base_footprint", listener, &position, &rpy);
                         setGridPosition(position, mapMetaData, &gridPose);

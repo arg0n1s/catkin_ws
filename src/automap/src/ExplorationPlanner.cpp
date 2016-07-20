@@ -110,7 +110,7 @@ bool ExplorationPlanner::extractValidFrontiersLocal(){
                 if(radius>minL) { // i think this should only be the distance of the 2 outer points
                         cv::Point centroidGlobal = calcFrontierCentroid(globalFp);
                         double frontierYaw = calcFrontierColorGradient(globalFp); // this is quite accurate but not very smart
-                        //centroidGlobal = shiftCentroid(centroidGlobal, frontierYaw); // this prevents centroids in unknown but also not very smart
+                        centroidGlobal = shiftCentroid(centroidGlobal, frontierYaw); // this prevents centroids in unknown but also not very smart
                         cv::Point2f centroidWorld = gridPtToWorld(centroidGlobal);
                         passableFrontiers.push_back(Frontier(globalFp, centroidGlobal, centroidWorld, length, frontierYaw));
                 }
@@ -174,7 +174,7 @@ bool ExplorationPlanner::extractValidFrontiersGlobal(){
                 if(radius>minL) { // i think this should only be the distance of the 2 outer points
                         cv::Point centroidGlobal = calcFrontierCentroid(current);
                         double frontierYaw = calcFrontierColorGradient(current); // this is quite accurate but not very smart
-                        //centroidGlobal = shiftCentroid(centroidGlobal, frontierYaw); // this prevents centroids in unknown but also not very smart
+                        centroidGlobal = shiftCentroid(centroidGlobal, frontierYaw); // this prevents centroids in unknown but also not very smart
                         cv::Point2f centroidWorld = gridPtToWorld(centroidGlobal);
                         passableFrontiers.push_back(Frontier(current, centroidGlobal, centroidWorld, length, frontierYaw));
                 }
@@ -412,11 +412,23 @@ cv::Point ExplorationPlanner::calcFrontierCentroid(const frontierPoints& points)
 }
 
 cv::Point ExplorationPlanner::shiftCentroid(const cv::Point& point, const double yaw) const {
-        cv::Point shiftedCentroid;
         double temp_yaw = correctYawAngle(yaw, 180);
-        shiftedCentroid.x =  (int)round(point.x + 0.4/0.05 * cv::cos((-temp_yaw) * CV_PI / 180.0));
-        shiftedCentroid.y =  (int)round(point.y + 0.4/0.05 * cv::sin((-temp_yaw) * CV_PI / 180.0));
-        return shiftedCentroid;
+        cv::Point end;
+        end.x =  (int)round(point.x + 120 * cv::cos((-temp_yaw) * CV_PI / 180.0));
+        end.y =  (int)round(point.y + 120 * cv::sin((-temp_yaw) * CV_PI / 180.0));
+        cv::LineIterator it(occupancyGrid, point, end, 8);
+        for(int i = 0; i<it.count; i++, ++it){
+          if(occupancyGrid.at<uchar>(it.pos()) > PTP::UNKNOWN_CELL_COLOR){
+            return it.pos();
+          }
+        }
+        return point;
+
+        //shiftedCentroid.x =  (int)round(point.x + 0.4/0.05 * cv::cos((-temp_yaw) * CV_PI / 180.0));
+        //shiftedCentroid.y =  (int)round(point.y + 0.4/0.05 * cv::sin((-temp_yaw) * CV_PI / 180.0));
+
+        //cv::Point shiftedCentroid;
+        //return shiftedCentroid;
 }
 
 double ExplorationPlanner::calcFrontierColorGradient(const frontierPoints& points) const {
