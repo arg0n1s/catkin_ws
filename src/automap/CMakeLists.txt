@@ -16,6 +16,7 @@ find_package(catkin REQUIRED COMPONENTS
   cv_bridge
   image_transport
   PCL REQUIRED
+  rospack
 )
 
 ## System dependencies are found with CMake's conventions
@@ -153,7 +154,7 @@ target_link_libraries(FRONTIER ${catkin_LIBRARIES} PATH)
 target_link_libraries(PLANNER ${catkin_LIBRARIES} PATH P_EX)
 target_link_libraries(E_PLANNER ${catkin_LIBRARIES} PLANNER F_DETECTOR PATH FRONTIER)
 target_link_libraries(GLOBAL_PLANNER ${catkin_LIBRARIES} PLANNER )
-target_link_libraries(automap_node ${catkin_LIBRARIES} E_PLANNER PLANNER)
+target_link_libraries(automap_node ${catkin_LIBRARIES} E_PLANNER PLANNER yaml-cpp)
 
 #############
 ## Install ##

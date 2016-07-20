@@ -106,7 +106,7 @@ bool ExplorationPlanner::extractValidFrontiersLocal(){
                 float radius;
                 cv::minEnclosingCircle(globalFp, center, radius);
                 radius = radius*2*mapInfo.resolution;
-                std::cout<<center<<" radius*2: "<<radius<< " length: "<<length<<" gap: "<<dist<<" robotWidth:"<<minL<<std::endl;
+                //std::cout<<center<<" radius*2: "<<radius<< " length: "<<length<<" gap: "<<dist<<" robotWidth:"<<minL<<std::endl;
                 if(radius>minL) { // i think this should only be the distance of the 2 outer points
                         cv::Point centroidGlobal = calcFrontierCentroid(globalFp);
                         double frontierYaw = calcFrontierColorGradient(globalFp); // this is quite accurate but not very smart
@@ -170,7 +170,7 @@ bool ExplorationPlanner::extractValidFrontiersGlobal(){
                 float radius;
                 cv::minEnclosingCircle(current, center, radius);
                 radius = radius*2*mapInfo.resolution;
-                std::cout<<center<<" radius*2: "<<radius<< " length: "<<length<<" gap: "<<dist<<" robotWidth:"<<minL<<std::endl;
+                //std::cout<<center<<" radius*2: "<<radius<< " length: "<<length<<" gap: "<<dist<<" robotWidth:"<<minL<<std::endl;
                 if(radius>minL) { // i think this should only be the distance of the 2 outer points
                         cv::Point centroidGlobal = calcFrontierCentroid(current);
                         double frontierYaw = calcFrontierColorGradient(current); // this is quite accurate but not very smart

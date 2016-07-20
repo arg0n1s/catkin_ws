@@ -122,7 +122,6 @@ GLOBAL_PLANNER_EXTERNAL_OBJECTS =
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.2.4.8
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /opt/ros/indigo/lib/libimage_transport.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /opt/ros/indigo/lib/libmessage_filters.so
-/home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /opt/ros/indigo/lib/libclass_loader.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/libPocoFoundation.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libdl.so
@@ -139,8 +138,6 @@ GLOBAL_PLANNER_EXTERNAL_OBJECTS =
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /opt/ros/indigo/lib/librostime.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /opt/ros/indigo/lib/libcpp_common.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-/home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
@@ -171,8 +168,6 @@ GLOBAL_PLANNER_EXTERNAL_OBJECTS =
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/libpcl_people.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/libpcl_tracking.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/libpcl_apps.so
-/home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
@@ -185,6 +180,12 @@ GLOBAL_PLANNER_EXTERNAL_OBJECTS =
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/libvtkRendering.so.5.8.0
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/libvtkHybrid.so.5.8.0
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/libvtkCharts.so.5.8.0
+/home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /opt/ros/indigo/lib/librospack.so
+/home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libpython2.7.so
+/home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+/home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /home/sebastian/catkin_ws/devel/lib/libPLANNER.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /home/sebastian/catkin_ws/devel/lib/libPATH.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libopencv_videostab.so.2.4.8
@@ -228,7 +229,6 @@ GLOBAL_PLANNER_EXTERNAL_OBJECTS =
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.2.4.8
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /opt/ros/indigo/lib/libimage_transport.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /opt/ros/indigo/lib/libmessage_filters.so
-/home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /opt/ros/indigo/lib/libclass_loader.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/libPocoFoundation.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libdl.so
@@ -259,8 +259,6 @@ GLOBAL_PLANNER_EXTERNAL_OBJECTS =
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/libvtkFiltering.so.5.8.0
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/libvtkCommon.so.5.8.0
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/libvtksys.so.5.8.0
-/home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
@@ -287,8 +285,6 @@ GLOBAL_PLANNER_EXTERNAL_OBJECTS =
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/libpcl_people.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/libpcl_tracking.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/libpcl_apps.so
-/home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
@@ -315,6 +311,12 @@ GLOBAL_PLANNER_EXTERNAL_OBJECTS =
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/libpcl_people.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/libpcl_tracking.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/libpcl_apps.so
+/home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /opt/ros/indigo/lib/librospack.so
+/home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libpython2.7.so
+/home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+/home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: /home/sebastian/catkin_ws/devel/lib/libP_EX.so
 /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so: automap/CMakeFiles/GLOBAL_PLANNER.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX shared library /home/sebastian/catkin_ws/devel/lib/libGLOBAL_PLANNER.so"

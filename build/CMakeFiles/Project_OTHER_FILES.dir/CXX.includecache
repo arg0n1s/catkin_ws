@@ -6,7 +6,41 @@
 
 #IncludeRegexTransform: 
 
-/home/sebastian/catkin_ws/src/automap/src/ExplorationPlanner.cpp
+/home/sebastian/catkin_ws/src/automap/src/automap_node.cpp
+ros/ros.h
+-
+opencv2/opencv.hpp
+-
+PathtransformPlanner.h
+-
 ExplorationPlanner.h
-/home/sebastian/catkin_ws/src/automap/src/ExplorationPlanner.h
+-
+nav_msgs/MapMetaData.h
+-
+nav_msgs/OccupancyGrid.h
+-
+geometry_msgs/Pose.h
+-
+image_transport/image_transport.h
+-
+cv_bridge/cv_bridge.h
+-
+tf/transform_listener.h
+-
+vector
+-
+string
+-
+move_base_msgs/MoveBaseAction.h
+-
+actionlib/client/simple_action_client.h
+-
+ros/package.h
+-
+yaml-cpp/yaml.h
+-
+fstream
+-
+simulation/telemetry_msg.h
+-
 

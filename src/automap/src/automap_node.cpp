@@ -1,4 +1,5 @@
 #include <ros/ros.h>
+#include <opencv2/opencv.hpp>
 #include <PathtransformPlanner.h>
 #include <ExplorationPlanner.h>
 #include <nav_msgs/MapMetaData.h>
@@ -11,8 +12,14 @@
 #include <string>
 #include <move_base_msgs/MoveBaseAction.h>
 #include <actionlib/client/simple_action_client.h>
+#include <ros/package.h>
+#include <yaml-cpp/yaml.h>
+#include <fstream>
+#include <simulation/telemetry_msg.h>
 
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
+
+static const double NSEC_PER_SEC = 1000000000.0;
 
 void mapMetaCallback(const nav_msgs::MapMetaData::ConstPtr& metaMsg, nav_msgs::MapMetaData *meta){
         *meta = *metaMsg;
@@ -38,6 +45,9 @@ void mapCallback(const nav_msgs::OccupancyGrid::ConstPtr& mapMsg, cv::Mat *map){
                 }
         }
 
+}
+void telemetryCallback(const simulation::telemetry_msg::ConstPtr& tele, simulation::telemetry_msg* telemetry){
+        *telemetry = *tele;
 }
 
 void setGridPosition(geometry_msgs::Pose& laser, nav_msgs::MapMetaData& mapInfo, cv::Point * gridPose){
@@ -93,16 +103,18 @@ void sendGoal(nav_msgs::Path& p, MoveBaseClient& ac)
 
         ROS_INFO("Sending goal for x:%lf / y:%lf",goal.target_pose.pose.position.x,goal.target_pose.pose.position.y);
         ac.sendGoal(goal);
-        ac.waitForResult();
+        //ac.waitForResult();
 }
 
 int main(int argc, char **argv){
 
         ros::init(argc, argv, "automap");
         ros::NodeHandle nh;
+        ros::Time initTime = ros::Time::now();
 
         nav_msgs::MapMetaData mapMetaData;
         cv::Mat map;
+        simulation::telemetry_msg telemetry;
         sensor_msgs::ImagePtr edgeImageMsg;
 
         MoveBaseClient ac("move_base", true);
@@ -119,29 +131,37 @@ int main(int argc, char **argv){
         ros::Subscriber mapMetaSub = nh.subscribe<nav_msgs::MapMetaData>("map_metadata", 10, boost::bind(mapMetaCallback, _1, &mapMetaData));
         ros::Subscriber mapSub = nh.subscribe<nav_msgs::OccupancyGrid>("map", 10, boost::bind(mapCallback, _1, &map));
         ros::Publisher pathPub = nh.advertise<nav_msgs::Path>("pathtransformPlanner/path", 10);
+        ros::Subscriber robotInfo = nh.subscribe<simulation::telemetry_msg>("telemetry", 10, boost::bind(telemetryCallback, _1, &telemetry));
 
         image_transport::ImageTransport it(nh);
         image_transport::Publisher edgePub = it.advertise("floatingEdges", 1);
 
         //wait for map - server
-        ros::Duration d = ros::Duration(5, 0);
+        ros::Duration d = ros::Duration(2, 0);
         ros::spinOnce();
-        while(mapMetaData.resolution == 0 && ros::ok()){
-          ROS_INFO("Waiting for the map server to come up...");
-          d.sleep();
-          ros::spinOnce();
+        while(mapMetaData.resolution == 0 && ros::ok()) {
+                ROS_INFO("Waiting for the map server to come up...");
+                d.sleep();
+                ros::spinOnce();
+        }
+        while(map.cols==0 && map.rows==0 && ros::ok()) {
+                ROS_INFO("Waiting for the map server to come up...");
+                d.sleep();
+                ros::spinOnce();
         }
 
         PathtransformPlanner pPlanner(0.25, 0.4, mapMetaData);
         ExplorationPlanner ePlanner(&pPlanner);
 
         bool finished = false;
+        int retry = 5;
+        cv::Mat old = cv::Mat::zeros(map.rows, map.cols, CV_8UC1);
         // Loop starts here:
-        ros::Rate loop_rate(1);
+        ros::Rate loop_rate(1.0);
         while(ros::ok() && !finished) {
-                if(map.cols==0 && map.rows==0) {
-                        ROS_INFO("Waiting for the map server to come up");
-                }else{
+                double gain = cv::norm(old, map, CV_L2);
+
+                if(gain>2000.0 || retry==0) {
                         //Get Position Information...
                         getPositionInfo("map", "base_footprint", listener, &position, &rpy);
                         setGridPosition(position, mapMetaData, &gridPose);
@@ -156,33 +176,112 @@ int main(int argc, char **argv){
                         bool w = ePlanner.findBestPlanSimple(map, gridPose, rpy[2]);
 
 
-                        if(w){
-                          ROS_INFO("Best next Plan found!");
-                          std_msgs::Header genericHeader;
-                          genericHeader.stamp = ros::Time::now();
-                          genericHeader.frame_id = "map";
-                          ROS_INFO("Sending Plan..");
+                        if(w) {
+                                ROS_INFO("Best next Plan found!");
+                                std_msgs::Header genericHeader;
+                                genericHeader.stamp = ros::Time::now();
+                                genericHeader.frame_id = "map";
 
-                          // send map with valid detected Edges
-                          cv::Mat out = ePlanner.drawFrontiers();
-                          edgeImageMsg = cv_bridge::CvImage(std_msgs::Header(), "bgr8", out).toImageMsg();
-                          edgePub.publish(edgeImageMsg);
-                          nav_msgs::Path frontierPath = ePlanner.getBestPlan(genericHeader);
-                          pathPub.publish(frontierPath);
-                          ros::spinOnce();
-                          ROS_INFO("Sending Goal..");
-                          sendGoal(frontierPath, ac);
+
+                                // send map with valid detected Edges
+                                cv::Mat out = ePlanner.drawFrontiers();
+                                edgeImageMsg = cv_bridge::CvImage(std_msgs::Header(), "bgr8", out).toImageMsg();
+                                edgePub.publish(edgeImageMsg);
+
+
+                                nav_msgs::Path frontierPath = ePlanner.getBestPlan(genericHeader);
+                                ROS_INFO("Sending Plan..");
+                                pathPub.publish(frontierPath);
+                                ros::spinOnce();
+                                ROS_INFO("Sending Goal..");
+                                sendGoal(frontierPath, ac);
+
+
+
+
                         }else{
-                          ROS_INFO("Map exploration finished, aborting loop...");
-                          finished = true;
-                          
-                        }
-                        // resend map with valid detected Edges
-                        cv::Mat out = ePlanner.drawFrontiers();
-                        edgeImageMsg = cv_bridge::CvImage(std_msgs::Header(), "bgr8", out).toImageMsg();
-                        edgePub.publish(edgeImageMsg);
+                                ROS_INFO("Map exploration finished, aborting loop...");
+                                ac.cancelGoal();
 
+                                std::string imgMetaPath = ros::package::getPath("automap") + "/data/output/map.yaml";
+                                std::string imgStatPath = ros::package::getPath("automap") + "/data/output/exploration_statistics.txt";
+                                std::string imgPath = ros::package::getPath("automap") + "/data/output/map.pgm";
+
+                                std::vector<int> com_param;
+                                com_param.push_back(CV_IMWRITE_PNG_COMPRESSION);
+                                com_param.push_back(9);
+                                try {
+                                        cv::imwrite(imgPath, map, com_param);
+                                        ROS_INFO("Map written to: %s", imgPath.c_str());
+
+                                } catch (std::runtime_error& ex) {
+                                        std::cout << "Exception converting img to PNG: " << ex.what() << std::endl;
+                                }
+
+                                YAML::Emitter Y_out;
+                                Y_out << YAML::BeginMap;
+                                Y_out << YAML::Key << "image";
+                                Y_out << YAML::Value << "map.pgm";
+                                Y_out << YAML::Key << "resolution";
+                                Y_out << YAML::Value << mapMetaData.resolution;
+                                Y_out << YAML::Key << "origin";
+                                Y_out << YAML::Flow;
+                                Y_out << YAML::BeginSeq << mapMetaData.origin.position.x<<mapMetaData.origin.position.y
+                                <<mapMetaData.origin.position.z << YAML::EndSeq;
+                                Y_out << YAML::Key << "negate";
+                                Y_out << YAML::Value << 0;
+                                Y_out << YAML::Key << "occupied_thresh";
+                                Y_out << YAML::Value << 0.65;
+                                Y_out << YAML::Key << "free_thresh";
+                                Y_out << YAML::Value << 0.196;
+                                Y_out << YAML::EndMap;
+
+
+                                YAML::Emitter Y_out_statistics;
+                                Y_out_statistics << YAML::BeginMap;
+                                Y_out_statistics << YAML::Key << "driven distance during exploration(m)";
+                                Y_out_statistics << YAML::Value << telemetry.radial_distance;
+                                Y_out_statistics << YAML::Key << "time elapsed during exploration(s)";
+                                Y_out_statistics << YAML::Value << (ros::Time::now()-initTime).toNSec()/NSEC_PER_SEC;
+                                Y_out_statistics << YAML::EndMap;
+
+                                std::ofstream outfile_yaml(imgMetaPath);
+                                try{
+                                  outfile_yaml<<Y_out.c_str();
+                                  ROS_INFO("MapMetaData written to: %s", imgMetaPath.c_str());
+                                }catch (std::runtime_error& ex) {
+                                        std::cout << "Exception writing .yaml-file: " << ex.what() << std::endl;
+                                }
+                                outfile_yaml.close();
+
+                                std::ofstream outfile_statistics(imgStatPath);
+                                try{
+                                  outfile_statistics<<Y_out_statistics.c_str();
+                                  ROS_INFO("Statistics data written to: %s", imgStatPath.c_str());
+                                }catch (std::runtime_error& ex) {
+                                        std::cout << "Exception writing .txt-file: " << ex.what() << std::endl;
+                                }
+                                outfile_statistics.close();
+
+                                finished = true;
+                                ros::shutdown();
+
+
+                        }
+
+                        ROS_INFO("Enough information gained: %lf",gain);
+                        old = map.clone();
+                        retry = 5;
+                }else{
+                        ROS_INFO("Not enough information gained: %lf",gain);
+                        retry--;
                 }
+                // resend map with valid detected Edges
+                cv::Mat out = ePlanner.drawFrontiers();
+                edgeImageMsg = cv_bridge::CvImage(std_msgs::Header(), "bgr8", out).toImageMsg();
+                edgePub.publish(edgeImageMsg);
+
+
 
                 ros::spinOnce();
                 loop_rate.sleep();

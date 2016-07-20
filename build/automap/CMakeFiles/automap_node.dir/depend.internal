@@ -88,6 +88,7 @@ automap/CMakeFiles/automap_node.dir/src/automap_node.cpp.o
  /opt/ros/indigo/include/ros/message_traits.h
  /opt/ros/indigo/include/ros/names.h
  /opt/ros/indigo/include/ros/node_handle.h
+ /opt/ros/indigo/include/ros/package.h
  /opt/ros/indigo/include/ros/param.h
  /opt/ros/indigo/include/ros/parameter_adapter.h
  /opt/ros/indigo/include/ros/platform.h
