@@ -134,7 +134,7 @@ simulation_node_EXTERNAL_OBJECTS =
 /home/sebastian/catkin_ws/devel/lib/simulation/simulation_node: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/sebastian/catkin_ws/devel/lib/simulation/simulation_node: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
 /home/sebastian/catkin_ws/devel/lib/simulation/simulation_node: /home/sebastian/catkin_ws/devel/lib/libCAR_MODEL.so
-/home/sebastian/catkin_ws/devel/lib/simulation/simulation_node: /home/sebastian/catkin_ws/devel/lib/libFWD_KIN.so
+/home/sebastian/catkin_ws/devel/lib/simulation/simulation_node: /home/sebastian/catkin_ws/devel/lib/libFWD_KINEMATICS.so
 /home/sebastian/catkin_ws/devel/lib/simulation/simulation_node: simulation/CMakeFiles/simulation_node.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/sebastian/catkin_ws/devel/lib/simulation/simulation_node"
 	cd /home/sebastian/catkin_ws/build/simulation && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/simulation_node.dir/link.txt --verbose=$(VERBOSE)

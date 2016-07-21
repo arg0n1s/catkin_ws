@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/lane_tracker/Kalman.h
+lane_detector/lane_tracker/defines.h
+-
+opencv/cv.h
+-
+
+/home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/lane_tracker/defines.h
+opencv2/opencv.hpp
+-
+
+/home/sebastian/catkin_ws/src/lane_detector/src/Kalman.cpp
+lane_detector/lane_tracker/Kalman.h
+-
+opencv2/opencv.hpp
+-
+iostream
+-
+vector
+-
+

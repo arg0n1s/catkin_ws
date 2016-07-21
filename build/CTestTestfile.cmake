@@ -6,7 +6,7 @@
 # testing this directory and lists subdirectories to be tested as well.
 SUBDIRS(gtest)
 SUBDIRS(simulation)
-SUBDIRS(global_planner/sbpl)
+SUBDIRS(lane_detector)
+SUBDIRS(car_handler)
 SUBDIRS(automap)
-SUBDIRS(global_planner/pose_follower)
-SUBDIRS(global_planner/sbpl_lattice_planner)
+SUBDIRS(apollo_13)

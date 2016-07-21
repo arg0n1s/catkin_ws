@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+/home/sebastian/catkin_ws/build/simulation/simulation_node_automoc.cpp
+
 /home/sebastian/catkin_ws/devel/include/simulation/ctrl_msg.h
 string
 -

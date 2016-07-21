@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+/home/sebastian/catkin_ws/build/simulation/RAY_CAST_automoc.cpp
+
 /home/sebastian/catkin_ws/src/simulation/include/Raycaster.h
 opencv2/opencv.hpp
 -

@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -Wno-long-long -Wno-variadic-macros -std=c++11 -fopenmp   -shared -Wl,-soname,libHUNGARIAN_ALG.so -o /home/sebastian/catkin_ws/devel/lib/libHUNGARIAN_ALG.so CMakeFiles/HUNGARIAN_ALG.dir/src/HungarianAlg.cpp.o 

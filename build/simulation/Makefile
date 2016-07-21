@@ -91,7 +91,7 @@ install/strip/fast: install/strip
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"pkgconfig\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -206,32 +206,32 @@ DASH_automoc/fast:
 .PHONY : DASH_automoc/fast
 
 # Convenience name for target.
-simulation/CMakeFiles/FWD_KIN.dir/rule:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/FWD_KIN.dir/rule
-.PHONY : simulation/CMakeFiles/FWD_KIN.dir/rule
+simulation/CMakeFiles/FWD_KINEMATICS.dir/rule:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/FWD_KINEMATICS.dir/rule
+.PHONY : simulation/CMakeFiles/FWD_KINEMATICS.dir/rule
 
 # Convenience name for target.
-FWD_KIN: simulation/CMakeFiles/FWD_KIN.dir/rule
-.PHONY : FWD_KIN
+FWD_KINEMATICS: simulation/CMakeFiles/FWD_KINEMATICS.dir/rule
+.PHONY : FWD_KINEMATICS
 
 # fast build rule for target.
-FWD_KIN/fast:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/FWD_KIN.dir/build.make simulation/CMakeFiles/FWD_KIN.dir/build
-.PHONY : FWD_KIN/fast
+FWD_KINEMATICS/fast:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/FWD_KINEMATICS.dir/build.make simulation/CMakeFiles/FWD_KINEMATICS.dir/build
+.PHONY : FWD_KINEMATICS/fast
 
 # Convenience name for target.
-simulation/CMakeFiles/FWD_KIN_automoc.dir/rule:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/FWD_KIN_automoc.dir/rule
-.PHONY : simulation/CMakeFiles/FWD_KIN_automoc.dir/rule
+simulation/CMakeFiles/FWD_KINEMATICS_automoc.dir/rule:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/FWD_KINEMATICS_automoc.dir/rule
+.PHONY : simulation/CMakeFiles/FWD_KINEMATICS_automoc.dir/rule
 
 # Convenience name for target.
-FWD_KIN_automoc: simulation/CMakeFiles/FWD_KIN_automoc.dir/rule
-.PHONY : FWD_KIN_automoc
+FWD_KINEMATICS_automoc: simulation/CMakeFiles/FWD_KINEMATICS_automoc.dir/rule
+.PHONY : FWD_KINEMATICS_automoc
 
 # fast build rule for target.
-FWD_KIN_automoc/fast:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/FWD_KIN_automoc.dir/build.make simulation/CMakeFiles/FWD_KIN_automoc.dir/build
-.PHONY : FWD_KIN_automoc/fast
+FWD_KINEMATICS_automoc/fast:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/FWD_KINEMATICS_automoc.dir/build.make simulation/CMakeFiles/FWD_KINEMATICS_automoc.dir/build
+.PHONY : FWD_KINEMATICS_automoc/fast
 
 # Convenience name for target.
 simulation/CMakeFiles/RAY_CAST.dir/rule:
@@ -967,29 +967,29 @@ DASH_automoc.cpp.s:
 	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/DASH.dir/build.make simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.s
 .PHONY : DASH_automoc.cpp.s
 
-FWD_KIN_automoc.o: FWD_KIN_automoc.cpp.o
-.PHONY : FWD_KIN_automoc.o
+FWD_KINEMATICS_automoc.o: FWD_KINEMATICS_automoc.cpp.o
+.PHONY : FWD_KINEMATICS_automoc.o
 
 # target to build an object file
-FWD_KIN_automoc.cpp.o:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/FWD_KIN.dir/build.make simulation/CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.o
-.PHONY : FWD_KIN_automoc.cpp.o
+FWD_KINEMATICS_automoc.cpp.o:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/FWD_KINEMATICS.dir/build.make simulation/CMakeFiles/FWD_KINEMATICS.dir/FWD_KINEMATICS_automoc.cpp.o
+.PHONY : FWD_KINEMATICS_automoc.cpp.o
 
-FWD_KIN_automoc.i: FWD_KIN_automoc.cpp.i
-.PHONY : FWD_KIN_automoc.i
+FWD_KINEMATICS_automoc.i: FWD_KINEMATICS_automoc.cpp.i
+.PHONY : FWD_KINEMATICS_automoc.i
 
 # target to preprocess a source file
-FWD_KIN_automoc.cpp.i:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/FWD_KIN.dir/build.make simulation/CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.i
-.PHONY : FWD_KIN_automoc.cpp.i
+FWD_KINEMATICS_automoc.cpp.i:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/FWD_KINEMATICS.dir/build.make simulation/CMakeFiles/FWD_KINEMATICS.dir/FWD_KINEMATICS_automoc.cpp.i
+.PHONY : FWD_KINEMATICS_automoc.cpp.i
 
-FWD_KIN_automoc.s: FWD_KIN_automoc.cpp.s
-.PHONY : FWD_KIN_automoc.s
+FWD_KINEMATICS_automoc.s: FWD_KINEMATICS_automoc.cpp.s
+.PHONY : FWD_KINEMATICS_automoc.s
 
 # target to generate assembly for a file
-FWD_KIN_automoc.cpp.s:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/FWD_KIN.dir/build.make simulation/CMakeFiles/FWD_KIN.dir/FWD_KIN_automoc.cpp.s
-.PHONY : FWD_KIN_automoc.cpp.s
+FWD_KINEMATICS_automoc.cpp.s:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/FWD_KINEMATICS.dir/build.make simulation/CMakeFiles/FWD_KINEMATICS.dir/FWD_KINEMATICS_automoc.cpp.s
+.PHONY : FWD_KINEMATICS_automoc.cpp.s
 
 RAY_CAST_automoc.o: RAY_CAST_automoc.cpp.o
 .PHONY : RAY_CAST_automoc.o
@@ -1140,7 +1140,7 @@ src/ForwardKinematics.o: src/ForwardKinematics.cpp.o
 
 # target to build an object file
 src/ForwardKinematics.cpp.o:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/FWD_KIN.dir/build.make simulation/CMakeFiles/FWD_KIN.dir/src/ForwardKinematics.cpp.o
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/FWD_KINEMATICS.dir/build.make simulation/CMakeFiles/FWD_KINEMATICS.dir/src/ForwardKinematics.cpp.o
 .PHONY : src/ForwardKinematics.cpp.o
 
 src/ForwardKinematics.i: src/ForwardKinematics.cpp.i
@@ -1148,7 +1148,7 @@ src/ForwardKinematics.i: src/ForwardKinematics.cpp.i
 
 # target to preprocess a source file
 src/ForwardKinematics.cpp.i:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/FWD_KIN.dir/build.make simulation/CMakeFiles/FWD_KIN.dir/src/ForwardKinematics.cpp.i
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/FWD_KINEMATICS.dir/build.make simulation/CMakeFiles/FWD_KINEMATICS.dir/src/ForwardKinematics.cpp.i
 .PHONY : src/ForwardKinematics.cpp.i
 
 src/ForwardKinematics.s: src/ForwardKinematics.cpp.s
@@ -1156,7 +1156,7 @@ src/ForwardKinematics.s: src/ForwardKinematics.cpp.s
 
 # target to generate assembly for a file
 src/ForwardKinematics.cpp.s:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/FWD_KIN.dir/build.make simulation/CMakeFiles/FWD_KIN.dir/src/ForwardKinematics.cpp.s
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/FWD_KINEMATICS.dir/build.make simulation/CMakeFiles/FWD_KINEMATICS.dir/src/ForwardKinematics.cpp.s
 .PHONY : src/ForwardKinematics.cpp.s
 
 src/Raycaster.o: src/Raycaster.cpp.o
@@ -1313,8 +1313,8 @@ help:
 	@echo "... CAR_MODEL_automoc"
 	@echo "... DASH"
 	@echo "... DASH_automoc"
-	@echo "... FWD_KIN"
-	@echo "... FWD_KIN_automoc"
+	@echo "... FWD_KINEMATICS"
+	@echo "... FWD_KINEMATICS_automoc"
 	@echo "... RAY_CAST"
 	@echo "... RAY_CAST_automoc"
 	@echo "... _simulation_generate_messages_check_deps_ctrl_msg"
@@ -1377,9 +1377,9 @@ help:
 	@echo "... DASH_automoc.o"
 	@echo "... DASH_automoc.i"
 	@echo "... DASH_automoc.s"
-	@echo "... FWD_KIN_automoc.o"
-	@echo "... FWD_KIN_automoc.i"
-	@echo "... FWD_KIN_automoc.s"
+	@echo "... FWD_KINEMATICS_automoc.o"
+	@echo "... FWD_KINEMATICS_automoc.i"
+	@echo "... FWD_KINEMATICS_automoc.s"
 	@echo "... RAY_CAST_automoc.o"
 	@echo "... RAY_CAST_automoc.i"
 	@echo "... RAY_CAST_automoc.s"
