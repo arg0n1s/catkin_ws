@@ -164,48 +164,6 @@ apollo_13/fast:
 .PHONY : apollo_13/fast
 
 # Convenience name for target.
-apollo_13/CMakeFiles/bond_generate_messages_cpp.dir/rule:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 apollo_13/CMakeFiles/bond_generate_messages_cpp.dir/rule
-.PHONY : apollo_13/CMakeFiles/bond_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_cpp: apollo_13/CMakeFiles/bond_generate_messages_cpp.dir/rule
-.PHONY : bond_generate_messages_cpp
-
-# fast build rule for target.
-bond_generate_messages_cpp/fast:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f apollo_13/CMakeFiles/bond_generate_messages_cpp.dir/build.make apollo_13/CMakeFiles/bond_generate_messages_cpp.dir/build
-.PHONY : bond_generate_messages_cpp/fast
-
-# Convenience name for target.
-apollo_13/CMakeFiles/bond_generate_messages_lisp.dir/rule:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 apollo_13/CMakeFiles/bond_generate_messages_lisp.dir/rule
-.PHONY : apollo_13/CMakeFiles/bond_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_lisp: apollo_13/CMakeFiles/bond_generate_messages_lisp.dir/rule
-.PHONY : bond_generate_messages_lisp
-
-# fast build rule for target.
-bond_generate_messages_lisp/fast:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f apollo_13/CMakeFiles/bond_generate_messages_lisp.dir/build.make apollo_13/CMakeFiles/bond_generate_messages_lisp.dir/build
-.PHONY : bond_generate_messages_lisp/fast
-
-# Convenience name for target.
-apollo_13/CMakeFiles/bond_generate_messages_py.dir/rule:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 apollo_13/CMakeFiles/bond_generate_messages_py.dir/rule
-.PHONY : apollo_13/CMakeFiles/bond_generate_messages_py.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_py: apollo_13/CMakeFiles/bond_generate_messages_py.dir/rule
-.PHONY : bond_generate_messages_py
-
-# fast build rule for target.
-bond_generate_messages_py/fast:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f apollo_13/CMakeFiles/bond_generate_messages_py.dir/build.make apollo_13/CMakeFiles/bond_generate_messages_py.dir/build
-.PHONY : bond_generate_messages_py/fast
-
-# Convenience name for target.
 apollo_13/CMakeFiles/car_aruco.dir/rule:
 	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 apollo_13/CMakeFiles/car_aruco.dir/rule
 .PHONY : apollo_13/CMakeFiles/car_aruco.dir/rule
@@ -344,48 +302,6 @@ move_base_gencfg: apollo_13/CMakeFiles/move_base_gencfg.dir/rule
 move_base_gencfg/fast:
 	cd /home/sebastian/catkin_ws/build && $(MAKE) -f apollo_13/CMakeFiles/move_base_gencfg.dir/build.make apollo_13/CMakeFiles/move_base_gencfg.dir/build
 .PHONY : move_base_gencfg/fast
-
-# Convenience name for target.
-apollo_13/CMakeFiles/nodelet_generate_messages_cpp.dir/rule:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 apollo_13/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
-.PHONY : apollo_13/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_cpp: apollo_13/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
-.PHONY : nodelet_generate_messages_cpp
-
-# fast build rule for target.
-nodelet_generate_messages_cpp/fast:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f apollo_13/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make apollo_13/CMakeFiles/nodelet_generate_messages_cpp.dir/build
-.PHONY : nodelet_generate_messages_cpp/fast
-
-# Convenience name for target.
-apollo_13/CMakeFiles/nodelet_generate_messages_lisp.dir/rule:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 apollo_13/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
-.PHONY : apollo_13/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_lisp: apollo_13/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
-.PHONY : nodelet_generate_messages_lisp
-
-# fast build rule for target.
-nodelet_generate_messages_lisp/fast:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f apollo_13/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make apollo_13/CMakeFiles/nodelet_generate_messages_lisp.dir/build
-.PHONY : nodelet_generate_messages_lisp/fast
-
-# Convenience name for target.
-apollo_13/CMakeFiles/nodelet_generate_messages_py.dir/rule:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 apollo_13/CMakeFiles/nodelet_generate_messages_py.dir/rule
-.PHONY : apollo_13/CMakeFiles/nodelet_generate_messages_py.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_py: apollo_13/CMakeFiles/nodelet_generate_messages_py.dir/rule
-.PHONY : nodelet_generate_messages_py
-
-# fast build rule for target.
-nodelet_generate_messages_py/fast:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f apollo_13/CMakeFiles/nodelet_generate_messages_py.dir/build.make apollo_13/CMakeFiles/nodelet_generate_messages_py.dir/build
-.PHONY : nodelet_generate_messages_py/fast
 
 # Convenience name for target.
 apollo_13/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule:
@@ -606,9 +522,6 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... apollo_13"
-	@echo "... bond_generate_messages_cpp"
-	@echo "... bond_generate_messages_lisp"
-	@echo "... bond_generate_messages_py"
 	@echo "... car_aruco"
 	@echo "... costmap_2d_gencfg"
 	@echo "... costmap_2d_generate_messages_cpp"
@@ -624,9 +537,6 @@ help:
 	@echo "... map_msgs_generate_messages_lisp"
 	@echo "... map_msgs_generate_messages_py"
 	@echo "... move_base_gencfg"
-	@echo "... nodelet_generate_messages_cpp"
-	@echo "... nodelet_generate_messages_lisp"
-	@echo "... nodelet_generate_messages_py"
 	@echo "... pcl_msgs_generate_messages_cpp"
 	@echo "... pcl_msgs_generate_messages_lisp"
 	@echo "... pcl_msgs_generate_messages_py"

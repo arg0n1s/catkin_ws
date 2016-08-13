@@ -27,6 +27,7 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
+  "/home/sebastian/catkin_ws/devel/include"
   "/usr/include/vtk-5.8"
   "/usr/include/opencv"
   "/home/sebastian/catkin_ws/src/automap/include"

@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QLabel>
@@ -57,6 +58,9 @@ public:
     QLabel *label_13;
     QLCDNumber *distance;
     QLabel *label_14;
+    QCheckBox *automap_ctrl;
+    QCheckBox *automap_sens;
+    QCheckBox *automap_nbv;
     QStatusBar *statusbar;
     QMenuBar *menubar;
 
@@ -184,6 +188,16 @@ public:
         label_14 = new QLabel(centralwidget);
         label_14->setObjectName(QStringLiteral("label_14"));
         label_14->setGeometry(QRect(120, 220, 41, 16));
+        automap_ctrl = new QCheckBox(centralwidget);
+        automap_ctrl->setObjectName(QStringLiteral("automap_ctrl"));
+        automap_ctrl->setGeometry(QRect(300, 40, 181, 21));
+        automap_ctrl->setChecked(false);
+        automap_sens = new QCheckBox(centralwidget);
+        automap_sens->setObjectName(QStringLiteral("automap_sens"));
+        automap_sens->setGeometry(QRect(300, 70, 181, 21));
+        automap_nbv = new QCheckBox(centralwidget);
+        automap_nbv->setObjectName(QStringLiteral("automap_nbv"));
+        automap_nbv->setGeometry(QRect(300, 100, 181, 21));
         Dashboard->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(Dashboard);
         statusbar->setObjectName(QStringLiteral("statusbar"));
@@ -221,6 +235,9 @@ public:
         label_12->setText(QApplication::translate("Dashboard", "Radial Velocity", 0));
         label_13->setText(QApplication::translate("Dashboard", "Distance traveled:", 0));
         label_14->setText(QApplication::translate("Dashboard", "meters", 0));
+        automap_ctrl->setText(QApplication::translate("Dashboard", "Automap Control On/Off", 0));
+        automap_sens->setText(QApplication::translate("Dashboard", "Automap Sensing On/Off", 0));
+        automap_nbv->setText(QApplication::translate("Dashboard", "Automap NBV On/Off", 0));
     } // retranslateUi
 
 };

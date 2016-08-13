@@ -219,6 +219,20 @@ car_handler_node/fast:
 	cd /home/sebastian/catkin_ws/build && $(MAKE) -f car_handler/CMakeFiles/car_handler_node.dir/build.make car_handler/CMakeFiles/car_handler_node.dir/build
 .PHONY : car_handler_node/fast
 
+# Convenience name for target.
+car_handler/CMakeFiles/position_estimation.dir/rule:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 car_handler/CMakeFiles/position_estimation.dir/rule
+.PHONY : car_handler/CMakeFiles/position_estimation.dir/rule
+
+# Convenience name for target.
+position_estimation: car_handler/CMakeFiles/position_estimation.dir/rule
+.PHONY : position_estimation
+
+# fast build rule for target.
+position_estimation/fast:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f car_handler/CMakeFiles/position_estimation.dir/build.make car_handler/CMakeFiles/position_estimation.dir/build
+.PHONY : position_estimation/fast
+
 src/ForwardKinematics.o: src/ForwardKinematics.cpp.o
 .PHONY : src/ForwardKinematics.o
 
@@ -242,6 +256,30 @@ src/ForwardKinematics.s: src/ForwardKinematics.cpp.s
 src/ForwardKinematics.cpp.s:
 	cd /home/sebastian/catkin_ws/build && $(MAKE) -f car_handler/CMakeFiles/FWD_KIN.dir/build.make car_handler/CMakeFiles/FWD_KIN.dir/src/ForwardKinematics.cpp.s
 .PHONY : src/ForwardKinematics.cpp.s
+
+src/PositionEstimation.o: src/PositionEstimation.cpp.o
+.PHONY : src/PositionEstimation.o
+
+# target to build an object file
+src/PositionEstimation.cpp.o:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f car_handler/CMakeFiles/position_estimation.dir/build.make car_handler/CMakeFiles/position_estimation.dir/src/PositionEstimation.cpp.o
+.PHONY : src/PositionEstimation.cpp.o
+
+src/PositionEstimation.i: src/PositionEstimation.cpp.i
+.PHONY : src/PositionEstimation.i
+
+# target to preprocess a source file
+src/PositionEstimation.cpp.i:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f car_handler/CMakeFiles/position_estimation.dir/build.make car_handler/CMakeFiles/position_estimation.dir/src/PositionEstimation.cpp.i
+.PHONY : src/PositionEstimation.cpp.i
+
+src/PositionEstimation.s: src/PositionEstimation.cpp.s
+.PHONY : src/PositionEstimation.s
+
+# target to generate assembly for a file
+src/PositionEstimation.cpp.s:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f car_handler/CMakeFiles/position_estimation.dir/build.make car_handler/CMakeFiles/position_estimation.dir/src/PositionEstimation.cpp.s
+.PHONY : src/PositionEstimation.cpp.s
 
 src/Speedometer.o: src/Speedometer.cpp.o
 .PHONY : src/Speedometer.o
@@ -355,11 +393,15 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
+	@echo "... position_estimation"
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... src/ForwardKinematics.o"
 	@echo "... src/ForwardKinematics.i"
 	@echo "... src/ForwardKinematics.s"
+	@echo "... src/PositionEstimation.o"
+	@echo "... src/PositionEstimation.i"
+	@echo "... src/PositionEstimation.s"
 	@echo "... src/Speedometer.o"
 	@echo "... src/Speedometer.i"
 	@echo "... src/Speedometer.s"

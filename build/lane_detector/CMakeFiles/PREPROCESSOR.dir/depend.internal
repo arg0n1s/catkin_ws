@@ -3,12 +3,11 @@
 
 lane_detector/CMakeFiles/PREPROCESSOR.dir/src/preprocessor.cpp.o
  /home/sebastian/catkin_ws/devel/include/lane_detector/DetectorConfig.h
- /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/CameraInfoOpt.h
  /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/InversePerspectiveMapping.hh
  /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/LaneDetector.hh
- /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/LaneDetectorOpt.h
  /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/mcv.hh
  /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/preprocessor.h
+ /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/splineCombination.h
  /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/utils.h
  /home/sebastian/catkin_ws/src/lane_detector/src/preprocessor.cpp
  /opt/ros/indigo/include/XmlRpcDecl.h

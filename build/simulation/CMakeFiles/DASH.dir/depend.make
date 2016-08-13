@@ -3,6 +3,9 @@
 
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: simulation/DASH_automoc.cpp
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: simulation/moc_Dashboard.cpp
+simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /home/sebastian/catkin_ws/devel/include/automap/automap_ctrl_msg.h
+simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /home/sebastian/catkin_ws/devel/include/simulation/ctrl_msg.h
+simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /home/sebastian/catkin_ws/devel/include/simulation/telemetry_msg.h
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /home/sebastian/catkin_ws/src/simulation/include/Dashboard.h
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h
@@ -62,6 +65,7 @@ simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /opt/ros/indigo/include/ros/t
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /opt/ros/indigo/include/ros/wall_timer.h
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /opt/ros/indigo/include/ros/wall_timer_options.h
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /opt/ros/indigo/include/rosconsole/macros_generated.h
+simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /opt/ros/indigo/include/std_msgs/Header.h
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /usr/include/qt5/QtCore/QTimer
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /usr/include/qt5/QtCore/qalgorithms.h
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /usr/include/qt5/QtCore/qarraydata.h
@@ -179,6 +183,9 @@ simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /usr/include/qt5/QtWidgets/qt
 simulation/CMakeFiles/DASH.dir/DASH_automoc.cpp.o: /usr/include/qt5/QtWidgets/qwidget.h
 
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: simulation/ui_Dashboard.h
+simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /home/sebastian/catkin_ws/devel/include/automap/automap_ctrl_msg.h
+simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /home/sebastian/catkin_ws/devel/include/simulation/ctrl_msg.h
+simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /home/sebastian/catkin_ws/devel/include/simulation/telemetry_msg.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /home/sebastian/catkin_ws/src/simulation/include/Dashboard.cpp
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /home/sebastian/catkin_ws/src/simulation/include/Dashboard.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
@@ -239,6 +246,7 @@ simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /opt/ros/indigo/include/
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /opt/ros/indigo/include/ros/wall_timer.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /opt/ros/indigo/include/ros/wall_timer_options.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /opt/ros/indigo/include/rosconsole/macros_generated.h
+simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /opt/ros/indigo/include/std_msgs/Header.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtCore/QTimer
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtCore/QVariant
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtCore/qabstractitemmodel.h
@@ -362,6 +370,7 @@ simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtGui/q
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/QAction
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/QApplication
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/QButtonGroup
+simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/QCheckBox
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/QHeaderView
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/QLCDNumber
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/QLabel
@@ -381,6 +390,7 @@ simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidge
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/qactiongroup.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/qapplication.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/qbuttongroup.h
+simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/qcheckbox.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/qdesktopwidget.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/qframe.h
 simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.o: /usr/include/qt5/QtWidgets/qheaderview.h

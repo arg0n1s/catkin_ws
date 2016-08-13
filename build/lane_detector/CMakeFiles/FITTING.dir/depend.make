@@ -3,10 +3,8 @@
 
 lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /home/sebastian/catkin_ws/devel/include/lane_detector/DetectorConfig.h
 lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /home/sebastian/catkin_ws/devel/include/lane_detector/Lane.h
-lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/CameraInfoOpt.h
 lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/InversePerspectiveMapping.hh
 lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/LaneDetector.hh
-lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/LaneDetectorOpt.h
 lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/fitting.h
 lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/fittingApproach.h
 lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/lane_tracker/Ctracker.h
@@ -14,6 +12,7 @@ lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /home/sebastian/catkin_w
 lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/lane_tracker/Kalman.h
 lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/lane_tracker/defines.h
 lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/mcv.hh
+lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/splineCombination.h
 lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/utils.h
 lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /home/sebastian/catkin_ws/src/lane_detector/src/fitting.cpp
 lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h

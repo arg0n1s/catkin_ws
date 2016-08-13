@@ -16,6 +16,7 @@
 #include <yaml-cpp/yaml.h>
 #include <fstream>
 #include <simulation/telemetry_msg.h>
+#include <automap/automap_ctrl_msg.h>
 
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
 
@@ -23,6 +24,9 @@ static const double NSEC_PER_SEC = 1000000000.0;
 
 void mapMetaCallback(const nav_msgs::MapMetaData::ConstPtr& metaMsg, nav_msgs::MapMetaData *meta){
         *meta = *metaMsg;
+}
+void ctrlCallback(const automap::automap_ctrl_msg::ConstPtr& ctrlMsg, automap::automap_ctrl_msg* ctrlSignals){
+        *ctrlSignals = *ctrlMsg;
 }
 void mapCallback(const nav_msgs::OccupancyGrid::ConstPtr& mapMsg, cv::Mat *map){
         int width = mapMsg->info.width;
@@ -122,6 +126,12 @@ int main(int argc, char **argv){
         {
                 ROS_INFO("Waiting for the move_base action server to come up...");
         }
+        //control_On : motion control on/off / detection_On : sensing on/off /  NBV_On : nbv on/off
+        automap::automap_ctrl_msg ctrlSignals;
+        ctrlSignals.control_On=false;
+        ctrlSignals.detection_On=false;
+        ctrlSignals.NBV_On=false;
+
 
         tf::TransformListener listener;
         geometry_msgs::Pose position;
@@ -129,6 +139,7 @@ int main(int argc, char **argv){
         cv::Point gridPose;
 
         ros::Subscriber mapMetaSub = nh.subscribe<nav_msgs::MapMetaData>("map_metadata", 10, boost::bind(mapMetaCallback, _1, &mapMetaData));
+        ros::Subscriber ctrlSub = nh.subscribe<automap::automap_ctrl_msg>("automap/ctrl_msg", 10, boost::bind(ctrlCallback, _1, &ctrlSignals));
         ros::Subscriber mapSub = nh.subscribe<nav_msgs::OccupancyGrid>("map", 10, boost::bind(mapCallback, _1, &map));
         ros::Publisher pathPub = nh.advertise<nav_msgs::Path>("pathtransformPlanner/path", 10);
         ros::Subscriber robotInfo = nh.subscribe<simulation::telemetry_msg>("telemetry", 10, boost::bind(telemetryCallback, _1, &telemetry));
@@ -162,6 +173,9 @@ int main(int argc, char **argv){
                 double gain = cv::norm(old, map, CV_L2);
 
                 if(gain>2500.0 || retry==0) {
+                        ROS_INFO("Enough information gained: %lf",gain);
+                        old = map.clone();
+                        retry = 5;
                         //Get Position Information...
                         getPositionInfo("map", "base_footprint", listener, &position, &rpy);
                         setGridPosition(position, mapMetaData, &gridPose);
@@ -172,8 +186,14 @@ int main(int argc, char **argv){
                         }catch(std::exception& e) {
                                 std::cout<<e.what()<<std::endl;
                         }
+                        bool w = false;
 
-                        bool w = ePlanner.findBestPlanSimple(map, gridPose, rpy[2]);
+                        if(ctrlSignals.detection_On) {
+                                w = ePlanner.findBestPlan(map, gridPose, rpy[2], ctrlSignals.NBV_On);
+                        }else{
+                                w = true;
+                        }
+
 
 
                         if(w) {
@@ -188,20 +208,26 @@ int main(int argc, char **argv){
                                 edgeImageMsg = cv_bridge::CvImage(std_msgs::Header(), "bgr8", out).toImageMsg();
                                 edgePub.publish(edgeImageMsg);
 
-
-                                nav_msgs::Path frontierPath = ePlanner.getBestPlan(genericHeader);
-                                ROS_INFO("Sending Plan..");
-                                pathPub.publish(frontierPath);
-                                ros::spinOnce();
-                                ROS_INFO("Sending Goal..");
-                                sendGoal(frontierPath, ac);
+                                nav_msgs::Path frontierPath;
+                                if(ctrlSignals.detection_On) {
+                                        frontierPath = ePlanner.getBestPlan(genericHeader);
+                                }
 
 
+                                if(ctrlSignals.control_On && ctrlSignals.detection_On) {
+                                        ROS_INFO("Sending Plan..");
+                                        pathPub.publish(frontierPath);
+                                        ros::spinOnce();
+                                        ROS_INFO("Sending Goal..");
+                                        sendGoal(frontierPath, ac);
 
+                                }
 
                         }else{
                                 ROS_INFO("Map exploration finished, aborting loop...");
+                                ac.waitForResult();
                                 ac.cancelGoal();
+                                ac.waitForResult();
 
                                 std::string imgMetaPath = ros::package::getPath("automap") + "/data/output/map.yaml";
                                 std::string imgStatPath = ros::package::getPath("automap") + "/data/output/exploration_statistics.txt";
@@ -227,7 +253,7 @@ int main(int argc, char **argv){
                                 Y_out << YAML::Key << "origin";
                                 Y_out << YAML::Flow;
                                 Y_out << YAML::BeginSeq << mapMetaData.origin.position.x<<mapMetaData.origin.position.y
-                                <<mapMetaData.origin.position.z << YAML::EndSeq;
+                                      <<mapMetaData.origin.position.z << YAML::EndSeq;
                                 Y_out << YAML::Key << "negate";
                                 Y_out << YAML::Value << 0;
                                 Y_out << YAML::Key << "occupied_thresh";
@@ -247,8 +273,8 @@ int main(int argc, char **argv){
 
                                 std::ofstream outfile_yaml(imgMetaPath);
                                 try{
-                                  outfile_yaml<<Y_out.c_str();
-                                  ROS_INFO("MapMetaData written to: %s", imgMetaPath.c_str());
+                                        outfile_yaml<<Y_out.c_str();
+                                        ROS_INFO("MapMetaData written to: %s", imgMetaPath.c_str());
                                 }catch (std::runtime_error& ex) {
                                         std::cout << "Exception writing .yaml-file: " << ex.what() << std::endl;
                                 }
@@ -256,8 +282,8 @@ int main(int argc, char **argv){
 
                                 std::ofstream outfile_statistics(imgStatPath);
                                 try{
-                                  outfile_statistics<<Y_out_statistics.c_str();
-                                  ROS_INFO("Statistics data written to: %s", imgStatPath.c_str());
+                                        outfile_statistics<<Y_out_statistics.c_str();
+                                        ROS_INFO("Statistics data written to: %s", imgStatPath.c_str());
                                 }catch (std::runtime_error& ex) {
                                         std::cout << "Exception writing .txt-file: " << ex.what() << std::endl;
                                 }
@@ -269,9 +295,7 @@ int main(int argc, char **argv){
 
                         }
 
-                        ROS_INFO("Enough information gained: %lf",gain);
-                        old = map.clone();
-                        retry = 5;
+
                 }else{
                         ROS_INFO("Not enough information gained: %lf",gain);
                         retry--;

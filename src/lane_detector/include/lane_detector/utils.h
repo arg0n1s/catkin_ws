@@ -8,20 +8,20 @@
 #define UTILS_H_
 
 #include <lane_detector/LaneDetector.hh>
-#include <lane_detector/LaneDetectorOpt.h>
 #include <lane_detector/DetectorConfig.h>
 #include <opencv2/highgui/highgui.hpp>
 #include <geometry_msgs/Point32.h>
 #include <vector>
 #include <stdexcept>
 #include <algorithm>
+#include <lane_detector/splineCombination.h>
 
 namespace lane_detector{
 
   enum Driving
   {
-    on_the_left,
-    on_the_right
+    on_the_left = 1,
+    on_the_right = 0
   };
 
     namespace utils {
@@ -33,13 +33,13 @@ namespace lane_detector{
     inline float extrapolateLineY(float x, line& l) {
           float y = (l[0].y*(l[1].x-x) + l[1].y*(x-l[0].x))/(l[1].x - l[0].x);
           return y;
-    }
-    inline float calcSlopeAngle(cv::Point& pt1, cv::Point& pt2) {
-          float dY = std::abs(pt2.y - pt1.y);
-          float dX = std::abs(pt2.x - pt1.x);
-          float slope = dY/dX;
-          return 180*std::atan(slope)/CV_PI;
     }*/
+    inline float calcSlope(cv::Point& pt1, const cv::Point& pt2) {
+          float dY = pt2.y - pt1.y;
+          float dX = pt2.x - pt1.x;
+          float slope = dY/dX;
+          return slope;
+    }
 
     inline void boxes2Rects(std::vector<LaneDetector::Box>& boxes, std::vector<cv::Rect>& rects) {
       rects.clear();
@@ -59,12 +59,7 @@ namespace lane_detector{
       }
     }
 
-    template<typename T, typename... Args>
-    std::unique_ptr<T> make_unique(Args&&... args) {
-    return std::unique_ptr<T>(new T(std::forward<Args>(args)...));
-}
-
-    inline bool sortPointsY (const cv::Point& p1, const cv::Point& p2) { return (p1.y < p2.y); }
+    inline bool sortPointsY (const cv::Point& p1, const cv::Point& p2) { return (p1.y > p2.y); }
 
     /**
      * This function draws a spline on an image
@@ -162,27 +157,16 @@ namespace lane_detector{
     lanesConf.lineHeight = dynConfig.lineHeight;
     lanesConf.kernelWidth = dynConfig.kernelWidth;
     lanesConf.kernelHeight = dynConfig.kernelHeight;
-    lanesConf.lowerQuantile =
-        dynConfig.lowerQuantile;
-    lanesConf.localMaxima =
-        dynConfig.localMaxima;
-    lanesConf.groupingType = dynConfig.groupingType;
+    lanesConf.lowerQuantile = dynConfig.lowerQuantile;
+    lanesConf.localMaxima =dynConfig.localMaxima;
     lanesConf.binarize = dynConfig.binarize;
-    lanesConf.detectionThreshold =
-        dynConfig.detectionThreshold;
-    lanesConf.smoothScores =
-        dynConfig.smoothScores;
-    lanesConf.rMin = dynConfig.rMin;
-    lanesConf.rMax = dynConfig.rMax;
-    lanesConf.rStep = dynConfig.rStep;
-    lanesConf.thetaMin = dynConfig.thetaMin * CV_PI/180;
-    lanesConf.thetaMax = dynConfig.thetaMax * CV_PI/180;
-    lanesConf.thetaStep = dynConfig.thetaStep * CV_PI/180;
+    lanesConf.detectionThreshold = dynConfig.detectionThreshold;
+    lanesConf.smoothScores = dynConfig.smoothScores;
+
     lanesConf.ipmVpPortion = dynConfig.ipmVpPortion;
     lanesConf.getEndPoints = dynConfig.getEndPoints;
     lanesConf.group = dynConfig.group;
     lanesConf.groupThreshold = dynConfig.groupThreshold;
-    lanesConf.ransac = dynConfig.ransac;
 
     lanesConf.ransacLineNumSamples = dynConfig.ransacLineNumSamples;
     lanesConf.ransacLineNumIterations = dynConfig.ransacLineNumIterations;
@@ -192,19 +176,6 @@ namespace lane_detector{
     lanesConf.ransacLineBinarize = dynConfig.ransacLineBinarize;
     lanesConf.ransacLineWindow = dynConfig.ransacLineWindow;
 
-    lanesConf.ransacSplineNumSamples = dynConfig.ransacSplineNumSamples;
-    lanesConf.ransacSplineNumIterations = dynConfig.ransacSplineNumIterations;
-    lanesConf.ransacSplineNumGoodFit = dynConfig.ransacSplineNumGoodFit;
-    lanesConf.ransacSplineThreshold = dynConfig.ransacSplineThreshold;
-    lanesConf.ransacSplineScoreThreshold = dynConfig.ransacSplineScoreThreshold;
-    lanesConf.ransacSplineBinarize = dynConfig.ransacSplineBinarize;
-    lanesConf.ransacSplineWindow = dynConfig.ransacSplineWindow;
-
-    lanesConf.ransacSplineDegree = dynConfig.ransacSplineDegree;
-
-    lanesConf.ransacSpline = dynConfig.ransacSpline;
-    lanesConf.ransacLine = dynConfig.ransacLine;
-    lanesConf.ransacSplineStep = dynConfig.ransacSplineStep;
 
     lanesConf.overlapThreshold = dynConfig.overlapThreshold;
 
@@ -229,63 +200,13 @@ namespace lane_detector{
     lanesConf.extendIPMRectTop = dynConfig.extendIPMRectTop;
     lanesConf.extendIPMRectBottom = dynConfig.extendIPMRectBottom;
 
-    lanesConf.splineScoreJitter = dynConfig.splineScoreJitter;
-    lanesConf.splineScoreLengthRatio = dynConfig.splineScoreLengthRatio;
-    lanesConf.splineScoreAngleRatio = dynConfig.splineScoreAngleRatio;
-    lanesConf.splineScoreStep = dynConfig.splineScoreStep;
-
-    lanesConf.splineTrackingNumAbsentFrames = dynConfig.splineTrackingNumAbsentFrames;
-    lanesConf.splineTrackingNumSeenFrames = dynConfig.splineTrackingNumSeenFrames;
-
-    lanesConf.mergeSplineThetaThreshold = dynConfig.mergeSplineThetaThreshold;
-    lanesConf.mergeSplineRThreshold = dynConfig.mergeSplineRThreshold;
-    lanesConf.mergeSplineMeanThetaThreshold = dynConfig.mergeSplineMeanThetaThreshold;
-    lanesConf.mergeSplineMeanRThreshold = dynConfig.mergeSplineMeanRThreshold;
-    lanesConf.mergeSplineCentroidThreshold = dynConfig.mergeSplineCentroidThreshold;
-
-    lanesConf.lineTrackingNumAbsentFrames = dynConfig.lineTrackingNumAbsentFrames;
-    lanesConf.lineTrackingNumSeenFrames = dynConfig.lineTrackingNumSeenFrames;
-
-    lanesConf.mergeLineThetaThreshold = dynConfig.mergeLineThetaThreshold;
-    lanesConf.mergeLineRThreshold = dynConfig.mergeLineRThreshold;
-
     lanesConf.numStrips = dynConfig.numStrips;
 
-
-    lanesConf.checkSplines = dynConfig.checkSplines;
-    lanesConf.checkSplinesCurvenessThreshold = dynConfig.checkSplinesCurvenessThreshold;
-    lanesConf.checkSplinesLengthThreshold = dynConfig.checkSplinesLengthThreshold;
-    lanesConf.checkSplinesThetaDiffThreshold = dynConfig.checkSplinesThetaDiffThreshold;
-    lanesConf.checkSplinesThetaThreshold = dynConfig.checkSplinesThetaThreshold;
-
-    lanesConf.checkIPMSplines = dynConfig.checkIPMSplines;
-    lanesConf.checkIPMSplinesCurvenessThreshold = dynConfig.checkIPMSplinesCurvenessThreshold;
-    lanesConf.checkIPMSplinesLengthThreshold = dynConfig.checkIPMSplinesLengthThreshold;
-    lanesConf.checkIPMSplinesThetaDiffThreshold = dynConfig.checkIPMSplinesThetaDiffThreshold;
-    lanesConf.checkIPMSplinesThetaThreshold = dynConfig.checkIPMSplinesThetaThreshold;
-
-    lanesConf.finalSplineScoreThreshold = dynConfig.finalSplineScoreThreshold;
-
     lanesConf.useGroundPlane = dynConfig.useGroundPlane;
-
-    lanesConf.checkColor = dynConfig.checkColor;
-    lanesConf.checkColorNumBins = dynConfig.checkColorNumBins;
-    lanesConf.checkColorWindow = dynConfig.checkColorWindow;
-    lanesConf.checkColorNumYellowMin = dynConfig.checkColorNumYellowMin;
-    lanesConf.checkColorRGMin = dynConfig.checkColorRGMin;
-    lanesConf.checkColorRGMax = dynConfig.checkColorRGMax;
-    lanesConf.checkColorGBMin = dynConfig.checkColorGBMin;
-    lanesConf.checkColorRBMin = dynConfig.checkColorRBMin;
-    lanesConf.checkColorRBFThreshold = dynConfig.checkColorRBFThreshold;
-    lanesConf.checkColorRBF = dynConfig.checkColorRBF;
 
     lanesConf.ipmWindowClear = dynConfig.ipmWindowClear;
     lanesConf.ipmWindowLeft = dynConfig.ipmWindowLeft;
     lanesConf.ipmWindowRight = dynConfig.ipmWindowRight;
-
-    lanesConf.checkLaneWidth = dynConfig.checkLaneWidth;
-    lanesConf.checkLaneWidthMean = dynConfig.checkLaneWidthMean;
-    lanesConf.checkLaneWidthStd = dynConfig.checkLaneWidthStd;
     LaneDetector::DEBUG_LINES = dynConfig.debug_lines? 1 : 0;
     }
 
@@ -349,20 +270,42 @@ namespace lane_detector{
        }
      }
 
+     inline void makeSplineCombinations(const lane_detector::DetectorConfig& config, const LaneDetector::IPMInfo& ipmInfo, const std::vector<cv::Point2f>& centroids, const std::vector<std::vector<cv::Point>>& splines, std::vector<SplineCombination>& combinations) {
+       combinations.clear();
+       assert(centroids.size() == splines.size());
+       if(centroids.size() > 1) {
+         for(uint32_t i = 0; i < centroids.size()-1; i++) {
+           for(uint32_t j = i+1; j < centroids.size(); j++) {
+             if(splines[i].size() > 3 && splines[j].size() > 3) {
+               SplineCombination combination(config, ipmInfo, splines[i], splines[j], i, j, centroids[i], centroids[j]);
+               combinations.push_back(combination);
+            }
+           }
+         }
+       }
+     }
+
     //Transform a vector of points of the ipm image to world coordinates (in meters)
     inline void ipmPoints2World(const std::vector<cv::Point2f>& input, std::vector<cv::Point2f>& output, const LaneDetector::IPMInfo& ipmInfo) {
       std::vector<cv::Point2f> out;
       for(cv::Point2f p : input) {
-        CvPoint2D32f p_copy = p;
-        LaneDetector::mcvPointImIPM2World(&p_copy, &ipmInfo);
-        p_copy.x  /= 1000; //convert to meters
-        p_copy.y  /= 1000;
-        out.push_back(p_copy);
+        CvPoint2D32f p_world = p;
+
+        //x-direction
+        p_world.x /= ipmInfo.xScale;
+        p_world.x += ipmInfo.xLimits[0];
+        //y-direction
+        p_world.y /= ipmInfo.yScale;
+        p_world.y = ipmInfo.yLimits[1] - p_world.y;
+
+        p_world.x  /= 1000; //convert to meters
+        p_world.y  /= 1000;
+        out.push_back(p_world);
       }
       output = out;
     }
 
-    //Converts a single CV-point (cv::Point) in ROS-point (geometry_msgs::Point32)
+    //Converts a single CV-point (cv::Point2f) in ROS-point (geometry_msgs::Point32)
     // ROS conventions are being used
     geometry_msgs::Point32 cvtCvPointToROSPoint(const cv::Point2f& point) {
         geometry_msgs::Point32 point32;
@@ -370,11 +313,10 @@ namespace lane_detector{
         point32.y = -point.x;
         point32.z = 0;
 
-        std::cout << "x: " << point32.x << " y: " << point32.y << std::endl;
         return point32;
     }
 
-    //Converts a vector of CV-points (cv::Point) in ROS-points (geometry_msgs::Point32)
+    //Converts a vector of CV-points (cv::Point2f) in ROS-points (geometry_msgs::Point32)
     inline void cvtCvPoints2ROSPoints(const std::vector<cv::Point2f>& input, std::vector<geometry_msgs::Point32>& output) {
       output.clear();
       for(cv::Point2f p : input) {

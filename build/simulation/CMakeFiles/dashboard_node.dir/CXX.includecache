@@ -6,7 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/sebastian/catkin_ws/build/simulation/dashboard_node_automoc.cpp
+/home/sebastian/catkin_ws/devel/include/automap/automap_ctrl_msg.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
 
 /home/sebastian/catkin_ws/devel/include/simulation/ctrl_msg.h
 string
@@ -62,6 +78,8 @@ simulation/ctrl_msg.h
 QTimer
 -
 QKeyEvent
+-
+automap/automap_ctrl_msg.h
 -
 
 /home/sebastian/catkin_ws/src/simulation/src/simulation_dashboard.cpp

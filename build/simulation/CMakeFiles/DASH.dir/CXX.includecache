@@ -6,18 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/sebastian/catkin_ws/build/simulation/DASH_automoc.cpp
-moc_Dashboard.cpp
-/home/sebastian/catkin_ws/build/simulation/moc_Dashboard.cpp
-
-/home/sebastian/catkin_ws/build/simulation/moc_Dashboard.cpp
-../../src/simulation/include/Dashboard.h
-/home/sebastian/catkin_ws/src/simulation/include/Dashboard.h
-QtCore/qbytearray.h
--
-QtCore/qmetatype.h
--
-
 /home/sebastian/catkin_ws/build/simulation/ui_Dashboard.h
 QtCore/QVariant
 -
@@ -26,6 +14,8 @@ QtWidgets/QAction
 QtWidgets/QApplication
 -
 QtWidgets/QButtonGroup
+-
+QtWidgets/QCheckBox
 -
 QtWidgets/QHeaderView
 -
@@ -44,6 +34,64 @@ QtWidgets/QSlider
 QtWidgets/QStatusBar
 -
 QtWidgets/QWidget
+-
+
+/home/sebastian/catkin_ws/devel/include/automap/automap_ctrl_msg.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+
+/home/sebastian/catkin_ws/devel/include/simulation/ctrl_msg.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+
+/home/sebastian/catkin_ws/devel/include/simulation/telemetry_msg.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+geometry_msgs/Vector3.h
+-
+geometry_msgs/Vector3.h
 -
 
 /home/sebastian/catkin_ws/src/simulation/include/Dashboard.cpp
@@ -66,6 +114,8 @@ simulation/ctrl_msg.h
 QTimer
 -
 QKeyEvent
+-
+automap/automap_ctrl_msg.h
 -
 
 /opt/ros/indigo/include/XmlRpcDecl.h
@@ -747,6 +797,22 @@ ros/forwards.h
 /opt/ros/indigo/include/ros/ros/forwards.h
 
 /opt/ros/indigo/include/rosconsole/macros_generated.h
+
+/opt/ros/indigo/include/std_msgs/Header.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
 
 /usr/include/qt5/QtCore/QTimer
 qtimer.h
@@ -1814,6 +1880,10 @@ qapplication.h
 qbuttongroup.h
 /usr/include/qt5/QtWidgets/qbuttongroup.h
 
+/usr/include/qt5/QtWidgets/QCheckBox
+qcheckbox.h
+/usr/include/qt5/QtWidgets/qcheckbox.h
+
 /usr/include/qt5/QtWidgets/QHeaderView
 qheaderview.h
 /usr/include/qt5/QtWidgets/qheaderview.h
@@ -1926,6 +1996,10 @@ QtGui/qguiapplication.h
 
 /usr/include/qt5/QtWidgets/qbuttongroup.h
 QtCore/qobject.h
+-
+
+/usr/include/qt5/QtWidgets/qcheckbox.h
+QtWidgets/qabstractbutton.h
 -
 
 /usr/include/qt5/QtWidgets/qdesktopwidget.h

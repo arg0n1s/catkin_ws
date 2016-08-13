@@ -3,6 +3,7 @@
 
 simulation/CMakeFiles/dashboard_node.dir/dashboard_node_automoc.cpp.o: simulation/dashboard_node_automoc.cpp
 
+simulation/CMakeFiles/dashboard_node.dir/src/simulation_dashboard.cpp.o: /home/sebastian/catkin_ws/devel/include/automap/automap_ctrl_msg.h
 simulation/CMakeFiles/dashboard_node.dir/src/simulation_dashboard.cpp.o: /home/sebastian/catkin_ws/devel/include/simulation/ctrl_msg.h
 simulation/CMakeFiles/dashboard_node.dir/src/simulation_dashboard.cpp.o: /home/sebastian/catkin_ws/devel/include/simulation/telemetry_msg.h
 simulation/CMakeFiles/dashboard_node.dir/src/simulation_dashboard.cpp.o: /home/sebastian/catkin_ws/src/simulation/include/Dashboard.h

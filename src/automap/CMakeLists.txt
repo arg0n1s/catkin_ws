@@ -1,3 +1,5 @@
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
 cmake_minimum_required(VERSION 2.8.3)
 project(automap)
 
@@ -15,6 +17,7 @@ find_package(catkin REQUIRED COMPONENTS
   cv_bridge
   image_transport
   rospack
+  simulation
 )
 find_package(PCL REQUIRED)
 find_package(OpenCV REQUIRED)
@@ -53,11 +56,10 @@ find_package(OpenCV REQUIRED)
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )
+ add_message_files(
+   FILES
+   automap_ctrl_msg.msg
+ )
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -74,10 +76,10 @@ find_package(OpenCV REQUIRED)
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   nav_msgs#   sensor_msgs#   std_msgs
-# )
+ generate_messages(
+   DEPENDENCIES
+   std_msgs
+ )
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -113,6 +115,7 @@ catkin_package(
 #  LIBRARIES automap
 #  CATKIN_DEPENDS OpenCV message_generation nav_msgs roscpp roslib sensor_msgs std_msgs tf
 #  DEPENDS system_lib
+CATKIN_DEPENDS message_runtime std_msgs
 )
 
 ###########

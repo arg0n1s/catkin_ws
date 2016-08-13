@@ -98,8 +98,17 @@ PREPROCESSOR_EXTERNAL_OBJECTS =
 /home/sebastian/catkin_ws/devel/lib/libPREPROCESSOR.so: /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.8
 /home/sebastian/catkin_ws/devel/lib/libPREPROCESSOR.so: /usr/lib/x86_64-linux-gnu/libopencv_contrib.so.2.4.8
 /home/sebastian/catkin_ws/devel/lib/libPREPROCESSOR.so: /usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.2.4.8
+/home/sebastian/catkin_ws/devel/lib/libPREPROCESSOR.so: /home/sebastian/catkin_ws/devel/lib/libLaneDetector.so
+/home/sebastian/catkin_ws/devel/lib/libPREPROCESSOR.so: /home/sebastian/catkin_ws/devel/lib/libInversePerspectiveMapping.so
+/home/sebastian/catkin_ws/devel/lib/libPREPROCESSOR.so: /home/sebastian/catkin_ws/devel/lib/libMCV.so
+/home/sebastian/catkin_ws/devel/lib/libPREPROCESSOR.so: /usr/lib/x86_64-linux-gnu/libopencv_videostab.so.2.4.8
+/home/sebastian/catkin_ws/devel/lib/libPREPROCESSOR.so: /usr/lib/x86_64-linux-gnu/libopencv_superres.so.2.4.8
+/home/sebastian/catkin_ws/devel/lib/libPREPROCESSOR.so: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.2.4.8
+/home/sebastian/catkin_ws/devel/lib/libPREPROCESSOR.so: /usr/lib/x86_64-linux-gnu/libopencv_ocl.so.2.4.8
+/home/sebastian/catkin_ws/devel/lib/libPREPROCESSOR.so: /usr/lib/x86_64-linux-gnu/libopencv_gpu.so.2.4.8
 /home/sebastian/catkin_ws/devel/lib/libPREPROCESSOR.so: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.2.4.8
 /home/sebastian/catkin_ws/devel/lib/libPREPROCESSOR.so: /usr/lib/x86_64-linux-gnu/libopencv_legacy.so.2.4.8
+/home/sebastian/catkin_ws/devel/lib/libPREPROCESSOR.so: /usr/lib/x86_64-linux-gnu/libopencv_contrib.so.2.4.8
 /home/sebastian/catkin_ws/devel/lib/libPREPROCESSOR.so: /usr/lib/x86_64-linux-gnu/libopencv_video.so.2.4.8
 /home/sebastian/catkin_ws/devel/lib/libPREPROCESSOR.so: /usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.2.4.8
 /home/sebastian/catkin_ws/devel/lib/libPREPROCESSOR.so: /usr/lib/x86_64-linux-gnu/libopencv_ml.so.2.4.8

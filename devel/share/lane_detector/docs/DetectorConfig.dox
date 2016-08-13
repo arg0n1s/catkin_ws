@@ -3,14 +3,21 @@
 Reads and maintains the following parameters on the ROS server
 
 - \b "~debug_lines" : \b [bool] whether to show debug information and images or not min: False, default: False, max: True
+- \b "~camera_height" : \b [double] height of the camera in mm min: 50.0, default: 325.0, max: 500.0
+- \b "~camera_pitch" : \b [double] pitch of the camera in degrees min: 0.0, default: 23.4, max: 70.0
+- \b "~max_num_lanes" : \b [int] maximum number of lanes to detect min: 1, default: 6, max: 15
+- \b "~lane_num_absent_frames" : \b [int] number of frames the current lane is allowed to be absent before deleting it min: 1, default: 10, max: 100
+- \b "~lane_threshold" : \b [double] Threshold to consider a combination of two lines a valid lane min: 50.0, default: 250.0, max: 500.0
 - \b "~draw_boxes" : \b [bool] whether to draw the bounding boxes of the lanes or not min: False, default: False, max: True
 - \b "~draw_lines" : \b [bool] whether to draw the lines or not min: False, default: False, max: True
 - \b "~draw_splines" : \b [bool] whether to draw the splines(lanes) or not min: False, default: True, max: True
+- \b "~draw_tracked_centroids" : \b [bool] whether to draw the tracked centroids or not min: False, default: False, max: True
 - \b "~tracking_dt" : \b [double] Delta time for tracking min: 0.03, default: 0.2, max: 1.0
 - \b "~tracking_acc_noise_magnitude" : \b [double] Magnitude of the acceleration noise min: 0.05, default: 0.1, max: 0.9
-- \b "~tracking_dist_threshold" : \b [double] maximum distance threshold for assign a track on the current frame to a previous one min: 10.0, default: 60.0, max: 100.0
-- \b "~tracking_num_absent_frames" : \b [int] number of frames the track is allowed to be absent before deleting it min: 1, default: 10, max: 100
-- \b "~tracking_num_seen_frames" : \b [int] number of frames before considering the track good min: 1, default: 30, max: 100
+- \b "~tracking_dist_threshold" : \b [double] maximum distance threshold for assign a line on the current frame to a previous one min: 10.0, default: 60.0, max: 100.0
+- \b "~tracking_num_absent_frames" : \b [int] number of frames the line is allowed to be absent before deleting it min: 1, default: 10, max: 100
+- \b "~tracking_num_seen_frames" : \b [int] number of frames before considering a line good min: 1, default: 3, max: 100
+- \b "~min_spline_ransac_window_width" : \b [int] minimum width for the spline ransac window (in pixels) min: 1, default: 16, max: 40
 - \b "~driving_orientation" : \b [int] Driving orientation min: 0, default: 0, max: 1
 - \b "~ipmWidth" : \b [int] width of IPM image to use min: 160, default: 320, max: 640
 - \b "~ipmHeight" : \b [int] height of IPM image to use min: 120, default: 240, max: 480
@@ -19,28 +26,23 @@ Reads and maintains the following parameters on the ROS server
 - \b "~ipmRight" : \b [int] Right point in original image of region to make IPM for min: 300, default: 540, max: 640
 - \b "~ipmBottom" : \b [int] Bottom point in original image of region to make IPM for min: 300, default: 480, max: 480
 - \b "~ipmInterpolation" : \b [int] The method to use for IPM interpolation (default 0: bilinear. 1: NN) min: 0, default: 0, max: 1
-- \b "~lineWidth" : \b [double] width of line to detect in mm (in the world) min: 10.0, default: 19.0, max: 30.0
-- \b "~lineHeight" : \b [double] height of line to detect in mm (in the world) min: 10.0, default: 40.0, max: 2000.0
+- \b "~lineWidth" : \b [double] width of line to detect in mm (in the world) min: 10.0, default: 10.0, max: 30.0
+- \b "~lineHeight" : \b [double] height of line to detect in mm (in the world) min: 10.0, default: 500.0, max: 2000.0
+- \b "~line_dist_threshold" : \b [double] maximum allowed position difference (in pixel) of a line centroid from one frame to the next one min: 1.0, default: 8.0, max: 50.0
 - \b "~width_between_lines" : \b [double] width between to lines in mm (in the world) min: 400.0, default: 422.0, max: 850.0
-- \b "~kernelWidth" : \b [int] widht of kernel to use for filtering min: 1, default: 7, max: 30
-- \b "~kernelHeight" : \b [int] height of kernel to use for filtering min: 1, default: 3, max: 30
-- \b "~lowerQuantile" : \b [double] lower quantile to use for thresholding the filtered image min: 0.975, default: 0.985, max: 0.99
+- \b "~width_between_lines_threshold" : \b [double] threshold for the lane width min: 1.0, default: 40.0, max: 100.0
+- \b "~lane_width_weight" : \b [double] Cost weight for the lane width min: 1.0, default: 3.0, max: 10.0
+- \b "~kernelWidth" : \b [int] widht of kernel to use for filtering min: 1, default: 5, max: 30
+- \b "~kernelHeight" : \b [int] height of kernel to use for filtering min: 1, default: 5, max: 30
+- \b "~lowerQuantile" : \b [double] lower quantile to use for thresholding the filtered image min: 0.0, default: 0.985, max: 0.99
 - \b "~localMaxima" : \b [bool] whether to return local maxima or just the maximum min: False, default: True, max: True
-- \b "~groupingType" : \b [int] type of grouping to use (default 0: HV lines) min: 0, default: 0, max: 1
 - \b "~binarize" : \b [bool] whether to binarize the thresholded image or use the raw values min: False, default: False, max: True
 - \b "~detectionThreshold" : \b [double] threshold for line scores to declare as line min: 0.0, default: 4.0, max: 30.0
 - \b "~smoothScores" : \b [bool] whether to smooth scores of lines detected or not min: False, default: True, max: True
-- \b "~rMin" : \b [double] rMin for Hough transform (in pixels) min: 0.0, default: 10.0, max: 10.0
-- \b "~rMax" : \b [double] rMax for Hough transform (in pixels) min: 120.0, default: 150.0, max: 300.0
-- \b "~rStep" : \b [double] rStep for Hough transform (in pixels) min: 1.0, default: 2.0, max: 3.0
-- \b "~thetaMin" : \b [double] thetaMin for Hough transform (in degrees) min: -45.0, default: -45.0, max: 85.0
-- \b "~thetaMax" : \b [double] thetaMax for Hough transform (in degrees) min: 20.0, default: 45.0, max: 95.0
-- \b "~thetaStep" : \b [double] thetaStep for Hough transform (in degrees) min: 1.0, default: 2.0, max: 3.0
 - \b "~ipmVpPortion" : \b [double] Portion of IPM image height to add to y-coordinate of VP min: 0.0, default: 0.0, max: 0.8
 - \b "~getEndPoints" : \b [bool] Get the endpoints of the line min: False, default: False, max: True
 - \b "~group" : \b [bool] group nearby lines or not (default 1: group) min: False, default: True, max: True
 - \b "~groupThreshold" : \b [double] Threshold for grouping nearby lines (default 10) min: 10.0, default: 10.0, max: 25.0
-- \b "~ransac" : \b [bool] use RANSAC (1) or not (0) min: False, default: True, max: True
 - \b "~ransacLineNumSamples" : \b [int] Number of samples to use for RANSAC min: 0, default: 4, max: 180
 - \b "~ransacLineNumIterations" : \b [int] Number of iterations to use for RANSAC min: 25, default: 40, max: 100
 - \b "~ransacLineNumGoodFit" : \b [int] Number of close points to consider a good line fit min: 10, default: 10, max: 15
@@ -48,17 +50,6 @@ Reads and maintains the following parameters on the ROS server
 - \b "~ransacLineScoreThreshold" : \b [double] Threshold for detected line scores min: 0.0, default: 0.0, max: 20.0
 - \b "~ransacLineBinarize" : \b [bool] Whether to binarize image for RANSAC or not min: False, default: False, max: True
 - \b "~ransacLineWindow" : \b [int] Half width to use for ransac window min: 0, default: 15, max: 15
-- \b "~ransacSplineNumSamples" : \b [int] Number of samples to use for RANSAC min: 0, default: 4, max: 180
-- \b "~ransacSplineNumIterations" : \b [int] Number of iterations to use for RANSAC min: 25, default: 40, max: 100
-- \b "~ransacSplineNumGoodFit" : \b [int] Number of close points to consider a good line fit min: 10, default: 10, max: 15
-- \b "~ransacSplineThreshold" : \b [double] Threshold to consider a point close min: 0.0, default: 0.2, max: 0.9
-- \b "~ransacSplineScoreThreshold" : \b [double] Threshold for detected line scores min: 0.0, default: 0.0, max: 20.0
-- \b "~ransacSplineBinarize" : \b [bool] Whether to binarize image for RANSAC or not min: False, default: False, max: True
-- \b "~ransacSplineWindow" : \b [int] Half width to use for ransac window min: 6, default: 10, max: 15
-- \b "~ransacSplineDegree" : \b [int] Degree of spline to use min: 2, default: 3, max: 5
-- \b "~ransacSpline" : \b [bool] Whether to use splines min: False, default: False, max: True
-- \b "~ransacLine" : \b [bool] Whether to use lines min: False, default: True, max: True
-- \b "~ransacSplineStep" : \b [double] Step to use when pixelzing spline in ransac min: 0.1, default: 0.1, max: 0.9
 - \b "~overlapThreshold" : \b [double] Overlap threshold to use for grouping of bounding boxes min: 0.3, default: 0.3, max: 0.9
 - \b "~localizeAngleThreshold" : \b [double] Angle threshold used for localization (cosine, 1: most restrictive, 0: most liberal) min: 0.7, default: 0.9, max: 0.9
 - \b "~localizeNumLinePixels" : \b [int] Number of pixels to go in normal direction for localization min: 10, default: 20, max: 20
@@ -78,48 +69,9 @@ Reads and maintains the following parameters on the ROS server
 - \b "~extendIPMDeviationThreshold" : \b [int] Stop extending when number of deviating points exceeds this threshold min: 1, default: 2, max: 2
 - \b "~extendIPMRectTop" : \b [int] Top point for extension bounding box min: 0, default: 0, max: 200
 - \b "~extendIPMRectBottom" : \b [int] Bottom point for extension bounding box min: 100, default: 118, max: 480
-- \b "~splineScoreJitter" : \b [int] Number of pixels to go around the spline to compute score min: 2, default: 2, max: 4
-- \b "~splineScoreLengthRatio" : \b [double] Ratio of spline length to use min: 0.4, default: 1.5, max: 1.5
-- \b "~splineScoreAngleRatio" : \b [double] Ratio of spline angle to use min: 0.8, default: 1.2, max: 1.7
-- \b "~splineScoreStep" : \b [double] Step to use for spline score computation min: 0.01, default: 0.01, max: 0.02
-- \b "~splineTrackingNumAbsentFrames" : \b [int] number of frames the track is allowed to be absent before deleting it min: 0, default: 3, max: 60
-- \b "~splineTrackingNumSeenFrames" : \b [int] number of frames before considering the track good min: 0, default: 5, max: 60
-- \b "~mergeSplineThetaThreshold" : \b [double] Angle threshold for merging splines (radians) min: 0.2, default: 0.3, max: 0.52
-- \b "~mergeSplineRThreshold" : \b [double] R threshold (distance from origin) for merging splines min: 10.0, default: 15.0, max: 30.0
-- \b "~mergeSplineMeanThetaThreshold" : \b [double] Mean Angle threshold for merging splines (radians) min: 0.2, default: 0.2, max: 0.52
-- \b "~mergeSplineMeanRThreshold" : \b [double] Mean R threshold (distance from origin) for merging splines min: 10.0, default: 20.0, max: 30.0
-- \b "~mergeSplineCentroidThreshold" : \b [double] Distance threshold between spline cetroids for merging min: 50.0, default: 80.0, max: 90.0
-- \b "~lineTrackingNumAbsentFrames" : \b [int] number of frames the track is allowed to be absent before deleting it min: 0, default: 2, max: 60
-- \b "~lineTrackingNumSeenFrames" : \b [int] number of frames before considering the track good min: 0, default: 3, max: 60
-- \b "~mergeLineThetaThreshold" : \b [double] Angle threshold for merging lines (radians) min: 0.2, default: 0.3, max: 0.52
-- \b "~mergeLineRThreshold" : \b [double] R threshold (distance from origin) for merging lines min: 10.0, default: 15.0, max: 30.0
 - \b "~numStrips" : \b [int] Number of horizontal strips to divide the image to min: 1, default: 1, max: 20
-- \b "~checkSplines" : \b [bool] Whtethet to check splines or not min: False, default: True, max: True
-- \b "~checkSplinesCurvenessThreshold" : \b [double] Curveness Threshold for checking splines min: 0.6, default: 0.8, max: 0.95
-- \b "~checkSplinesLengthThreshold" : \b [double] Length Threshold for checking splines min: 10.0, default: 30.0, max: 50.0
-- \b "~checkSplinesThetaDiffThreshold" : \b [double] ThetaDiff Threshold for checking splines min: 0.05, default: 0.1, max: 0.4
-- \b "~checkSplinesThetaThreshold" : \b [double] ThetaThreshold Threshold for checking splines (radians) min: 1.0, default: 1.22, max: 1.4
-- \b "~checkIPMSplines" : \b [bool] True min: False, default: False, max: True
-- \b "~checkIPMSplinesCurvenessThreshold" : \b [double] Curveness Threshold for checking splines min: 0.6, default: 0.8, max: 0.95
-- \b "~checkIPMSplinesLengthThreshold" : \b [double] Length Threshold for checking splines min: 10.0, default: 30.0, max: 50.0
-- \b "~checkIPMSplinesThetaDiffThreshold" : \b [double] ThetaDiff Threshold for checking splines min: 0.05, default: 0.1, max: 0.4
-- \b "~checkIPMSplinesThetaThreshold" : \b [double] ThetaThreshold Threshold for checking splines min: 1.0, default: 1.22, max: 1.4
-- \b "~finalSplineScoreThreshold" : \b [double] Final Threshold for declaring a valid spline min: 0.0, default: 0.0, max: 4.0
 - \b "~useGroundPlane" : \b [bool] Use ground plane or not when sending to map min: False, default: False, max: True
-- \b "~checkColor" : \b [bool] Whether to check colors or not min: False, default: False, max: True
-- \b "~checkColorWindow" : \b [int] Size of window to use min: 1, default: 3, max: 10
-- \b "~checkColorNumBins" : \b [int] Number of bins to use min: 2, default: 16, max: 30
-- \b "~checkColorNumYellowMin" : \b [double] Min ratio of yellow points min: 0.1, default: 0.3, max: 0.9
-- \b "~checkColorRGMin" : \b [double] Min RG diff min: 1.0, default: 1.0, max: 5.0
-- \b "~checkColorRGMax" : \b [double] Max RG diff min: 20.0, default: 40.0, max: 60.0
-- \b "~checkColorGBMin" : \b [double] Min GB diff min: 4.0, default: 10.0, max: 30.0
-- \b "~checkColorRBMin" : \b [double] Min RB diff min: 4.0, default: 25.0, max: 30.0
-- \b "~checkColorRBFThreshold" : \b [double] RBF Threshold min: -0.1, default: -0.1, max: 0.0
-- \b "~checkColorRBF" : \b [bool] True min: False, default: False, max: True
 - \b "~ipmWindowClear" : \b [bool] Whether to clear part of the IPM image min: False, default: False, max: True
 - \b "~ipmWindowLeft" : \b [int] Left cordinate of window to keep in IPM min: 10, default: 50, max: 320
 - \b "~ipmWindowRight" : \b [int] Right cordinate of window to keep in IPM min: 100, default: 110, max: 480
-- \b "~checkLaneWidth" : \b [bool] Whether to check lane width or not min: False, default: False, max: True
-- \b "~checkLaneWidthMean" : \b [double] Mean of lane width to look for min: 10.0, default: 19.0, max: 40.0
-- \b "~checkLaneWidthStd" : \b [double] Std deviation of lane width to look for min: 1.0, default: 10.0, max: 20.0
 

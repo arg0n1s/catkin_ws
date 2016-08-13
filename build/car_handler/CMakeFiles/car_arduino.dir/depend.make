@@ -278,6 +278,8 @@ car_handler/CMakeFiles/car_arduino.dir/src/car_arduino.cpp.o: /opt/ros/indigo/in
 car_handler/CMakeFiles/car_arduino.dir/src/car_arduino.cpp.o: /opt/ros/indigo/include/ros/wall_timer.h
 car_handler/CMakeFiles/car_arduino.dir/src/car_arduino.cpp.o: /opt/ros/indigo/include/ros/wall_timer_options.h
 car_handler/CMakeFiles/car_arduino.dir/src/car_arduino.cpp.o: /opt/ros/indigo/include/rosconsole/macros_generated.h
+car_handler/CMakeFiles/car_arduino.dir/src/car_arduino.cpp.o: /opt/ros/indigo/include/sensor_msgs/Imu.h
+car_handler/CMakeFiles/car_arduino.dir/src/car_arduino.cpp.o: /opt/ros/indigo/include/sensor_msgs/MagneticField.h
 car_handler/CMakeFiles/car_arduino.dir/src/car_arduino.cpp.o: /opt/ros/indigo/include/std_msgs/Header.h
 car_handler/CMakeFiles/car_arduino.dir/src/car_arduino.cpp.o: /opt/ros/indigo/include/std_msgs/Int32.h
 car_handler/CMakeFiles/car_arduino.dir/src/car_arduino.cpp.o: /opt/ros/indigo/include/std_msgs/String.h

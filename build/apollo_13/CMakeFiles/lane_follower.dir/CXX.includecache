@@ -6,6 +6,30 @@
 
 #IncludeRegexTransform: 
 
+/home/sebastian/catkin_ws/devel/include/lane_detector/Lane.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+geometry_msgs/Point32.h
+-
+geometry_msgs/Point32.h
+-
+geometry_msgs/Point32.h
+-
+
 /home/sebastian/catkin_ws/src/apollo_13/src/lane_follower.cpp
 ros/ros.h
 -
@@ -40,6 +64,14 @@ actionlib/client/simple_client_goal_state.h
 geometry_msgs/PolygonStamped.h
 -
 teb_local_planner/ObstacleMsg.h
+-
+lane_detector/Lane.h
+-
+nav_msgs/Path.h
+-
+tf/transform_listener.h
+-
+std_msgs/Int32.h
 -
 
 /opt/ros/indigo/include/XmlRpcDecl.h
@@ -1238,6 +1270,26 @@ std_msgs/Header.h
 nav_msgs/MapMetaData.h
 -
 
+/opt/ros/indigo/include/nav_msgs/Path.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+geometry_msgs/PoseStamped.h
+-
+
 /opt/ros/indigo/include/pluginlib/class_desc.h
 
 /opt/ros/indigo/include/pluginlib/class_loader.h
@@ -2089,6 +2141,22 @@ ros/message_operations.h
 -
 
 /opt/ros/indigo/include/std_msgs/Header.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
+/opt/ros/indigo/include/std_msgs/Int32.h
 string
 -
 vector

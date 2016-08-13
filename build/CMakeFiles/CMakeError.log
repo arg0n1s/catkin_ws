@@ -1,21 +1,21 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec878038041/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec878038041.dir/build.make CMakeFiles/cmTryCompileExec878038041.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec2786501513/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2786501513.dir/build.make CMakeFiles/cmTryCompileExec2786501513.dir/build
 make[1]: Entering directory `/home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec878038041.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec878038041.dir/CheckSymbolExists.c.o   -c /home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTryCompileExec878038041
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec878038041.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTryCompileExec878038041.dir/CheckSymbolExists.c.o  -o cmTryCompileExec878038041 -rdynamic 
-CMakeFiles/cmTryCompileExec878038041.dir/CheckSymbolExists.c.o: In function `main':
+Building C object CMakeFiles/cmTryCompileExec2786501513.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2786501513.dir/CheckSymbolExists.c.o   -c /home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2786501513
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2786501513.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2786501513.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2786501513 -rdynamic 
+CMakeFiles/cmTryCompileExec2786501513.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-make[1]: *** [cmTryCompileExec878038041] Error 1
+make[1]: *** [cmTryCompileExec2786501513] Error 1
 make[1]: Leaving directory `/home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp'
-make: *** [cmTryCompileExec878038041/fast] Error 2
+make: *** [cmTryCompileExec2786501513/fast] Error 2
 
 File /home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -35,19 +35,147 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3307642851/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3307642851.dir/build.make CMakeFiles/cmTryCompileExec3307642851.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec150970072/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec150970072.dir/build.make CMakeFiles/cmTryCompileExec150970072.dir/build
 make[1]: Entering directory `/home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3307642851.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec3307642851.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec3307642851
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3307642851.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec3307642851.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3307642851 -rdynamic -lpthreads 
+Building C object CMakeFiles/cmTryCompileExec150970072.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec150970072.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec150970072
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec150970072.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec150970072.dir/CheckFunctionExists.c.o  -o cmTryCompileExec150970072 -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec150970072] Error 1
 make[1]: Leaving directory `/home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp'
-make[1]: *** [cmTryCompileExec3307642851] Error 1
-make: *** [cmTryCompileExec3307642851/fast] Error 2
+make: *** [cmTryCompileExec150970072/fast] Error 2
 
+
+Determining if the CL_VERSION_2_0 exist failed with the following output:
+Change Dir: /home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2842662439/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2842662439.dir/build.make CMakeFiles/cmTryCompileExec2842662439.dir/build
+make[1]: Entering directory `/home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2842662439.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2842662439.dir/CheckSymbolExists.c.o   -c /home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:47: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: No such file or directory
+ #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+                                               ^
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTryCompileExec2842662439.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory `/home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec2842662439/fast] Error 2
+
+File /home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CL_VERSION_2_0
+  return ((int*)(&CL_VERSION_2_0))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the CL_VERSION_1_2 exist failed with the following output:
+Change Dir: /home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2032679530/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2032679530.dir/build.make CMakeFiles/cmTryCompileExec2032679530.dir/build
+make[1]: Entering directory `/home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2032679530.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2032679530.dir/CheckSymbolExists.c.o   -c /home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:47: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: No such file or directory
+ #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+                                               ^
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTryCompileExec2032679530.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory `/home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec2032679530/fast] Error 2
+
+File /home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CL_VERSION_1_2
+  return ((int*)(&CL_VERSION_1_2))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the CL_VERSION_1_1 exist failed with the following output:
+Change Dir: /home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec597059067/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec597059067.dir/build.make CMakeFiles/cmTryCompileExec597059067.dir/build
+make[1]: Entering directory `/home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec597059067.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec597059067.dir/CheckSymbolExists.c.o   -c /home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:47: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: No such file or directory
+ #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+                                               ^
+compilation terminated.
+make[1]: Leaving directory `/home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec597059067.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTryCompileExec597059067/fast] Error 2
+
+File /home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CL_VERSION_1_1
+  return ((int*)(&CL_VERSION_1_1))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the CL_VERSION_1_0 exist failed with the following output:
+Change Dir: /home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2861015143/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2861015143.dir/build.make CMakeFiles/cmTryCompileExec2861015143.dir/build
+make[1]: Entering directory `/home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2861015143.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2861015143.dir/CheckSymbolExists.c.o   -c /home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:47: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: No such file or directory
+ #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+                                               ^
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTryCompileExec2861015143.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory `/home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec2861015143/fast] Error 2
+
+File /home/sebastian/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CL_VERSION_1_0
+  return ((int*)(&CL_VERSION_1_0))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
 

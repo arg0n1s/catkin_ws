@@ -117,9 +117,14 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unsp
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   INCLUDE("/home/sebastian/catkin_ws/build/gtest/cmake_install.cmake")
+  INCLUDE("/home/sebastian/catkin_ws/build/iai_kinect2/iai_kinect2/cmake_install.cmake")
   INCLUDE("/home/sebastian/catkin_ws/build/simulation/cmake_install.cmake")
   INCLUDE("/home/sebastian/catkin_ws/build/lane_detector/cmake_install.cmake")
+  INCLUDE("/home/sebastian/catkin_ws/build/iai_kinect2/kinect2_registration/cmake_install.cmake")
   INCLUDE("/home/sebastian/catkin_ws/build/car_handler/cmake_install.cmake")
+  INCLUDE("/home/sebastian/catkin_ws/build/iai_kinect2/kinect2_bridge/cmake_install.cmake")
+  INCLUDE("/home/sebastian/catkin_ws/build/iai_kinect2/kinect2_calibration/cmake_install.cmake")
+  INCLUDE("/home/sebastian/catkin_ws/build/iai_kinect2/kinect2_viewer/cmake_install.cmake")
   INCLUDE("/home/sebastian/catkin_ws/build/automap/cmake_install.cmake")
   INCLUDE("/home/sebastian/catkin_ws/build/apollo_13/cmake_install.cmake")
 

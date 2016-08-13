@@ -48,29 +48,19 @@ geometry_msgs/Point32.h
 geometry_msgs/Point32.h
 -
 
-/home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/CameraInfoOpt.h
-config.h
-/home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/config.h
-
 /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/InversePerspectiveMapping.hh
 cv.h
-/home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/cv.h
-mcv.hh
-/home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/mcv.hh
+-
+lane_detector/mcv.hh
+-
 list
 -
-CameraInfoOpt.h
-/home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/CameraInfoOpt.h
 
 /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/LaneDetector.hh
-mcv.hh
-/home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/mcv.hh
-InversePerspectiveMapping.hh
-/home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/InversePerspectiveMapping.hh
-
-/home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/LaneDetectorOpt.h
-config.h
-/home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/config.h
+lane_detector/InversePerspectiveMapping.hh
+-
+lane_detector/mcv.hh
+-
 
 /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/fitting.h
 opencv2/imgproc/imgproc.hpp
@@ -80,8 +70,6 @@ lane_detector/DetectorConfig.h
 cv.h
 -
 lane_detector/LaneDetector.hh
--
-lane_detector/LaneDetectorOpt.h
 -
 lane_detector/utils.h
 -
@@ -94,6 +82,8 @@ lane_detector/lane_tracker/Ctracker.h
 lane_detector/Lane.h
 -
 geometry_msgs/Point32.h
+-
+lane_detector/splineCombination.h
 -
 
 /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/fittingApproach.h
@@ -150,10 +140,24 @@ vector
 cv.h
 -
 
-/home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/utils.h
+/home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/splineCombination.h
+vector
+-
+cv.h
+-
+lane_detector/utils.h
+-
+iostream
+-
+algorithm
+-
 lane_detector/LaneDetector.hh
 -
-lane_detector/LaneDetectorOpt.h
+lane_detector/DetectorConfig.h
+-
+
+/home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/utils.h
+lane_detector/LaneDetector.hh
 -
 lane_detector/DetectorConfig.h
 -
@@ -166,6 +170,8 @@ vector
 stdexcept
 -
 algorithm
+-
+lane_detector/splineCombination.h
 -
 
 /home/sebastian/catkin_ws/src/lane_detector/src/fitting.cpp
