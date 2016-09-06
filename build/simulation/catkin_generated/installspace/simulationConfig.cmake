@@ -145,7 +145,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(simulation_EXPORTED_TARGETS "simulation_generate_messages_cpp;simulation_generate_messages_lisp;simulation_generate_messages_py")
+set(simulation_EXPORTED_TARGETS "simulation_generate_messages_cpp;simulation_generate_messages_lisp;simulation_generate_messages_py;simulation_gencfg")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${simulation_EXPORTED_TARGETS})
   if(NOT TARGET ${t})

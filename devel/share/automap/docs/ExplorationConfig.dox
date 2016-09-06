@@ -1,0 +1,33 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~planner_robot_width" : \b [double] width of the robot(m), used for collision avoidance min: 0.0, default: 0.25, max: 2.0
+- \b "~planner_robot_length" : \b [double] length of the robot(m), used for collision avoidance min: 0.0, default: 0.4, max: 2.0
+- \b "~planner_downsampling_factor" : \b [double] downsampling of the occupancy grid, increases performance min: 0.0, default: 0.2, max: 1.0
+- \b "~planner_min_obstacle_distance" : \b [double] minimum allowed distance to obstacles(m) min: 0.0, default: 0.4, max: 2.0
+- \b "~planner_alpha" : \b [double] scales how strongly obstacles may influence path planning min: 0.0, default: 0.4, max: 2.0
+- \b "~frontier_dilation_rate" : \b [int] inflates detected objects to ensure clean removal from frontiers min: 0, default: 3, max: 10
+- \b "~frontier_blur_kernel" : \b [int] smoothens the map to remove micro holes produced by a range sensor min: 0, default: 5, max: 10
+- \b "~frontier_inflate_frontiers" : \b [bool] enlarges frontiers to connect adjacent frontiers separated by noise min: False, default: True, max: True
+- \b "~exploration_rolling_window_width" : \b [double] width(m) of the local exploration perspective min: 0.0, default: 30.0, max: 200.0
+- \b "~exploration_rolling_window_height" : \b [double] height(m) of the local exploration perspective min: 0.0, default: 30.0, max: 200.0
+- \b "~exploration_score_simple_dist_exp" : \b [double] exponent of the distance weight function min: 0.0, default: 4.0, max: 10.0
+- \b "~exploration_score_simple_dist_base" : \b [double] base of the distance weight function min: 0.0, default: 2.0, max: 10.0
+- \b "~exploration_score_simple_angle_exp" : \b [double] exponent of the view angle weight function min: 0.0, default: 4.0, max: 10.0
+- \b "~exploration_score_simple_angle_base" : \b [double] base of the view angle weight function min: 0.0, default: 2.0, max: 10.0
+- \b "~exploration_score_nbv_sampling_points" : \b [int] number of random generated sampling points per frontier min: 0, default: 10, max: 200
+- \b "~exploration_score_nbv_sensor_min_range" : \b [double] minimum sensing distance(m) of the range sensor min: 0.0, default: 1.0, max: 30.0
+- \b "~exploration_score_nbv_sensor_max_range" : \b [double] minimum sensing distance(m) of the range sensor min: 0.0, default: 6.0, max: 30.0
+- \b "~exploration_score_nbv_sensor_angular_accuracy" : \b [double] angular sensing accuracy(deg) of the range sensor min: 0.01, default: 0.5, max: 360.0
+- \b "~exploration_score_nbv_sensor_fov" : \b [double] FOV of the range sensor min: 0.0, default: 90.0, max: 360.0
+- \b "~exploration_score_nbv_angular_scan_accuracy" : \b [double] angular sensing accuracy(deg) used in sampling on a specific frontier min: 0.01, default: 5.0, max: 360.0
+- \b "~exploration_score_nbv_angular_scan_range" : \b [double] maximum angular range(deg) to be sampled on a specific frontier min: 0.0, default: 180.0, max: 360.0
+- \b "~exploration_score_nbv_alpha" : \b [double] weight of distance in the exponent of the scoring function min: 0.0, default: 0.1, max: 10.0
+- \b "~exploration_score_nbv_distance_thresh" : \b [double] above this distance(m) view angle is ignored min: 0.0, default: 8.0, max: 200.0
+- \b "~exploration_goal_accuracy_position" : \b [double] a distance(m) threshold below which a frontier is viewed as reached min: 0.0, default: 1.0, max: 200.0
+- \b "~exploration_goal_accuracy_angle" : \b [double] an angular(rad) threshold below which a frontier is viewed as reached min: 0.0, default: 0.5, max: 6.3
+- \b "~node_retries" : \b [int] number of exploration retries before a new exploration is forced min: 0, default: 5, max: 100
+- \b "~node_information_gain" : \b [double] minimum required amount of information gained before a new exploration is planned min: 0.0, default: 2500.0, max: 100000.0
+- \b "~node_loop_rate" : \b [double] frequency of the main loop(hz) min: 0.0, default: 1.0, max: 100.0
+

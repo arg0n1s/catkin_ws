@@ -1,0 +1,8 @@
+prefix=/home/sebastian/catkin_ws/devel
+
+Name: swri_profiler
+Description: Description of swri_profiler
+Version: 0.0.1
+Cflags: -I/home/sebastian/catkin_ws/src/swri_profiler/swri_profiler/include
+Libs: -L/home/sebastian/catkin_ws/devel/lib -lswri_profiler
+Requires: std_msgs swri_profiler_msgs roscpp

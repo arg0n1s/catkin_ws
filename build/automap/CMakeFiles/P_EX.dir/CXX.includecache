@@ -6,3 +6,13 @@
 
 #IncludeRegexTransform: 
 
+/home/sebastian/catkin_ws/src/automap/include/PlannerException.h
+exception
+-
+string
+-
+
+/home/sebastian/catkin_ws/src/automap/src/PlannerException.cpp
+PlannerException.h
+/home/sebastian/catkin_ws/src/automap/src/PlannerException.h
+

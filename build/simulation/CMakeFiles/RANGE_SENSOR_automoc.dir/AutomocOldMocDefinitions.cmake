@@ -1,0 +1,1 @@
+set(AM_OLD_COMPILE_SETTINGS "ROSCONSOLE_BACKEND_LOG4CXX;ROS_BUILD_SHARED_LIBS=1;ROS_PACKAGE_NAME=\"simulation\" ~~~ /home/sebastian/catkin_ws/devel/include;/usr/include/opencv;/home/sebastian/catkin_ws/src/simulation/include;/opt/ros/indigo/include;/usr/include ~~~  ~~~ FALSE ~~~ ")

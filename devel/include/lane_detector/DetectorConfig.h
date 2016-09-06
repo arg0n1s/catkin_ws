@@ -227,15 +227,19 @@ class DEFAULT
         (*_i)->getValue(config, val);
 
         if("debug_lines"==(*_i)->name){debug_lines = boost::any_cast<bool>(val);}
+        if("use_gpu"==(*_i)->name){use_gpu = boost::any_cast<bool>(val);}
+        if("number_of_threads"==(*_i)->name){number_of_threads = boost::any_cast<int>(val);}
         if("camera_height"==(*_i)->name){camera_height = boost::any_cast<double>(val);}
         if("camera_pitch"==(*_i)->name){camera_pitch = boost::any_cast<double>(val);}
         if("max_num_lanes"==(*_i)->name){max_num_lanes = boost::any_cast<int>(val);}
         if("lane_num_absent_frames"==(*_i)->name){lane_num_absent_frames = boost::any_cast<int>(val);}
         if("lane_threshold"==(*_i)->name){lane_threshold = boost::any_cast<double>(val);}
+        if("draw_roi"==(*_i)->name){draw_roi = boost::any_cast<bool>(val);}
         if("draw_boxes"==(*_i)->name){draw_boxes = boost::any_cast<bool>(val);}
         if("draw_lines"==(*_i)->name){draw_lines = boost::any_cast<bool>(val);}
         if("draw_splines"==(*_i)->name){draw_splines = boost::any_cast<bool>(val);}
         if("draw_tracked_centroids"==(*_i)->name){draw_tracked_centroids = boost::any_cast<bool>(val);}
+        if("transform_back"==(*_i)->name){transform_back = boost::any_cast<bool>(val);}
         if("tracking_dt"==(*_i)->name){tracking_dt = boost::any_cast<double>(val);}
         if("tracking_acc_noise_magnitude"==(*_i)->name){tracking_acc_noise_magnitude = boost::any_cast<double>(val);}
         if("tracking_dist_threshold"==(*_i)->name){tracking_dist_threshold = boost::any_cast<double>(val);}
@@ -256,6 +260,7 @@ class DEFAULT
         if("width_between_lines"==(*_i)->name){width_between_lines = boost::any_cast<double>(val);}
         if("width_between_lines_threshold"==(*_i)->name){width_between_lines_threshold = boost::any_cast<double>(val);}
         if("lane_width_weight"==(*_i)->name){lane_width_weight = boost::any_cast<double>(val);}
+        if("use_custom_kernels"==(*_i)->name){use_custom_kernels = boost::any_cast<bool>(val);}
         if("kernelWidth"==(*_i)->name){kernelWidth = boost::any_cast<int>(val);}
         if("kernelHeight"==(*_i)->name){kernelHeight = boost::any_cast<int>(val);}
         if("lowerQuantile"==(*_i)->name){lowerQuantile = boost::any_cast<double>(val);}
@@ -275,42 +280,23 @@ class DEFAULT
         if("ransacLineBinarize"==(*_i)->name){ransacLineBinarize = boost::any_cast<bool>(val);}
         if("ransacLineWindow"==(*_i)->name){ransacLineWindow = boost::any_cast<int>(val);}
         if("overlapThreshold"==(*_i)->name){overlapThreshold = boost::any_cast<double>(val);}
-        if("localizeAngleThreshold"==(*_i)->name){localizeAngleThreshold = boost::any_cast<double>(val);}
-        if("localizeNumLinePixels"==(*_i)->name){localizeNumLinePixels = boost::any_cast<int>(val);}
-        if("extendAngleThreshold"==(*_i)->name){extendAngleThreshold = boost::any_cast<double>(val);}
-        if("extendMeanDirAngleThreshold"==(*_i)->name){extendMeanDirAngleThreshold = boost::any_cast<double>(val);}
-        if("extendLinePixelsTangent"==(*_i)->name){extendLinePixelsTangent = boost::any_cast<int>(val);}
-        if("extendLinePixelsNormal"==(*_i)->name){extendLinePixelsNormal = boost::any_cast<int>(val);}
-        if("extendContThreshold"==(*_i)->name){extendContThreshold = boost::any_cast<double>(val);}
-        if("extendDeviationThreshold"==(*_i)->name){extendDeviationThreshold = boost::any_cast<int>(val);}
-        if("extendRectTop"==(*_i)->name){extendRectTop = boost::any_cast<int>(val);}
-        if("extendRectBottom"==(*_i)->name){extendRectBottom = boost::any_cast<int>(val);}
-        if("extendIPMAngleThreshold"==(*_i)->name){extendIPMAngleThreshold = boost::any_cast<double>(val);}
-        if("extendIPMMeanDirAngleThreshold"==(*_i)->name){extendIPMMeanDirAngleThreshold = boost::any_cast<double>(val);}
-        if("extendIPMLinePixelsTangent"==(*_i)->name){extendIPMLinePixelsTangent = boost::any_cast<int>(val);}
-        if("extendIPMLinePixelsNormal"==(*_i)->name){extendIPMLinePixelsNormal = boost::any_cast<int>(val);}
-        if("extendIPMContThreshold"==(*_i)->name){extendIPMContThreshold = boost::any_cast<double>(val);}
-        if("extendIPMDeviationThreshold"==(*_i)->name){extendIPMDeviationThreshold = boost::any_cast<int>(val);}
-        if("extendIPMRectTop"==(*_i)->name){extendIPMRectTop = boost::any_cast<int>(val);}
-        if("extendIPMRectBottom"==(*_i)->name){extendIPMRectBottom = boost::any_cast<int>(val);}
-        if("numStrips"==(*_i)->name){numStrips = boost::any_cast<int>(val);}
-        if("useGroundPlane"==(*_i)->name){useGroundPlane = boost::any_cast<bool>(val);}
-        if("ipmWindowClear"==(*_i)->name){ipmWindowClear = boost::any_cast<bool>(val);}
-        if("ipmWindowLeft"==(*_i)->name){ipmWindowLeft = boost::any_cast<int>(val);}
-        if("ipmWindowRight"==(*_i)->name){ipmWindowRight = boost::any_cast<int>(val);}
       }
     }
 
     bool debug_lines;
+bool use_gpu;
+int number_of_threads;
 double camera_height;
 double camera_pitch;
 int max_num_lanes;
 int lane_num_absent_frames;
 double lane_threshold;
+bool draw_roi;
 bool draw_boxes;
 bool draw_lines;
 bool draw_splines;
 bool draw_tracked_centroids;
+bool transform_back;
 double tracking_dt;
 double tracking_acc_noise_magnitude;
 double tracking_dist_threshold;
@@ -331,6 +317,7 @@ double line_dist_threshold;
 double width_between_lines;
 double width_between_lines_threshold;
 double lane_width_weight;
+bool use_custom_kernels;
 int kernelWidth;
 int kernelHeight;
 double lowerQuantile;
@@ -350,29 +337,6 @@ double ransacLineScoreThreshold;
 bool ransacLineBinarize;
 int ransacLineWindow;
 double overlapThreshold;
-double localizeAngleThreshold;
-int localizeNumLinePixels;
-double extendAngleThreshold;
-double extendMeanDirAngleThreshold;
-int extendLinePixelsTangent;
-int extendLinePixelsNormal;
-double extendContThreshold;
-int extendDeviationThreshold;
-int extendRectTop;
-int extendRectBottom;
-double extendIPMAngleThreshold;
-double extendIPMMeanDirAngleThreshold;
-int extendIPMLinePixelsTangent;
-int extendIPMLinePixelsNormal;
-double extendIPMContThreshold;
-int extendIPMDeviationThreshold;
-int extendIPMRectTop;
-int extendIPMRectBottom;
-int numStrips;
-bool useGroundPlane;
-bool ipmWindowClear;
-int ipmWindowLeft;
-int ipmWindowRight;
 
     bool state;
     std::string name;
@@ -385,6 +349,10 @@ int ipmWindowRight;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       bool debug_lines;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      bool use_gpu;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      int number_of_threads;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       double camera_height;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       double camera_pitch;
@@ -395,6 +363,8 @@ int ipmWindowRight;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       double lane_threshold;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      bool draw_roi;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       bool draw_boxes;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       bool draw_lines;
@@ -402,6 +372,8 @@ int ipmWindowRight;
       bool draw_splines;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       bool draw_tracked_centroids;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      bool transform_back;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       double tracking_dt;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -443,6 +415,8 @@ int ipmWindowRight;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       double lane_width_weight;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      bool use_custom_kernels;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int kernelWidth;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int kernelHeight;
@@ -480,52 +454,6 @@ int ipmWindowRight;
       int ransacLineWindow;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       double overlapThreshold;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      double localizeAngleThreshold;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      int localizeNumLinePixels;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      double extendAngleThreshold;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      double extendMeanDirAngleThreshold;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      int extendLinePixelsTangent;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      int extendLinePixelsNormal;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      double extendContThreshold;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      int extendDeviationThreshold;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      int extendRectTop;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      int extendRectBottom;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      double extendIPMAngleThreshold;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      double extendIPMMeanDirAngleThreshold;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      int extendIPMLinePixelsTangent;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      int extendIPMLinePixelsNormal;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      double extendIPMContThreshold;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      int extendIPMDeviationThreshold;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      int extendIPMRectTop;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      int extendIPMRectBottom;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      int numStrips;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      bool useGroundPlane;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      bool ipmWindowClear;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      int ipmWindowLeft;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      int ipmWindowRight;
 //#line 218 "/opt/ros/indigo/share/dynamic_reconfigure/cmake/../templates/ConfigType.h.template"
 
     bool __fromMessage__(dynamic_reconfigure::Config &msg)
@@ -672,6 +600,26 @@ DetectorConfig::GroupDescription<DetectorConfig::DEFAULT, DetectorConfig> Defaul
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<bool>("debug_lines", "bool", 0, "whether to show debug information and images or not", "", &DetectorConfig::debug_lines)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.use_gpu = 0;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.use_gpu = 1;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.use_gpu = 0;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<bool>("use_gpu", "bool", 0, "whether to use hardware acceleration or not", "", &DetectorConfig::use_gpu)));
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<bool>("use_gpu", "bool", 0, "whether to use hardware acceleration or not", "", &DetectorConfig::use_gpu)));
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.number_of_threads = 0;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.number_of_threads = 10;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.number_of_threads = 4;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("number_of_threads", "int", 0, "How many cpu threads (workers) should be used", "", &DetectorConfig::number_of_threads)));
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("number_of_threads", "int", 0, "How many cpu threads (workers) should be used", "", &DetectorConfig::number_of_threads)));
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.camera_height = 50.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.camera_height = 500.0;
@@ -722,6 +670,16 @@ DetectorConfig::GroupDescription<DetectorConfig::DEFAULT, DetectorConfig> Defaul
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<double>("lane_threshold", "double", 0, "Threshold to consider a combination of two lines a valid lane", "", &DetectorConfig::lane_threshold)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.draw_roi = 0;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.draw_roi = 1;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.draw_roi = 0;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<bool>("draw_roi", "bool", 0, "whether to draw the region of interest or not", "", &DetectorConfig::draw_roi)));
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<bool>("draw_roi", "bool", 0, "whether to draw the region of interest or not", "", &DetectorConfig::draw_roi)));
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.draw_boxes = 0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.draw_boxes = 1;
@@ -761,6 +719,16 @@ DetectorConfig::GroupDescription<DetectorConfig::DEFAULT, DetectorConfig> Defaul
       Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<bool>("draw_tracked_centroids", "bool", 0, "whether to draw the tracked centroids or not", "", &DetectorConfig::draw_tracked_centroids)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<bool>("draw_tracked_centroids", "bool", 0, "whether to draw the tracked centroids or not", "", &DetectorConfig::draw_tracked_centroids)));
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.transform_back = 0;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.transform_back = 1;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.transform_back = 0;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<bool>("transform_back", "bool", 0, "whether to transform back the detected lines on IPM to the original image", "", &DetectorConfig::transform_back)));
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<bool>("transform_back", "bool", 0, "whether to transform back the detected lines on IPM to the original image", "", &DetectorConfig::transform_back)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.tracking_dt = 0.03;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -828,9 +796,9 @@ DetectorConfig::GroupDescription<DetectorConfig::DEFAULT, DetectorConfig> Defaul
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.driving_orientation = 0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("driving_orientation", "int", 0, "Driving orientation", "{'enum_description': 'An enum to set driving orientation', 'enum': [{'srcline': 30, 'description': 'Drive on the right', 'srcfile': '/home/sebastian/catkin_ws/src/lane_detector/cfg/Detector.cfg', 'cconsttype': 'const int', 'value': 0, 'ctype': 'int', 'type': 'int', 'name': 'on_the_right'}, {'srcline': 31, 'description': 'Drive on the left', 'srcfile': '/home/sebastian/catkin_ws/src/lane_detector/cfg/Detector.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'on_the_left'}]}", &DetectorConfig::driving_orientation)));
+      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("driving_orientation", "int", 0, "Driving orientation", "{'enum_description': 'An enum to set driving orientation', 'enum': [{'srcline': 37, 'description': 'Drive on the right', 'srcfile': '/home/sebastian/catkin_ws/src/lane_detector/cfg/Detector.cfg', 'cconsttype': 'const int', 'value': 0, 'ctype': 'int', 'type': 'int', 'name': 'on_the_right'}, {'srcline': 38, 'description': 'Drive on the left', 'srcfile': '/home/sebastian/catkin_ws/src/lane_detector/cfg/Detector.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'on_the_left'}]}", &DetectorConfig::driving_orientation)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("driving_orientation", "int", 0, "Driving orientation", "{'enum_description': 'An enum to set driving orientation', 'enum': [{'srcline': 30, 'description': 'Drive on the right', 'srcfile': '/home/sebastian/catkin_ws/src/lane_detector/cfg/Detector.cfg', 'cconsttype': 'const int', 'value': 0, 'ctype': 'int', 'type': 'int', 'name': 'on_the_right'}, {'srcline': 31, 'description': 'Drive on the left', 'srcfile': '/home/sebastian/catkin_ws/src/lane_detector/cfg/Detector.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'on_the_left'}]}", &DetectorConfig::driving_orientation)));
+      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("driving_orientation", "int", 0, "Driving orientation", "{'enum_description': 'An enum to set driving orientation', 'enum': [{'srcline': 37, 'description': 'Drive on the right', 'srcfile': '/home/sebastian/catkin_ws/src/lane_detector/cfg/Detector.cfg', 'cconsttype': 'const int', 'value': 0, 'ctype': 'int', 'type': 'int', 'name': 'on_the_right'}, {'srcline': 38, 'description': 'Drive on the left', 'srcfile': '/home/sebastian/catkin_ws/src/lane_detector/cfg/Detector.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'on_the_left'}]}", &DetectorConfig::driving_orientation)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.ipmWidth = 160;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -906,7 +874,7 @@ DetectorConfig::GroupDescription<DetectorConfig::DEFAULT, DetectorConfig> Defaul
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.lineWidth = 30.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.lineWidth = 10.0;
+      __default__.lineWidth = 18.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<double>("lineWidth", "double", 0, "width of line to detect in mm (in the world)", "", &DetectorConfig::lineWidth)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -961,6 +929,16 @@ DetectorConfig::GroupDescription<DetectorConfig::DEFAULT, DetectorConfig> Defaul
       Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<double>("lane_width_weight", "double", 0, "Cost weight for the lane width", "", &DetectorConfig::lane_width_weight)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<double>("lane_width_weight", "double", 0, "Cost weight for the lane width", "", &DetectorConfig::lane_width_weight)));
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.use_custom_kernels = 0;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.use_custom_kernels = 1;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.use_custom_kernels = 0;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<bool>("use_custom_kernels", "bool", 0, "whether to use custom kernels for filtering", "", &DetectorConfig::use_custom_kernels)));
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<bool>("use_custom_kernels", "bool", 0, "whether to use custom kernels for filtering", "", &DetectorConfig::use_custom_kernels)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.kernelWidth = 1;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -1151,236 +1129,6 @@ DetectorConfig::GroupDescription<DetectorConfig::DEFAULT, DetectorConfig> Defaul
       Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<double>("overlapThreshold", "double", 0, "Overlap threshold to use for grouping of bounding boxes", "", &DetectorConfig::overlapThreshold)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<double>("overlapThreshold", "double", 0, "Overlap threshold to use for grouping of bounding boxes", "", &DetectorConfig::overlapThreshold)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.localizeAngleThreshold = 0.7;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.localizeAngleThreshold = 0.9;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.localizeAngleThreshold = 0.9;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<double>("localizeAngleThreshold", "double", 0, "Angle threshold used for localization (cosine, 1: most restrictive, 0: most liberal)", "", &DetectorConfig::localizeAngleThreshold)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<double>("localizeAngleThreshold", "double", 0, "Angle threshold used for localization (cosine, 1: most restrictive, 0: most liberal)", "", &DetectorConfig::localizeAngleThreshold)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.localizeNumLinePixels = 10;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.localizeNumLinePixels = 20;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.localizeNumLinePixels = 20;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("localizeNumLinePixels", "int", 0, "Number of pixels to go in normal direction for localization", "", &DetectorConfig::localizeNumLinePixels)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("localizeNumLinePixels", "int", 0, "Number of pixels to go in normal direction for localization", "", &DetectorConfig::localizeNumLinePixels)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.extendAngleThreshold = 0.7;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.extendAngleThreshold = 0.95;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.extendAngleThreshold = 0.86;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<double>("extendAngleThreshold", "double", 0, "Angle threshold used for extending (cosine, 1: most restrictive, 0: most liberal)", "", &DetectorConfig::extendAngleThreshold)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<double>("extendAngleThreshold", "double", 0, "Angle threshold used for extending (cosine, 1: most restrictive, 0: most liberal)", "", &DetectorConfig::extendAngleThreshold)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.extendMeanDirAngleThreshold = 0.7;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.extendMeanDirAngleThreshold = 0.95;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.extendMeanDirAngleThreshold = 0.95;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<double>("extendMeanDirAngleThreshold", "double", 0, "Angle threshold from mean direction used for extending (cosine, 1: most restrictive, 0: most liberal)", "", &DetectorConfig::extendMeanDirAngleThreshold)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<double>("extendMeanDirAngleThreshold", "double", 0, "Angle threshold from mean direction used for extending (cosine, 1: most restrictive, 0: most liberal)", "", &DetectorConfig::extendMeanDirAngleThreshold)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.extendLinePixelsTangent = 5;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.extendLinePixelsTangent = 20;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.extendLinePixelsTangent = 10;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("extendLinePixelsTangent", "int", 0, "Number of pixels to go in tangent direction for extending", "", &DetectorConfig::extendLinePixelsTangent)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("extendLinePixelsTangent", "int", 0, "Number of pixels to go in tangent direction for extending", "", &DetectorConfig::extendLinePixelsTangent)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.extendLinePixelsNormal = 5;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.extendLinePixelsNormal = 20;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.extendLinePixelsNormal = 20;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("extendLinePixelsNormal", "int", 0, "Number of pixels to go in normal direction for extending", "", &DetectorConfig::extendLinePixelsNormal)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("extendLinePixelsNormal", "int", 0, "Number of pixels to go in normal direction for extending", "", &DetectorConfig::extendLinePixelsNormal)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.extendContThreshold = 0.0;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.extendContThreshold = 0.35;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.extendContThreshold = 0.35;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<double>("extendContThreshold", "double", 0, "Threhsold used for stopping the extending process (higher -> less extending)", "", &DetectorConfig::extendContThreshold)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<double>("extendContThreshold", "double", 0, "Threhsold used for stopping the extending process (higher -> less extending)", "", &DetectorConfig::extendContThreshold)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.extendDeviationThreshold = 1;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.extendDeviationThreshold = 2;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.extendDeviationThreshold = 2;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("extendDeviationThreshold", "int", 0, "Stop extending when number of deviating points exceeds this threshold", "", &DetectorConfig::extendDeviationThreshold)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("extendDeviationThreshold", "int", 0, "Stop extending when number of deviating points exceeds this threshold", "", &DetectorConfig::extendDeviationThreshold)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.extendRectTop = 100;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.extendRectTop = 200;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.extendRectTop = 200;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("extendRectTop", "int", 0, "Top point for extension bounding box", "", &DetectorConfig::extendRectTop)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("extendRectTop", "int", 0, "Top point for extension bounding box", "", &DetectorConfig::extendRectTop)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.extendRectBottom = 200;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.extendRectBottom = 480;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.extendRectBottom = 380;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("extendRectBottom", "int", 0, "Bottom point for extension bounding box", "", &DetectorConfig::extendRectBottom)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("extendRectBottom", "int", 0, "Bottom point for extension bounding box", "", &DetectorConfig::extendRectBottom)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.extendIPMAngleThreshold = 0.7;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.extendIPMAngleThreshold = 0.95;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.extendIPMAngleThreshold = 0.95;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<double>("extendIPMAngleThreshold", "double", 0, "Angle threshold used for extending (cosine, 1: most restrictive, 0: most liberal)", "", &DetectorConfig::extendIPMAngleThreshold)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<double>("extendIPMAngleThreshold", "double", 0, "Angle threshold used for extending (cosine, 1: most restrictive, 0: most liberal)", "", &DetectorConfig::extendIPMAngleThreshold)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.extendIPMMeanDirAngleThreshold = 0.7;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.extendIPMMeanDirAngleThreshold = 0.95;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.extendIPMMeanDirAngleThreshold = 0.86;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<double>("extendIPMMeanDirAngleThreshold", "double", 0, "Angle threshold from mean direction used for extending (cosine, 1: most restrictive, 0: most liberal)", "", &DetectorConfig::extendIPMMeanDirAngleThreshold)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<double>("extendIPMMeanDirAngleThreshold", "double", 0, "Angle threshold from mean direction used for extending (cosine, 1: most restrictive, 0: most liberal)", "", &DetectorConfig::extendIPMMeanDirAngleThreshold)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.extendIPMLinePixelsTangent = 5;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.extendIPMLinePixelsTangent = 20;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.extendIPMLinePixelsTangent = 5;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("extendIPMLinePixelsTangent", "int", 0, "Number of pixels to go in tangent direction for extending", "", &DetectorConfig::extendIPMLinePixelsTangent)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("extendIPMLinePixelsTangent", "int", 0, "Number of pixels to go in tangent direction for extending", "", &DetectorConfig::extendIPMLinePixelsTangent)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.extendIPMLinePixelsNormal = 5;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.extendIPMLinePixelsNormal = 20;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.extendIPMLinePixelsNormal = 10;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("extendIPMLinePixelsNormal", "int", 0, "Number of pixels to go in normal direction for extending", "", &DetectorConfig::extendIPMLinePixelsNormal)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("extendIPMLinePixelsNormal", "int", 0, "Number of pixels to go in normal direction for extending", "", &DetectorConfig::extendIPMLinePixelsNormal)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.extendIPMContThreshold = 0.0;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.extendIPMContThreshold = 0.35;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.extendIPMContThreshold = 0.05;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<double>("extendIPMContThreshold", "double", 0, "Threhsold used for stopping the extending process (higher -> less extending)", "", &DetectorConfig::extendIPMContThreshold)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<double>("extendIPMContThreshold", "double", 0, "Threhsold used for stopping the extending process (higher -> less extending)", "", &DetectorConfig::extendIPMContThreshold)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.extendIPMDeviationThreshold = 1;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.extendIPMDeviationThreshold = 2;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.extendIPMDeviationThreshold = 2;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("extendIPMDeviationThreshold", "int", 0, "Stop extending when number of deviating points exceeds this threshold", "", &DetectorConfig::extendIPMDeviationThreshold)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("extendIPMDeviationThreshold", "int", 0, "Stop extending when number of deviating points exceeds this threshold", "", &DetectorConfig::extendIPMDeviationThreshold)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.extendIPMRectTop = 0;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.extendIPMRectTop = 200;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.extendIPMRectTop = 0;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("extendIPMRectTop", "int", 0, "Top point for extension bounding box", "", &DetectorConfig::extendIPMRectTop)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("extendIPMRectTop", "int", 0, "Top point for extension bounding box", "", &DetectorConfig::extendIPMRectTop)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.extendIPMRectBottom = 100;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.extendIPMRectBottom = 480;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.extendIPMRectBottom = 118;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("extendIPMRectBottom", "int", 0, "Bottom point for extension bounding box", "", &DetectorConfig::extendIPMRectBottom)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("extendIPMRectBottom", "int", 0, "Bottom point for extension bounding box", "", &DetectorConfig::extendIPMRectBottom)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.numStrips = 1;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.numStrips = 20;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.numStrips = 1;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("numStrips", "int", 0, "Number of horizontal strips to divide the image to", "", &DetectorConfig::numStrips)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("numStrips", "int", 0, "Number of horizontal strips to divide the image to", "", &DetectorConfig::numStrips)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.useGroundPlane = 0;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.useGroundPlane = 1;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.useGroundPlane = 0;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<bool>("useGroundPlane", "bool", 0, "Use ground plane or not when sending to map", "", &DetectorConfig::useGroundPlane)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<bool>("useGroundPlane", "bool", 0, "Use ground plane or not when sending to map", "", &DetectorConfig::useGroundPlane)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.ipmWindowClear = 0;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.ipmWindowClear = 1;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.ipmWindowClear = 0;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<bool>("ipmWindowClear", "bool", 0, "Whether to clear part of the IPM image", "", &DetectorConfig::ipmWindowClear)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<bool>("ipmWindowClear", "bool", 0, "Whether to clear part of the IPM image", "", &DetectorConfig::ipmWindowClear)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.ipmWindowLeft = 10;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.ipmWindowLeft = 320;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.ipmWindowLeft = 50;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("ipmWindowLeft", "int", 0, "Left cordinate of window to keep in IPM", "", &DetectorConfig::ipmWindowLeft)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("ipmWindowLeft", "int", 0, "Left cordinate of window to keep in IPM", "", &DetectorConfig::ipmWindowLeft)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.ipmWindowRight = 100;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.ipmWindowRight = 480;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.ipmWindowRight = 110;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("ipmWindowRight", "int", 0, "Right cordinate of window to keep in IPM", "", &DetectorConfig::ipmWindowRight)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(DetectorConfig::AbstractParamDescriptionConstPtr(new DetectorConfig::ParamDescription<int>("ipmWindowRight", "int", 0, "Right cordinate of window to keep in IPM", "", &DetectorConfig::ipmWindowRight)));
 //#line 235 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.convertParams();
 //#line 235 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -1460,9 +1208,9 @@ DetectorConfig::GroupDescription<DetectorConfig::DEFAULT, DetectorConfig> Defaul
     return statics;
   }
 
-//#line 30 "/home/sebastian/catkin_ws/src/lane_detector/cfg/Detector.cfg"
+//#line 37 "/home/sebastian/catkin_ws/src/lane_detector/cfg/Detector.cfg"
       const int Detector_on_the_right = 0;
-//#line 31 "/home/sebastian/catkin_ws/src/lane_detector/cfg/Detector.cfg"
+//#line 38 "/home/sebastian/catkin_ws/src/lane_detector/cfg/Detector.cfg"
       const int Detector_on_the_left = 1;
 }
 

@@ -18,9 +18,15 @@ lane_detector/CMakeFiles/lane_detector.dir/src/lane_detector.cpp.o
  /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/splineCombination.h
  /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/utils.h
  /home/sebastian/catkin_ws/src/lane_detector/src/lane_detector.cpp
+ /home/sebastian/catkin_ws/src/swri_profiler/swri_profiler/include/swri_profiler/profiler.h
  /opt/ros/indigo/include/XmlRpcDecl.h
  /opt/ros/indigo/include/XmlRpcValue.h
  /opt/ros/indigo/include/cv_bridge/cv_bridge.h
+ /opt/ros/indigo/include/diagnostic_msgs/DiagnosticArray.h
+ /opt/ros/indigo/include/diagnostic_msgs/DiagnosticStatus.h
+ /opt/ros/indigo/include/diagnostic_msgs/KeyValue.h
+ /opt/ros/indigo/include/diagnostic_updater/DiagnosticStatusWrapper.h
+ /opt/ros/indigo/include/diagnostic_updater/diagnostic_updater.h
  /opt/ros/indigo/include/dynamic_reconfigure/BoolParameter.h
  /opt/ros/indigo/include/dynamic_reconfigure/Config.h
  /opt/ros/indigo/include/dynamic_reconfigure/ConfigDescription.h

@@ -2,15 +2,19 @@
 \verbatim
 <node name="lane_detector" pkg="lane_detector" type="lane_detector">
   <param name="debug_lines" type="bool" value="False" />
+  <param name="use_gpu" type="bool" value="False" />
+  <param name="number_of_threads" type="int" value="4" />
   <param name="camera_height" type="double" value="325.0" />
   <param name="camera_pitch" type="double" value="23.4" />
   <param name="max_num_lanes" type="int" value="6" />
   <param name="lane_num_absent_frames" type="int" value="10" />
   <param name="lane_threshold" type="double" value="250.0" />
+  <param name="draw_roi" type="bool" value="False" />
   <param name="draw_boxes" type="bool" value="False" />
   <param name="draw_lines" type="bool" value="False" />
   <param name="draw_splines" type="bool" value="True" />
   <param name="draw_tracked_centroids" type="bool" value="False" />
+  <param name="transform_back" type="bool" value="False" />
   <param name="tracking_dt" type="double" value="0.2" />
   <param name="tracking_acc_noise_magnitude" type="double" value="0.1" />
   <param name="tracking_dist_threshold" type="double" value="60.0" />
@@ -25,12 +29,13 @@
   <param name="ipmRight" type="int" value="540" />
   <param name="ipmBottom" type="int" value="480" />
   <param name="ipmInterpolation" type="int" value="0" />
-  <param name="lineWidth" type="double" value="10.0" />
+  <param name="lineWidth" type="double" value="18.0" />
   <param name="lineHeight" type="double" value="500.0" />
   <param name="line_dist_threshold" type="double" value="8.0" />
   <param name="width_between_lines" type="double" value="422.0" />
   <param name="width_between_lines_threshold" type="double" value="40.0" />
   <param name="lane_width_weight" type="double" value="3.0" />
+  <param name="use_custom_kernels" type="bool" value="False" />
   <param name="kernelWidth" type="int" value="5" />
   <param name="kernelHeight" type="int" value="5" />
   <param name="lowerQuantile" type="double" value="0.985" />
@@ -50,29 +55,6 @@
   <param name="ransacLineBinarize" type="bool" value="False" />
   <param name="ransacLineWindow" type="int" value="15" />
   <param name="overlapThreshold" type="double" value="0.3" />
-  <param name="localizeAngleThreshold" type="double" value="0.9" />
-  <param name="localizeNumLinePixels" type="int" value="20" />
-  <param name="extendAngleThreshold" type="double" value="0.86" />
-  <param name="extendMeanDirAngleThreshold" type="double" value="0.95" />
-  <param name="extendLinePixelsTangent" type="int" value="10" />
-  <param name="extendLinePixelsNormal" type="int" value="20" />
-  <param name="extendContThreshold" type="double" value="0.35" />
-  <param name="extendDeviationThreshold" type="int" value="2" />
-  <param name="extendRectTop" type="int" value="200" />
-  <param name="extendRectBottom" type="int" value="380" />
-  <param name="extendIPMAngleThreshold" type="double" value="0.95" />
-  <param name="extendIPMMeanDirAngleThreshold" type="double" value="0.86" />
-  <param name="extendIPMLinePixelsTangent" type="int" value="5" />
-  <param name="extendIPMLinePixelsNormal" type="int" value="10" />
-  <param name="extendIPMContThreshold" type="double" value="0.05" />
-  <param name="extendIPMDeviationThreshold" type="int" value="2" />
-  <param name="extendIPMRectTop" type="int" value="0" />
-  <param name="extendIPMRectBottom" type="int" value="118" />
-  <param name="numStrips" type="int" value="1" />
-  <param name="useGroundPlane" type="bool" value="False" />
-  <param name="ipmWindowClear" type="bool" value="False" />
-  <param name="ipmWindowLeft" type="int" value="50" />
-  <param name="ipmWindowRight" type="int" value="110" />
 </node>
 \endverbatim
 

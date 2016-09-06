@@ -3,15 +3,19 @@
 Reads and maintains the following parameters on the ROS server
 
 - \b "~debug_lines" : \b [bool] whether to show debug information and images or not min: False, default: False, max: True
+- \b "~use_gpu" : \b [bool] whether to use hardware acceleration or not min: False, default: False, max: True
+- \b "~number_of_threads" : \b [int] How many cpu threads (workers) should be used min: 0, default: 4, max: 10
 - \b "~camera_height" : \b [double] height of the camera in mm min: 50.0, default: 325.0, max: 500.0
 - \b "~camera_pitch" : \b [double] pitch of the camera in degrees min: 0.0, default: 23.4, max: 70.0
 - \b "~max_num_lanes" : \b [int] maximum number of lanes to detect min: 1, default: 6, max: 15
 - \b "~lane_num_absent_frames" : \b [int] number of frames the current lane is allowed to be absent before deleting it min: 1, default: 10, max: 100
 - \b "~lane_threshold" : \b [double] Threshold to consider a combination of two lines a valid lane min: 50.0, default: 250.0, max: 500.0
+- \b "~draw_roi" : \b [bool] whether to draw the region of interest or not min: False, default: False, max: True
 - \b "~draw_boxes" : \b [bool] whether to draw the bounding boxes of the lanes or not min: False, default: False, max: True
 - \b "~draw_lines" : \b [bool] whether to draw the lines or not min: False, default: False, max: True
 - \b "~draw_splines" : \b [bool] whether to draw the splines(lanes) or not min: False, default: True, max: True
 - \b "~draw_tracked_centroids" : \b [bool] whether to draw the tracked centroids or not min: False, default: False, max: True
+- \b "~transform_back" : \b [bool] whether to transform back the detected lines on IPM to the original image min: False, default: False, max: True
 - \b "~tracking_dt" : \b [double] Delta time for tracking min: 0.03, default: 0.2, max: 1.0
 - \b "~tracking_acc_noise_magnitude" : \b [double] Magnitude of the acceleration noise min: 0.05, default: 0.1, max: 0.9
 - \b "~tracking_dist_threshold" : \b [double] maximum distance threshold for assign a line on the current frame to a previous one min: 10.0, default: 60.0, max: 100.0
@@ -26,12 +30,13 @@ Reads and maintains the following parameters on the ROS server
 - \b "~ipmRight" : \b [int] Right point in original image of region to make IPM for min: 300, default: 540, max: 640
 - \b "~ipmBottom" : \b [int] Bottom point in original image of region to make IPM for min: 300, default: 480, max: 480
 - \b "~ipmInterpolation" : \b [int] The method to use for IPM interpolation (default 0: bilinear. 1: NN) min: 0, default: 0, max: 1
-- \b "~lineWidth" : \b [double] width of line to detect in mm (in the world) min: 10.0, default: 10.0, max: 30.0
+- \b "~lineWidth" : \b [double] width of line to detect in mm (in the world) min: 10.0, default: 18.0, max: 30.0
 - \b "~lineHeight" : \b [double] height of line to detect in mm (in the world) min: 10.0, default: 500.0, max: 2000.0
 - \b "~line_dist_threshold" : \b [double] maximum allowed position difference (in pixel) of a line centroid from one frame to the next one min: 1.0, default: 8.0, max: 50.0
 - \b "~width_between_lines" : \b [double] width between to lines in mm (in the world) min: 400.0, default: 422.0, max: 850.0
 - \b "~width_between_lines_threshold" : \b [double] threshold for the lane width min: 1.0, default: 40.0, max: 100.0
 - \b "~lane_width_weight" : \b [double] Cost weight for the lane width min: 1.0, default: 3.0, max: 10.0
+- \b "~use_custom_kernels" : \b [bool] whether to use custom kernels for filtering min: False, default: False, max: True
 - \b "~kernelWidth" : \b [int] widht of kernel to use for filtering min: 1, default: 5, max: 30
 - \b "~kernelHeight" : \b [int] height of kernel to use for filtering min: 1, default: 5, max: 30
 - \b "~lowerQuantile" : \b [double] lower quantile to use for thresholding the filtered image min: 0.0, default: 0.985, max: 0.99
@@ -51,27 +56,4 @@ Reads and maintains the following parameters on the ROS server
 - \b "~ransacLineBinarize" : \b [bool] Whether to binarize image for RANSAC or not min: False, default: False, max: True
 - \b "~ransacLineWindow" : \b [int] Half width to use for ransac window min: 0, default: 15, max: 15
 - \b "~overlapThreshold" : \b [double] Overlap threshold to use for grouping of bounding boxes min: 0.3, default: 0.3, max: 0.9
-- \b "~localizeAngleThreshold" : \b [double] Angle threshold used for localization (cosine, 1: most restrictive, 0: most liberal) min: 0.7, default: 0.9, max: 0.9
-- \b "~localizeNumLinePixels" : \b [int] Number of pixels to go in normal direction for localization min: 10, default: 20, max: 20
-- \b "~extendAngleThreshold" : \b [double] Angle threshold used for extending (cosine, 1: most restrictive, 0: most liberal) min: 0.7, default: 0.86, max: 0.95
-- \b "~extendMeanDirAngleThreshold" : \b [double] Angle threshold from mean direction used for extending (cosine, 1: most restrictive, 0: most liberal) min: 0.7, default: 0.95, max: 0.95
-- \b "~extendLinePixelsTangent" : \b [int] Number of pixels to go in tangent direction for extending min: 5, default: 10, max: 20
-- \b "~extendLinePixelsNormal" : \b [int] Number of pixels to go in normal direction for extending min: 5, default: 20, max: 20
-- \b "~extendContThreshold" : \b [double] Threhsold used for stopping the extending process (higher -> less extending) min: 0.0, default: 0.35, max: 0.35
-- \b "~extendDeviationThreshold" : \b [int] Stop extending when number of deviating points exceeds this threshold min: 1, default: 2, max: 2
-- \b "~extendRectTop" : \b [int] Top point for extension bounding box min: 100, default: 200, max: 200
-- \b "~extendRectBottom" : \b [int] Bottom point for extension bounding box min: 200, default: 380, max: 480
-- \b "~extendIPMAngleThreshold" : \b [double] Angle threshold used for extending (cosine, 1: most restrictive, 0: most liberal) min: 0.7, default: 0.95, max: 0.95
-- \b "~extendIPMMeanDirAngleThreshold" : \b [double] Angle threshold from mean direction used for extending (cosine, 1: most restrictive, 0: most liberal) min: 0.7, default: 0.86, max: 0.95
-- \b "~extendIPMLinePixelsTangent" : \b [int] Number of pixels to go in tangent direction for extending min: 5, default: 5, max: 20
-- \b "~extendIPMLinePixelsNormal" : \b [int] Number of pixels to go in normal direction for extending min: 5, default: 10, max: 20
-- \b "~extendIPMContThreshold" : \b [double] Threhsold used for stopping the extending process (higher -> less extending) min: 0.0, default: 0.05, max: 0.35
-- \b "~extendIPMDeviationThreshold" : \b [int] Stop extending when number of deviating points exceeds this threshold min: 1, default: 2, max: 2
-- \b "~extendIPMRectTop" : \b [int] Top point for extension bounding box min: 0, default: 0, max: 200
-- \b "~extendIPMRectBottom" : \b [int] Bottom point for extension bounding box min: 100, default: 118, max: 480
-- \b "~numStrips" : \b [int] Number of horizontal strips to divide the image to min: 1, default: 1, max: 20
-- \b "~useGroundPlane" : \b [bool] Use ground plane or not when sending to map min: False, default: False, max: True
-- \b "~ipmWindowClear" : \b [bool] Whether to clear part of the IPM image min: False, default: False, max: True
-- \b "~ipmWindowLeft" : \b [int] Left cordinate of window to keep in IPM min: 10, default: 50, max: 320
-- \b "~ipmWindowRight" : \b [int] Right cordinate of window to keep in IPM min: 100, default: 110, max: 480
 

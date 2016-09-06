@@ -1,0 +1,11 @@
+\subsubsection usage Usage
+\verbatim
+<node name="simulation" pkg="simulation" type="simulation">
+  <param name="obstacle_color" type="int" value="0" />
+  <param name="max_sensor_distance" type="double" value="2.7" />
+  <param name="min_sensor_distance" type="double" value="0.0" />
+  <param name="field_of_view" type="double" value="45.0" />
+  <param name="angular_resolution" type="double" value="0.5" />
+</node>
+\endverbatim
+

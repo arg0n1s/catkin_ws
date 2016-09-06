@@ -66,116 +66,33 @@ void mcvGetGaussianKernel(CvMat *kernel, unsigned char w, FLOAT sigma)
            (exp(-.5*i*i)/sigma - (i*i)*exp(-(.5/sigma)*i*i)/(sigma*sigma));
  }
 
- /** This function performs the IPM transformation, filter the IPM image
-  * and applies thresholding to the image.
+ /** This function performs the IPM transformation, filter and applies thresholding to the image.
   *
   * \param image the input/output image
   * \param cameraInfo the camera parameters
   * \param ipmInfo output for parameters of the performed IPM transformation
+  * \param vp vanishing point
   * \param lanesConf parameters for lane detection
   */
- void mcvPreprocess(CvMat **inImage,
-                  CameraInfo *cameraInfo, IPMInfo* ipmInfo, LaneDetectorConf *lanesConf)
+ void getIpmMap(CvMat *inImage,
+                  CameraInfo *cameraInfo, IPMInfo* ipmInfo, FLOAT_POINT2D vp, LaneDetectorConf *lanesConf, list<CvPoint>* outPixels,  list<CvPoint>* inPixels, list<CvPoint> *ipm_out_of_area, CvMat* uvGrid)
  {
    //input size
-   CvSize inSize = cvSize((*inImage)->width, (*inImage)->height);
-
-   CvMat *image = cvCloneMat(*inImage);
+   CvSize inSize = cvSize(inImage->width, inImage->height);
 
    //Get IPM
    CvSize ipmSize = cvSize((int)lanesConf->ipmWidth,
        (int)lanesConf->ipmHeight);
-   CvMat * ipm;
-   ipm = cvCreateMat(ipmSize.height, ipmSize.width, (*inImage)->type);
+   CvMat* ipm;
+   ipm = cvCreateMat(ipmSize.height, ipmSize.width, inImage->type);
    ipmInfo->vpPortion = lanesConf->ipmVpPortion;
    ipmInfo->ipmLeft = lanesConf->ipmLeft;
    ipmInfo->ipmRight = lanesConf->ipmRight;
    ipmInfo->ipmTop = lanesConf->ipmTop;
    ipmInfo->ipmBottom = lanesConf->ipmBottom;
    ipmInfo->ipmInterpolation = lanesConf->ipmInterpolation;
-   list<CvPoint> outPixels;
-   list<CvPoint>::iterator outPixelsi;
-   mcvGetIPM(image, ipm, ipmInfo, cameraInfo, &outPixels);
-
-   CvMat* rawipm = cvCloneMat(ipm);
-
-   //debugging
-   CvMat *dbIpmImage;
-   if(DEBUG_LINES)
-   {
-     dbIpmImage = cvCreateMat(ipm->height, ipm->width, ipm->type);
-     cvCopy(ipm, dbIpmImage);
-     //show the IPM image
-     SHOW_IMAGE(dbIpmImage, "IPM image", 10);
-   }
-
-   //zero out points outside the image in IPM view
-   for(outPixelsi=outPixels.begin(); outPixelsi!=outPixels.end(); outPixelsi++)
-   {
-     CV_MAT_ELEM(*ipm, float, (*outPixelsi).y, (*outPixelsi).x) = 0;
-   }
-   outPixels.clear();
-
- #warning "Check this clearing of IPM image for 2 lanes"
-   if (lanesConf->ipmWindowClear)
-   {
-     //check to blank out other periferi of the image
-     //blank from 60->100 (width 40)
-     CvRect mask = cvRect(lanesConf->ipmWindowLeft, 0,
-                          lanesConf->ipmWindowRight -
-                          lanesConf->ipmWindowLeft + 1,
-                          ipm->height);
-     mcvSetMat(ipm, mask, 0);
-   }
-
-   //show filtered image
-   if (DEBUG_LINES) {
-     SHOW_IMAGE(ipm, "Lane unthresholded filtered", 10);
-   }
-
-   CvMat *fipm = cvCloneMat(ipm);
-
-  //zero out negative values
- #warning "clean negative parts in filtered image"
-  mcvThresholdLower(ipm, ipm, 0);
-
-   vector <Line> dbIpmStopLines;
-
-   int stripHeight = ipm->height / lanesConf->numStrips;
-   for (int i=0; i<lanesConf->numStrips; i++) //lines
-   {
-     //get the mask
-     CvRect mask;
-     mask = cvRect(0, i*stripHeight, ipm->width,
-             stripHeight);
-   // 	SHOW_RECT(mask, "Mask");
-
-     //get the subimage to work on
-     CvMat *subimage = cvCloneMat(ipm);
-     //clear all but the mask
-     mcvSetMat(subimage, mask, 0);
-
-     //compute quantile: .985
-     FLOAT qtileThreshold = mcvGetQuantile(subimage, lanesConf->lowerQuantile);
-     mcvThresholdLower(subimage, subimage, qtileThreshold);
-
-     if(DEBUG_LINES) {
- 	    CvMat *dbIpmImageThresholded;
- 	    dbIpmImageThresholded = cvCreateMat(ipm->height, ipm->width, ipm->type);
- 	    cvCopy(subimage, dbIpmImageThresholded); //ipm
- 	    char str[256];
- 	    sprintf(str, "Lanes #%d thresholded IPM", i);
- 	    //thresholded ipm
- 	    SHOW_IMAGE(dbIpmImageThresholded, str, 10);
- 	    cvReleaseMat(&dbIpmImageThresholded);
-     }
-       cvReleaseMat(inImage);
-       *inImage = subimage;
-   }
+   mcvGetIpmMap(inImage, ipm, uvGrid, ipmInfo, cameraInfo, vp, outPixels, inPixels, ipm_out_of_area);
    cvReleaseMat(&ipm);
-   cvReleaseMat(&image);
-   cvReleaseMat(&fipm);
-   cvReleaseMat(&rawipm);
  }
 
  /** This function thresholds the image below a certain value to the threshold

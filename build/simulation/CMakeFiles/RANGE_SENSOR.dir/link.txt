@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -std=c++11   -shared -Wl,-soname,libRANGE_SENSOR.so -o /home/sebastian/catkin_ws/devel/lib/libRANGE_SENSOR.so CMakeFiles/RANGE_SENSOR.dir/src/RangeSensor.cpp.o CMakeFiles/RANGE_SENSOR.dir/RANGE_SENSOR_automoc.cpp.o 

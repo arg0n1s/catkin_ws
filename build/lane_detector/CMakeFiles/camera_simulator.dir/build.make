@@ -122,6 +122,9 @@ camera_simulator_EXTERNAL_OBJECTS =
 /home/sebastian/catkin_ws/devel/lib/lane_detector/camera_simulator: /opt/ros/indigo/lib/libclass_loader.so
 /home/sebastian/catkin_ws/devel/lib/lane_detector/camera_simulator: /usr/lib/libPocoFoundation.so
 /home/sebastian/catkin_ws/devel/lib/lane_detector/camera_simulator: /usr/lib/x86_64-linux-gnu/libdl.so
+/home/sebastian/catkin_ws/devel/lib/lane_detector/camera_simulator: /opt/ros/indigo/lib/libroslib.so
+/home/sebastian/catkin_ws/devel/lib/lane_detector/camera_simulator: /opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so
+/home/sebastian/catkin_ws/devel/lib/lane_detector/camera_simulator: /home/sebastian/catkin_ws/devel/lib/libswri_profiler.so
 /home/sebastian/catkin_ws/devel/lib/lane_detector/camera_simulator: /opt/ros/indigo/lib/libroscpp.so
 /home/sebastian/catkin_ws/devel/lib/lane_detector/camera_simulator: /usr/lib/x86_64-linux-gnu/libboost_signals.so
 /home/sebastian/catkin_ws/devel/lib/lane_detector/camera_simulator: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
@@ -130,12 +133,10 @@ camera_simulator_EXTERNAL_OBJECTS =
 /home/sebastian/catkin_ws/devel/lib/lane_detector/camera_simulator: /opt/ros/indigo/lib/librosconsole_backend_interface.so
 /home/sebastian/catkin_ws/devel/lib/lane_detector/camera_simulator: /usr/lib/liblog4cxx.so
 /home/sebastian/catkin_ws/devel/lib/lane_detector/camera_simulator: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/sebastian/catkin_ws/devel/lib/lane_detector/camera_simulator: /opt/ros/indigo/lib/libxmlrpcpp.so
-/home/sebastian/catkin_ws/devel/lib/lane_detector/camera_simulator: /opt/ros/indigo/lib/libroslib.so
-/home/sebastian/catkin_ws/devel/lib/lane_detector/camera_simulator: /opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/sebastian/catkin_ws/devel/lib/lane_detector/camera_simulator: /opt/ros/indigo/lib/libroscpp_serialization.so
 /home/sebastian/catkin_ws/devel/lib/lane_detector/camera_simulator: /opt/ros/indigo/lib/librostime.so
 /home/sebastian/catkin_ws/devel/lib/lane_detector/camera_simulator: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/sebastian/catkin_ws/devel/lib/lane_detector/camera_simulator: /opt/ros/indigo/lib/libxmlrpcpp.so
 /home/sebastian/catkin_ws/devel/lib/lane_detector/camera_simulator: /opt/ros/indigo/lib/libcpp_common.so
 /home/sebastian/catkin_ws/devel/lib/lane_detector/camera_simulator: /usr/lib/x86_64-linux-gnu/libboost_system.so
 /home/sebastian/catkin_ws/devel/lib/lane_detector/camera_simulator: /usr/lib/x86_64-linux-gnu/libboost_thread.so

@@ -6,25 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/lane_tracker/HungarianAlg.h
-vector
--
-iostream
--
-limits
--
-time.h
--
-lane_detector/lane_tracker/defines.h
--
-
-/home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/lane_tracker/defines.h
-opencv2/opencv.hpp
--
-
-/home/sebastian/catkin_ws/src/lane_detector/src/HungarianAlg.cpp
-lane_detector/lane_tracker/HungarianAlg.h
--
-limits
--
-

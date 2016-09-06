@@ -1,0 +1,2 @@
+set(swri_profiler_msgs_MESSAGE_FILES "/home/sebastian/catkin_ws/src/swri_profiler/swri_profiler_msgs/msg/ProfileIndex.msg;/home/sebastian/catkin_ws/src/swri_profiler/swri_profiler_msgs/msg/ProfileIndexArray.msg;/home/sebastian/catkin_ws/src/swri_profiler/swri_profiler_msgs/msg/ProfileData.msg;/home/sebastian/catkin_ws/src/swri_profiler/swri_profiler_msgs/msg/ProfileDataArray.msg")
+set(swri_profiler_msgs_SERVICE_FILES "")

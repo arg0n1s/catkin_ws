@@ -234,32 +234,32 @@ FWD_KINEMATICS_automoc/fast:
 .PHONY : FWD_KINEMATICS_automoc/fast
 
 # Convenience name for target.
-simulation/CMakeFiles/RAY_CAST.dir/rule:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/RAY_CAST.dir/rule
-.PHONY : simulation/CMakeFiles/RAY_CAST.dir/rule
+simulation/CMakeFiles/RANGE_SENSOR.dir/rule:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/RANGE_SENSOR.dir/rule
+.PHONY : simulation/CMakeFiles/RANGE_SENSOR.dir/rule
 
 # Convenience name for target.
-RAY_CAST: simulation/CMakeFiles/RAY_CAST.dir/rule
-.PHONY : RAY_CAST
+RANGE_SENSOR: simulation/CMakeFiles/RANGE_SENSOR.dir/rule
+.PHONY : RANGE_SENSOR
 
 # fast build rule for target.
-RAY_CAST/fast:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/RAY_CAST.dir/build.make simulation/CMakeFiles/RAY_CAST.dir/build
-.PHONY : RAY_CAST/fast
+RANGE_SENSOR/fast:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/RANGE_SENSOR.dir/build.make simulation/CMakeFiles/RANGE_SENSOR.dir/build
+.PHONY : RANGE_SENSOR/fast
 
 # Convenience name for target.
-simulation/CMakeFiles/RAY_CAST_automoc.dir/rule:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/RAY_CAST_automoc.dir/rule
-.PHONY : simulation/CMakeFiles/RAY_CAST_automoc.dir/rule
+simulation/CMakeFiles/RANGE_SENSOR_automoc.dir/rule:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/RANGE_SENSOR_automoc.dir/rule
+.PHONY : simulation/CMakeFiles/RANGE_SENSOR_automoc.dir/rule
 
 # Convenience name for target.
-RAY_CAST_automoc: simulation/CMakeFiles/RAY_CAST_automoc.dir/rule
-.PHONY : RAY_CAST_automoc
+RANGE_SENSOR_automoc: simulation/CMakeFiles/RANGE_SENSOR_automoc.dir/rule
+.PHONY : RANGE_SENSOR_automoc
 
 # fast build rule for target.
-RAY_CAST_automoc/fast:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/RAY_CAST_automoc.dir/build.make simulation/CMakeFiles/RAY_CAST_automoc.dir/build
-.PHONY : RAY_CAST_automoc/fast
+RANGE_SENSOR_automoc/fast:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/RANGE_SENSOR_automoc.dir/build.make simulation/CMakeFiles/RANGE_SENSOR_automoc.dir/build
+.PHONY : RANGE_SENSOR_automoc/fast
 
 # Convenience name for target.
 simulation/CMakeFiles/_simulation_generate_messages_check_deps_ctrl_msg.dir/rule:
@@ -400,6 +400,62 @@ dashboard_node_automoc: simulation/CMakeFiles/dashboard_node_automoc.dir/rule
 dashboard_node_automoc/fast:
 	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/dashboard_node_automoc.dir/build.make simulation/CMakeFiles/dashboard_node_automoc.dir/build
 .PHONY : dashboard_node_automoc/fast
+
+# Convenience name for target.
+simulation/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+.PHONY : simulation/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_gencfg: simulation/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+.PHONY : dynamic_reconfigure_gencfg
+
+# fast build rule for target.
+dynamic_reconfigure_gencfg/fast:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make simulation/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
+.PHONY : dynamic_reconfigure_gencfg/fast
+
+# Convenience name for target.
+simulation/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+.PHONY : simulation/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_cpp: simulation/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+.PHONY : dynamic_reconfigure_generate_messages_cpp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_cpp/fast:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make simulation/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
+
+# Convenience name for target.
+simulation/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+.PHONY : simulation/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_lisp: simulation/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+.PHONY : dynamic_reconfigure_generate_messages_lisp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_lisp/fast:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make simulation/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
+
+# Convenience name for target.
+simulation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+.PHONY : simulation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_py: simulation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+.PHONY : dynamic_reconfigure_generate_messages_py
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_py/fast:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make simulation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_py/fast
 
 # Convenience name for target.
 simulation/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
@@ -638,6 +694,20 @@ sensor_msgs_generate_messages_py: simulation/CMakeFiles/sensor_msgs_generate_mes
 sensor_msgs_generate_messages_py/fast:
 	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make simulation/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
 .PHONY : sensor_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+simulation/CMakeFiles/simulation_gencfg.dir/rule:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/simulation_gencfg.dir/rule
+.PHONY : simulation/CMakeFiles/simulation_gencfg.dir/rule
+
+# Convenience name for target.
+simulation_gencfg: simulation/CMakeFiles/simulation_gencfg.dir/rule
+.PHONY : simulation_gencfg
+
+# fast build rule for target.
+simulation_gencfg/fast:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/simulation_gencfg.dir/build.make simulation/CMakeFiles/simulation_gencfg.dir/build
+.PHONY : simulation_gencfg/fast
 
 # Convenience name for target.
 simulation/CMakeFiles/simulation_gencpp.dir/rule:
@@ -991,29 +1061,29 @@ FWD_KINEMATICS_automoc.cpp.s:
 	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/FWD_KINEMATICS.dir/build.make simulation/CMakeFiles/FWD_KINEMATICS.dir/FWD_KINEMATICS_automoc.cpp.s
 .PHONY : FWD_KINEMATICS_automoc.cpp.s
 
-RAY_CAST_automoc.o: RAY_CAST_automoc.cpp.o
-.PHONY : RAY_CAST_automoc.o
+RANGE_SENSOR_automoc.o: RANGE_SENSOR_automoc.cpp.o
+.PHONY : RANGE_SENSOR_automoc.o
 
 # target to build an object file
-RAY_CAST_automoc.cpp.o:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/RAY_CAST.dir/build.make simulation/CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.o
-.PHONY : RAY_CAST_automoc.cpp.o
+RANGE_SENSOR_automoc.cpp.o:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/RANGE_SENSOR.dir/build.make simulation/CMakeFiles/RANGE_SENSOR.dir/RANGE_SENSOR_automoc.cpp.o
+.PHONY : RANGE_SENSOR_automoc.cpp.o
 
-RAY_CAST_automoc.i: RAY_CAST_automoc.cpp.i
-.PHONY : RAY_CAST_automoc.i
+RANGE_SENSOR_automoc.i: RANGE_SENSOR_automoc.cpp.i
+.PHONY : RANGE_SENSOR_automoc.i
 
 # target to preprocess a source file
-RAY_CAST_automoc.cpp.i:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/RAY_CAST.dir/build.make simulation/CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.i
-.PHONY : RAY_CAST_automoc.cpp.i
+RANGE_SENSOR_automoc.cpp.i:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/RANGE_SENSOR.dir/build.make simulation/CMakeFiles/RANGE_SENSOR.dir/RANGE_SENSOR_automoc.cpp.i
+.PHONY : RANGE_SENSOR_automoc.cpp.i
 
-RAY_CAST_automoc.s: RAY_CAST_automoc.cpp.s
-.PHONY : RAY_CAST_automoc.s
+RANGE_SENSOR_automoc.s: RANGE_SENSOR_automoc.cpp.s
+.PHONY : RANGE_SENSOR_automoc.s
 
 # target to generate assembly for a file
-RAY_CAST_automoc.cpp.s:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/RAY_CAST.dir/build.make simulation/CMakeFiles/RAY_CAST.dir/RAY_CAST_automoc.cpp.s
-.PHONY : RAY_CAST_automoc.cpp.s
+RANGE_SENSOR_automoc.cpp.s:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/RANGE_SENSOR.dir/build.make simulation/CMakeFiles/RANGE_SENSOR.dir/RANGE_SENSOR_automoc.cpp.s
+.PHONY : RANGE_SENSOR_automoc.cpp.s
 
 dashboard_node_automoc.o: dashboard_node_automoc.cpp.o
 .PHONY : dashboard_node_automoc.o
@@ -1159,29 +1229,29 @@ src/ForwardKinematics.cpp.s:
 	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/FWD_KINEMATICS.dir/build.make simulation/CMakeFiles/FWD_KINEMATICS.dir/src/ForwardKinematics.cpp.s
 .PHONY : src/ForwardKinematics.cpp.s
 
-src/Raycaster.o: src/Raycaster.cpp.o
-.PHONY : src/Raycaster.o
+src/RangeSensor.o: src/RangeSensor.cpp.o
+.PHONY : src/RangeSensor.o
 
 # target to build an object file
-src/Raycaster.cpp.o:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/RAY_CAST.dir/build.make simulation/CMakeFiles/RAY_CAST.dir/src/Raycaster.cpp.o
-.PHONY : src/Raycaster.cpp.o
+src/RangeSensor.cpp.o:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/RANGE_SENSOR.dir/build.make simulation/CMakeFiles/RANGE_SENSOR.dir/src/RangeSensor.cpp.o
+.PHONY : src/RangeSensor.cpp.o
 
-src/Raycaster.i: src/Raycaster.cpp.i
-.PHONY : src/Raycaster.i
+src/RangeSensor.i: src/RangeSensor.cpp.i
+.PHONY : src/RangeSensor.i
 
 # target to preprocess a source file
-src/Raycaster.cpp.i:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/RAY_CAST.dir/build.make simulation/CMakeFiles/RAY_CAST.dir/src/Raycaster.cpp.i
-.PHONY : src/Raycaster.cpp.i
+src/RangeSensor.cpp.i:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/RANGE_SENSOR.dir/build.make simulation/CMakeFiles/RANGE_SENSOR.dir/src/RangeSensor.cpp.i
+.PHONY : src/RangeSensor.cpp.i
 
-src/Raycaster.s: src/Raycaster.cpp.s
-.PHONY : src/Raycaster.s
+src/RangeSensor.s: src/RangeSensor.cpp.s
+.PHONY : src/RangeSensor.s
 
 # target to generate assembly for a file
-src/Raycaster.cpp.s:
-	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/RAY_CAST.dir/build.make simulation/CMakeFiles/RAY_CAST.dir/src/Raycaster.cpp.s
-.PHONY : src/Raycaster.cpp.s
+src/RangeSensor.cpp.s:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/RANGE_SENSOR.dir/build.make simulation/CMakeFiles/RANGE_SENSOR.dir/src/RangeSensor.cpp.s
+.PHONY : src/RangeSensor.cpp.s
 
 src/simulation_control.o: src/simulation_control.cpp.o
 .PHONY : src/simulation_control.o
@@ -1315,8 +1385,8 @@ help:
 	@echo "... DASH_automoc"
 	@echo "... FWD_KINEMATICS"
 	@echo "... FWD_KINEMATICS_automoc"
-	@echo "... RAY_CAST"
-	@echo "... RAY_CAST_automoc"
+	@echo "... RANGE_SENSOR"
+	@echo "... RANGE_SENSOR_automoc"
 	@echo "... _simulation_generate_messages_check_deps_ctrl_msg"
 	@echo "... _simulation_generate_messages_check_deps_telemetry_msg"
 	@echo "... actionlib_generate_messages_cpp"
@@ -1327,6 +1397,10 @@ help:
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... dashboard_node"
 	@echo "... dashboard_node_automoc"
+	@echo "... dynamic_reconfigure_gencfg"
+	@echo "... dynamic_reconfigure_generate_messages_cpp"
+	@echo "... dynamic_reconfigure_generate_messages_lisp"
+	@echo "... dynamic_reconfigure_generate_messages_py"
 	@echo "... edit_cache"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_lisp"
@@ -1350,6 +1424,7 @@ help:
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... simulation_gencfg"
 	@echo "... simulation_gencpp"
 	@echo "... simulation_generate_messages"
 	@echo "... simulation_generate_messages_cpp"
@@ -1380,9 +1455,9 @@ help:
 	@echo "... FWD_KINEMATICS_automoc.o"
 	@echo "... FWD_KINEMATICS_automoc.i"
 	@echo "... FWD_KINEMATICS_automoc.s"
-	@echo "... RAY_CAST_automoc.o"
-	@echo "... RAY_CAST_automoc.i"
-	@echo "... RAY_CAST_automoc.s"
+	@echo "... RANGE_SENSOR_automoc.o"
+	@echo "... RANGE_SENSOR_automoc.i"
+	@echo "... RANGE_SENSOR_automoc.s"
 	@echo "... dashboard_node_automoc.o"
 	@echo "... dashboard_node_automoc.i"
 	@echo "... dashboard_node_automoc.s"
@@ -1401,9 +1476,9 @@ help:
 	@echo "... src/ForwardKinematics.o"
 	@echo "... src/ForwardKinematics.i"
 	@echo "... src/ForwardKinematics.s"
-	@echo "... src/Raycaster.o"
-	@echo "... src/Raycaster.i"
-	@echo "... src/Raycaster.s"
+	@echo "... src/RangeSensor.o"
+	@echo "... src/RangeSensor.i"
+	@echo "... src/RangeSensor.s"
 	@echo "... src/simulation_control.o"
 	@echo "... src/simulation_control.i"
 	@echo "... src/simulation_control.s"

@@ -5,11 +5,11 @@
 #include <lane_detector/fitSpline.h>
 #include <mrpt/math/model_search.h>
 #include <mrpt/random.h>
-
+#include <swri_profiler/profiler.h>
 
 void FittingApproach::fitting(cv::Mat& mat, cv::Rect& box, std::vector<cv::Point>& splinePoints)
 {
-
+        SWRI_PROFILE("Spline-Fitting");
         box.y = 0;
         box.height = mat.rows-1;
         //TODO Link parameter min_spline_ransac_window_width from ROS-Config
@@ -29,7 +29,6 @@ void FittingApproach::fitting(cv::Mat& mat, cv::Rect& box, std::vector<cv::Point
         //std::cout << "ransac_window_width: " << ransac_box.width << std::endl;
         //std::cout << "8" << std::endl;
         std::vector<TPoint2D> points;
-
         for(int i=0; i < ransac_window.rows; i++)
         {
                 float* pixel = ransac_window.ptr<float>(i);
@@ -54,8 +53,7 @@ void FittingApproach::fitting(cv::Mat& mat, cv::Rect& box, std::vector<cv::Point
           const double DIST_THRESHOLD = 1;
           std::vector<double> best_initial_x;
       		std::vector<double> best_initial_y;
-
-      		bool found = search.ransacSingleModel( fit, 4, DIST_THRESHOLD, best_model, best_inliers );
+          bool found = search.ransacSingleModel( fit, 4, DIST_THRESHOLD, best_model, best_inliers );
           //ROS_INFO("Found:%i",found);
           if(found) {
             ROS_DEBUG("Inliers count: %lu", best_inliers.size());

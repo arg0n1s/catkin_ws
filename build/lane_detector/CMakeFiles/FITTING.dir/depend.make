@@ -15,8 +15,14 @@ lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /home/sebastian/catkin_w
 lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/splineCombination.h
 lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/utils.h
 lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /home/sebastian/catkin_ws/src/lane_detector/src/fitting.cpp
+lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /home/sebastian/catkin_ws/src/swri_profiler/swri_profiler/include/swri_profiler/profiler.h
 lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h
+lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /opt/ros/indigo/include/diagnostic_msgs/DiagnosticArray.h
+lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /opt/ros/indigo/include/diagnostic_msgs/DiagnosticStatus.h
+lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /opt/ros/indigo/include/diagnostic_msgs/KeyValue.h
+lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /opt/ros/indigo/include/diagnostic_updater/DiagnosticStatusWrapper.h
+lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /opt/ros/indigo/include/diagnostic_updater/diagnostic_updater.h
 lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /opt/ros/indigo/include/dynamic_reconfigure/BoolParameter.h
 lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /opt/ros/indigo/include/dynamic_reconfigure/Config.h
 lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o: /opt/ros/indigo/include/dynamic_reconfigure/ConfigDescription.h

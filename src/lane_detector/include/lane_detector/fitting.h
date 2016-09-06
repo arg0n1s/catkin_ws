@@ -38,13 +38,17 @@ public:
         inline void setDrivingOrientation(lane_detector::Driving driving_orientation) {
           this->driving_orientation = driving_orientation;
         }
-        lane_detector::Lane fitting(cv::Mat& original, cv::Mat& preprocessed, LaneDetector::IPMInfo& ipmInfo, std::vector<LaneDetector::Box>& boxes);
+        lane_detector::Lane fitting(cv::Mat& original, cv::Mat& preprocessed_bgr, cv::Mat& preprocessed, LaneDetector::IPMInfo& ipmInfo, LaneDetector::CameraInfo& cameraInfo, std::vector<LaneDetector::Box>& boxes);
 private:
         void findCurrentLane(const std::vector<cv::Point2f>& centroids, const std::vector<std::vector<cv::Point>>& splines,  SplineCombination& current_lane, cv::Mat& image);
         float calcCost(SplineCombination& combination);
+        void getSpline(cv::Mat& inImage, cv::Rect& rect, std::vector<cv::Point>& spline);
+        void drawSplines(cv::Mat& outImage, std::vector< std::vector<cv::Point> > & splines);
+        void drawBoxes(cv::Mat& outImage, std::vector<cv::Rect>& rects);
         lane_detector::DetectorConfig config;
         LaneDetector::LaneDetectorConf lanesConf;
         LaneDetector::IPMInfo ipmInfo;
+        LaneDetector::CameraInfo cameraInfo;
         CTracker tracker;
         lane_detector::Driving driving_orientation;
         SplineCombination last_lane;

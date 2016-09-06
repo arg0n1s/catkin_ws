@@ -73,6 +73,8 @@ tf/transform_listener.h
 -
 std_msgs/Int32.h
 -
+limits
+-
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h

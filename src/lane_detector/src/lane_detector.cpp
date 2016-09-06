@@ -27,6 +27,7 @@
 #include <lane_detector/LaneDetector.hh>
 #include <lane_detector/mcv.hh>
 #include <lane_detector/utils.h>
+#include <swri_profiler/profiler.h>
 
 cv_bridge::CvImagePtr currentFrame_ptr;
 Preprocessor preproc;
@@ -71,24 +72,25 @@ void drivingOrientationCB(const std_msgs::Int32::ConstPtr& driving_orientation)
 }
 
 void processImage(LaneDetector::CameraInfo& cameraInfo, LaneDetector::LaneDetectorConf& lanesConf) {
-
   if(currentFrame_ptr) {
-
+    SWRI_PROFILE("processImage");
     //information paramameters of the IPM transform
-    LaneDetector::IPMInfo ipminfo;
+    LaneDetector::IPMInfo ipmInfo;
     // detect bounding boxes arround the lanes
     std::vector<LaneDetector::Box> boxes;
-    cv::Mat originalImg = currentFrame_ptr->image;
-    preproc.preprocess(originalImg, ipminfo);
-    cv::Mat preprocessed = originalImg.clone();
-    lane_detector::utils::scaleMat(originalImg, originalImg);
-    if(originalImg.channels() == 1) cv::cvtColor(originalImg, originalImg, CV_GRAY2BGR);
-    extractor.extract(originalImg, preprocessed, boxes);
-    lane_detector::Lane current_lane = fitting_phase.fitting(originalImg, preprocessed, ipminfo, boxes);
+    cv::Mat processed_bgr = currentFrame_ptr->image;
+    preproc.preprocess(currentFrame_ptr->image, processed_bgr, ipmInfo, cameraInfo);
+    cv::Mat preprocessed = processed_bgr.clone();
+    lane_detector::utils::scaleMat(processed_bgr, processed_bgr);
+    if(processed_bgr.channels() == 1) cv::cvtColor(processed_bgr, processed_bgr, CV_GRAY2BGR);
+    extractor.extract(processed_bgr, preprocessed, boxes);
+    lane_detector::Lane current_lane = fitting_phase.fitting(currentFrame_ptr->image, processed_bgr, preprocessed, ipmInfo, cameraInfo, boxes);
     lane_pub.publish(current_lane);
-    cv::imshow("Out", originalImg);
+
+    cv::imshow("Out", processed_bgr);
     cv::waitKey(1);
-    cv::line(currentFrame_ptr->image, cv::Point((currentFrame_ptr->image.cols-1)/2, 0), cv::Point((currentFrame_ptr->image.cols-1)/2, currentFrame_ptr->image.rows), cv::Scalar(0, 255, 239), 1);
+
+    //cv::line(currentFrame_ptr->image, cv::Point((currentFrame_ptr->image.cols-1)/2, 0), cv::Point((currentFrame_ptr->image.cols-1)/2, currentFrame_ptr->image.rows), cv::Scalar(0, 255, 239), 1);
        // print lanes
         /*for(int i=0; i<splines.size(); i++)
          {
@@ -165,7 +167,7 @@ int main(int argc, char **argv){
 
         while (!info_set) {
           ros::spinOnce();
-          ROS_ERROR("No information on topic camera_info received");
+          ROS_WARN("No information on topic camera_info received");
         }
 
         //Stop the Subscriber

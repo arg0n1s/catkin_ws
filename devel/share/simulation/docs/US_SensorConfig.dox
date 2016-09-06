@@ -1,0 +1,10 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~obstacle_color" : \b [int] color of a pixel on an occupancy grid that should be regarded as an obstacle min: 0, default: 0, max: 255
+- \b "~max_sensor_distance" : \b [double] maximum sensing distance of the simulated range sensor min: 0.0, default: 2.7, max: 30.0
+- \b "~min_sensor_distance" : \b [double] minimum sensing distance of the simulated range sensor min: 0.0, default: 0.0, max: 30.0
+- \b "~field_of_view" : \b [double] the simulated range sensors field of view (deg) min: 0.0, default: 45.0, max: 360.0
+- \b "~angular_resolution" : \b [double] angular resolution of the sensors field of view (deg) min: 0.01, default: 0.5, max: 360.0
+

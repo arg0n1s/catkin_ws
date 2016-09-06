@@ -145,7 +145,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(automap_EXPORTED_TARGETS "automap_generate_messages_cpp;automap_generate_messages_lisp;automap_generate_messages_py")
+set(automap_EXPORTED_TARGETS "automap_generate_messages_cpp;automap_generate_messages_lisp;automap_generate_messages_py;automap_gencfg")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${automap_EXPORTED_TARGETS})
   if(NOT TARGET ${t})

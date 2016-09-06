@@ -125,12 +125,13 @@ dashboard_node_EXTERNAL_OBJECTS =
 /home/sebastian/catkin_ws/devel/lib/simulation/dashboard_node: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 /home/sebastian/catkin_ws/devel/lib/simulation/dashboard_node: /opt/ros/indigo/lib/libxmlrpcpp.so
 /home/sebastian/catkin_ws/devel/lib/simulation/dashboard_node: /opt/ros/indigo/lib/libtf2.so
-/home/sebastian/catkin_ws/devel/lib/simulation/dashboard_node: /opt/ros/indigo/lib/libroscpp_serialization.so
 /home/sebastian/catkin_ws/devel/lib/simulation/dashboard_node: /opt/ros/indigo/lib/librosconsole.so
 /home/sebastian/catkin_ws/devel/lib/simulation/dashboard_node: /opt/ros/indigo/lib/librosconsole_log4cxx.so
 /home/sebastian/catkin_ws/devel/lib/simulation/dashboard_node: /opt/ros/indigo/lib/librosconsole_backend_interface.so
 /home/sebastian/catkin_ws/devel/lib/simulation/dashboard_node: /usr/lib/liblog4cxx.so
 /home/sebastian/catkin_ws/devel/lib/simulation/dashboard_node: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/sebastian/catkin_ws/devel/lib/simulation/dashboard_node: /opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so
+/home/sebastian/catkin_ws/devel/lib/simulation/dashboard_node: /opt/ros/indigo/lib/libroscpp_serialization.so
 /home/sebastian/catkin_ws/devel/lib/simulation/dashboard_node: /opt/ros/indigo/lib/librostime.so
 /home/sebastian/catkin_ws/devel/lib/simulation/dashboard_node: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
 /home/sebastian/catkin_ws/devel/lib/simulation/dashboard_node: /opt/ros/indigo/lib/libcpp_common.so

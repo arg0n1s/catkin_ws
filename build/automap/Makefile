@@ -262,6 +262,20 @@ _automap_generate_messages_check_deps_automap_ctrl_msg/fast:
 .PHONY : _automap_generate_messages_check_deps_automap_ctrl_msg/fast
 
 # Convenience name for target.
+automap/CMakeFiles/automap_gencfg.dir/rule:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 automap/CMakeFiles/automap_gencfg.dir/rule
+.PHONY : automap/CMakeFiles/automap_gencfg.dir/rule
+
+# Convenience name for target.
+automap_gencfg: automap/CMakeFiles/automap_gencfg.dir/rule
+.PHONY : automap_gencfg
+
+# fast build rule for target.
+automap_gencfg/fast:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f automap/CMakeFiles/automap_gencfg.dir/build.make automap/CMakeFiles/automap_gencfg.dir/build
+.PHONY : automap_gencfg/fast
+
+# Convenience name for target.
 automap/CMakeFiles/automap_gencpp.dir/rule:
 	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 automap/CMakeFiles/automap_gencpp.dir/rule
 .PHONY : automap/CMakeFiles/automap_gencpp.dir/rule
@@ -579,6 +593,7 @@ help:
 	@echo "... PLANNER"
 	@echo "... P_EX"
 	@echo "... _automap_generate_messages_check_deps_automap_ctrl_msg"
+	@echo "... automap_gencfg"
 	@echo "... automap_gencpp"
 	@echo "... automap_generate_messages"
 	@echo "... automap_generate_messages_cpp"
