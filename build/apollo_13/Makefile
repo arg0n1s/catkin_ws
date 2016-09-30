@@ -234,6 +234,20 @@ costmap_2d_generate_messages_py/fast:
 .PHONY : costmap_2d_generate_messages_py/fast
 
 # Convenience name for target.
+apollo_13/CMakeFiles/kinect2_filter.dir/rule:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 apollo_13/CMakeFiles/kinect2_filter.dir/rule
+.PHONY : apollo_13/CMakeFiles/kinect2_filter.dir/rule
+
+# Convenience name for target.
+kinect2_filter: apollo_13/CMakeFiles/kinect2_filter.dir/rule
+.PHONY : kinect2_filter
+
+# fast build rule for target.
+kinect2_filter/fast:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f apollo_13/CMakeFiles/kinect2_filter.dir/build.make apollo_13/CMakeFiles/kinect2_filter.dir/build
+.PHONY : kinect2_filter/fast
+
+# Convenience name for target.
 apollo_13/CMakeFiles/lane_follower.dir/rule:
 	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 apollo_13/CMakeFiles/lane_follower.dir/rule
 .PHONY : apollo_13/CMakeFiles/lane_follower.dir/rule
@@ -491,6 +505,30 @@ src/car_aruco.cpp.s:
 	cd /home/sebastian/catkin_ws/build && $(MAKE) -f apollo_13/CMakeFiles/car_aruco.dir/build.make apollo_13/CMakeFiles/car_aruco.dir/src/car_aruco.cpp.s
 .PHONY : src/car_aruco.cpp.s
 
+src/kinect2_filter.o: src/kinect2_filter.cpp.o
+.PHONY : src/kinect2_filter.o
+
+# target to build an object file
+src/kinect2_filter.cpp.o:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f apollo_13/CMakeFiles/kinect2_filter.dir/build.make apollo_13/CMakeFiles/kinect2_filter.dir/src/kinect2_filter.cpp.o
+.PHONY : src/kinect2_filter.cpp.o
+
+src/kinect2_filter.i: src/kinect2_filter.cpp.i
+.PHONY : src/kinect2_filter.i
+
+# target to preprocess a source file
+src/kinect2_filter.cpp.i:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f apollo_13/CMakeFiles/kinect2_filter.dir/build.make apollo_13/CMakeFiles/kinect2_filter.dir/src/kinect2_filter.cpp.i
+.PHONY : src/kinect2_filter.cpp.i
+
+src/kinect2_filter.s: src/kinect2_filter.cpp.s
+.PHONY : src/kinect2_filter.s
+
+# target to generate assembly for a file
+src/kinect2_filter.cpp.s:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f apollo_13/CMakeFiles/kinect2_filter.dir/build.make apollo_13/CMakeFiles/kinect2_filter.dir/src/kinect2_filter.cpp.s
+.PHONY : src/kinect2_filter.cpp.s
+
 src/lane_follower.o: src/lane_follower.cpp.o
 .PHONY : src/lane_follower.o
 
@@ -531,6 +569,7 @@ help:
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... kinect2_filter"
 	@echo "... lane_follower"
 	@echo "... list_install_components"
 	@echo "... map_msgs_generate_messages_cpp"
@@ -555,6 +594,9 @@ help:
 	@echo "... src/car_aruco.o"
 	@echo "... src/car_aruco.i"
 	@echo "... src/car_aruco.s"
+	@echo "... src/kinect2_filter.o"
+	@echo "... src/kinect2_filter.i"
+	@echo "... src/kinect2_filter.s"
 	@echo "... src/lane_follower.o"
 	@echo "... src/lane_follower.i"
 	@echo "... src/lane_follower.s"

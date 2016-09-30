@@ -5,30 +5,34 @@
   <param name="planner_robot_length" type="double" value="0.4" />
   <param name="planner_downsampling_factor" type="double" value="0.2" />
   <param name="planner_min_obstacle_distance" type="double" value="0.4" />
-  <param name="planner_alpha" type="double" value="0.4" />
+  <param name="planner_alpha" type="double" value="1.0" />
+  <param name="frontier_tolerance" type="double" value="1.2" />
   <param name="frontier_dilation_rate" type="int" value="3" />
   <param name="frontier_blur_kernel" type="int" value="5" />
   <param name="frontier_inflate_frontiers" type="bool" value="True" />
-  <param name="exploration_rolling_window_width" type="double" value="30.0" />
-  <param name="exploration_rolling_window_height" type="double" value="30.0" />
+  <param name="exploration_rolling_window_width" type="double" value="22.0" />
+  <param name="exploration_rolling_window_height" type="double" value="22.0" />
   <param name="exploration_score_simple_dist_exp" type="double" value="4.0" />
-  <param name="exploration_score_simple_dist_base" type="double" value="2.0" />
   <param name="exploration_score_simple_angle_exp" type="double" value="4.0" />
-  <param name="exploration_score_simple_angle_base" type="double" value="2.0" />
-  <param name="exploration_score_nbv_sampling_points" type="int" value="10" />
+  <param name="exploration_score_nbv_sampling_points" type="int" value="25" />
   <param name="exploration_score_nbv_sensor_min_range" type="double" value="1.0" />
-  <param name="exploration_score_nbv_sensor_max_range" type="double" value="6.0" />
-  <param name="exploration_score_nbv_sensor_angular_accuracy" type="double" value="0.5" />
-  <param name="exploration_score_nbv_sensor_fov" type="double" value="90.0" />
-  <param name="exploration_score_nbv_angular_scan_accuracy" type="double" value="5.0" />
+  <param name="exploration_score_nbv_sensor_max_range" type="double" value="7.0" />
+  <param name="exploration_score_nbv_sensor_angular_accuracy" type="double" value="0.1" />
+  <param name="exploration_score_nbv_sensor_fov" type="double" value="70.0" />
+  <param name="exploration_score_nbv_angular_scan_accuracy" type="double" value="10.0" />
   <param name="exploration_score_nbv_angular_scan_range" type="double" value="180.0" />
+  <param name="exploration_score_nbv_obstacle_inflation" type="int" value="2" />
   <param name="exploration_score_nbv_alpha" type="double" value="0.1" />
-  <param name="exploration_score_nbv_distance_thresh" type="double" value="8.0" />
+  <param name="exploration_score_nbv_beta" type="double" value="1.5" />
   <param name="exploration_goal_accuracy_position" type="double" value="1.0" />
   <param name="exploration_goal_accuracy_angle" type="double" value="0.5" />
-  <param name="node_retries" type="int" value="5" />
-  <param name="node_information_gain" type="double" value="2500.0" />
-  <param name="node_loop_rate" type="double" value="1.0" />
+  <param name="node_retries" type="int" value="30" />
+  <param name="node_information_gain" type="double" value="3500.0" />
+  <param name="node_loop_rate" type="double" value="2.0" />
+  <param name="node_control_on" type="bool" value="True" />
+  <param name="node_sensing_on" type="bool" value="True" />
+  <param name="node_use_nbv" type="bool" value="True" />
+  <param name="node_show_exploration_planner_result" type="bool" value="False" />
 </node>
 \endverbatim
 

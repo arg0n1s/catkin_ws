@@ -231,15 +231,14 @@ class DEFAULT
         if("planner_downsampling_factor"==(*_i)->name){planner_downsampling_factor = boost::any_cast<double>(val);}
         if("planner_min_obstacle_distance"==(*_i)->name){planner_min_obstacle_distance = boost::any_cast<double>(val);}
         if("planner_alpha"==(*_i)->name){planner_alpha = boost::any_cast<double>(val);}
+        if("frontier_tolerance"==(*_i)->name){frontier_tolerance = boost::any_cast<double>(val);}
         if("frontier_dilation_rate"==(*_i)->name){frontier_dilation_rate = boost::any_cast<int>(val);}
         if("frontier_blur_kernel"==(*_i)->name){frontier_blur_kernel = boost::any_cast<int>(val);}
         if("frontier_inflate_frontiers"==(*_i)->name){frontier_inflate_frontiers = boost::any_cast<bool>(val);}
         if("exploration_rolling_window_width"==(*_i)->name){exploration_rolling_window_width = boost::any_cast<double>(val);}
         if("exploration_rolling_window_height"==(*_i)->name){exploration_rolling_window_height = boost::any_cast<double>(val);}
         if("exploration_score_simple_dist_exp"==(*_i)->name){exploration_score_simple_dist_exp = boost::any_cast<double>(val);}
-        if("exploration_score_simple_dist_base"==(*_i)->name){exploration_score_simple_dist_base = boost::any_cast<double>(val);}
         if("exploration_score_simple_angle_exp"==(*_i)->name){exploration_score_simple_angle_exp = boost::any_cast<double>(val);}
-        if("exploration_score_simple_angle_base"==(*_i)->name){exploration_score_simple_angle_base = boost::any_cast<double>(val);}
         if("exploration_score_nbv_sampling_points"==(*_i)->name){exploration_score_nbv_sampling_points = boost::any_cast<int>(val);}
         if("exploration_score_nbv_sensor_min_range"==(*_i)->name){exploration_score_nbv_sensor_min_range = boost::any_cast<double>(val);}
         if("exploration_score_nbv_sensor_max_range"==(*_i)->name){exploration_score_nbv_sensor_max_range = boost::any_cast<double>(val);}
@@ -247,13 +246,18 @@ class DEFAULT
         if("exploration_score_nbv_sensor_fov"==(*_i)->name){exploration_score_nbv_sensor_fov = boost::any_cast<double>(val);}
         if("exploration_score_nbv_angular_scan_accuracy"==(*_i)->name){exploration_score_nbv_angular_scan_accuracy = boost::any_cast<double>(val);}
         if("exploration_score_nbv_angular_scan_range"==(*_i)->name){exploration_score_nbv_angular_scan_range = boost::any_cast<double>(val);}
+        if("exploration_score_nbv_obstacle_inflation"==(*_i)->name){exploration_score_nbv_obstacle_inflation = boost::any_cast<int>(val);}
         if("exploration_score_nbv_alpha"==(*_i)->name){exploration_score_nbv_alpha = boost::any_cast<double>(val);}
-        if("exploration_score_nbv_distance_thresh"==(*_i)->name){exploration_score_nbv_distance_thresh = boost::any_cast<double>(val);}
+        if("exploration_score_nbv_beta"==(*_i)->name){exploration_score_nbv_beta = boost::any_cast<double>(val);}
         if("exploration_goal_accuracy_position"==(*_i)->name){exploration_goal_accuracy_position = boost::any_cast<double>(val);}
         if("exploration_goal_accuracy_angle"==(*_i)->name){exploration_goal_accuracy_angle = boost::any_cast<double>(val);}
         if("node_retries"==(*_i)->name){node_retries = boost::any_cast<int>(val);}
         if("node_information_gain"==(*_i)->name){node_information_gain = boost::any_cast<double>(val);}
         if("node_loop_rate"==(*_i)->name){node_loop_rate = boost::any_cast<double>(val);}
+        if("node_control_on"==(*_i)->name){node_control_on = boost::any_cast<bool>(val);}
+        if("node_sensing_on"==(*_i)->name){node_sensing_on = boost::any_cast<bool>(val);}
+        if("node_use_nbv"==(*_i)->name){node_use_nbv = boost::any_cast<bool>(val);}
+        if("node_show_exploration_planner_result"==(*_i)->name){node_show_exploration_planner_result = boost::any_cast<bool>(val);}
       }
     }
 
@@ -262,15 +266,14 @@ double planner_robot_length;
 double planner_downsampling_factor;
 double planner_min_obstacle_distance;
 double planner_alpha;
+double frontier_tolerance;
 int frontier_dilation_rate;
 int frontier_blur_kernel;
 bool frontier_inflate_frontiers;
 double exploration_rolling_window_width;
 double exploration_rolling_window_height;
 double exploration_score_simple_dist_exp;
-double exploration_score_simple_dist_base;
 double exploration_score_simple_angle_exp;
-double exploration_score_simple_angle_base;
 int exploration_score_nbv_sampling_points;
 double exploration_score_nbv_sensor_min_range;
 double exploration_score_nbv_sensor_max_range;
@@ -278,13 +281,18 @@ double exploration_score_nbv_sensor_angular_accuracy;
 double exploration_score_nbv_sensor_fov;
 double exploration_score_nbv_angular_scan_accuracy;
 double exploration_score_nbv_angular_scan_range;
+int exploration_score_nbv_obstacle_inflation;
 double exploration_score_nbv_alpha;
-double exploration_score_nbv_distance_thresh;
+double exploration_score_nbv_beta;
 double exploration_goal_accuracy_position;
 double exploration_goal_accuracy_angle;
 int node_retries;
 double node_information_gain;
 double node_loop_rate;
+bool node_control_on;
+bool node_sensing_on;
+bool node_use_nbv;
+bool node_show_exploration_planner_result;
 
     bool state;
     std::string name;
@@ -305,6 +313,8 @@ double node_loop_rate;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       double planner_alpha;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      double frontier_tolerance;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int frontier_dilation_rate;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int frontier_blur_kernel;
@@ -317,11 +327,7 @@ double node_loop_rate;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       double exploration_score_simple_dist_exp;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      double exploration_score_simple_dist_base;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       double exploration_score_simple_angle_exp;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      double exploration_score_simple_angle_base;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int exploration_score_nbv_sampling_points;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -337,9 +343,11 @@ double node_loop_rate;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       double exploration_score_nbv_angular_scan_range;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      int exploration_score_nbv_obstacle_inflation;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       double exploration_score_nbv_alpha;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      double exploration_score_nbv_distance_thresh;
+      double exploration_score_nbv_beta;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       double exploration_goal_accuracy_position;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -350,6 +358,14 @@ double node_loop_rate;
       double node_information_gain;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       double node_loop_rate;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      bool node_control_on;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      bool node_sensing_on;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      bool node_use_nbv;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      bool node_show_exploration_planner_result;
 //#line 218 "/opt/ros/indigo/share/dynamic_reconfigure/cmake/../templates/ConfigType.h.template"
 
     bool __fromMessage__(dynamic_reconfigure::Config &msg)
@@ -530,11 +546,21 @@ ExplorationConfig::GroupDescription<ExplorationConfig::DEFAULT, ExplorationConfi
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.planner_alpha = 2.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.planner_alpha = 0.4;
+      __default__.planner_alpha = 1.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("planner_alpha", "double", 0, "scales how strongly obstacles may influence path planning", "", &ExplorationConfig::planner_alpha)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("planner_alpha", "double", 0, "scales how strongly obstacles may influence path planning", "", &ExplorationConfig::planner_alpha)));
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.frontier_tolerance = 0.0;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.frontier_tolerance = 10.0;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.frontier_tolerance = 1.2;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("frontier_tolerance", "double", 0, "ignores gaps bigger than the diagonal of the robot footprint multiplied by this factor", "", &ExplorationConfig::frontier_tolerance)));
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("frontier_tolerance", "double", 0, "ignores gaps bigger than the diagonal of the robot footprint multiplied by this factor", "", &ExplorationConfig::frontier_tolerance)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.frontier_dilation_rate = 0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -570,7 +596,7 @@ ExplorationConfig::GroupDescription<ExplorationConfig::DEFAULT, ExplorationConfi
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.exploration_rolling_window_width = 200.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.exploration_rolling_window_width = 30.0;
+      __default__.exploration_rolling_window_width = 22.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("exploration_rolling_window_width", "double", 0, "width(m) of the local exploration perspective", "", &ExplorationConfig::exploration_rolling_window_width)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -580,7 +606,7 @@ ExplorationConfig::GroupDescription<ExplorationConfig::DEFAULT, ExplorationConfi
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.exploration_rolling_window_height = 200.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.exploration_rolling_window_height = 30.0;
+      __default__.exploration_rolling_window_height = 22.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("exploration_rolling_window_height", "double", 0, "height(m) of the local exploration perspective", "", &ExplorationConfig::exploration_rolling_window_height)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -596,16 +622,6 @@ ExplorationConfig::GroupDescription<ExplorationConfig::DEFAULT, ExplorationConfi
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("exploration_score_simple_dist_exp", "double", 0, "exponent of the distance weight function", "", &ExplorationConfig::exploration_score_simple_dist_exp)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.exploration_score_simple_dist_base = 0.0;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.exploration_score_simple_dist_base = 10.0;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.exploration_score_simple_dist_base = 2.0;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("exploration_score_simple_dist_base", "double", 0, "base of the distance weight function", "", &ExplorationConfig::exploration_score_simple_dist_base)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("exploration_score_simple_dist_base", "double", 0, "base of the distance weight function", "", &ExplorationConfig::exploration_score_simple_dist_base)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.exploration_score_simple_angle_exp = 0.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.exploration_score_simple_angle_exp = 10.0;
@@ -616,21 +632,11 @@ ExplorationConfig::GroupDescription<ExplorationConfig::DEFAULT, ExplorationConfi
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("exploration_score_simple_angle_exp", "double", 0, "exponent of the view angle weight function", "", &ExplorationConfig::exploration_score_simple_angle_exp)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.exploration_score_simple_angle_base = 0.0;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.exploration_score_simple_angle_base = 10.0;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.exploration_score_simple_angle_base = 2.0;
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("exploration_score_simple_angle_base", "double", 0, "base of the view angle weight function", "", &ExplorationConfig::exploration_score_simple_angle_base)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("exploration_score_simple_angle_base", "double", 0, "base of the view angle weight function", "", &ExplorationConfig::exploration_score_simple_angle_base)));
-//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.exploration_score_nbv_sampling_points = 0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.exploration_score_nbv_sampling_points = 200;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.exploration_score_nbv_sampling_points = 10;
+      __default__.exploration_score_nbv_sampling_points = 25;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<int>("exploration_score_nbv_sampling_points", "int", 0, "number of random generated sampling points per frontier", "", &ExplorationConfig::exploration_score_nbv_sampling_points)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -650,17 +656,17 @@ ExplorationConfig::GroupDescription<ExplorationConfig::DEFAULT, ExplorationConfi
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.exploration_score_nbv_sensor_max_range = 30.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.exploration_score_nbv_sensor_max_range = 6.0;
+      __default__.exploration_score_nbv_sensor_max_range = 7.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("exploration_score_nbv_sensor_max_range", "double", 0, "minimum sensing distance(m) of the range sensor", "", &ExplorationConfig::exploration_score_nbv_sensor_max_range)));
+      Default.abstract_parameters.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("exploration_score_nbv_sensor_max_range", "double", 0, "maximum sensing distance(m) of the range sensor", "", &ExplorationConfig::exploration_score_nbv_sensor_max_range)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("exploration_score_nbv_sensor_max_range", "double", 0, "minimum sensing distance(m) of the range sensor", "", &ExplorationConfig::exploration_score_nbv_sensor_max_range)));
+      __param_descriptions__.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("exploration_score_nbv_sensor_max_range", "double", 0, "maximum sensing distance(m) of the range sensor", "", &ExplorationConfig::exploration_score_nbv_sensor_max_range)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.exploration_score_nbv_sensor_angular_accuracy = 0.01;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.exploration_score_nbv_sensor_angular_accuracy = 360.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.exploration_score_nbv_sensor_angular_accuracy = 0.5;
+      __default__.exploration_score_nbv_sensor_angular_accuracy = 0.1;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("exploration_score_nbv_sensor_angular_accuracy", "double", 0, "angular sensing accuracy(deg) of the range sensor", "", &ExplorationConfig::exploration_score_nbv_sensor_angular_accuracy)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -670,7 +676,7 @@ ExplorationConfig::GroupDescription<ExplorationConfig::DEFAULT, ExplorationConfi
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.exploration_score_nbv_sensor_fov = 360.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.exploration_score_nbv_sensor_fov = 90.0;
+      __default__.exploration_score_nbv_sensor_fov = 70.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("exploration_score_nbv_sensor_fov", "double", 0, "FOV of the range sensor", "", &ExplorationConfig::exploration_score_nbv_sensor_fov)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -680,7 +686,7 @@ ExplorationConfig::GroupDescription<ExplorationConfig::DEFAULT, ExplorationConfi
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.exploration_score_nbv_angular_scan_accuracy = 360.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.exploration_score_nbv_angular_scan_accuracy = 5.0;
+      __default__.exploration_score_nbv_angular_scan_accuracy = 10.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("exploration_score_nbv_angular_scan_accuracy", "double", 0, "angular sensing accuracy(deg) used in sampling on a specific frontier", "", &ExplorationConfig::exploration_score_nbv_angular_scan_accuracy)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -696,6 +702,16 @@ ExplorationConfig::GroupDescription<ExplorationConfig::DEFAULT, ExplorationConfi
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("exploration_score_nbv_angular_scan_range", "double", 0, "maximum angular range(deg) to be sampled on a specific frontier", "", &ExplorationConfig::exploration_score_nbv_angular_scan_range)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.exploration_score_nbv_obstacle_inflation = 0;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.exploration_score_nbv_obstacle_inflation = 10;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.exploration_score_nbv_obstacle_inflation = 2;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<int>("exploration_score_nbv_obstacle_inflation", "int", 0, "prevents escaping rays during sampling operations", "", &ExplorationConfig::exploration_score_nbv_obstacle_inflation)));
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<int>("exploration_score_nbv_obstacle_inflation", "int", 0, "prevents escaping rays during sampling operations", "", &ExplorationConfig::exploration_score_nbv_obstacle_inflation)));
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.exploration_score_nbv_alpha = 0.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.exploration_score_nbv_alpha = 10.0;
@@ -706,15 +722,15 @@ ExplorationConfig::GroupDescription<ExplorationConfig::DEFAULT, ExplorationConfi
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("exploration_score_nbv_alpha", "double", 0, "weight of distance in the exponent of the scoring function", "", &ExplorationConfig::exploration_score_nbv_alpha)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.exploration_score_nbv_distance_thresh = 0.0;
+      __min__.exploration_score_nbv_beta = 0.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.exploration_score_nbv_distance_thresh = 200.0;
+      __max__.exploration_score_nbv_beta = 10.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.exploration_score_nbv_distance_thresh = 8.0;
+      __default__.exploration_score_nbv_beta = 1.5;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("exploration_score_nbv_distance_thresh", "double", 0, "above this distance(m) view angle is ignored", "", &ExplorationConfig::exploration_score_nbv_distance_thresh)));
+      Default.abstract_parameters.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("exploration_score_nbv_beta", "double", 0, "weight of angledifferential in the exponent of the scoring function", "", &ExplorationConfig::exploration_score_nbv_beta)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("exploration_score_nbv_distance_thresh", "double", 0, "above this distance(m) view angle is ignored", "", &ExplorationConfig::exploration_score_nbv_distance_thresh)));
+      __param_descriptions__.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("exploration_score_nbv_beta", "double", 0, "weight of angledifferential in the exponent of the scoring function", "", &ExplorationConfig::exploration_score_nbv_beta)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.exploration_goal_accuracy_position = 0.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -740,7 +756,7 @@ ExplorationConfig::GroupDescription<ExplorationConfig::DEFAULT, ExplorationConfi
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.node_retries = 100;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.node_retries = 5;
+      __default__.node_retries = 30;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<int>("node_retries", "int", 0, "number of exploration retries before a new exploration is forced", "", &ExplorationConfig::node_retries)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -750,7 +766,7 @@ ExplorationConfig::GroupDescription<ExplorationConfig::DEFAULT, ExplorationConfi
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.node_information_gain = 100000.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.node_information_gain = 2500.0;
+      __default__.node_information_gain = 3500.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("node_information_gain", "double", 0, "minimum required amount of information gained before a new exploration is planned", "", &ExplorationConfig::node_information_gain)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -760,11 +776,51 @@ ExplorationConfig::GroupDescription<ExplorationConfig::DEFAULT, ExplorationConfi
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.node_loop_rate = 100.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.node_loop_rate = 1.0;
+      __default__.node_loop_rate = 2.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("node_loop_rate", "double", 0, "frequency of the main loop(hz)", "", &ExplorationConfig::node_loop_rate)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<double>("node_loop_rate", "double", 0, "frequency of the main loop(hz)", "", &ExplorationConfig::node_loop_rate)));
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.node_control_on = 0;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.node_control_on = 1;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.node_control_on = 1;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<bool>("node_control_on", "bool", 0, "send motion control commands", "", &ExplorationConfig::node_control_on)));
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<bool>("node_control_on", "bool", 0, "send motion control commands", "", &ExplorationConfig::node_control_on)));
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.node_sensing_on = 0;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.node_sensing_on = 1;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.node_sensing_on = 1;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<bool>("node_sensing_on", "bool", 0, "analyze map for next action", "", &ExplorationConfig::node_sensing_on)));
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<bool>("node_sensing_on", "bool", 0, "analyze map for next action", "", &ExplorationConfig::node_sensing_on)));
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.node_use_nbv = 0;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.node_use_nbv = 1;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.node_use_nbv = 1;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<bool>("node_use_nbv", "bool", 0, "use nbv exploration strategy", "", &ExplorationConfig::node_use_nbv)));
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<bool>("node_use_nbv", "bool", 0, "use nbv exploration strategy", "", &ExplorationConfig::node_use_nbv)));
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.node_show_exploration_planner_result = 0;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.node_show_exploration_planner_result = 1;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.node_show_exploration_planner_result = 0;
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<bool>("node_show_exploration_planner_result", "bool", 0, "broadcasts the occupancy grid with highlighted valid frontiers", "", &ExplorationConfig::node_show_exploration_planner_result)));
+//#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(ExplorationConfig::AbstractParamDescriptionConstPtr(new ExplorationConfig::ParamDescription<bool>("node_show_exploration_planner_result", "bool", 0, "broadcasts the occupancy grid with highlighted valid frontiers", "", &ExplorationConfig::node_show_exploration_planner_result)));
 //#line 235 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.convertParams();
 //#line 235 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"

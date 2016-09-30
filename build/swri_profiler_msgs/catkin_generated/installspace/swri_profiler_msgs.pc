@@ -1,0 +1,8 @@
+prefix=/home/sebastian/catkin_ws/install
+
+Name: swri_profiler_msgs
+Description: Description of swri_profiler_msgs
+Version: 0.0.1
+Cflags: -I/home/sebastian/catkin_ws/install/include
+Libs: -L/home/sebastian/catkin_ws/install/lib 
+Requires: message_runtime

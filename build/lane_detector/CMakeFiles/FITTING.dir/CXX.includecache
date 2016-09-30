@@ -188,7 +188,7 @@ omp.h
 swri_profiler/profiler.h
 -
 
-/home/sebastian/catkin_ws/src/swri_profiler/swri_profiler/include/swri_profiler/profiler.h
+/home/sebastian/catkin_ws/src/swri_profiler/include/swri_profiler/profiler.h
 algorithm
 -
 limits

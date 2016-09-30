@@ -500,6 +500,34 @@ geometry_msgs_generate_messages_py/fast:
 .PHONY : geometry_msgs_generate_messages_py/fast
 
 # Convenience name for target.
+simulation/CMakeFiles/measurements_node.dir/rule:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/measurements_node.dir/rule
+.PHONY : simulation/CMakeFiles/measurements_node.dir/rule
+
+# Convenience name for target.
+measurements_node: simulation/CMakeFiles/measurements_node.dir/rule
+.PHONY : measurements_node
+
+# fast build rule for target.
+measurements_node/fast:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/measurements_node.dir/build.make simulation/CMakeFiles/measurements_node.dir/build
+.PHONY : measurements_node/fast
+
+# Convenience name for target.
+simulation/CMakeFiles/measurements_node_automoc.dir/rule:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/measurements_node_automoc.dir/rule
+.PHONY : simulation/CMakeFiles/measurements_node_automoc.dir/rule
+
+# Convenience name for target.
+measurements_node_automoc: simulation/CMakeFiles/measurements_node_automoc.dir/rule
+.PHONY : measurements_node_automoc
+
+# fast build rule for target.
+measurements_node_automoc/fast:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/measurements_node_automoc.dir/build.make simulation/CMakeFiles/measurements_node_automoc.dir/build
+.PHONY : measurements_node_automoc/fast
+
+# Convenience name for target.
 simulation/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
 	cd /home/sebastian/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
 .PHONY : simulation/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
@@ -1133,6 +1161,30 @@ include/Dashboard.cpp.s:
 	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/DASH.dir/build.make simulation/CMakeFiles/DASH.dir/include/Dashboard.cpp.s
 .PHONY : include/Dashboard.cpp.s
 
+measurements_node_automoc.o: measurements_node_automoc.cpp.o
+.PHONY : measurements_node_automoc.o
+
+# target to build an object file
+measurements_node_automoc.cpp.o:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/measurements_node.dir/build.make simulation/CMakeFiles/measurements_node.dir/measurements_node_automoc.cpp.o
+.PHONY : measurements_node_automoc.cpp.o
+
+measurements_node_automoc.i: measurements_node_automoc.cpp.i
+.PHONY : measurements_node_automoc.i
+
+# target to preprocess a source file
+measurements_node_automoc.cpp.i:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/measurements_node.dir/build.make simulation/CMakeFiles/measurements_node.dir/measurements_node_automoc.cpp.i
+.PHONY : measurements_node_automoc.cpp.i
+
+measurements_node_automoc.s: measurements_node_automoc.cpp.s
+.PHONY : measurements_node_automoc.s
+
+# target to generate assembly for a file
+measurements_node_automoc.cpp.s:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/measurements_node.dir/build.make simulation/CMakeFiles/measurements_node.dir/measurements_node_automoc.cpp.s
+.PHONY : measurements_node_automoc.cpp.s
+
 scan_node_automoc.o: scan_node_automoc.cpp.o
 .PHONY : scan_node_automoc.o
 
@@ -1325,6 +1377,30 @@ src/simulation_laserscan.cpp.s:
 	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/scan_node.dir/build.make simulation/CMakeFiles/scan_node.dir/src/simulation_laserscan.cpp.s
 .PHONY : src/simulation_laserscan.cpp.s
 
+src/simulation_measurements.o: src/simulation_measurements.cpp.o
+.PHONY : src/simulation_measurements.o
+
+# target to build an object file
+src/simulation_measurements.cpp.o:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/measurements_node.dir/build.make simulation/CMakeFiles/measurements_node.dir/src/simulation_measurements.cpp.o
+.PHONY : src/simulation_measurements.cpp.o
+
+src/simulation_measurements.i: src/simulation_measurements.cpp.i
+.PHONY : src/simulation_measurements.i
+
+# target to preprocess a source file
+src/simulation_measurements.cpp.i:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/measurements_node.dir/build.make simulation/CMakeFiles/measurements_node.dir/src/simulation_measurements.cpp.i
+.PHONY : src/simulation_measurements.cpp.i
+
+src/simulation_measurements.s: src/simulation_measurements.cpp.s
+.PHONY : src/simulation_measurements.s
+
+# target to generate assembly for a file
+src/simulation_measurements.cpp.s:
+	cd /home/sebastian/catkin_ws/build && $(MAKE) -f simulation/CMakeFiles/measurements_node.dir/build.make simulation/CMakeFiles/measurements_node.dir/src/simulation_measurements.cpp.s
+.PHONY : src/simulation_measurements.cpp.s
+
 src/simulation_usscan.o: src/simulation_usscan.cpp.o
 .PHONY : src/simulation_usscan.o
 
@@ -1409,6 +1485,8 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
+	@echo "... measurements_node"
+	@echo "... measurements_node_automoc"
 	@echo "... nav_msgs_generate_messages_cpp"
 	@echo "... nav_msgs_generate_messages_lisp"
 	@echo "... nav_msgs_generate_messages_py"
@@ -1464,6 +1542,9 @@ help:
 	@echo "... include/Dashboard.o"
 	@echo "... include/Dashboard.i"
 	@echo "... include/Dashboard.s"
+	@echo "... measurements_node_automoc.o"
+	@echo "... measurements_node_automoc.i"
+	@echo "... measurements_node_automoc.s"
 	@echo "... scan_node_automoc.o"
 	@echo "... scan_node_automoc.i"
 	@echo "... scan_node_automoc.s"
@@ -1488,6 +1569,9 @@ help:
 	@echo "... src/simulation_laserscan.o"
 	@echo "... src/simulation_laserscan.i"
 	@echo "... src/simulation_laserscan.s"
+	@echo "... src/simulation_measurements.o"
+	@echo "... src/simulation_measurements.i"
+	@echo "... src/simulation_measurements.s"
 	@echo "... src/simulation_usscan.o"
 	@echo "... src/simulation_usscan.i"
 	@echo "... src/simulation_usscan.s"

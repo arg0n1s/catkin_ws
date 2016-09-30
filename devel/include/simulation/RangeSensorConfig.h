@@ -428,7 +428,7 @@ RangeSensorConfig::GroupDescription<RangeSensorConfig::DEFAULT, RangeSensorConfi
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.laser_max_sensor_distance = 30.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.laser_max_sensor_distance = 6.0;
+      __default__.laser_max_sensor_distance = 10.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(RangeSensorConfig::AbstractParamDescriptionConstPtr(new RangeSensorConfig::ParamDescription<double>("laser_max_sensor_distance", "double", 0, "maximum sensing distance of the simulated laser range sensor", "", &RangeSensorConfig::laser_max_sensor_distance)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -448,7 +448,7 @@ RangeSensorConfig::GroupDescription<RangeSensorConfig::DEFAULT, RangeSensorConfi
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.laser_field_of_view = 360.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.laser_field_of_view = 90.0;
+      __default__.laser_field_of_view = 70.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(RangeSensorConfig::AbstractParamDescriptionConstPtr(new RangeSensorConfig::ParamDescription<double>("laser_field_of_view", "double", 0, "the simulated laser range sensors field of view (deg)", "", &RangeSensorConfig::laser_field_of_view)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -458,7 +458,7 @@ RangeSensorConfig::GroupDescription<RangeSensorConfig::DEFAULT, RangeSensorConfi
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.laser_angular_resolution = 360.0;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.laser_angular_resolution = 0.5;
+      __default__.laser_angular_resolution = 0.2;
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(RangeSensorConfig::AbstractParamDescriptionConstPtr(new RangeSensorConfig::ParamDescription<double>("laser_angular_resolution", "double", 0, "angular resolution of the laser sensors field of view (deg)", "", &RangeSensorConfig::laser_angular_resolution)));
 //#line 280 "/opt/ros/indigo/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"

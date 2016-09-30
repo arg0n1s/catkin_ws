@@ -1482,7 +1482,7 @@ smclib_DIR:PATH=/opt/ros/indigo/share/smclib/cmake
 std_msgs_DIR:PATH=/opt/ros/indigo/share/std_msgs/cmake
 
 //Value Computed by CMake
-swri_profiler_BINARY_DIR:STATIC=/home/sebastian/catkin_ws/build/swri_profiler/swri_profiler
+swri_profiler_BINARY_DIR:STATIC=/home/sebastian/catkin_ws/build/swri_profiler
 
 swri_profiler_DIR:PATH=
 
@@ -1490,22 +1490,22 @@ swri_profiler_DIR:PATH=
 swri_profiler_LIB_DEPENDS:STATIC=general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
 
 //Value Computed by CMake
-swri_profiler_SOURCE_DIR:STATIC=/home/sebastian/catkin_ws/src/swri_profiler/swri_profiler
+swri_profiler_SOURCE_DIR:STATIC=/home/sebastian/catkin_ws/src/swri_profiler
 
 //Value Computed by CMake
-swri_profiler_msgs_BINARY_DIR:STATIC=/home/sebastian/catkin_ws/build/swri_profiler/swri_profiler_msgs
+swri_profiler_msgs_BINARY_DIR:STATIC=/home/sebastian/catkin_ws/build/swri_profiler_msgs
 
 //The directory containing a CMake configuration file for swri_profiler_msgs.
 swri_profiler_msgs_DIR:PATH=/home/sebastian/catkin_ws/devel/share/swri_profiler_msgs/cmake
 
 //Value Computed by CMake
-swri_profiler_msgs_SOURCE_DIR:STATIC=/home/sebastian/catkin_ws/src/swri_profiler/swri_profiler_msgs
+swri_profiler_msgs_SOURCE_DIR:STATIC=/home/sebastian/catkin_ws/src/swri_profiler_msgs
 
 //Value Computed by CMake
-swri_profiler_tools_BINARY_DIR:STATIC=/home/sebastian/catkin_ws/build/swri_profiler/swri_profiler_tools
+swri_profiler_tools_BINARY_DIR:STATIC=/home/sebastian/catkin_ws/build/swri_profiler_tools
 
 //Value Computed by CMake
-swri_profiler_tools_SOURCE_DIR:STATIC=/home/sebastian/catkin_ws/src/swri_profiler/swri_profiler_tools
+swri_profiler_tools_SOURCE_DIR:STATIC=/home/sebastian/catkin_ws/src/swri_profiler_tools
 
 //The directory containing a CMake configuration file for tf2.
 tf2_DIR:PATH=/opt/ros/indigo/share/tf2/cmake

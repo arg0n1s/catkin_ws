@@ -40,7 +40,7 @@ SET(CMAKE_C_TARGET_INCLUDE_PATH
   "/usr/include/mrpt/slam/include"
   "/usr/include/mrpt/topography/include"
   "/home/sebastian/catkin_ws/src/lane_detector/include"
-  "/home/sebastian/catkin_ws/src/swri_profiler/swri_profiler/include"
+  "/home/sebastian/catkin_ws/src/swri_profiler/include"
   "/opt/ros/indigo/include"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

@@ -17,7 +17,7 @@ lane_detector/CMakeFiles/lane_detector.dir/src/lane_detector.cpp.o: /home/sebast
 lane_detector/CMakeFiles/lane_detector.dir/src/lane_detector.cpp.o: /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/splineCombination.h
 lane_detector/CMakeFiles/lane_detector.dir/src/lane_detector.cpp.o: /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/utils.h
 lane_detector/CMakeFiles/lane_detector.dir/src/lane_detector.cpp.o: /home/sebastian/catkin_ws/src/lane_detector/src/lane_detector.cpp
-lane_detector/CMakeFiles/lane_detector.dir/src/lane_detector.cpp.o: /home/sebastian/catkin_ws/src/swri_profiler/swri_profiler/include/swri_profiler/profiler.h
+lane_detector/CMakeFiles/lane_detector.dir/src/lane_detector.cpp.o: /home/sebastian/catkin_ws/src/swri_profiler/include/swri_profiler/profiler.h
 lane_detector/CMakeFiles/lane_detector.dir/src/lane_detector.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 lane_detector/CMakeFiles/lane_detector.dir/src/lane_detector.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h
 lane_detector/CMakeFiles/lane_detector.dir/src/lane_detector.cpp.o: /opt/ros/indigo/include/cv_bridge/cv_bridge.h

@@ -104,7 +104,7 @@ opencv2/highgui/highgui.hpp
 opencv2/ocl/ocl.hpp
 -
 
-/home/sebastian/catkin_ws/src/swri_profiler/swri_profiler/include/swri_profiler/profiler.h
+/home/sebastian/catkin_ws/src/swri_profiler/include/swri_profiler/profiler.h
 algorithm
 -
 limits

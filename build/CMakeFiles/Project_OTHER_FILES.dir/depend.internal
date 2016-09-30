@@ -5,6 +5,8 @@ CMakeFiles/Project_OTHER_FILES.dir/apollo_13/src/apollo_13.cpp.o
  /home/sebastian/catkin_ws/src/apollo_13/src/apollo_13.cpp
 CMakeFiles/Project_OTHER_FILES.dir/apollo_13/src/car_aruco.cpp.o
  /home/sebastian/catkin_ws/src/apollo_13/src/car_aruco.cpp
+CMakeFiles/Project_OTHER_FILES.dir/apollo_13/src/kinect2_filter.cpp.o
+ /home/sebastian/catkin_ws/src/apollo_13/src/kinect2_filter.cpp
 CMakeFiles/Project_OTHER_FILES.dir/apollo_13/src/lane_follower.cpp.o
  /home/sebastian/catkin_ws/src/apollo_13/src/lane_follower.cpp
 CMakeFiles/Project_OTHER_FILES.dir/automap/src/ExplorationPlanner.cpp.o
@@ -76,49 +78,52 @@ CMakeFiles/Project_OTHER_FILES.dir/lane_detector/src/mcv.cc.o
 CMakeFiles/Project_OTHER_FILES.dir/lane_detector/src/preprocessor.cpp.o
  /home/sebastian/catkin_ws/src/lane_detector/src/preprocessor.cpp
 CMakeFiles/Project_OTHER_FILES.dir/simulation/include/Dashboard.cpp.o
+ /home/sebastian/catkin_ws/build/simulation/ui_Dashboard.h
  /home/sebastian/catkin_ws/src/simulation/include/Dashboard.cpp
  /home/sebastian/catkin_ws/src/simulation/include/Dashboard.h
 CMakeFiles/Project_OTHER_FILES.dir/simulation/src/CarModel.cpp.o
  /home/sebastian/catkin_ws/src/simulation/src/CarModel.cpp
 CMakeFiles/Project_OTHER_FILES.dir/simulation/src/ForwardKinematics.cpp.o
  /home/sebastian/catkin_ws/src/simulation/src/ForwardKinematics.cpp
-CMakeFiles/Project_OTHER_FILES.dir/simulation/src/Raycaster.cpp.o
- /home/sebastian/catkin_ws/src/simulation/src/Raycaster.cpp
+CMakeFiles/Project_OTHER_FILES.dir/simulation/src/RangeSensor.cpp.o
+ /home/sebastian/catkin_ws/src/simulation/src/RangeSensor.cpp
 CMakeFiles/Project_OTHER_FILES.dir/simulation/src/simulation_control.cpp.o
  /home/sebastian/catkin_ws/src/simulation/src/simulation_control.cpp
 CMakeFiles/Project_OTHER_FILES.dir/simulation/src/simulation_dashboard.cpp.o
  /home/sebastian/catkin_ws/src/simulation/src/simulation_dashboard.cpp
 CMakeFiles/Project_OTHER_FILES.dir/simulation/src/simulation_laserscan.cpp.o
  /home/sebastian/catkin_ws/src/simulation/src/simulation_laserscan.cpp
+CMakeFiles/Project_OTHER_FILES.dir/simulation/src/simulation_measurements.cpp.o
+ /home/sebastian/catkin_ws/src/simulation/src/simulation_measurements.cpp
 CMakeFiles/Project_OTHER_FILES.dir/simulation/src/simulation_usscan.cpp.o
  /home/sebastian/catkin_ws/src/simulation/src/simulation_usscan.cpp
-CMakeFiles/Project_OTHER_FILES.dir/swri_profiler/swri_profiler/src/nodes/basic_profiler_example_node.cpp.o
- /home/sebastian/catkin_ws/src/swri_profiler/swri_profiler/src/nodes/basic_profiler_example_node.cpp
-CMakeFiles/Project_OTHER_FILES.dir/swri_profiler/swri_profiler/src/profiler.cpp.o
- /home/sebastian/catkin_ws/src/swri_profiler/swri_profiler/src/profiler.cpp
-CMakeFiles/Project_OTHER_FILES.dir/swri_profiler/swri_profiler_tools/src/main.cpp.o
- /home/sebastian/catkin_ws/src/swri_profiler/swri_profiler_tools/src/main.cpp
-CMakeFiles/Project_OTHER_FILES.dir/swri_profiler/swri_profiler_tools/src/partition_widget.cpp.o
- /home/sebastian/catkin_ws/src/swri_profiler/swri_profiler_tools/src/partition_widget.cpp
-CMakeFiles/Project_OTHER_FILES.dir/swri_profiler/swri_profiler_tools/src/profile.cpp.o
- /home/sebastian/catkin_ws/src/swri_profiler/swri_profiler_tools/src/profile.cpp
-CMakeFiles/Project_OTHER_FILES.dir/swri_profiler/swri_profiler_tools/src/profile_database.cpp.o
- /home/sebastian/catkin_ws/src/swri_profiler/swri_profiler_tools/src/profile_database.cpp
-CMakeFiles/Project_OTHER_FILES.dir/swri_profiler/swri_profiler_tools/src/profile_tree_widget.cpp.o
- /home/sebastian/catkin_ws/src/swri_profiler/swri_profiler_tools/src/profile_tree_widget.cpp
-CMakeFiles/Project_OTHER_FILES.dir/swri_profiler/swri_profiler_tools/src/profiler_master.cpp.o
- /home/sebastian/catkin_ws/src/swri_profiler/swri_profiler_tools/src/profiler_master.cpp
-CMakeFiles/Project_OTHER_FILES.dir/swri_profiler/swri_profiler_tools/src/profiler_msg_adapter.cpp.o
- /home/sebastian/catkin_ws/src/swri_profiler/swri_profiler_tools/src/profiler_msg_adapter.cpp
-CMakeFiles/Project_OTHER_FILES.dir/swri_profiler/swri_profiler_tools/src/profiler_window.cpp.o
- /home/sebastian/catkin_ws/src/swri_profiler/swri_profiler_tools/src/profiler_window.cpp
-CMakeFiles/Project_OTHER_FILES.dir/swri_profiler/swri_profiler_tools/src/register_meta_types.cpp.o
- /home/sebastian/catkin_ws/src/swri_profiler/swri_profiler_tools/src/register_meta_types.cpp
-CMakeFiles/Project_OTHER_FILES.dir/swri_profiler/swri_profiler_tools/src/ros_source.cpp.o
- /home/sebastian/catkin_ws/src/swri_profiler/swri_profiler_tools/src/ros_source.cpp
-CMakeFiles/Project_OTHER_FILES.dir/swri_profiler/swri_profiler_tools/src/ros_source_backend.cpp.o
- /home/sebastian/catkin_ws/src/swri_profiler/swri_profiler_tools/src/ros_source_backend.cpp
-CMakeFiles/Project_OTHER_FILES.dir/swri_profiler/swri_profiler_tools/src/time_plot_widget.cpp.o
- /home/sebastian/catkin_ws/src/swri_profiler/swri_profiler_tools/src/time_plot_widget.cpp
-CMakeFiles/Project_OTHER_FILES.dir/swri_profiler/swri_profiler_tools/src/util.cpp.o
- /home/sebastian/catkin_ws/src/swri_profiler/swri_profiler_tools/src/util.cpp
+CMakeFiles/Project_OTHER_FILES.dir/swri_profiler/src/nodes/basic_profiler_example_node.cpp.o
+ /home/sebastian/catkin_ws/src/swri_profiler/src/nodes/basic_profiler_example_node.cpp
+CMakeFiles/Project_OTHER_FILES.dir/swri_profiler/src/profiler.cpp.o
+ /home/sebastian/catkin_ws/src/swri_profiler/src/profiler.cpp
+CMakeFiles/Project_OTHER_FILES.dir/swri_profiler_tools/src/main.cpp.o
+ /home/sebastian/catkin_ws/src/swri_profiler_tools/src/main.cpp
+CMakeFiles/Project_OTHER_FILES.dir/swri_profiler_tools/src/partition_widget.cpp.o
+ /home/sebastian/catkin_ws/src/swri_profiler_tools/src/partition_widget.cpp
+CMakeFiles/Project_OTHER_FILES.dir/swri_profiler_tools/src/profile.cpp.o
+ /home/sebastian/catkin_ws/src/swri_profiler_tools/src/profile.cpp
+CMakeFiles/Project_OTHER_FILES.dir/swri_profiler_tools/src/profile_database.cpp.o
+ /home/sebastian/catkin_ws/src/swri_profiler_tools/src/profile_database.cpp
+CMakeFiles/Project_OTHER_FILES.dir/swri_profiler_tools/src/profile_tree_widget.cpp.o
+ /home/sebastian/catkin_ws/src/swri_profiler_tools/src/profile_tree_widget.cpp
+CMakeFiles/Project_OTHER_FILES.dir/swri_profiler_tools/src/profiler_master.cpp.o
+ /home/sebastian/catkin_ws/src/swri_profiler_tools/src/profiler_master.cpp
+CMakeFiles/Project_OTHER_FILES.dir/swri_profiler_tools/src/profiler_msg_adapter.cpp.o
+ /home/sebastian/catkin_ws/src/swri_profiler_tools/src/profiler_msg_adapter.cpp
+CMakeFiles/Project_OTHER_FILES.dir/swri_profiler_tools/src/profiler_window.cpp.o
+ /home/sebastian/catkin_ws/src/swri_profiler_tools/src/profiler_window.cpp
+CMakeFiles/Project_OTHER_FILES.dir/swri_profiler_tools/src/register_meta_types.cpp.o
+ /home/sebastian/catkin_ws/src/swri_profiler_tools/src/register_meta_types.cpp
+CMakeFiles/Project_OTHER_FILES.dir/swri_profiler_tools/src/ros_source.cpp.o
+ /home/sebastian/catkin_ws/src/swri_profiler_tools/src/ros_source.cpp
+CMakeFiles/Project_OTHER_FILES.dir/swri_profiler_tools/src/ros_source_backend.cpp.o
+ /home/sebastian/catkin_ws/src/swri_profiler_tools/src/ros_source_backend.cpp
+CMakeFiles/Project_OTHER_FILES.dir/swri_profiler_tools/src/time_plot_widget.cpp.o
+ /home/sebastian/catkin_ws/src/swri_profiler_tools/src/time_plot_widget.cpp
+CMakeFiles/Project_OTHER_FILES.dir/swri_profiler_tools/src/util.cpp.o
+ /home/sebastian/catkin_ws/src/swri_profiler_tools/src/util.cpp

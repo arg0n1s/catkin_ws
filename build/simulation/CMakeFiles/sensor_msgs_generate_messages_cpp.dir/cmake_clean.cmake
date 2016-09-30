@@ -4,6 +4,7 @@ FILE(REMOVE_RECURSE
   "FWD_KINEMATICS_automoc.cpp"
   "RANGE_SENSOR_automoc.cpp"
   "dashboard_node_automoc.cpp"
+  "measurements_node_automoc.cpp"
   "scan_node_automoc.cpp"
   "simulation_node_automoc.cpp"
   "usrange_node_automoc.cpp"

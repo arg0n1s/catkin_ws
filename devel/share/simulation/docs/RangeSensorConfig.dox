@@ -3,10 +3,10 @@
 Reads and maintains the following parameters on the ROS server
 
 - \b "~laser_obstacle_color" : \b [int] color of a pixel on an occupancy grid that should be regarded as an obstacle min: 0, default: 0, max: 255
-- \b "~laser_max_sensor_distance" : \b [double] maximum sensing distance of the simulated laser range sensor min: 0.0, default: 6.0, max: 30.0
+- \b "~laser_max_sensor_distance" : \b [double] maximum sensing distance of the simulated laser range sensor min: 0.0, default: 10.0, max: 30.0
 - \b "~laser_min_sensor_distance" : \b [double] minimum sensing distance of the simulated laser range sensor min: 0.0, default: 0.0, max: 30.0
-- \b "~laser_field_of_view" : \b [double] the simulated laser range sensors field of view (deg) min: 0.0, default: 90.0, max: 360.0
-- \b "~laser_angular_resolution" : \b [double] angular resolution of the laser sensors field of view (deg) min: 0.01, default: 0.5, max: 360.0
+- \b "~laser_field_of_view" : \b [double] the simulated laser range sensors field of view (deg) min: 0.0, default: 70.0, max: 360.0
+- \b "~laser_angular_resolution" : \b [double] angular resolution of the laser sensors field of view (deg) min: 0.01, default: 0.2, max: 360.0
 - \b "~us_obstacle_color" : \b [int] color of a pixel on an occupancy grid that should be regarded as an obstacle min: 0, default: 0, max: 255
 - \b "~us_max_sensor_distance" : \b [double] maximum sensing distance of the simulated us range sensor min: 0.0, default: 2.7, max: 30.0
 - \b "~us_min_sensor_distance" : \b [double] minimum sensing distance of the simulated us range sensor min: 0.0, default: 0.0, max: 30.0

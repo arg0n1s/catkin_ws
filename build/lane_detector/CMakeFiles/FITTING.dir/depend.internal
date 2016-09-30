@@ -16,7 +16,7 @@ lane_detector/CMakeFiles/FITTING.dir/src/fitting.cpp.o
  /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/splineCombination.h
  /home/sebastian/catkin_ws/src/lane_detector/include/lane_detector/utils.h
  /home/sebastian/catkin_ws/src/lane_detector/src/fitting.cpp
- /home/sebastian/catkin_ws/src/swri_profiler/swri_profiler/include/swri_profiler/profiler.h
+ /home/sebastian/catkin_ws/src/swri_profiler/include/swri_profiler/profiler.h
  /opt/ros/indigo/include/XmlRpcDecl.h
  /opt/ros/indigo/include/XmlRpcValue.h
  /opt/ros/indigo/include/diagnostic_msgs/DiagnosticArray.h
